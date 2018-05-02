@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        "github",
+        "splitter"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"
+        }
+    }
+}
