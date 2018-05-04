@@ -5,7 +5,7 @@
 
 Ai-Thinker GPRS development SDK written by C
 
-安信可GPRS模组二次开发SDK C语言版
+安信可GPRS模组二次开发SDK C语言版 文档
 
 
 
