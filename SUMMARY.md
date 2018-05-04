@@ -10,6 +10,11 @@
 * [A9G](ying-jian/a9g.md)
 * [开发板pudding](ying-jian/kai-fa-ban-pudding.md)
 
+## 基础知识
+
+* GSM/GPRS
+* GPS
+
 ## C SDK
 
 * [开发环境安装](c-sdk/kai-fa-huan-jing-an-zhuang.md)
