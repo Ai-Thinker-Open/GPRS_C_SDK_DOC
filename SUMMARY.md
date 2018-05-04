@@ -6,7 +6,7 @@
 * [article2](article2.md)
 * [a2](a2.md)
 
-## test
+## 硬件
 
 * [test2](test/test2.md)
 * [test3](test/test3.md)
