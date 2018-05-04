@@ -1,6 +1,6 @@
 
 
-[Ai-Thinker GPRS C SDK](https://github.com/Ai-Thinker-Open/GPRS-C-SDK) DOC
+[Ai-Thinker GPRS C SDK](https://github.com/Ai-Thinker-Open/GPRS-C-SDK) 文档
 =====
 
 Ai-Thinker GPRS development SDK written by C
@@ -12,7 +12,7 @@ Ai-Thinker GPRS development SDK written by C
 ## (一) 硬件
 
 * **A9 GPRS 模块**</br>
-![](./doc/assets/A9.png)</br>
+![./doc/assets/A9.png)](/assets/A9.png)</br>
 特征：
   * 32位内核，主频高达312MHz，4k指令缓存，4k数据缓存
   * 多达29个GPIO（两个GPIO作为下载口）
