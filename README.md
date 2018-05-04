@@ -1,18 +1,9 @@
 
 
-[Ai-Thinker GPRS C SDK](https://github.com/Ai-Thinker-Open/GPRS-C-SDK) 文档
-=====
+## A9 GPRS 模块
 
-Ai-Thinker GPRS development SDK written by C
+![./doc/assets/A9.png)](/assets/A9.png)
 
-安信可GPRS模组二次开发SDK C语言版 文档
-
-
-
-## (一) 硬件
-
-* **A9 GPRS 模块**</br>
-![./doc/assets/A9.png)](/assets/A9.png)</br>
 特征：
   * 32位内核，主频高达312MHz，4k指令缓存，4k数据缓存
   * 多达29个GPIO（两个GPIO作为下载口）
@@ -33,14 +24,18 @@ Ai-Thinker GPRS development SDK written by C
   * 语音通话
   * 短信服务
 
-* **A9G GPRS+GPS+BDS模块**</br>
-![](./doc/assets/A9G.png)</br>
+## A9G GPRS+GPS+BDS模块
+
+![](/assets/A9G.png)
+
 特征：
   * A9所有特征
   * 集成GPS+BDS(和串口2连接)
 
-* **A9/A9G GPRS(+GPS+BDS) 开发板**</br>
-![](./doc/assets/A9G_dev.png)</br>
+## A9/A9G GPRS(+GPS+BDS) 开发板(pudding)
+
+
+
 A9/A9G开发板，方便开发和调试
 特征：
   * 1个A9G模块（A9和A9G采用相同封装，引脚相同,所以开发板通用）

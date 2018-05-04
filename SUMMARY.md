@@ -2,7 +2,7 @@
 
 ## 介绍
 
-* [简单介绍](README.md)
+* [硬件](README.md)
 * [article2](article2.md)
 * [a2](a2.md)
 
