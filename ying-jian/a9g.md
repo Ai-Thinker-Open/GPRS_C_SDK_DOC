@@ -15,3 +15,4 @@
 
 ![](/assets/size.jpg)
 * GK9501：一款高性能、高集成度、低功耗、低成本的多模卫星定位导航芯片，支持BDS/GPS/GLONASS/GALILEO/QZSS/SBAS。
+
