@@ -14,3 +14,4 @@
 * 模组引脚图(硬件资料文件中也包含)(A9和A9G模组引脚兼容)
 
 ![](/assets/size.jpg)
+* GK9501：一款高性能、高集成度、低功耗、低成本的多模卫星定位导航芯片，支持BDS/GPS/GLONASS/GALILEO/QZSS/SBAS。
