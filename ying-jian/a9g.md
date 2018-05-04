@@ -8,7 +8,7 @@
 
 ## 硬件
 
-* 规格书：[A9规格书](http://wiki.ai-thinker.com/_media/b101ps00a1_a9_product_specification_v2.pdf)
+* 规格书：[A9G规格书](http://wiki.ai-thinker.com/_media/b102ps00a3_a9g_product_specification.pdf)
 * 用户手册：[A9/A9G用户手册](http://wiki.ai-thinker.com/_media/a6_a9_a9g_gprs_user_manual.pdf)
 * 硬件资料文件：[A9/A9G硬件资料](http://wiki.ai-thinker.com/_media/gprs/a6a9a9g_hardware_info.rar)
 * 模组引脚图(硬件资料文件中也包含)(A9和A9G模组引脚兼容)
