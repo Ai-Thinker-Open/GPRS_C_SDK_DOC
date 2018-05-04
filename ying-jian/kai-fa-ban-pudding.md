@@ -15,10 +15,14 @@
   * 1个开机按键，1个复位按键
   * 2个连接到GPIO的LED灯
   * 1个麦克风</br>
-![](./doc/assets/A9G_dev_pin.png)</br>
-> 注意图中的所有引脚名均为A9/A9G内主芯片的引脚，A9G内部串口2已经和GPS连接，即开启GPS后`RX`脚会输出GPS输出的原始信息
+
+## 引脚图
+
 
 
 ## 原理图
 
+* A9原理图：http://wiki.ai-thinker.com/_media/gprs/a9/a9-dev_v1.2.pdf
 * A9G原理图：http://wiki.ai-thinker.com/_media/gprs/a9g/a9g-dev_v1.2.pdf
+* A9原理图库：http://wiki.ai-thinker.com/_media/gprs/a9g/a9g-dev_v1.2.zip
+* A9G原理图库：http://wiki.ai-thinker.com/_media/gprs/a9/a9-dev_v1.2.zip
