@@ -5,6 +5,9 @@
 
 安信可GPRS模组二次开发C语言版SDK文档
 
+[点我在线阅读](https://neutree.gitbooks.io/gprs-c-sdk-doc/)
+
+
 ## 关于模组
 
 安信可GPRS模组型号主要有**A9**，**A9G**。
