@@ -139,17 +139,18 @@ void AppMainTask(VOID *pData)
 
 * 查看debug信息：打开`Plugins`->`Active Tracer`，界面及功能如下图
 
-![tracer](./assets/coolwatcher_trace.png)
+![](/assets/coolwatcher_trace.png)
 
 使用前需要设置Tracer，设置如下如1~6步：
 
-![Tracer设置](./assets/coolwatcher_trace_settings.png)
+![](/assets/coolwatcher_trace_settings.png)
 
 * 程序中需要输出调试信息可以调用`api_debug.h`中的`Trace(uint16_t nIndex,PCSTR fmt, ...)`函数，其中 `nIndex`就是对应tracer设置中的`MMI 01` ~ `MMI 16`
 
 #### Tracer使用容易遇到的问题
 
 * 有时候自己期望的调试数据没有显示，有可能是点了右上角的暂停显示最新的按钮，忘了关闭！！
+* 刚开机的时候Trace模块可能还没启动完成，可能会出现开始部分信息没有打印的情况
 
 
 #### 死机处理
@@ -157,15 +158,18 @@ void AppMainTask(VOID *pData)
 这里模拟了一个异常，空指针赋值的异常，一般出现这种问题都是指针乱飞的问题！
 打开GBD，并设置选择elf文件
 
-![指针异常](./assets/coolwatcher_gdb_launch.png)
+![](/assets/coolwatcher_gdb_launch.png)
 
-![选择elf文件](./assets/coolwatcher_gdb_settings.png)
+![](/assets/coolwatcher_gdb_settings.png)
 
 打开GBD终端，输入`bt` 或者`bt f`查看信息
 
-![异常信息](./assets/coolwatcher_gdb_error_info.png)
+![](/assets/coolwatcher_gdb_error_info.png)
 
-需要注意的是，这个GDB并不是在并不支持手动打断点功能，打断点需要在代码中写入断点语句才行，所以只用它来查看死机信息就行了，当死机后再用它！！
+需要注意的是，这个GDB并不是在并不支持手动打断点功能，打断点需要在代码中写入断点语句才行，所以只用它来查看死机信息就行了，当死机后再用它！
+
+如果觉得这个GDB调试功能不是很好用，可以用打印调试信息的方式来调试bug
 
 
 如果遇到问题，参见文档中的常见问题，也可以在[issue](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/issues?utf8=%E2%9C%93&q=)里找有没有先例
+
