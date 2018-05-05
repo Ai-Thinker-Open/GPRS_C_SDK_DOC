@@ -88,7 +88,7 @@ void first_Main(void)
 每个程序都有一个入口，这里的入口是一个函数：
 `void first_Main(void)`，返回值和参数都是void，下划线左边**必须**是文件夹的名字，这里是first，下划线右半边**必须**是Main，首字母大写。
 
-调用`OS_CreateTask`来创建一个任务，具体参数含义可以见OS部分，这里先不阐述。调用`OS_SetUserMainHandle`将刚刚创建的任务指针（句柄）传给底层，让底层知道给那个任务发送事件
+调用`OS_CreateTask`来创建一个任务，具体参数含义可以见OS部分，这里先不阐述。调用`OS_SetUserMainHandle`将刚刚创建的任务指针（句柄）传给底层，让底层知道给那个任务发送事件，**这个是必须的**
 
 2. 主任务处理
 
