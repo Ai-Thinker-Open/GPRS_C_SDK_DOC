@@ -143,14 +143,19 @@ typedef struct{
 ```
 bool GPIO_Init(GPIO_config_t config);
 ```
+
 ##### 功能
+
 初始化IO
 
 ##### 参数
+
 * config：初始化配置
 
 ##### 返回值
+
 * bool：配置成功/失败
+
 ----
 
 #### GPIO_Init
@@ -158,14 +163,19 @@ bool GPIO_Init(GPIO_config_t config);
 ```
 bool GPIO_Init(GPIO_config_t config);
 ```
+
 ##### 功能
+
 初始化IO
 
 ##### 参数
+
 * config：初始化配置
 
 ##### 返回值
+
 * bool：配置成功/失败
+
 ---
 
 
