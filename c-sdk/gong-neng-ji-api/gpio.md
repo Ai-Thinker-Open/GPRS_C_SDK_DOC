@@ -3,7 +3,9 @@ GPIO (General Purpose Input Output)通用输入输出接口
 
 ## 一：枚举类型
 
-#### 1. GPIO_PIN：引脚
+#### GPIO_PIN
+
+引脚
 
 ```
 typedef enum{
@@ -46,7 +48,10 @@ typedef enum{
 }GPIO_PIN;
 ```
 
-#### 2. GPIO_MODE：IO模式
+
+#### GPIO_MODE
+
+IO模式
 
 ```
 typedef enum{
@@ -57,7 +62,9 @@ typedef enum{
 }GPIO_MODE;
 ```
 
-#### 3. GPIO_LEVEL：高低电平
+#### GPIO_LEVEL
+
+高低电平
 
 ```
 typedef enum{
@@ -66,7 +73,9 @@ typedef enum{
 }GPIO_LEVEL;
 ```
 
-#### 4. GPIO_INT_TYPE：中断类型
+#### GPIO_INT_TYPE
+
+中断类型
 
 ```
 typedef enum {
@@ -83,29 +92,105 @@ typedef enum {
 
 ## 二：结构体类型
 
-## 三：功能函数接口
+#### GPIO_INT_callback_param_t
 
+中断回调函数参数类型
 
-
-
-
+```
 typedef struct{
     GPIO_PIN pin;
 }GPIO_INT_callback_param_t;
+```
 
+#### PCallbackINT
+
+中断回调函数类型
+
+```
 typedef void (*PCallbackINT)(GPIO_INT_callback_param_t* param);
+```
 
+#### GPIO_INT_config_t
+
+中断配置选项
+
+```
 typedef struct{
-    uint16_t        debounce; //ms
+    uint16_t        debounce; //去抖时间（ms）
     GPIO_INT_TYPE   type    ;
     PCallbackINT    callback;
 }GPIO_INT_config_t;
+```
 
+#### GPIO_config_t
+
+GPIO配置选项
+
+```
 typedef struct{
-    GPIO_PIN          pin         ;
-    GPIO_MODE         mode        ;
-    GPIO_LEVEL        defaultLevel;
-    GPIO_INT_config_t intConfig   ;
+    GPIO_PIN          pin         ;  //引脚
+    GPIO_MODE         mode        ;  //模式
+    GPIO_LEVEL        defaultLevel;  //默认电平
+    GPIO_INT_config_t intConfig   ;  //中断配置（中断模式需要配置）
 }GPIO_config_t;
+```
+
+
+## 三：功能函数接口
+
+#### GPIO_Init
+
+```
+bool GPIO_Init(GPIO_config_t config);
+```
+##### 功能
+初始化IO
+
+##### 参数
+* config：初始化配置
+
+##### 返回值
+* bool：配置成功/失败
+
+
+
+/// \brief  void GPIO_GetConfig(GPIO_PIN pin,GPIO_config_t* config);
+/// \param  GPIO_PIN pin,  set the number of gpio
+/// \param  GPIO_config_t* config, set the GPIO_config_t struct
+/// \return void
+#define GPIO_GetConfig                              CSDK_FUNC(GPIO_GetConfig)
+
+/// \brief  bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
+/// \param  GPIO_config_t gpioConf, set the GPIO_config_t struct
+/// \param  GPIO_LEVEL  level,  set the  gpio level high or low
+/// \return bool
+#define GPIO_SetLevel                               CSDK_FUNC(GPIO_SetLevel)
+
+/// \brief  bool GPIO_Set(GPIO_PIN pin, GPIO_LEVEL  level);
+/// \param  GPIO_PIN pin,  set the number of gpio
+/// \param  GPIO_LEVEL  level,  set the  gpio level high or low
+/// \return bool
+#define GPIO_Set                                    CSDK_FUNC(GPIO_Set)
+
+/// \brief  bool GPIO_GetLevel(GPIO_config_t gpioConf, GPIO_LEVEL* level);
+/// \param  GPIO_config_t gpioConf, set the GPIO_config_t struct
+/// \param  GPIO_LEVEL*  level,  get the  gpio level high or low
+/// \return bool
+#define GPIO_GetLevel                               CSDK_FUNC(GPIO_GetLevel)
+
+/// \brief  bool GPIO_Get(GPIO_PIN pin, GPIO_LEVEL* level);
+/// \param  GPIO_PIN pin,  set the number of gpio
+/// \param  GPIO_LEVEL*  level,  get the  gpio level high or low
+/// \return bool
+#define GPIO_Get                                    CSDK_FUNC(GPIO_Get)
+
+/// \brief  bool GPIO_Close(GPIO_PIN pin);
+/// \param  GPIO_PIN pin,  set the number of gpio
+/// \return bool
+#define GPIO_Close                                  CSDK_FUNC(GPIO_Close)
+
+
+
+
 
 #endif
