@@ -13,8 +13,8 @@
 
 ## 基础知识
 
-* GSM/GPRS
-* GPS
+* [GSM/GPRS](ji-chu-zhi-shi/gsmgprs.md)
+* [GPS](ji-chu-zhi-shi/gps.md)
 
 ## C SDK
 
