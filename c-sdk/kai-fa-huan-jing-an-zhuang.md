@@ -22,7 +22,7 @@ GPRS C SDK 开发环境搭建
 
 * 解压到某个文件夹,比如`C:\CSDTK`,**路径请不要带中文！**
 * 运行CSDTk目录下的`config_env_admin.bat`文件
-* 解压下载到的CSDK为`GPRS_C_SDK`文件夹放到某个目录下
+* 解压下载到的CSDK为`GPRS_C_SDK`文件夹放到某个目录下，比如`C:\GPRS_C_SDK`，**请使用下划线(_)而不是减号(-)**
 
 
 
