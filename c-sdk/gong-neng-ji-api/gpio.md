@@ -61,8 +61,8 @@ typedef enum{
 
 ```
 typedef enum{
-    GPIO_LEVEL_LOW  = 0,
-    GPIO_LEVEL_HIGH = 1
+    GPIO_LEVEL_LOW  = 0,  //低电平
+    GPIO_LEVEL_HIGH = 1   //高电平
 }GPIO_LEVEL;
 ```
 
