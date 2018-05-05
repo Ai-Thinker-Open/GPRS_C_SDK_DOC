@@ -18,7 +18,7 @@
 |demo    |  一些例程                    |
 |doc     | 相关文档，Markdown格式        |
 |hex     |  最后产生的可烧录文件         |
-|include |  SDK文件目录                 |
+|include |  SDK头文件目录                 |
 |init    |  系统初始化的目录，可以不用理会，不建议改动 |
 |platform|  库文件等，请确保`platform/csdk`文件夹不为空|
 
