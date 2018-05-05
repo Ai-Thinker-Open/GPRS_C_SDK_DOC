@@ -22,21 +22,23 @@ GPRS C SDK 开发环境搭建
 
 * 解压到某个文件夹,比如`C:\CSDTK`,**路径请不要带中文！**
 * 运行CSDTk目录下的`config_env_admin.bat`文件
-* 解压下载到的CSDK为`GPRS_C_SDK`文件夹放到某个目录下，比如`C:\GPRS_C_SDK`，**请使用下划线(_)而不是减号(-)**
-
 
 
 ## 3. 编译
 
-解压CSDK工程目录到`GPRS_C_SDK`目录，按住shift，鼠标右键单击，选择cmd打开或者powershell打开，如图：
-![](./assets/open_with_cmd.png)
-然后使用`build.bat`脚本来编译工程，有以下参数：
+* 解压下载到的CSDK为`GPRS_C_SDK`文件夹放到某个目录下，比如`C:\GPRS_C_SDK`，**请使用下划线(_)而不是减号(-)**
+
+* 进入CSDK文件夹（`C:\GPRS_C_SDK`），按住shift，在文件夹内空白处鼠标右键单击，选择cmd打开或者powershell打开，如图：
+
+![](/assets/open_with_cmd.png)
+
+然后在CMD或powershell窗口中使用`build.bat`脚本来编译工程，有以下参数：
   * 使用 `./build.bat $PROJ`来编译你的应用模块，如 `./build.batsh app` 则是编译app目录下的源码
-  * 使用 `./build.bat demo $PROJ` 来编译demo目录下的特定例程
+  * 使用 `./build.bat demo $PROJ` 来编译demo目录下的特定例程，比如`./build.bat demo gpio`
   * 使用 `./build.bat clean $PROJ` 清除`$PROJ`目录的中间文件
   * 使用 `./build.bat clean all` 清除所有中间文件
   * 使用 `./build.bat demo $PROJ release` 来生成release版本，比如`./build.bat demo gpio release`，
-  如果最后一个参数不是`release`，则默认是`debug`版本， `debug`版本在死机后会停止运行并可以使用GDB调试，而**release版本在死机时会自动重启系统**，所以实际投入使用时请使用release版本，测试时使用debug版本
+  如果最后一个参数不是`release`，则默认是`debug`版本， `debug`版本在死机后会停止运行并可以使用GDB调试，而**release版本在死机时会自动重启系统**，所以**实际投入使用时请使用release版本以防止出现bug时死机**，测试时使用debug版本
 
 **比如：**
 ```
@@ -46,7 +48,7 @@ GPRS C SDK 开发环境搭建
 
 * **目标文件说明** 
 
-两个文件一大一小，在第一次下载时需要下载大文件(`*_B*.lod`)即可，第二次和以后为了减少下载时间都只需要下载小文件(`*_flash.lod`)即可，更新SDK后也需要重新下载大文件
+两个文件一大一小，在第一次下载时需要下载大文件(`*_B*.lod`)即可，第二次和以后为了减少下载时间都只需要下载小文件(`*_flash.lod`)即可，更新SDK后需要重新下载大文件
 
 ## 6. 其它问题
 
@@ -55,3 +57,5 @@ GPRS C SDK 开发环境搭建
 * 方式一：github[添加issue](https://github.com/Ai-Thinker-Open/GPRS-C-SDK/issues/new)
 
 * 方式二：[安信可论坛讨论](http://bbs.ai-thinker.com/forum.php?mod=forumdisplay&fid=37)
+
+
