@@ -7,14 +7,14 @@ GPIO (General Purpose Input Output)通用输入输出接口
 
 ```
 typedef enum{
-    GPIO_PIN0 = 0,       //IO interruptible
-    GPIO_PIN1,           //IO interruptible
-    GPIO_PIN2,           //IO interruptible
-    GPIO_PIN3,           //IO interruptible
-    GPIO_PIN4,           //IO interruptible
-    GPIO_PIN5,           //IO interruptible
-    GPIO_PIN6,           //IO interruptible
-    GPIO_PIN7,           //IO interruptible
+    GPIO_PIN0 = 0, //IO 可中断
+    GPIO_PIN1,     //IO 可中断
+    GPIO_PIN2,     //IO 可中断
+    GPIO_PIN3,     //IO 可中断
+    GPIO_PIN4,     //IO 可中断
+    GPIO_PIN5,     //IO 可中断
+    GPIO_PIN6,     //IO 可中断
+    GPIO_PIN7,     //IO 可中断
     GPIO_PIN8,
     GPIO_PIN9,
     GPIO_PIN10,
