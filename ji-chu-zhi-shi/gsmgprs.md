@@ -46,7 +46,7 @@ GPRS定义了CS-1到CS-4四种信道编码方式，不同编码方式速率不�
 2. **GPRS附着（Attach）**：建立GPRS设备到GPRS网络的通信信道，实际上是附着到SGSN(serving GPRS support node)上。
 
 3. **GPRS PDP Context(分组报文协议上下文)激活**：可以将这一步看作是GPRS设备从网关拿到IP地址，经过这一步设备便具有数据通信功能,能够与公网设备建立通信。</br>
-GGSN(gateway GPRS Support Node)是GPRS网络中的关键部分，是GPRS网络和外部分组交换网络之间的交互，从外部网络来看，GGSN就是一个子网路由器，负责交换SGSN与外部网络之间的信息。
+GGSN(gateway GPRS Support Node)是GPRS网络中的关键部分，是GPRS网络和外部分组交换网络之间的交互，从外部网络来看，GGSN就是一个子网路由器，负责交换SGSN与外部网络之间的信息，还负责认证、流量计费等功能。
 
 4. 与公网设备建立连接：因为设备已经建立好于公网的连接，只需要直接通过某种协议连接即可，比如建立TCP连接、UDP连接等
 
