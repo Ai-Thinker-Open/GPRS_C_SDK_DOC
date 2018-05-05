@@ -6,7 +6,7 @@
 **GPS**:Global Positioning System，全球定位系统，由美国研制，全球覆盖率高达98%，共24颗卫星。
 全球最早研制并投入使用的定位系统
 
-定位系统，除了GPS，除了GPS外，还有中国的北斗卫星导航系统（BeiDou Navigation Satellite System，**BDS**），俄罗斯的**GLONASS**系统，欧洲的伽利略系统（**Galileo** satellite navigation system），日本的**QZSS**。
+定位系统，除了GPS外，还有中国的北斗卫星导航系统（BeiDou Navigation Satellite System，**BDS**），俄罗斯的**GLONASS**系统，欧洲的伽利略系统（**Galileo** satellite navigation system），日本的**QZSS**。
 
 除了卫星定位系统，还有**SBAS**（Satellite-Based Augmentation System），即星基增强系统，通过地球静止轨道（GEO）卫星搭载卫星导航增强信号转发器，可以向用户播发星历误差、卫星钟差、电离层延迟等多种修正信息，实现对于原有卫星导航系统定位精度的改进，从而成为各航天大国竞相发展的手段。目前，全球已经建立起了多个SBAS系统，如美国的WAAS（Wide Area Augmentation System）、俄罗斯的SDCM（System for Differential Corrections and Monitoring）、欧洲的EGNOS（European Geostationary Navigation Overlay Service）、日本的MSAS（Multi-functional Satellite Augmentation System）以及印度的GAGAN（GPS Aided Geo Augmented Navigation）
 
