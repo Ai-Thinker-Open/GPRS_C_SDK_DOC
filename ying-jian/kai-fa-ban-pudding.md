@@ -18,7 +18,7 @@
 
 ## 引脚图
 
-![](/assets/pudding_pin.jpg)
+![](/assets/pudding_pin.png)
 
 ## 原理图
 
