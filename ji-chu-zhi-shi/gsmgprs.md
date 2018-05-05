@@ -32,5 +32,13 @@ GPRS网络为每个用户分配**最多**8个时隙来传输数据，这最多8�
 
 **GPRS传输速度**：理论上class值越大速度越快，但是速度受基站和GPRS设备（GPRS模组、手机）双方的最低速度限制，比如GPRS设备支持Class 12，但是基站只支持Class 10，那就会收到Class 10限制，而且和信号、干扰等因素也有关系。
 
+#### （3）GPRS建立数据通信流程
+
+1. GPRS设备连接基站并注册(register)到网络，保证有足够强的信号,此时便可以使用GSM服务，即可以通话、短信。
+
+2. **GPRS附着（Attach）**：建立GPRS设备到GPRS网络的通信信道，实际上是附着到SGSN(serving GPRS support node)上。
+
+3. **GPRS PDP Context(分组报文协议上下文)激活**：可以将这一步看作是GPRS设备从网关拿到IP地址，经过这一步设备便具有数据通信功能。</br>
+GGSN(gateway GPRS Support Node)是GPRS网络中的关键部分，是GPRS网络和外部分组交换网络之间的交互，从外部网络来看，GGSN就是一个子网路由器，负责交换设备与外部网络之间的信息。
 
 
