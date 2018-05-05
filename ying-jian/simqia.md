@@ -9,4 +9,6 @@ SIM卡
 
 ![](/assets/微信截图_20180505130001.png)
 
+![](/assets/SIM Card.png)
+
 **开发板pudding使用micro SIM卡**
