@@ -8,3 +8,5 @@ SIM卡
 ![](/assets/c8ea15ce36d3d539d086d6e73287e950352ab05f.jpg)
 
 ![](/assets/微信截图_20180505130001.png)
+
+开发板pudding使用micro SIM卡
