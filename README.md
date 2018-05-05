@@ -5,6 +5,7 @@
 
 安信可GPRS模组二次开发C语言版SDK文档
 
+CSDK代码仓库：https://github.com/Ai-Thinker-Open/GPRS-C-SDK
 
 [点我在线阅读](https://neutree.gitbooks.io/gprs-c-sdk-doc/)
 
