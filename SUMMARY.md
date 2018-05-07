@@ -23,8 +23,8 @@
 * [下载编译好的固件到模组](c-sdk/xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.md)
 * [开始第一份代码](c-sdk/kai-shi-di-yi-fen-dai-ma.md)
 * [功能及API](c-sdk/gong-neng-ji-api.md)
-  * [OS](c-sdk/gong-neng-ji-api/os.md)
   * [GPIO](c-sdk/gong-neng-ji-api/gpio.md)
+  * [OS](c-sdk/gong-neng-ji-api/os.md)
   * ADC
   * UART
   * IIC
