@@ -5,6 +5,8 @@ GPS
 
 例程：[demo/gps](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/gps/src/demo_gps.c)
 
+**注意**：在使用定位坐标显示到地图上时，注意坐标的转换，模组输出的位置是WGS84坐标，如果使用百度地图，需要转换成BD-09坐标，如果使用的腾讯地图、高德地图、google地图等，请先转换到GCJ-02坐标（火星坐标）
+
 
 ## 函数
 
