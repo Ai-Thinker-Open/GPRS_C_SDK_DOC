@@ -3,6 +3,8 @@
 
 模组共有三个UART，串口1、串口2以及下载调试串口HST串口
 
+例程:[`demo/uart`](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/uart/src/demo_uart.c)
+
 ---
 
 ## 一：枚举类型
