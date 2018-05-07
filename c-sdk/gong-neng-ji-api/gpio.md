@@ -51,6 +51,7 @@ typedef enum{
 }GPIO_PIN;
 ```
 
+---
 
 #### GPIO_MODE
 
@@ -65,6 +66,8 @@ typedef enum{
 }GPIO_MODE;
 ```
 
+---
+
 #### GPIO_LEVEL
 
 高低电平
@@ -75,6 +78,8 @@ typedef enum{
     GPIO_LEVEL_HIGH = 1   //高电平
 }GPIO_LEVEL;
 ```
+
+---
 
 #### GPIO_INT_TYPE
 
@@ -91,6 +96,7 @@ typedef enum {
 }GPIO_INT_TYPE;
 ```
 
+---
 
 
 ## 二：结构体类型
@@ -105,6 +111,8 @@ typedef struct{
 }GPIO_INT_callback_param_t;
 ```
 
+---
+
 #### PCallbackINT
 
 中断回调函数类型
@@ -112,6 +120,8 @@ typedef struct{
 ```
 typedef void (*PCallbackINT)(GPIO_INT_callback_param_t* param);
 ```
+
+---
 
 #### GPIO_INT_config_t
 
@@ -124,6 +134,8 @@ typedef struct{
     PCallbackINT    callback;
 }GPIO_INT_config_t;
 ```
+
+---
 
 #### GPIO_config_t
 
@@ -138,8 +150,11 @@ typedef struct{
 }GPIO_config_t;
 ```
 
+---
+
 
 ## 三：功能函数接口
+
 
 #### GPIO_Init
 
