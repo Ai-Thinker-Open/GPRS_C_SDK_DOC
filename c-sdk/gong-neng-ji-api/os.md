@@ -151,7 +151,7 @@ HANDLE OS_CreateTask(
 
 * pTaskEntry:任务执行函数，PTASK_FUNC_T 类型
 * pParameter:需要传递给执行函数的参数
-* pStackAddr:自定义栈的地址，可以为`NULL `
+* pStackAddr:自定义栈的地址，暂时不支持自定义，即值只能为`NULL `
 * nStackSize:栈大小
 * nPriority:任务优先级，>=0，每个任务优先级不同，值越小任务优先级越大
 * nCreationFlags: `OS_CREATE_DEFAULT `/`0`：默认，创建任务后开始执行任务；OS_CREATE_SUSPENDED：创建任务后不执行任务，需要手动调用start函数开启任务运行
@@ -391,50 +391,359 @@ bool OS_IsEventAvailable(
     HANDLE hTask);
 ```
 
+##### 功能
+
+判断某个任务是否有事件可以接收
+
+##### 参数
+
+* hTask:任务句柄，`OS_CreateTask`的返回值
+
+##### 返回值
+
+* 是否有事件可以接收
+
+---
+
+#### OS_Malloc 
+
+```
 PVOID OS_Malloc (UINT32 nSize);
+```
+
+##### 功能
+
+动态分配内存
+
+##### 参数
+
+* nSize:动态分配内存长度，单位是字节
+
+##### 返回值
+
+* 动态分配内存块的首地址，若分配失败，则返回`NULL`
+
+---
+
+#### OS_Realloc
+
+```
 PVOID OS_Realloc(VOID *ptr, UINT32 nSize);
+```
+
+##### 功能
+
+重新分配内存
+
+##### 参数
+
+* ptr:动态分配的内存块首地址
+* nSize:新动态分配的内存块长度
+
+##### 返回值
+
+* 成功分配的内存块首地址，若为`NULL`，则分配失败
+
+---
+
+#### OS_Free   
+
+```
 bool  OS_Free   (PVOID pMemBlock);
+```
 
+##### 功能
+
+释放动态分配的内存
+
+##### 参数
+
+* pMemBlock:动态分配的内存块首地址
+
+##### 返回值
+
+* 是否释放成功
+
+---
+
+#### OS_GetHeapUsageStatus
+
+```
 bool OS_GetHeapUsageStatus(OS_Heap_Status_t* pOsHeapStatus);
+```
 
+##### 功能
+
+获取堆的使用情况
+
+##### 参数
+
+* pOsHeapStatus:堆使用情况
+
+##### 返回值
+
+* 是否获取堆状态成功
+
+---
+
+#### OS_CreateSemaphore
+
+```
 HANDLE OS_CreateSemaphore(
     UINT32 nInitCount // Specify the initial count of the semaphore
     );
+```
 
+##### 功能
+
+创建一个信号量
+
+##### 参数
+
+* nInitCount:信号量初始化值，0表示资源被占用，n表示有n个资源值，每次wait将会等待资源值并减一，release操作将会将资源值加一
+
+#### 返回值
+
+* 信号量句柄，如果失败，返回`NULL`
+
+---
+
+#### OS_DeleteSemaphore
+
+```
 bool OS_DeleteSemaphore(
     HANDLE hSem);
+```
 
+##### 功能
+
+删除信号量
+
+##### 参数
+
+* hSem:信号量句柄，`OS_CreateSemaphore`的返回值
+
+##### 返回值
+
+* 信号量是否删除成功
+
+---
+
+#### OS_WaitForSemaphore
+
+```
 bool OS_WaitForSemaphore(
     HANDLE hSem,    // Specify the handle to a counting semaphore
     UINT32 nTimeOut // the time-out value
     );
+```
 
+##### 功能
+
+等待信号量知道资源值大于0，并将资源值减一
+
+##### 参数
+
+* hSem:信号量句柄，`OS_CreateSemaphore`的返回值
+* nTimeOut:超时值，暂时保留，即值为`OS_WAIT_FOREVER`
+
+##### 返回值
+
+* 是否成功获取到信号量（资源值）
+
+---
+
+#### OS_ReleaseSemaphore
+
+```
 bool OS_ReleaseSemaphore(
     HANDLE hSem //Specify the counting semaphore
     );
+```
 
+##### 功能
 
+释放信号量，即资源值加一
 
+##### 参数
+
+* hSem:信号量句柄，`OS_CreateSemaphore`的返回值
+
+##### 返回值
+
+* 是否释放信号量（资源值）成功
+
+---
+
+#### OS_CreateMutex
+
+```
 HANDLE OS_CreateMutex(void);
+```
 
+##### 功能
+
+创建一个互斥量
+
+##### 参数
+
+无
+
+##### 返回值
+
+* 互斥量句柄，如果失败，返回`NULL`
+
+---
+
+#### OS_DeleteMutex
+
+```
 void OS_DeleteMutex(HANDLE mutex);
+```
 
+##### 功能
+
+删除互斥量
+
+##### 参数
+
+* mutex:互斥量句柄，`OS_CreateMutex`的返回值
+
+##### 返回值
+
+无
+
+---
+
+#### OS_LockMutex
+
+```
 void OS_LockMutex(HANDLE mutex);
+```
 
+##### 功能
+
+锁互斥量，即占用资源
+
+##### 参数
+
+* mutex:互斥量句柄，`OS_CreateMutex`的返回值
+
+##### 返回值
+
+无
+
+---
+
+#### OS_UnlockMutex
+
+```
 void OS_UnlockMutex(HANDLE mutex);
+```
 
+##### 功能
 
-/********************************************************************/
-//////////////////////////////timer///////////////////////////////////
+释放互斥量，即释放资源
 
+##### 参数
+
+* mutex:互斥量句柄，`OS_CreateMutex`的返回值
+
+##### 返回值
+无
+
+---
+
+#### OS_CALLBACK_FUNC_T
+
+```
 typedef void (*OS_CALLBACK_FUNC_T)(void* param);
-/**
-  *
-  * @param hTask Task handle that must have OS_WaitEvent(hTask.....)
-  *
-  */
+```
+
+##### 功能
+
+回调函数，由用户定义
+
+##### 参数
+
+* param：用户传入的参数
+
+##### 返回值
+
+无
+
+---
+
+#### OS_StartCallbackTimer
+
+```
 bool OS_StartCallbackTimer(HANDLE hTask, UINT32 ms, OS_CALLBACK_FUNC_T callback, void* param);
+```
 
+##### 功能
+
+开始软件计时器，设定时间到了后会触发回调函数
+
+##### 参数
+
+* hTask:任务句柄，这个指定的任务里必须包含`OS_WaitEvent`函数调用（比如可以传主任务），否则不会触发回调
+* ms：定时时间
+* callback：回调函数
+* param：传入回调函数的参数
+
+##### 返回值
+
+* 创建定时器是否成功
+
+---
+
+#### OS_StopCallbackTimer
+
+```
 bool OS_StopCallbackTimer(HANDLE hTask, OS_CALLBACK_FUNC_T callback, void *param);
+```
 
+##### 功能
+
+停止软件计时器
+
+##### 参数
+
+* hTask:任务句柄，这个指定的任务里必须包含`OS_WaitEvent`函数调用（比如可以传主任务），否则不会触发回调
+* callback：回调函数
+* param：传入回调函数的参数
+
+##### 返回值
+
+* 停止定时器是否成功
+
+---
+
+#### OS_QueryCallbackTimer
+
+```
 uint32_t OS_QueryCallbackTimer(HANDLE hTask, OS_CALLBACK_FUNC_T callback, void *param);
+```
+
+##### 功能
+
+查询软件计时器还剩多少时间结束
+
+##### 参数
+
+* hTask:任务句柄，这个指定的任务里必须包含`OS_WaitEvent`函数调用（比如可以传主任务），否则不会触发回调
+* callback：回调函数
+* param：传入回调函数的参数
+
+##### 返回值
+
+* 定时器离结束剩余的时间
+
+---
+
+
+
+
+
+
+
