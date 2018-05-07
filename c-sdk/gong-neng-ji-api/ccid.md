@@ -3,6 +3,8 @@ ICCID(Integrate circuit card identity 集成电路卡识别码)
 
 ICCD是SIM卡的唯一标识,长度为20的字符串。
 
+例程：[demo/iccid](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/iccid/src/demo_iccid.c)
+
 ## 函数
 
 #### SIM_GetICCID
