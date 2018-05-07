@@ -6,7 +6,9 @@ GPS
 例程：[demo/gps](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/gps/src/demo_gps.c)
 
 
-## GPS_Open
+## 函数
+
+#### GPS_Open
 
 ```
 bool GPS_Open(UART_Callback_t gpsReceivedCallback);
@@ -14,7 +16,7 @@ bool GPS_Open(UART_Callback_t gpsReceivedCallback);
 
 ##### 功能
 
-开启GPS
+开启GPS电源，GPS进入工作状态
 
 ##### 参数
 
@@ -24,5 +26,23 @@ bool GPS_Open(UART_Callback_t gpsReceivedCallback);
 
 * 是否成功打开GPS
 
-#### 
+#### GPS_Close
+
+```
 bool GPS_Close();
+```
+
+##### 功能
+
+关闭GPS电源
+
+##### 参数
+
+无
+
+##### 返回值
+
+是否成功关闭GPS
+
+
+
