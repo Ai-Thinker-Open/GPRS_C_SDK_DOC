@@ -24,9 +24,9 @@
 * [开始第一份代码](c-sdk/kai-shi-di-yi-fen-dai-ma.md)
 * [功能及API](c-sdk/gong-neng-ji-api.md)
   * [GPIO](c-sdk/gong-neng-ji-api/gpio.md)
-  * [OS](c-sdk/gong-neng-ji-api/os.md)
   * ADC
   * UART
+  * [OS](c-sdk/gong-neng-ji-api/os.md)
   * IIC
   * SPI
   * CCID
