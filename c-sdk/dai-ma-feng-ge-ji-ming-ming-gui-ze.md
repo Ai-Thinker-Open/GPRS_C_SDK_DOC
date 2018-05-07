@@ -36,7 +36,7 @@ CSDK使用统一的代码风格，简要概括为以下几个点：
 
 #### tab还是空格？
 
-不使用<kbd>tab</kbd>，编辑器设置<kbd>tab</kd>为4空格替换
+不使用<kbd>tab</kbd>，编辑器设置<kbd>tab</kbd>为4空格替换
 
 
 
