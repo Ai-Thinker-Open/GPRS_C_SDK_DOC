@@ -145,7 +145,7 @@ void AppMainTask(VOID *pData)
 
 ![](/assets/coolwatcher_trace_settings.png)
 
-* 程序中需要输出调试信息可以调用`api_debug.h`中的`Trace(uint16_t nIndex,PCSTR fmt, ...)`函数，其中 `nIndex`就是对应tracer设置中的`MMI 01` ~ `MMI 16`
+* 程序中需要输出调试信息可以调用`api_debug.h`中的`bool Trace(uint16_t nIndex,const char* fmt, ...)`函数，其中 `nIndex`就是对应tracer设置中的`MMI 01` ~ `MMI 16`
 
 #### Tracer使用容易遇到的问题
 

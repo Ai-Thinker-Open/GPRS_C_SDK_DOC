@@ -1,7 +1,20 @@
 GPIO (General Purpose Input Output)通用输入输出接口
 ===
 
+
+要保证引脚功能可以正常使用，在配置IO之前必须将对应IO口的电源打开，使用
+```
+bool PM_PowerEnable(Power_Type_t powerType, bool isOn)
+```
+函数来打开对应的IO口电源
+
+模组引脚除了通用IO功能外，部分引脚还有复用功能，具体见[开发板中的引脚图](../../ying-jian/kai-fa-ban-pudding.md/#引脚图)
+
+
+
 例示代码请参考[CSDK demo/gpio](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/gpio/src/demo_gpio.c)
+
+---
 
 
 ## 一：枚举类型
