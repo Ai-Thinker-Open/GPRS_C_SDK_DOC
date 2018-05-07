@@ -1,6 +1,9 @@
 GPIO (General Purpose Input Output)通用输入输出接口
 ===
 
+例示代码请参考[CSDK demo/gpio](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/gpio/src/demo_gpio.c)
+
+
 ## 一：枚举类型
 
 #### GPIO_PIN
