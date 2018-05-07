@@ -6,7 +6,20 @@ GPIO (General Purpose Input Output)通用输入输出接口
 ```
 bool PM_PowerEnable(Power_Type_t powerType, bool isOn)
 ```
-函数来打开对应的IO口电源
+函数来打开对应的IO口电源,不同IO口对应的电源如下：
+```
+typedef enum{
+    POWER_TYPE_VPAD = 0,            // GPIO0  ~ GPIO7  and GPIO25 ~ GPIO36    2.8V   //always on
+    POWER_TYPE_MMC,                 // GPIO8  ~ GPIO13                        1.9V
+    POWER_TYPE_LCD,                 // GPIO14 ~ GPIO18                        1.9V
+    POWER_TYPE_CAM,                 // GPIO19 ~ GPIO24                        1.9V
+    POWER_TYPE_MAX
+}Power_Type_t;
+```
+
+> 比如：
+* 需要使用GPIO5，则需要调用`PM_PowerEnable(POWER_TYPE_VPAD,true);`
+* 需要调用I2C2,因为I2C2是复用IO19和20，所以调用`PM_PowerEnable(POWER_TYPE_CAM,true);`
 
 模组引脚除了通用IO功能外，部分引脚还有复用功能，具体见[开发板中的引脚图](../../ying-jian/kai-fa-ban-pudding.md/#引脚图)
 
