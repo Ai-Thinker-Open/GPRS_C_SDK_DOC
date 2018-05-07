@@ -28,10 +28,10 @@
   * [ADC](c-sdk/gong-neng-ji-api/adc.md)
   * [UART](c-sdk/gong-neng-ji-api/uart.md)
   * [OS](c-sdk/gong-neng-ji-api/os.md)
+  * [IMEI](c-sdk/gong-neng-ji-api/imei.md)
+  * CCID
   * IIC
   * SPI
-  * CCID
-  * IMEI
   * GPS
   * time
   * [FS\(文件系统\)\(储存数据到flash或T卡\)](c-sdk/gong-neng-ji-api/fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.md)
