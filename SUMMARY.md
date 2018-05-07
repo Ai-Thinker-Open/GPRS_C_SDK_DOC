@@ -29,7 +29,7 @@
   * [UART](c-sdk/gong-neng-ji-api/uart.md)
   * [OS](c-sdk/gong-neng-ji-api/os.md)
   * [IMEI](c-sdk/gong-neng-ji-api/imei.md)
-  * CCID
+  * [ICCID](c-sdk/gong-neng-ji-api/ccid.md)
   * IIC
   * SPI
   * GPS
