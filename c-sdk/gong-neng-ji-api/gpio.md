@@ -158,68 +158,133 @@ bool GPIO_Init(GPIO_config_t config);
 
 ----
 
-#### GPIO_Init
+#### GPIO_GetConfig
 
 ```
-bool GPIO_Init(GPIO_config_t config);
+void GPIO_GetConfig(GPIO_PIN pin,GPIO_config_t* config);
 ```
 
 ##### 功能
 
-初始化IO
+获取GPIO配置
 
 ##### 参数
 
-* config：初始化配置
+* config：GPIO配置变量地址
 
 ##### 返回值
 
-* bool：配置成功/失败
+---
+
+
+#### GPIO_SetLevel
+
+```
+bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
+```
+
+##### 功能
+
+设置GPIO电平
+
+##### 参数
+
+* gpioConf：GPIO初始化配置变量
+* level:电平高低
+
+##### 返回值
+
+* bool：是否设置成功
 
 ---
 
 
 
+#### GPIO_Set
+
+```
+bool GPIO_Set(GPIO_PIN pin, GPIO_LEVEL  level);
+```
+
+##### 功能
+
+设置GPIO电平，与`GPIO_SetLevel`功能一样，只是参数不一样
+
+##### 参数
+
+* pin:GPIO口
+* level:电平高低
+
+##### 返回值
+
+* bool：是否设置成功
+
+---
+
+
+#### GPIO_GetLevel
+
+```
+bool GPIO_GetLevel(GPIO_config_t gpioConf, GPIO_LEVEL* level);
+```
+
+##### 功能
+
+获取GPIO电平
+
+##### 参数
+
+* gpioConf:GPIO初始化配置变量
+* level:电平高低结果返回值，变量指针
+
+##### 返回值
+
+* bool：是否获取成功
+
+---
+
+
+#### GPIO_Get
+
+```
+bool GPIO_Get(GPIO_PIN pin, GPIO_LEVEL* level);
+```
+
+##### 功能
+
+获取GPIO电平，功能与`GPIO_GetLevel`一样，只是参数不同
+
+##### 参数
+
+* pin:GPIO口
+* level:电平高低结果返回值，变量指针
+
+##### 返回值
+
+* bool：是否获取成功
+
+---
 
 
 
-/// \brief  void GPIO_GetConfig(GPIO_PIN pin,GPIO_config_t* config);
-/// \param  GPIO_PIN pin,  set the number of gpio
-/// \param  GPIO_config_t* config, set the GPIO_config_t struct
-/// \return void
-#define GPIO_GetConfig                              CSDK_FUNC(GPIO_GetConfig)
+#### GPIO_Close
 
-/// \brief  bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
-/// \param  GPIO_config_t gpioConf, set the GPIO_config_t struct
-/// \param  GPIO_LEVEL  level,  set the  gpio level high or low
-/// \return bool
-#define GPIO_SetLevel                               CSDK_FUNC(GPIO_SetLevel)
+```
+bool GPIO_Close(GPIO_PIN pin);
+```
 
-/// \brief  bool GPIO_Set(GPIO_PIN pin, GPIO_LEVEL  level);
-/// \param  GPIO_PIN pin,  set the number of gpio
-/// \param  GPIO_LEVEL  level,  set the  gpio level high or low
-/// \return bool
-#define GPIO_Set                                    CSDK_FUNC(GPIO_Set)
+##### 功能
 
-/// \brief  bool GPIO_GetLevel(GPIO_config_t gpioConf, GPIO_LEVEL* level);
-/// \param  GPIO_config_t gpioConf, set the GPIO_config_t struct
-/// \param  GPIO_LEVEL*  level,  get the  gpio level high or low
-/// \return bool
-#define GPIO_GetLevel                               CSDK_FUNC(GPIO_GetLevel)
+关闭GPIO口，复位GPIO到默认状态
 
-/// \brief  bool GPIO_Get(GPIO_PIN pin, GPIO_LEVEL* level);
-/// \param  GPIO_PIN pin,  set the number of gpio
-/// \param  GPIO_LEVEL*  level,  get the  gpio level high or low
-/// \return bool
-#define GPIO_Get                                    CSDK_FUNC(GPIO_Get)
+##### 参数
 
-/// \brief  bool GPIO_Close(GPIO_PIN pin);
-/// \param  GPIO_PIN pin,  set the number of gpio
-/// \return bool
-#define GPIO_Close                                  CSDK_FUNC(GPIO_Close)
+* pin:GPIO口
+
+##### 返回值
+
+* bool：是否成功
+
+---
 
 
-
-
-
-#endif
