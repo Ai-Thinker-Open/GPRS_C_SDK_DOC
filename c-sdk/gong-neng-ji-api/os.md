@@ -11,7 +11,7 @@
 
 #### OS_WAIT_FOREVER 
 
-阻塞等待（永远等待）
+超时时间特殊值，阻塞等待（永远等待）
 
 ```
 #define OS_WAIT_FOREVER 0xFFFFFFFF
@@ -21,7 +21,7 @@
 
 #### OS_NO_WAIT 
 
-不等待
+超时时间特殊值，不等待
 
 ```
 #define OS_NO_WAIT 0x0
@@ -31,7 +31,7 @@
 
 #### OS_EVENT_PRI_NORMAL 
 
-事件优先级普通
+事件优先级普通,`OS_SendEvent`的nOption参数的值
 
 ```
 #define OS_EVENT_PRI_NORMAL 0
@@ -41,13 +41,35 @@
 
 #### OS_EVENT_PRI_URGENT 
 
-事件优先级紧急
+事件优先级紧急，`OS_SendEvent`的nOption参数的值
+
 
 ```
 #define OS_EVENT_PRI_URGENT 1
 ```
 
 ---
+
+#### OS_CREATE_DEFAULT   
+
+函数`OS_CreateTask`的`nCreationFlags`参数的值，表示创建任务后自动开始执行任务
+
+```
+#define OS_CREATE_DEFAULT   0
+```
+
+---
+
+#### OS_CREATE_SUSPENDED 
+
+函数`OS_CreateTask`的`nCreationFlags`参数的值，表示创建任务后不自动开始执行任务
+
+```
+#define OS_CREATE_SUSPENDED 1
+```
+
+---
+
 
 ## 二：结构体
 
@@ -130,7 +152,11 @@ HANDLE OS_CreateTask(
 * pTaskEntry:任务执行函数，PTASK_FUNC_T 类型
 * pParameter:需要传递给执行函数的参数
 * pStackAddr:自定义栈的地址，可以为`NULL `
-* 
+* nStackSize:栈大小
+* nPriority:任务优先级，>=0，每个任务优先级不同，值越小任务优先级越大
+* nCreationFlags: `OS_CREATE_DEFAULT `/`0`：默认，创建任务后开始执行任务；OS_CREATE_SUSPENDED：创建任务后不执行任务，需要手动调用start函数开启任务运行
+* nTimeSlice:保留，值为0
+* pTaskName:任务名称
 
 ##### 返回值
 
@@ -138,45 +164,232 @@ HANDLE OS_CreateTask(
 
 ---
 
+#### OS_StartTask
+
+```
 void OS_StartTask(
     HANDLE pHTask,
     PVOID pParameter);
+```
 
+##### 功能
+
+开始执行任务
+
+##### 参数
+
+* pHTask:任务句柄，`OS_CreateTask`的返回值
+* pParameter:需要传给任务函数的参数
+
+#####返回值
+
+无
+
+---
+
+#### OS_StopTask
+
+```
 void OS_StopTask(
     HANDLE pHTask);
+```
 
+##### 功能
+
+停止任务执行
+
+##### 参数
+
+* pHTask:任务句柄，`OS_CreateTask`的返回值
+
+##### 返回值
+
+无
+
+---
+
+#### OS_DeleteTask
+
+```
 bool OS_DeleteTask(
     HANDLE hTask);
+```
 
-UINT32 OS_SuspendTask(
+##### 功能
+
+删除任务
+
+##### 参数
+
+* hTask:任务句柄，`OS_CreateTask`的返回值
+
+##### 返回值
+
+* 删除任务是否成功
+
+---
+
+#### OS_SuspendTask
+
+```
+bool OS_SuspendTask(
     HANDLE hTask);
+```
 
+##### 功能
+
+挂起线程
+
+##### 参数
+
+* hTask:任务句柄，`OS_CreateTask`的返回值
+
+##### 返回值
+
+* 挂起是否成功
+
+---
+
+#### OS_ResumeTask
+
+```
 bool OS_ResumeTask(
     HANDLE hTask);
+```
 
+##### 功能
+
+继续任务
+
+##### 参数
+
+* hTask:任务句柄，`OS_CreateTask`的返回值
+
+##### 返回值
+
+* 是否成功
+
+---
+
+#### OS_Sleep
+
+```
 bool OS_Sleep(UINT32 nMillisecondes);
+```
+
+##### 功能
+
+阻塞毫秒级延时
+
+##### 参数
+
+* nMillisecondes:阻塞延迟时间，单位毫秒
+
+##### 返回值
+
+* 是否成功（始终为true）
+
+---
+
+#### OS_SleepUs
+
+```
 void OS_SleepUs(UINT32 us);
+```
 
+##### 功能
 
-#define OS_TIME_OUT_WAIT_FOREVER 0xFFFFFFFF
-#define OS_TIME_OUT_NO_WAIT      0x0
+阻塞微妙级延时
 
+##### 参数
+
+* us: 延时时间，单位微妙
+
+##### 返回值
+
+无
+
+---
+
+#### OS_WaitEvent
+
+```
 bool OS_WaitEvent(
     HANDLE   hTask,
     PVOID*   pEvent,
     UINT32   nTimeOut);
+```
 
+##### 功能
+
+阻塞等待事件
+
+##### 参数
+
+* hTask:任务句柄，`OS_CreateTask`的返回值
+* pEvent:事件值，来自`OS_SendEvent`的参数
+* nTimeOut:等待超时时间，目前只支持阻塞等待，即值必须为`OS_WAIT_FOREVER`
+
+##### 返回值
+
+* 成功等待到事件
+
+---
+
+#### OS_SendEvent
+
+```
 bool OS_SendEvent(
     HANDLE hTask,
     PVOID  pEvent,
     UINT32 nTimeOut,
     UINT16 nOption);
+```
 
+##### 功能
+
+向某个任务发送事件
+
+##### 参数
+
+* hTask:任务句柄，`OS_CreateTask`的返回值
+* pEvent：事件发送的数据（指针）
+* nTimeOut:超时时间，目前只支持阻塞等待，即值必须为`OS_WAIT_FOREVER`
+* nOption:事件选项，`OS_EVENT_PRI_NORMAL`：普通优先级，`OS_EVENT_PRI_URGENT`:紧急优先级
+
+##### 返回值
+
+* 事件是否发送成功
+
+---
+
+#### OS_ResetEventQueue
+
+```
 bool OS_ResetEventQueue(
     HANDLE hTask);
+```
 
+##### 功能
+
+重置事件队列
+
+##### 参数
+
+* hTask:任务句柄，`OS_CreateTask`的返回值
+
+##### 返回值
+
+* 是否重置成功
+
+---
+
+#### OS_IsEventAvailable
+
+```
 bool OS_IsEventAvailable(
     HANDLE hTask);
+```
 
 PVOID OS_Malloc (UINT32 nSize);
 PVOID OS_Realloc(VOID *ptr, UINT32 nSize);
