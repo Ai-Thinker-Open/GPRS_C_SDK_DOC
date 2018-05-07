@@ -154,7 +154,7 @@ HANDLE OS_CreateTask(
 * pStackAddr:自定义栈的地址，暂时不支持自定义，即值只能为`NULL `
 * nStackSize:栈大小
 * nPriority:任务优先级，>=0，每个任务优先级不同，值越小任务优先级越大
-* nCreationFlags: `OS_CREATE_DEFAULT `/`0`：默认，创建任务后开始执行任务；OS_CREATE_SUSPENDED：创建任务后不执行任务，需要手动调用start函数开启任务运行
+* nCreationFlags: `OS_CREATE_DEFAULT `/`0`：默认，创建任务后开始执行任务；`OS_CREATE_SUSPENDED`：创建任务后不执行任务，需要手动调用start函数开启任务运行
 * nTimeSlice:保留，值为0
 * pTaskName:任务名称
 
