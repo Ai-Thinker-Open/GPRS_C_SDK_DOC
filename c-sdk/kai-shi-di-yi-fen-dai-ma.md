@@ -3,7 +3,7 @@
 
 确保可以编译代码、下载固件到GPRS模块/开发板后，就可以开始了解如何写一份代码啦~~~~
 
-以下的代码可以在工程目录`demo/first`中找到
+以下的代码可以在工程目录[`demo/first`](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/tree/master/demo/first)中找到
 
 作为第一份代码，当然是从我们熟悉的hello wold做起呀~~~
 
