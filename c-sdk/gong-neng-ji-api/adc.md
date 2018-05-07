@@ -22,7 +22,7 @@ typedef enum
     ADC_CHANNEL_MAX
 }ADC_Channel_t;
 ```
------
+---
 
 #### ADC_Sample_Period_t
 
@@ -43,9 +43,87 @@ typedef enum
 } ADC_Sample_Period_t;//Acquisition Time Period
 ```
 
+---
+
 ## 二：结构体类型
 
+#### ADC_Config_t
+
+ADC配置信息，包含了通道值和采样周期
+
+```
+typedef struct
+{
+    ADC_Channel_t        channel;
+    ADC_Sample_Period_t  samplePeriod;
+}ADC_Config_t;
+```
+
+
 ## 三：功能函数
+
+#### ADC_Init
+
+```
+void ADC_Init(ADC_Config_t adcConfig);
+```
+
+##### 功能
+
+初始化ADC
+
+##### 参数
+
+* adcConfig：ADC配置信息
+
+##### 返回值
+
+无
+
+---
+
+#### ADC_Read
+
+```
+bool ADC_Read(ADC_Channel_t channel, uint16_t* value, uint16_t* mV);
+```
+
+##### 功能
+
+读取ADC值，包括数值（0~1023）和电压值(0~1.8v)
+
+##### 参数
+
+* channel:ADC通道选择
+* value:读取到的值，传入指针
+* mV:读取到的电压值，传入指针
+
+##### 返回值
+
+* bool：是否读取成功
+
+---
+
+#### ADC_Close
+
+```
+void ADC_Close(ADC_Channel_t channel);
+```
+
+##### 功能
+
+关闭ADC定期采样，当所有通道关闭后会释放ADC硬件资源
+
+##### 参数
+
+* channel:ADC通道选择
+
+##### 返回值
+
+无
+
+---
+
 
 
 
