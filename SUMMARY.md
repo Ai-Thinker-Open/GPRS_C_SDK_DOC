@@ -26,7 +26,7 @@
 * [功能及API](c-sdk/gong-neng-ji-api.md)
   * [GPIO](c-sdk/gong-neng-ji-api/gpio.md)
   * [ADC](c-sdk/gong-neng-ji-api/adc.md)
-  * UART
+  * [UART](c-sdk/gong-neng-ji-api/uart.md)
   * [OS](c-sdk/gong-neng-ji-api/os.md)
   * IIC
   * SPI
