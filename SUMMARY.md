@@ -32,7 +32,7 @@
   * [ICCID](c-sdk/gong-neng-ji-api/ccid.md)
   * [GPS](c-sdk/gong-neng-ji-api/gps.md)
   * [I2C](c-sdk/gong-neng-ji-api/iic.md)
-  * SPI
+  * [SPI](c-sdk/gong-neng-ji-api/spi.md)
   * time
   * [FS\(文件系统\)\(储存数据到flash或T卡\)](c-sdk/gong-neng-ji-api/fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.md)
   * GPRS网络\(基站\)
