@@ -39,7 +39,7 @@
   * [DNS](c-sdk/gong-neng-ji-api/dns.md)
   * [socket网络通信](c-sdk/gong-neng-ji-api/socketwang-luo-tong-xin.md)
   * [SSL/TLS](c-sdk/gong-neng-ji-api/ssltls.md)
-  * MQTT
+  * [MQTT](c-sdk/gong-neng-ji-api/mqtt.md)
   * PM\(电源管理\)
   * 电话
   * SMS\(短信\)
