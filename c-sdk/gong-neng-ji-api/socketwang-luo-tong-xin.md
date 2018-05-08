@@ -3,7 +3,7 @@ DNS
 
 域名解析服务，需要GPRS网络已经能正常使用的前提下使用
 
-例程：[demo/dns](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/dns/src/demo_dns.c)
+例程：[demo/socket](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/socket/src/demo_socket.c)
 
 
 ## 一：枚举类型
