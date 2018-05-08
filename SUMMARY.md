@@ -40,7 +40,7 @@
   * [socket网络通信](c-sdk/gong-neng-ji-api/socketwang-luo-tong-xin.md)
   * [SSL/TLS](c-sdk/gong-neng-ji-api/ssltls.md)
   * [MQTT](c-sdk/gong-neng-ji-api/mqtt.md)
-  * PM\(电源管理\)
+  * [PM\(电源管理\)](c-sdk/gong-neng-ji-api/pmdian-yuan-guan-740629.md)
   * 电话
   * SMS\(短信\)
   * FOTA\(远程固件升级\)
