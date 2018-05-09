@@ -21,6 +21,7 @@ install:
 script:
     # 自定义输出目录 gitbook build src dest
   - gitbook build . ./build/zh
+  - chmod +x ./deploy.sh
 
 # 分支白名单
 branches:
