@@ -20,7 +20,6 @@ install:
 # 构建脚本
 script:
     # 自定义输出目录 gitbook build src dest
-  - gitbook build . ./build
   - gitbook build . ./build/zh
 
 # 分支白名单
