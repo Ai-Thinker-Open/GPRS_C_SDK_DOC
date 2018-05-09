@@ -20,7 +20,7 @@ git config user.email $GIT_EMAIL
 
 git remote add upstream "https://$GITHUB_TOKEN@github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC.git"
 
-# comment below because we don't need history of gh-pages, adn use git push --force to cover history
+# comment below because we don't need history of gh-pages, and use git push --force to cover history
 # git fetch upstream
 
 # git reset upstream/gh-pages
