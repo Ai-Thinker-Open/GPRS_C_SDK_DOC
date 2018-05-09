@@ -7,7 +7,7 @@
 
 CSDK代码仓库：https://github.com/Ai-Thinker-Open/GPRS-C-SDK
 
-[点我在线阅读](https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/)
+[点我在线阅读](https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh)
 
 
 ## 关于模组
