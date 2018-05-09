@@ -43,6 +43,6 @@ branches:
 
 # 不使用travis的github pages构建功能，自定义脚本
 after_success:
-  - "deploy.sh"
+  - "./deploy.sh"
   
   
