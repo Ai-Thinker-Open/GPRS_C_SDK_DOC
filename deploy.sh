@@ -20,9 +20,10 @@ git config user.email $GIT_EMAIL
 
 git remote add upstream "https://$GITHUB_TOKEN@github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC.git"
 
-git fetch upstream
+# comment below because we don't need history of gh-pages, adn use git push --force to cover history
+# git fetch upstream
 
-git reset upstream/gh-pages
+# git reset upstream/gh-pages
 
 # echo "gprs.ai-thinker.com" > CNAME
 
