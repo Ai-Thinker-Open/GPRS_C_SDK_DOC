@@ -21,7 +21,6 @@ install:
 script:
     # 自定义输出目录 gitbook build src dest
   - gitbook build . ./build/zh
-  - chmod +x ./deploy.sh
 
 # 分支白名单
 branches:
@@ -44,6 +43,7 @@ branches:
 
 # 不使用travis的github pages构建功能，自定义脚本
 after_success:
-  - "./deploy.sh"
+  # - chmod +x ./deploy.sh
+  - bash ./deploy.sh
   
   
