@@ -30,4 +30,4 @@ git add -A
 
 git commit -m "rebuild pages at ${rev}"
 
-git push --force -q upstream HEAD:gh-pages
+git push --force upstream HEAD:gh-pages
