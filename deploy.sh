@@ -12,13 +12,17 @@ mv ./old/en ./en
 
 rm -rf ./old
 
-git initgit config user.name $GIT_NAME
+git init
+
+git config user.name $GIT_NAME
 
 git config user.email $GIT_EMAIL
 
 git remote add upstream "https://$GITHUB_TOKEN@github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC.git"
 
-git fetch upstream && git reset upstream/gh-pages
+git fetch upstream
+
+git reset upstream/gh-pages
 
 # echo "gprs.ai-thinker.com" > CNAME
 
