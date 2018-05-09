@@ -27,18 +27,22 @@ branches:
   only:
     - en # 只对 en 分支进行构建
 
-# GitHub Pages 部署
-deploy:
-  provider: pages
-  skip_cleanup: true
-  # 在项目仪表盘的 Settings -> Environment Variables 中配置
-  github_token: $GITHUB_TOKEN
-  # 将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起
-  local_dir: build
-  #fqdn: $CUSTOM_DOMAIN
-  name: $GIT_NAME
-  email: $GIT_EMAIL
-  on:
-    branch: en
+# # GitHub Pages 部署
+# deploy:
+#   provider: pages
+#   skip_cleanup: true
+#   # 在项目仪表盘的 Settings -> Environment Variables 中配置
+#   github_token: $GITHUB_TOKEN
+#   # 将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build/zh 目录一起
+#   local_dir: build/zh
+#   #fqdn: $CUSTOM_DOMAIN
+#   name: $GIT_NAME
+#   email: $GIT_EMAIL
+#   on:
+#     branch: master
+
+# 不使用travis的github pages构建功能，自定义脚本
+after_success:
+  - bash ./deploy.sh
   
-  
+
