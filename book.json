@@ -1,8 +1,8 @@
 {
     "title":"GPRS C SDK DOC",
-    "description": "GPRS C SDK 文档",
+    "description": "GPRS C SDK documention",
     "author":"Ai-Thinker",
-    "language": "zh-hans",
+    "language": "en",
     "root":".",
     "plugins": [
         "github",
@@ -24,7 +24,7 @@
             "defineWord" : ["Gitbook Use"]
         },
         "edit-link": {
-            "base": "https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master",
+            "base": "https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en",
             "label": ""
         },
         "sharing": {
@@ -35,23 +35,23 @@
             "instapaper": false,
             "vk": false,
             "all": [
-                "weibo",
                 "facebook",
                 "twitter",
                 "google",
                 "instapaper",
-                "vk"
+                "vk",
+                "weibo"
             ]
         },
         "my-toolbar": {
             "buttons": [
                 {
-                    "label": "English",
-                    "text":"English",
+                    "label": "中文",
+                    "text":"中文",
                     "icon": "fa fa-language",
                     "position": "left",
                     "target": "_self",
-                    "url": "https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en"
+                    "url": "https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh"
                 }
             ]
         },
