@@ -51,7 +51,7 @@
                     "icon": "fa fa-language",
                     "position": "left",
                     "target": "_self",
-                    "url": "https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/{{filepath_lang}}"
+                    "url": "https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"
                 }
             ]
         },
