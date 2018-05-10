@@ -11,7 +11,7 @@
         "-search",
         "search-pro",
         "edit-link",
-        "page-toc-button",
+        "anchor-navigation-ex",
         "sharing",
         "my-toolbar"
     ],
@@ -23,17 +23,9 @@
             "cutWordLib": "nodejieba",
             "defineWord" : ["Gitbook Use"]
         },
-        "simple-page-toc": {
-            "maxDepth": 4,
-            "skipFirstH1": false
-        },
         "edit-link": {
             "base": "https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master",
             "label": ""
-        },
-        "page-toc-button": {
-            "maxTocDepth": 2,
-            "minTocSize": 2
         },
         "sharing": {
             "weibo": true,
@@ -67,6 +59,18 @@
             "theme": "white",
             "family": "sans", 
             "size": 2 
+        },
+        "anchor-navigation-ex": {
+            "associatedWithSummary": false,
+            "showLevel": true,
+            "multipleH1": true,
+            "mode": "float",
+            "pageTop": {
+                "showLevelIcon": true,
+                "level1Icon": "fa fa-angle-double-right",
+                "level2Icon": "fa fa-angle-double-right",
+                "level3Icon": "fa fa-angle-double-right"
+            }
         }
     }
 }
