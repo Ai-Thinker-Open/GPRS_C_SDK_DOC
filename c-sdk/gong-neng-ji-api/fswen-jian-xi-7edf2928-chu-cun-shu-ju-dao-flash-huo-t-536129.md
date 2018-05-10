@@ -9,23 +9,23 @@ SDK当前未提供flash相关操作，但是提供了使用起来更为方便简
 例程：[demo/fs](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/fs/src/demo_fs.c)
 
 
-## 一：宏定义
+## 宏定义
 
-#### FS_TFLASH_ROOT
+### FS_TFLASH_ROOT
 
 TF卡开机自动挂载的位置
 
-```
+```c
 #define FS_TFLASH_ROOT "/t"
 ```
 
 ---
 
-#### FS_O_RDONLY
+### FS_O_RDONLY
 
 只读
 
-```
+```c
 #define FS_O_RDONLY                0
 ```
 
@@ -35,198 +35,198 @@ TF卡开机自动挂载的位置
 
 只写
 
-```
+```c
 #define FS_O_WRONLY                1
 ```
 
 ---
 
-#### FS_O_RDWR
+### FS_O_RDWR
 
 读写
 
-```
+```c
 #define FS_O_RDWR                  2
 ```
 
 ---
 
-#### FS_O_ACCMODE
+### FS_O_ACCMODE
 
 读写文件操作时，用于取出flag的低2位（判断文件权限）
 
-```
+```c
 #define FS_O_ACCMODE               3
 ```
 
 ---
 
-#### FS_O_CREAT
+### FS_O_CREAT
 
 如果文件存在，不产生影响，不存在则建立，返回成功
 如果文件存在且有`FS_O_EXCL`，则返回失败
 
-```
+```c
 #define FS_O_CREAT                 00100
 ```
 
 ---
 
-#### FS_O_EXCL
+### FS_O_EXCL
 
 如果它和`FS_O_CREAT`同时设定，且文件已经存在，则创建文件操作会失败，返回-1
 
-```
+```c
 #define FS_O_EXCL                  00200
 ```
 
 ---
 
-#### FS_O_TRUNC
+### FS_O_TRUNC
 
 如果文件存在，则以只写或只读打开，并删除文件之前的内容
 
-```
+```c
 #define FS_O_TRUNC                 01000
 ```
 
 ---
 
-#### FS_O_APPEND
+### FS_O_APPEND
 
 追加
 
-```
+```c
 #define FS_O_APPEND                02000
 ```
 
 ---
 
-#### FS_ATTR_MARK
+### FS_ATTR_MARK
 
 文件属性标记
 
-```
+```c
 #define FS_ATTR_MARK       0x0
 ```
 
 ---
 
-#### FS_ATTR_RO
+### FS_ATTR_RO
 
 文件属性只读
 
-```
+```c
 #define FS_ATTR_RO            0x00000001
 ```
 
 ---
 
-#### FS_ATTR_HIDDEN
+### FS_ATTR_HIDDEN
 
 文件属性隐藏
 
-```
+```c
 #define FS_ATTR_HIDDEN    0x00000002
 ```
 
 ---
 
-#### FS_ATTR_SYSTEM
+### FS_ATTR_SYSTEM
 
 文件属性系统文件
 
-```
+```c
 #define FS_ATTR_SYSTEM    0x00000004
 ```
 
 ---
 
-#### FS_ATTR_VOLUME
+### FS_ATTR_VOLUME
 
 卷标
 
-```
+```c
 #define FS_ATTR_VOLUME    0x00000008
 ```
 
 ---
 
-#### FS_ATTR_DIR
+### FS_ATTR_DIR
 
 文件夹
 
-```
+```c
 #define FS_ATTR_DIR           0x00000010
 ```
 
 ---
 
-#### FS_ATTR_ARCHIVE
+### FS_ATTR_ARCHIVE
 
 压缩文件
 
-```
+```c
 #define FS_ATTR_ARCHIVE   0x00000020
 ```
 
 ---
 
-#### FS_SEEK_SET
+### FS_SEEK_SET
 
 文件开头
 
-```
+```c
 #define FS_SEEK_SET                 0
 ```
 
 ---
 
-#### FS_SEEK_CUR
+### FS_SEEK_CUR
 
 当前位置
 
-```
+```c
 #define FS_SEEK_CUR                 1
 ```
 
 ---
 
-#### FS_SEEK_END
+### FS_SEEK_END
 
 末尾位置
 
-```
+```c
 #define FS_SEEK_END                 2
 ```
 
 ---
 
-#### FS_DEVICE_NAME_T_FLASH
+### FS_DEVICE_NAME_T_FLASH
 
 TF卡名称
 
-```
+```c
 #define FS_DEVICE_NAME_T_FLASH  "TF"
 ```
 
 ---
 
-#### FS_DEVICE_NAME_FLASH
+### FS_DEVICE_NAME_FLASH
 
 Flash名称
 
-```
+```c
 #define FS_DEVICE_NAME_FLASH    "FLASH"
 ```
 
 ---
 
-#### ERR_FS
+### ERR_FS
 
 错误信息,错误信息详细信息请看[api_inc_fs.h](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_inc_fs.h)
 
-```
+```c
 #define ERR_FS_IS_DIRECTORY                                -4200001
 #define ERR_FS_NOT_DIRECTORY                               -4200002
 #define ERR_FS_NO_DIR_ENTRY                                -4200003
@@ -279,13 +279,13 @@ Flash名称
 ---
 
 
-## 二：结构体类型
+## 结构体类型
 
-#### API_FS_INFO
+### API_FS_INFO
 
 文件系统空间信息，包括总空间和已经使用的空间信息
 
-```
+```c
 typedef struct
 {
     UINT64 totalSize;    // Total size
@@ -296,12 +296,12 @@ typedef struct
 ---
 
 
-## 三：功能函数
+## 功能函数
 
 
-#### API_FS_Open
+### API_FS_Open
 
-```
+```c
 int32_t  API_FS_Open(
     PCSTR    fileName,
     uint32_t operationFlag,
@@ -326,9 +326,9 @@ int32_t  API_FS_Open(
 
 ---
 
-#### API_FS_Close
+### API_FS_Close
 
-```
+```c
 int32_t  API_FS_Close(
     int32_t fd
 );
@@ -348,9 +348,9 @@ int32_t  API_FS_Close(
 
 ---
 
-#### API_FS_Read
+### API_FS_Read
 
-```
+```c
 int32_t  API_FS_Read(
     int32_t  fd,
     uint8_t* pBuffer,
@@ -374,9 +374,9 @@ int32_t  API_FS_Read(
 
 ---
 
-#### API_FS_Write
+### API_FS_Write
 
-```
+```c
 int32_t  API_FS_Write(
     int32_t  fd,
     uint8_t* pBuffer,
@@ -400,9 +400,9 @@ int32_t  API_FS_Write(
 
 ---
 
-#### API_FS_Flush
+### API_FS_Flush
 
-```
+```c
 uint32_t API_FS_Flush(
     int32_t fd
 );
@@ -422,9 +422,9 @@ uint32_t API_FS_Flush(
 
 ---
 
-#### API_FS_Create
+### API_FS_Create
 
-```
+```c
 int32_t API_FS_Create(
     PCSTR fileName,
     uint32_t mode
@@ -446,9 +446,9 @@ int32_t API_FS_Create(
 
 ---
 
-#### API_FS_Delete
+### API_FS_Delete
 
-```
+```c
 int32_t  API_FS_Delete(
     PCSTR fileName
 );
@@ -468,9 +468,9 @@ int32_t  API_FS_Delete(
 
 ---
 
-#### API_FS_Seek
+### API_FS_Seek
 
-```
+```c
 int64_t API_FS_Seek(
     int32_t  fd,
     int64_t  offset,
@@ -494,9 +494,9 @@ int64_t API_FS_Seek(
 
 ---
 
-#### API_FS_IsEndOfFile
+### API_FS_IsEndOfFile
 
-```
+```c
 int32_t API_FS_IsEndOfFile(
     int32_t fd
 );
@@ -516,9 +516,9 @@ int32_t API_FS_IsEndOfFile(
 
 ---
 
-#### API_FS_Rename
+### API_FS_Rename
 
-```
+```c
 int32_t API_FS_Rename(
     PCSTR oldName,
     PCSTR newName
@@ -540,9 +540,9 @@ int32_t API_FS_Rename(
 
 ---
 
-#### API_FS_GetFileName
+### API_FS_GetFileName
 
-```
+```c
 int32_t  API_FS_GetFileName(
     int32_t  fd,
     int32_t  nameBufferLen,
@@ -566,9 +566,9 @@ int32_t  API_FS_GetFileName(
 
 ---
 
-#### API_FS_GetFileSize
+### API_FS_GetFileSize
 
-```
+```c
 int64_t  API_FS_GetFileSize(
     int32_t fd
 );
@@ -588,9 +588,9 @@ int64_t  API_FS_GetFileSize(
 
 ---
 
-#### API_FS_GetDirSize
+### API_FS_GetDirSize
 
-```
+```c
 int64_t  API_FS_GetDirSize(
     PCSTR     fileName,
     uint64_t* size
@@ -612,9 +612,9 @@ int64_t  API_FS_GetDirSize(
 
 ---
 
-#### API_FS_GetCurDir
+### API_FS_GetCurDir
 
-```
+```c
 int32_t  API_FS_GetCurDir(
     uint32_t size,
     PSTR     pCurDir
@@ -636,9 +636,9 @@ int32_t  API_FS_GetCurDir(
 
 ---
 
-#### API_FS_ChangeDir
+### API_FS_ChangeDir
 
-```
+```c
 int32_t  API_FS_ChangeDir(
     PCSTR pDirName
 );
@@ -658,9 +658,9 @@ int32_t  API_FS_ChangeDir(
 
 ---
 
-#### API_FS_Mkdir
+### API_FS_Mkdir
 
-```
+```c
 int32_t API_FS_Mkdir(
     PCSTR fileName,
     uint32_t mode
@@ -682,9 +682,9 @@ int32_t API_FS_Mkdir(
 
 ---
 
-#### API_FS_Rmdir
+### API_FS_Rmdir
 
-```
+```c
 int32_t API_FS_Rmdir(
     PCSTR dirName
 );
@@ -704,9 +704,9 @@ int32_t API_FS_Rmdir(
 
 ---
 
-#### API_FS_GetFSInfo
+### API_FS_GetFSInfo
 
-```
+```c
 int32_t API_FS_GetFSInfo(
     PCSTR         pDevName,
     API_FS_INFO* pFsInfo

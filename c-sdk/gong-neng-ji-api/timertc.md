@@ -7,58 +7,58 @@ time（RTC）
 例程：[demo/time](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/time/src/demo_time.c)
 
 
-## 一：时间相关类型
+## 时间相关类型
 
-#### time_t
+### time_t
 
 用整数来表示时间
 
-```
+```c
 typedef long         time_t;
 ```
 
 ---
 
-#### clock_t
+### clock_t
 
 用整数来表示时间
 
-```
+```c
 typedef long         clock_t;
 ```
 
 ---
 
-## 二：宏定义
+## 宏定义
 
-## CLOCKS_PER_SEC
+### CLOCKS_PER_SEC
 
 系统clock转秒
 
-```
+```c
 #define CLOCKS_PER_SEC   (16384.0)
 ```
 
 ---
 
-## CLOCKS_PER_MSEC
+### CLOCKS_PER_MSEC
 
 系统clock转ms
 
-```
+```c
 #define CLOCKS_PER_MSEC  (16.384)
 ```
 
 ---
 
 
-## 三：结构体类型
+## 结构体类型
 
-#### tm
+### tm
 
 时间表示，包括年月日时分秒
 
-```
+```c
 typedef struct tm{
     int tm_sec;         /* 秒，范围从 0 到 59        */
     int tm_min;         /* 分，范围从 0 到 59        */
@@ -74,12 +74,12 @@ typedef struct tm{
 
 ---
 
-#### timeval_t
+### timeval_t
 
 时间，秒和毫秒表示
 （tv_usec这里实际上是毫秒不是微妙）
 
-```
+```c
 typedef struct timeval {
     long long    tv_sec;         /* seconds */
     long         tv_usec;        /* and microseconds!!!but millisecond instead here(实际数据是ms)!! */
@@ -88,11 +88,11 @@ typedef struct timeval {
 
 ---
 
-#### timezone_t
+### timezone_t
 
 时区类型
 
-```
+```c
 typedef struct timezone {
     int tz_minuteswest;
     int tz_dsttime;
@@ -101,11 +101,11 @@ typedef struct timezone {
 
 ---
 
-#### RTC_Time_t
+### RTC_Time_t
 
 RTC时间
 
-```
+```c
 typedef struct{
     uint16_t year;
     uint8_t  month;
@@ -119,12 +119,12 @@ typedef struct{
 
 ---
 
-## 四：功能函数
+## 功能函数
 
 
-#### gettimeofday
+### gettimeofday
 
-```
+```c
 int gettimeofday(timeval_t *tv, timezone_t *tz);
 ```
 
@@ -143,9 +143,9 @@ int gettimeofday(timeval_t *tv, timezone_t *tz);
 
 ---
 
-#### TIME_SetIsAutoUpdateRtcTime
+### TIME_SetIsAutoUpdateRtcTime
 
-```
+```c
 void TIME_SetIsAutoUpdateRtcTime(bool isAutoUpdate);
 ```
 
@@ -164,9 +164,9 @@ void TIME_SetIsAutoUpdateRtcTime(bool isAutoUpdate);
 
 ---
 
-#### TIME_IsAutoUpdateRtcTime
+### TIME_IsAutoUpdateRtcTime
 
-```
+```c
 bool TIME_IsAutoUpdateRtcTime();
 ```
 
@@ -184,9 +184,9 @@ bool TIME_IsAutoUpdateRtcTime();
 
 ---
 
-#### TIME_SetRtcTime
+### TIME_SetRtcTime
 
-```
+```c
 bool TIME_SetRtcTime(RTC_Time_t* time);
 ```
 
@@ -204,9 +204,9 @@ bool TIME_SetRtcTime(RTC_Time_t* time);
 
 ---
 
-#### TIME_GetRtcTIme
+### TIME_GetRtcTIme
 
-```
+```c
 bool TIME_GetRtcTIme(RTC_Time_t* time);
 ```
 
@@ -224,9 +224,9 @@ bool TIME_GetRtcTIme(RTC_Time_t* time);
 
 ---
 
-#### clock
+### clock
 
-```
+```c
 clock_t clock(void);
 ```
 

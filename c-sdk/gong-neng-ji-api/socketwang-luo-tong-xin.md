@@ -6,13 +6,13 @@ DNS
 例程：[demo/socket](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/socket/src/demo_socket.c)
 
 
-## 一：枚举类型
+## 枚举类型
 
 #### TCP_UDP_t
 
 TCP、UDP选择
 
-```
+```c
 typedef enum{
     TCP = 0,
     UDP =1
@@ -21,11 +21,11 @@ typedef enum{
 
 ---
 
-#### API_Socket_Error_t
+### API_Socket_Error_t
 
 错误信息
 
-```
+```c
 typedef enum{
     /** No error, everything OK. */
     API_SOCKET_ERROR_NONE = 0,
@@ -66,12 +66,12 @@ typedef enum{
 ```
 
 
-## 二：功能函数
+## 功能函数
 
 
-#### Socket_TcpipConnect
+### Socket_TcpipConnect
 
-```
+```c
 int      Socket_TcpipConnect(TCP_UDP_t tcpOrUdp, const char* ip,uint16_t port);
 ```
 
@@ -91,9 +91,9 @@ int      Socket_TcpipConnect(TCP_UDP_t tcpOrUdp, const char* ip,uint16_t port);
 
 ---
 
-#### Socket_TcpipWrite
+### Socket_TcpipWrite
 
-```
+```c
 int      Socket_TcpipWrite(int socketFd, uint8_t* data, uint16_t length);
 ```
 
@@ -113,9 +113,9 @@ int      Socket_TcpipWrite(int socketFd, uint8_t* data, uint16_t length);
 
 ---
 
-#### Socket_TcpipRead
+### Socket_TcpipRead
 
-```
+```c
 int      Socket_TcpipRead( int socketFd, uint8_t* data, uint16_t length);
 ```
 
@@ -135,9 +135,9 @@ int      Socket_TcpipRead( int socketFd, uint8_t* data, uint16_t length);
 
 ---
 
-#### Socket_TcpipClose
+### Socket_TcpipClose
 
-```
+```c
 bool     Socket_TcpipClose(int socketFd);
 ```
 

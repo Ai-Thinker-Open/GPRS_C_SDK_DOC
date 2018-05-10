@@ -1,11 +1,76 @@
 {
+    "title":"GPRS C SDK DOC",
+    "description": "GPRS C SDK 文档",
+    "author":"Ai-Thinker",
+    "language": "zh-hans",
+    "root":".",
     "plugins": [
         "github",
-        "splitter"
+        "splitter",
+        "fontsettings",
+        "-search",
+        "search-pro",
+        "edit-link",
+        "anchor-navigation-ex",
+        "sharing",
+        "my-toolbar"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"
+        },
+        "search-pro": {
+            "cutWordLib": "nodejieba",
+            "defineWord" : ["Gitbook Use"]
+        },
+        "edit-link": {
+            "base": "https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master",
+            "label": ""
+        },
+        "sharing": {
+            "weibo": true,
+            "facebook": true,
+            "twitter": true,
+            "google": false,
+            "instapaper": false,
+            "vk": false,
+            "all": [
+                "weibo",
+                "facebook",
+                "twitter",
+                "google",
+                "instapaper",
+                "vk"
+            ]
+        },
+        "my-toolbar": {
+            "buttons": [
+                {
+                    "label": "English",
+                    "text":"English",
+                    "icon": "fa fa-language",
+                    "position": "left",
+                    "target": "_self",
+                    "url": "https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en"
+                }
+            ]
+        },
+        "fontsettings": {
+            "theme": "white",
+            "family": "sans", 
+            "size": 2 
+        },
+        "anchor-navigation-ex": {
+            "associatedWithSummary": false,
+            "showLevel": true,
+            "multipleH1": false,
+            "mode": "float",
+            "pageTop": {
+                "showLevelIcon": true,
+                "level1Icon": "fa fa-angle-double-right",
+                "level2Icon": "fa fa-angle-double-right",
+                "level3Icon": "fa fa-angle-double-right"
+            }
         }
     }
 }

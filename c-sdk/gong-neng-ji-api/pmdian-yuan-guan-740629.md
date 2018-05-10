@@ -8,13 +8,13 @@ Power Manager 电源管理
 例程：[demo/pm](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/pm/src/demo_pm.c)
 
 
-## 一：枚举类型
+## 枚举类型
 
-#### Power_Type_t
+### Power_Type_t
 
 外设电源
 
-```
+```c
 typedef enum{
     POWER_TYPE_VPAD = 0,            // GPIO0  ~ GPIO7  and GPIO25 ~ GPIO36    2.8V   //always on
     POWER_TYPE_MMC,                 // GPIO8  ~ GPIO13                        1.9V
@@ -26,11 +26,11 @@ typedef enum{
 
 ---
 
-#### Power_On_Cause_t
+### Power_On_Cause_t
 
 开机原因
 
-```
+```c
 typedef enum{
     POWER_ON_CAUSE_KEY = 0  ,
     POWER_ON_CAUSE_CHARGE   ,
@@ -44,12 +44,12 @@ typedef enum{
 ---
 
 
-## 二：功能函数
+## 功能函数
 
 
-#### PM_PowerEnable
+### PM_PowerEnable
 
-```
+```c
 bool PM_PowerEnable(Power_Type_t powerType, bool isOn);
 ```
 
@@ -68,9 +68,9 @@ bool PM_PowerEnable(Power_Type_t powerType, bool isOn);
 
 ---
 
-#### PM_SleepMode
+### PM_SleepMode
 
-```
+```c
 void PM_SleepMode(bool isSleepMode);
 ```
 
@@ -89,9 +89,9 @@ void PM_SleepMode(bool isSleepMode);
 
 ---
 
-#### PM_Voltage
+### PM_Voltage
 
-```
+```c
 uint16_t PM_Voltage(uint8_t* percent);
 ```
 
@@ -109,9 +109,9 @@ uint16_t PM_Voltage(uint8_t* percent);
 
 ---
 
-#### PM_ShutDown
+### PM_ShutDown
 
-```
+```c
 void PM_ShutDown();
 ```
 
@@ -129,9 +129,9 @@ void PM_ShutDown();
 
 ---
 
-#### PM_Restart
+### PM_Restart
 
-```
+```c
 void PM_Restart();
 ```
 

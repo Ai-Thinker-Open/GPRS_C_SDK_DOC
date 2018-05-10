@@ -6,13 +6,13 @@ CALL 电话语音电话
 例程：[demo/call](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/call/src/demo_call.c)
 
 
-## 一：枚举类型
+## 枚举类型
 
-#### CALL_DTMF_Gain_t
+### CALL_DTMF_Gain_t
 
 DTMF 增益
 
-```
+```c
 typedef enum
 {
     CALL_DTMF_GAIN_0dB = 0,
@@ -26,11 +26,11 @@ typedef enum
 
 ---
 
-#### Power_On_Cause_t
+### Power_On_Cause_t
 
 错误信息
 
-```
+```c
 typedef enum{
     CALL_ERROR_NONE              = 0  ,
     CALL_ERROR_NO_DIAL_TONE           ,  //TERMINAL USER HAS POWERED OFF
@@ -48,12 +48,12 @@ typedef enum{
 ---
 
 
-## 二：功能函数
+## 功能函数
 
 
-#### CALL_Dial
+### CALL_Dial
 
-```
+```c
 bool CALL_Dial(const char* number);
 ```
 
@@ -71,9 +71,9 @@ bool CALL_Dial(const char* number);
 
 ---
 
-#### CALL_HangUp
+### CALL_HangUp
 
-```
+```c
 bool CALL_HangUp();
 ```
 
@@ -91,9 +91,9 @@ bool CALL_HangUp();
 
 ---
 
-#### CALL_Answer
+### CALL_Answer
 
-```
+```c
 bool CALL_Answer();
 ```
 
@@ -111,9 +111,9 @@ bool CALL_Answer();
 
 ---
 
-#### CALL_DTMF
+### CALL_DTMF
 
-```
+```c
 bool CALL_DTMF(char dtmf, CALL_DTMF_Gain_t attenuation, uint8_t duration, uint8_t speakerGain, bool send);
 ```
 

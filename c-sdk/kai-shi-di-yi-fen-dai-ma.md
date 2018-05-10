@@ -9,7 +9,7 @@
 
 所以我们的**目标**：一个完整的代码架构，并能不断间隔打印`Hello GPRS`即可
 
-## 零：目录
+## 目录
 
 |  目录  |  描述  |
 |  ---   |  ---  |
@@ -22,12 +22,12 @@
 |init    |  系统初始化的目录，可以不用理会，不建议改动 |
 |platform|  库文件等，请确保`platform/csdk`文件夹不为空|
 
-## 一：建立文件夹、文件
+## 建立文件夹、文件
 
 * 新建`demo/fisrt `文件夹，并新建`Makefile`文件，注意只是首字母大写，或者全是小写
 填入以下内容：
 
-```
+```c
 # Name of the module
 LOCAL_NAME := demo/first
 
@@ -67,16 +67,18 @@ include ${SOFT_WORKDIR}/platform/compilation/cust_rules.mk
 * 新建`demo/first/src`文件夹,并新建`demo_first.c`文件
 
 
-## 二：代码
+## 代码
 
 代码可以在工程目录`demo/first/src/demo_first.c`中找到
 
-#### （1）编写程序入口，并创建主任务，用来接收来自底层的事件
+主要要做的事情是:编写程序入口，并创建主任务，用来接收来自底层的事件,同时建立一个任务,不停打印信息
 
 
-1. 程序入口，创建主任务（这里使用到了操作系统相关的函数，如果没有接触过，请不要惧怕，可以先照着做）
+### 入口及主任务
 
-```
+程序入口，创建主任务（这里使用到了操作系统相关的函数，如果没有接触过，请不要惧怕，可以先照着做）
+
+```c
 
 #include "stdbool.h"
 #include "stdint.h"
@@ -104,9 +106,9 @@ void first_Main(void)
 
 调用`OS_CreateTask`来创建一个任务，具体参数含义可以见OS部分，这里先不阐述。调用`OS_SetUserMainHandle`将刚刚创建的任务指针（句柄）传给底层，让底层知道给那个任务发送事件，**这个是必须的**
 
-2. 主任务处理
+### 主任务处理及打印任务
 
-```
+```c
 
 #define SECOND_TASK_STACK_SIZE    (2048 * 2)
 #define SECOND_TASK_PRIORITY      1
@@ -157,7 +159,7 @@ void MainTask(void *pData)
 
 然后主任务阻塞等待来自底层的事件，并在`EventDispatch`函数中处理，这里暂时没有处理任何事件，所有事件可以在`api_event.h`中找到，每个事件的参数也有注释
 
-## 三：编译并下载固件看验证
+## 编译并下载固件看验证
 
 按照前面的编译、下载方法下载到开发板运行，打开调试工具可以看到打印的`Hello GPRS`
 

@@ -6,13 +6,13 @@ DNS
 例程：[demo/dns](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/dns/src/demo_dns.c)
 
 
-## 一：枚举类型
+## 枚举类型
 
-#### DNS_Status_t
+### DNS_Status_t
 
 DNS状态
 
-```
+```c
 typedef enum{
     DNS_STATUS_ERROR = -1,
     DNS_STATUS_OK    =  0,
@@ -24,12 +24,12 @@ typedef enum{
 ---
 
 
-## 二：功能函数
+## 功能函数
 
 
-#### DNS_CALLBACK_FUNC_T
+### DNS_CALLBACK_FUNC_T
 
-```
+```c
 typedef VOID (*DNS_CALLBACK_FUNC_T)(DNS_Status_t status, void* param);
 ```
 
@@ -48,9 +48,9 @@ DNS解析回调函数
 
 ---
 
-#### DNS_GetHostByName
+### DNS_GetHostByName
 
-```
+```c
 DNS_Status_t     DNS_GetHostByName(const char* domain, char* ip);
 ```
 
@@ -70,9 +70,9 @@ DNS_Status_t     DNS_GetHostByName(const char* domain, char* ip);
 
 ---
 
-#### DNS_GetHostByNameEX
+### DNS_GetHostByNameEX
 
-```
+```c
 DNS_Status_t     DNS_GetHostByNameEX(const char *hostname, char* ip, DNS_CALLBACK_FUNC_T func, void* param);
 ```
 
@@ -93,9 +93,9 @@ DNS_Status_t     DNS_GetHostByNameEX(const char *hostname, char* ip, DNS_CALLBAC
 
 ---
 
-#### DNS_GetHostByName2
+### DNS_GetHostByName2
 
-```
+```c
 int32_t          DNS_GetHostByName2(const char* domain, char* ip);
 ```
 

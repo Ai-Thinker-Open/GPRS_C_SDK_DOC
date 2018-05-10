@@ -7,13 +7,13 @@ SSL/TLS
 例程：[demo/ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/ssl/src/demo_ssl.c)
 
 
-## 一：枚举类型
+## 枚举类型
 
-#### SSL_Version_t
+### SSL_Version_t
 
 SSL/TLS版本
 
-```
+```c
 typedef enum{
     SSL_VERSION_SSLv3 = 0,
     SSL_VERSION_TLSv1    ,
@@ -25,11 +25,11 @@ typedef enum{
 
 ---
 
-#### SSL_Error_t
+### SSL_Error_t
 
 错误信息
 
-```
+```c
 typedef enum{
     SSL_ERROR_NONE       =  0x00 ,
     SSL_ERROR_PARAM      = -0x01 ,
@@ -45,11 +45,11 @@ typedef enum{
 
 ---
 
-#### SSL_Verify_Mode_t
+### SSL_Verify_Mode_t
 
 验证模式
 
-```
+```c
 typedef enum{
     SSL_VERIFY_MODE_NONE     = 0,
     SSL_VERIFY_MODE_OPTIONAL = 1,
@@ -60,13 +60,13 @@ typedef enum{
 
 ---
 
-## 二:结构体类型
+## 结构体类型
 
-#### SSL_Config_t
+### SSL_Config_t
 
 SSL/TLS配置
 
-```
+```c
 typedef struct{
     const char*       caCert;
     const char*       caCrl;
@@ -86,12 +86,12 @@ typedef struct{
 
 ---
 
-## 三：功能函数
+## 功能函数
 
 
-#### SSL_Init
+### SSL_Init
 
-```
+```c
 SSL_Error_t SSL_Init(SSL_Config_t* sslConfig);
 ```
 
@@ -109,9 +109,9 @@ SSL_Error_t SSL_Init(SSL_Config_t* sslConfig);
 
 ---
 
-#### SSL_Connect
+### SSL_Connect
 
-```
+```c
 SSL_Error_t SSL_Connect(SSL_Config_t* sslConfig, const char* server, const char* port);
 ```
 
@@ -131,9 +131,9 @@ SSL_Error_t SSL_Connect(SSL_Config_t* sslConfig, const char* server, const char*
 
 ---
 
-#### SSL_Write
+### SSL_Write
 
-```
+```c
 int SSL_Write(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
 ```
 
@@ -154,9 +154,9 @@ SSL/TLS发送数据（阻塞）
 
 ---
 
-#### SSL_Read
+### SSL_Read
 
-```
+```c
 int SSL_Read(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
 ```
 
@@ -177,9 +177,9 @@ int SSL_Read(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
 
 ---
 
-#### SSL_Close
+### SSL_Close
 
-```
+```c
 SSL_Error_t SSL_Close(SSL_Config_t* sslConfig);
 ```
 
@@ -197,9 +197,9 @@ SSL_Error_t SSL_Close(SSL_Config_t* sslConfig);
 
 ---
 
-#### SSL_Destroy
+### SSL_Destroy
 
-```
+```c
 SSL_Error_t SSL_Destroy(SSL_Config_t* sslConfig);
 ```
 

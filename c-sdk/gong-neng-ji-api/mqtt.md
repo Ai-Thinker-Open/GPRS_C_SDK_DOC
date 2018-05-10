@@ -7,13 +7,13 @@ MQTT是一种基于订阅发布模型的协议，在实时聊天（IM）、物�
 [demo/mqtt](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt/src/demo_mqtt.c)
 [demo/mqtt_ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt_ssl/src/demo_mqtt.c)
 
-## 一：枚举类型
+## 枚举类型
 
-#### MQTT_Error_t
+### MQTT_Error_t
 
 MQTT错误信息
 
-```
+```c
 typedef enum{
     MQTT_ERROR_NONE       =  0,  //no error
     /** Out of memory error.     */
@@ -56,11 +56,11 @@ typedef enum{
 
 ---
 
-#### MQTT_SSL_Version_t
+### MQTT_SSL_Version_t
 
 MQTT SSL支持的版本
 
-```
+```c
 typedef enum{
     MQTT_SSL_VERSION_SSLv3 = 0,
     MQTT_SSL_VERSION_TLSv1    ,
@@ -72,11 +72,11 @@ typedef enum{
 
 ---
 
-#### MQTT_SSL_Verify_Mode_t
+### MQTT_SSL_Verify_Mode_t
 
 验证模式
 
-```
+```c
 typedef enum{
     MQTT_SSL_VERIFY_MODE_NONE     = 0,
     MQTT_SSL_VERIFY_MODE_OPTIONAL = 1,
@@ -87,11 +87,11 @@ typedef enum{
 
 ---
 
-#### MQTT_Connection_Status_t
+### MQTT_Connection_Status_t
 
 MQTT连接状态
 
-```
+```c
 typedef enum
 {
     /** Accepted */
@@ -117,11 +117,11 @@ typedef enum
 
 ---
 
-#### MQTT_Flags_t
+### MQTT_Flags_t
 
 MQTT标志位
 
-```
+```c
 typedef enum{
     MQTT_FLAG_NONE      = 0   ,
     MQTT_FLAG_DATA_LAST = 1 ,
@@ -133,13 +133,13 @@ typedef enum{
 
 
 
-## 二:结构体类型
+## 结构体类型
 
-#### MQTT_Client_t
+### MQTT_Client_t
 
 MQTT对象
 
-```
+```c
 typedef struct{
     void* mqttClient;
 }MQTT_Client_t;
@@ -147,11 +147,11 @@ typedef struct{
 
 ---
 
-#### MQTT_Connect_Info_t
+### MQTT_Connect_Info_t
 
 MQTT连接配置信息
 
-```
+```c
 typedef struct{
     /** Client identifier, must be set by caller  */
     const char *client_id;
@@ -189,12 +189,12 @@ typedef struct{
 ---
 
 
-## 三：功能函数
+## 功能函数
 
 
-#### MQTT_Connection_Callback_t
+### MQTT_Connection_Callback_t
 
-```
+```c
 typedef void (*MQTT_Connection_Callback_t)(MQTT_Client_t* client, void* arg, MQTT_Connection_Status_t status);
 ```
 
@@ -214,9 +214,9 @@ typedef void (*MQTT_Connection_Callback_t)(MQTT_Client_t* client, void* arg, MQT
 
 ---
 
-#### MQTT_Request_Callback_t
+### MQTT_Request_Callback_t
 
-```
+```c
 typedef void (*MQTT_Request_Callback_t)(void* arg, MQTT_Error_t err);
 ```
 
@@ -235,9 +235,9 @@ MQTT请求回调函数
 
 ---
 
-#### MQTT_InPub_Callback_t
+### MQTT_InPub_Callback_t
 
-```
+```c
 typedef void (*MQTT_InPub_Callback_t)(void* arg, const char* topic, uint32_t payloadLen);
 ```
 
@@ -257,9 +257,9 @@ MQTT收到消息头回调函数，没有消息体，消息体在`MQTT_InPub_Data
 
 ---
 
-#### MQTT_InPub_Data_Callback_t
+### MQTT_InPub_Data_Callback_t
 
-```
+```c
 typedef void (*MQTT_InPub_Data_Callback_t)(void* arg, const uint8_t* data, uint16_t len, MQTT_Flags_t flags);
 ```
 
@@ -280,9 +280,9 @@ MQTT收到消息的消息体,`MQTT_InPub_Callback_t`后产生
 
 ---
 
-#### MQTT_ClientNew
+### MQTT_ClientNew
 
-```
+```c
 MQTT_Client_t* MQTT_ClientNew();
 ```
 
@@ -300,9 +300,9 @@ MQTT_Client_t* MQTT_ClientNew();
 
 ---
 
-#### MQTT_Connect
+### MQTT_Connect
 
-```
+```c
 MQTT_Error_t   MQTT_Connect(MQTT_Client_t* client, const char* domainOrIp,uint16_t port, 
                             MQTT_Connection_Callback_t callback, void* arg, const MQTT_Connect_Info_t* connectInfo);
 ```
@@ -326,9 +326,9 @@ MQTT_Error_t   MQTT_Connect(MQTT_Client_t* client, const char* domainOrIp,uint16
 
 ---
 
-#### MQTT_Disconnect
+### MQTT_Disconnect
 
-```
+```c
 MQTT_Error_t   MQTT_Disconnect(MQTT_Client_t* client);
 ```
 
@@ -346,9 +346,9 @@ MQTT_Error_t   MQTT_Disconnect(MQTT_Client_t* client);
 
 ---
 
-#### MQTT_SetInPubCallback
+### MQTT_SetInPubCallback
 
-```
+```c
 void           MQTT_SetInPubCallback(MQTT_Client_t* client, MQTT_InPub_Callback_t inpubCallback, MQTT_InPub_Data_Callback_t dataInpubCallback, void* arg);
 ```
 
@@ -369,9 +369,9 @@ void           MQTT_SetInPubCallback(MQTT_Client_t* client, MQTT_InPub_Callback_
 
 ---
 
-#### MQTT_Subscribe
+### MQTT_Subscribe
 
-```
+```c
 MQTT_Error_t   MQTT_Subscribe(MQTT_Client_t* client, const char* topic, uint8_t qos, MQTT_Request_Callback_t callback, void* arg);
 ```
 
@@ -393,9 +393,9 @@ MQTT_Error_t   MQTT_Subscribe(MQTT_Client_t* client, const char* topic, uint8_t 
 
 ---
 
-#### MQTT_Unsubscribe
+### MQTT_Unsubscribe
 
-```
+```c
 MQTT_Error_t   MQTT_Unsubscribe(MQTT_Client_t* client, const char* topic, MQTT_Request_Callback_t callback, void* arg);
 ```
 
@@ -416,9 +416,9 @@ MQTT_Error_t   MQTT_Unsubscribe(MQTT_Client_t* client, const char* topic, MQTT_R
 
 ---
 
-#### MQTT_Publish
+### MQTT_Publish
 
-```
+```c
 MQTT_Error_t   MQTT_Publish(MQTT_Client_t* client, const char* topic, const void* payload, uint16_t payloadLen, uint8_t dup, uint8_t qos, uint8_t retain,
                                   MQTT_Request_Callback_t callback, void* arg);
 ```
@@ -446,9 +446,9 @@ MQTT_Error_t   MQTT_Publish(MQTT_Client_t* client, const char* topic, const void
 
 ---
 
-#### MQTT_IsConnected
+### MQTT_IsConnected
 
-```
+```c
 uint8_t MQTT_IsConnected(MQTT_Client_t* client);
 ```
 
