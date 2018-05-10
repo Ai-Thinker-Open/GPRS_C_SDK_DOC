@@ -28,7 +28,7 @@
             "label": ""
         },
         "sharing": {
-            "weibo": true,
+            "weibo": false,
             "facebook": false,
             "twitter": false,
             "google": false,
