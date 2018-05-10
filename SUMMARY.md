@@ -12,10 +12,10 @@
 * [USB-UART module](hardware/usb-uart-module.md)
 * [SIM Card](hardware/sim-card.md)
 
-## 基础知识
+## Basic Knowledge
 
-* [GSM/GPRS](ji-chu-zhi-shi/gsmgprs.md)
-* [GPS](ji-chu-zhi-shi/gps.md)
+* [GSM/GPRS](basic-knowledge/gsmgprs.md)
+* [GPS](basic-knowledge/gps.md)
 
 ## C SDK
 
