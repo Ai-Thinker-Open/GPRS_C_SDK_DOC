@@ -6,11 +6,11 @@
 
 ## Hardware
 
-* [A9](ying-jian/a9.md)
-* [A9G](ying-jian/a9g.md)
-* [pudding dev board](ying-jian/kai-fa-ban-pudding.md)
-* [USB-UART module](ying-jian/usbzhuan-chuan-kou-mo-kuai.md)
-* [SIM Card](ying-jian/simqia.md)
+* [A9](hardware/a9.md)
+* [A9G](hardware/a9g.md)
+* [pudding dev board](hardware/pudding-dev-board.md)
+* [USB-UART module](hardware/usb-uart-module.md)
+* [SIM Card](hardware/sim-card.md)
 
 ## 基础知识
 
