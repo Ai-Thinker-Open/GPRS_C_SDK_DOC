@@ -1,16 +1,16 @@
 # Summary
 
-## 介绍
+## introduces
 
-* [关于本文档](README.md)
+* [About](README.md)
 
-## 硬件
+## Hardware
 
 * [A9](ying-jian/a9.md)
 * [A9G](ying-jian/a9g.md)
-* [开发板pudding](ying-jian/kai-fa-ban-pudding.md)
-* [USB转串口模块](ying-jian/usbzhuan-chuan-kou-mo-kuai.md)
-* [SIM卡](ying-jian/simqia.md)
+* [pudding dev board](ying-jian/kai-fa-ban-pudding.md)
+* [USB-UART module](ying-jian/usbzhuan-chuan-kou-mo-kuai.md)
+* [SIM Card](ying-jian/simqia.md)
 
 ## 基础知识
 
