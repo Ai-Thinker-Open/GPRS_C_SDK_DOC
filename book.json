@@ -1,11 +1,41 @@
 {
+    "title":"GPRS C SDK DOC",
+    "description": "GPRS C SDK 文档",
+    "author":"Ai-Thinker",
+    "language": "zh-hans",
+    "root":".",
     "plugins": [
         "github",
-        "splitter"
+        "splitter",
+        "github-buttons",
+        "ad",
+        "-search",
+        "search-pro",
+        "simple-page-toc"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"
+        },
+        "github-buttons": {
+            "buttons": [{
+              "user": "Ai-Thinker-Open",
+              "repo": "GPRS_C_SDK",
+              "type": "star",
+              "size": "large"
+            }]
+        },
+        "ad": {
+            "contentTop": "<div><style>.lang{background: #222 url(overlay.png) repeat-x; display: inline-block; padding: 5px 10px 6px;color: #fff; text-decoration: none;-moz-border-radius: 6px; -webkit-border-radius: 6px;-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);text-shadow: 0 -1px 1px rgba(0,0,0,0.25);border-bottom: 1px solid rgba(0,0,0,0.25);position: relative;cursor: pointer;background-color: #bdbdbd;font-size: 14px;padding: 8px 14px 9px; } .lang:hover{background-color: #9c9c9c; }</style> <a class='lang'>English</a></div>",
+            "contentBottom": ""
+        },
+        "search-pro": {
+            "cutWordLib": "nodejieba",
+            "defineWord" : ["Gitbook Use"]
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
         }
     }
 }

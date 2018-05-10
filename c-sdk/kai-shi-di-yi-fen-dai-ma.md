@@ -27,7 +27,7 @@
 * 新建`demo/fisrt `文件夹，并新建`Makefile`文件，注意只是首字母大写，或者全是小写
 填入以下内容：
 
-```
+```c
 # Name of the module
 LOCAL_NAME := demo/first
 
@@ -76,7 +76,7 @@ include ${SOFT_WORKDIR}/platform/compilation/cust_rules.mk
 
 1. 程序入口，创建主任务（这里使用到了操作系统相关的函数，如果没有接触过，请不要惧怕，可以先照着做）
 
-```
+```c
 
 #include "stdbool.h"
 #include "stdint.h"
@@ -106,7 +106,7 @@ void first_Main(void)
 
 2. 主任务处理
 
-```
+```c
 
 #define SECOND_TASK_STACK_SIZE    (2048 * 2)
 #define SECOND_TASK_PRIORITY      1
