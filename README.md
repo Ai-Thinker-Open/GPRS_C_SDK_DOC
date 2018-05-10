@@ -31,7 +31,7 @@ The development of modules mainly provides two kinds of interfaces:
    * AT firmware is the default firmware， you can set up immediately, more refer to [Ai-Thinker Wiki](http://wiki.ai-thinker.com/gprs)
    * This document does not contains any infomation of AT Command
 
-（二）**SDK On Chip Development**，No external MCU is needed, burn the firmware directly to GPRS module
+（B）**SDK On Chip Development**，No external MCU is needed, burn the firmware directly to GPRS module
 
 * The advantage of this method is that it doesn't need extra MCU, programming directly on modules, saving hardware resources, and save mony for projects
 
