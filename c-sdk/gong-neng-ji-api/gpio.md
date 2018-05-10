@@ -30,9 +30,9 @@ typedef enum{
 ---
 
 
-## 一：枚举类型
+## 枚举类型
 
-#### GPIO_PIN
+### GPIO_PIN
 
 引脚
 
@@ -79,7 +79,7 @@ typedef enum{
 
 ---
 
-#### GPIO_MODE
+### GPIO_MODE
 
 IO模式
 
@@ -94,7 +94,7 @@ typedef enum{
 
 ---
 
-#### GPIO_LEVEL
+### GPIO_LEVEL
 
 高低电平
 
@@ -107,7 +107,7 @@ typedef enum{
 
 ---
 
-#### GPIO_INT_TYPE
+### GPIO_INT_TYPE
 
 中断类型
 
@@ -125,9 +125,9 @@ typedef enum {
 ---
 
 
-## 二：结构体类型
+## 结构体类型
 
-#### GPIO_INT_callback_param_t
+### GPIO_INT_callback_param_t
 
 中断回调函数参数类型
 
@@ -139,7 +139,7 @@ typedef struct{
 
 ---
 
-#### PCallbackINT
+### PCallbackINT
 
 中断回调函数类型
 
@@ -149,7 +149,7 @@ typedef void (*PCallbackINT)(GPIO_INT_callback_param_t* param);
 
 ---
 
-#### GPIO_INT_config_t
+### GPIO_INT_config_t
 
 中断配置选项
 
@@ -163,7 +163,7 @@ typedef struct{
 
 ---
 
-#### GPIO_config_t
+### GPIO_config_t
 
 GPIO配置选项
 
@@ -179,10 +179,10 @@ typedef struct{
 ---
 
 
-## 三：功能函数接口
+## 功能函数接口
 
 
-#### GPIO_Init
+### GPIO_Init
 
 ```
 bool GPIO_Init(GPIO_config_t config);
@@ -202,7 +202,7 @@ bool GPIO_Init(GPIO_config_t config);
 
 ----
 
-#### GPIO_GetConfig
+### GPIO_GetConfig
 
 ```
 void GPIO_GetConfig(GPIO_PIN pin,GPIO_config_t* config);
@@ -221,7 +221,7 @@ void GPIO_GetConfig(GPIO_PIN pin,GPIO_config_t* config);
 ---
 
 
-#### GPIO_SetLevel
+### GPIO_SetLevel
 
 ```
 bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
@@ -244,7 +244,7 @@ bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
 
 
 
-#### GPIO_Set
+### GPIO_Set
 
 ```
 bool GPIO_Set(GPIO_PIN pin, GPIO_LEVEL  level);
@@ -266,7 +266,7 @@ bool GPIO_Set(GPIO_PIN pin, GPIO_LEVEL  level);
 ---
 
 
-#### GPIO_GetLevel
+### GPIO_GetLevel
 
 ```
 bool GPIO_GetLevel(GPIO_config_t gpioConf, GPIO_LEVEL* level);
@@ -288,7 +288,7 @@ bool GPIO_GetLevel(GPIO_config_t gpioConf, GPIO_LEVEL* level);
 ---
 
 
-#### GPIO_Get
+### GPIO_Get
 
 ```
 bool GPIO_Get(GPIO_PIN pin, GPIO_LEVEL* level);
@@ -311,7 +311,7 @@ bool GPIO_Get(GPIO_PIN pin, GPIO_LEVEL* level);
 
 
 
-#### GPIO_Close
+### GPIO_Close
 
 ```
 bool GPIO_Close(GPIO_PIN pin);

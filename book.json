@@ -63,7 +63,7 @@
         "anchor-navigation-ex": {
             "associatedWithSummary": false,
             "showLevel": true,
-            "multipleH1": true,
+            "multipleH1": false,
             "mode": "float",
             "pageTop": {
                 "showLevelIcon": true,

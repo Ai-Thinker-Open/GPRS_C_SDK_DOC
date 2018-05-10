@@ -1,7 +1,7 @@
 GPRS C SDK 开发环境搭建
 ====
 
-## 0.注意
+## 注意
 
 **重要，请先阅读**
 * SDK没有特定的IDE，用户自己选择代码编辑器编辑代码。
@@ -12,19 +12,19 @@ GPRS C SDK 开发环境搭建
 
 * 如果你是使用git进行克隆，请设置git在pull时不将`<LF>`转换为`<CR><LF>`，设置方法参考[这里](https://www.jianshu.com/p/305a138883d4)
 
-## 1. 下载工具链以及下载调试工具及SDK
+## 下载工具链以及下载调试工具及SDK
 
 * 下载CSDTK4.2：[百度云下载](https://pan.baidu.com/s/1Oa5tvWW2Flfl5UJITk980g)
 
 * [下载SDK](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/releases)
 
-## 2. 安装
+## 安装
 
 * 解压到某个文件夹,比如`C:\CSDTK`,**路径请不要带中文！**
 * 运行CSDTk目录下的`config_env_admin.bat`文件
 
 
-## 3. 编译
+## 编译
 
 * 解压下载到的CSDK为`GPRS_C_SDK`文件夹放到某个目录下，比如`C:\GPRS_C_SDK`，**请使用下划线(_)而不是减号(-)**
 
@@ -50,7 +50,7 @@ GPRS C SDK 开发环境搭建
 
 两个文件一大一小，在第一次下载时需要下载大文件(`*_B*.lod`)即可，第二次和以后为了减少下载时间都只需要下载小文件(`*_flash.lod`)即可，更新SDK后需要重新下载大文件
 
-## 6. 其它问题
+## 其它问题
 
 * 如果遇到问题，请仔细对比文档，看操作是否有错，也可以在[issue](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/issues?utf8=%E2%9C%93&q=)里找有没有先例，如果仍然有错，可以到安信可论坛提问或者github提交issue
 

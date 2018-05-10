@@ -7,9 +7,9 @@ SSL/TLS
 例程：[demo/ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/ssl/src/demo_ssl.c)
 
 
-## 一：枚举类型
+## 枚举类型
 
-#### SSL_Version_t
+### SSL_Version_t
 
 SSL/TLS版本
 
@@ -25,7 +25,7 @@ typedef enum{
 
 ---
 
-#### SSL_Error_t
+### SSL_Error_t
 
 错误信息
 
@@ -45,7 +45,7 @@ typedef enum{
 
 ---
 
-#### SSL_Verify_Mode_t
+### SSL_Verify_Mode_t
 
 验证模式
 
@@ -60,9 +60,9 @@ typedef enum{
 
 ---
 
-## 二:结构体类型
+## 结构体类型
 
-#### SSL_Config_t
+### SSL_Config_t
 
 SSL/TLS配置
 
@@ -86,10 +86,10 @@ typedef struct{
 
 ---
 
-## 三：功能函数
+## 功能函数
 
 
-#### SSL_Init
+### SSL_Init
 
 ```
 SSL_Error_t SSL_Init(SSL_Config_t* sslConfig);
@@ -109,7 +109,7 @@ SSL_Error_t SSL_Init(SSL_Config_t* sslConfig);
 
 ---
 
-#### SSL_Connect
+### SSL_Connect
 
 ```
 SSL_Error_t SSL_Connect(SSL_Config_t* sslConfig, const char* server, const char* port);
@@ -131,7 +131,7 @@ SSL_Error_t SSL_Connect(SSL_Config_t* sslConfig, const char* server, const char*
 
 ---
 
-#### SSL_Write
+### SSL_Write
 
 ```
 int SSL_Write(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
@@ -154,7 +154,7 @@ SSL/TLS发送数据（阻塞）
 
 ---
 
-#### SSL_Read
+### SSL_Read
 
 ```
 int SSL_Read(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
@@ -177,7 +177,7 @@ int SSL_Read(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
 
 ---
 
-#### SSL_Close
+### SSL_Close
 
 ```
 SSL_Error_t SSL_Close(SSL_Config_t* sslConfig);
@@ -197,7 +197,7 @@ SSL_Error_t SSL_Close(SSL_Config_t* sslConfig);
 
 ---
 
-#### SSL_Destroy
+### SSL_Destroy
 
 ```
 SSL_Error_t SSL_Destroy(SSL_Config_t* sslConfig);

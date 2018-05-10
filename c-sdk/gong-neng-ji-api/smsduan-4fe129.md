@@ -7,9 +7,9 @@ CALL 电话语音电话
 例程：[demo/sms](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/sms/src/demo_sms.c)
 
 
-## 一：宏定义
+## 宏定义
 
-##### SMS_PHONE_NUMBER_MAX_LEN
+### SMS_PHONE_NUMBER_MAX_LEN
 
 电话号码最长长度
 
@@ -17,7 +17,7 @@ CALL 电话语音电话
 #define  SMS_PHONE_NUMBER_MAX_LEN  21
 ```
 
-##### SMS_BODY_MAX_LEN
+### SMS_BODY_MAX_LEN
 
 短信消息体最长长度（字节）
 
@@ -26,9 +26,9 @@ CALL 电话语音电话
 ```
 
 
-## 二：枚举类型
+## 枚举类型
 
-#### SMS_Format_t
+### SMS_Format_t
 
 短信格式，目前仅支持文本格式
 
@@ -42,7 +42,7 @@ typedef enum{
 
 ---
 
-#### SMS_Error_t
+### SMS_Error_t
 
 错误信息
 
@@ -55,7 +55,7 @@ typedef enum{
 
 ---
 
-#### SMS_Encode_Type_t
+### SMS_Encode_Type_t
 
 编码格式，包括ascii和unicode
 
@@ -69,7 +69,7 @@ typedef enum{
 
 ---
 
-#### SMS_Number_Type_t
+### SMS_Number_Type_t
 
 号码地区类型
 
@@ -83,7 +83,7 @@ typedef enum{
 
 ---
 
-#### SMS_Status_t
+### SMS_Status_t
 
 短信状态
 
@@ -103,7 +103,7 @@ typedef enum{
 
 ---
 
-#### SMS_Storage_t
+### SMS_Storage_t
 
 短信储存位置
 
@@ -117,9 +117,9 @@ typedef enum{
 
 ---
 
-## 三：结构体类型
+## 结构体类型
 
-#### SMS_Parameter_t
+### SMS_Parameter_t
 
 短信参数
 
@@ -135,7 +135,7 @@ typedef struct
 
 ---
 
-#### SMS_Server_Center_Info_t
+### SMS_Server_Center_Info_t
 
 短信中心信息
 
@@ -148,7 +148,7 @@ typedef struct{
 
 ---
 
-#### SMS_Message_Info_t
+### SMS_Message_Info_t
 
 短消息
 
@@ -169,7 +169,7 @@ typedef struct{
 
 ---
 
-#### SMS_Storage_Info_t
+### SMS_Storage_Info_t
 
 短消息储存信息
 
@@ -189,10 +189,10 @@ typedef struct{
 ---
 
 
-## 四：功能函数
+## 功能函数
 
 
-#### SMS_SetFormat
+### SMS_SetFormat
 
 ```
 bool SMS_SetFormat(SMS_Format_t format, SIM_ID_t simID);
@@ -213,7 +213,7 @@ bool SMS_SetFormat(SMS_Format_t format, SIM_ID_t simID);
 
 ---
 
-#### SMS_SetParameter
+### SMS_SetParameter
 
 ```
 bool SMS_SetParameter(SMS_Parameter_t* smsParameter,SIM_ID_t simID);
@@ -234,7 +234,7 @@ bool SMS_SetParameter(SMS_Parameter_t* smsParameter,SIM_ID_t simID);
 
 ---
 
-#### SMS_SendMessage
+### SMS_SendMessage
 
 ```
 bool SMS_SendMessage(const char* phoneNumber, const uint8_t* message,  uint8_t length, SIM_ID_t simID);
@@ -257,7 +257,7 @@ bool SMS_SendMessage(const char* phoneNumber, const uint8_t* message,  uint8_t l
 
 ---
 
-#### SMS_SetServerCenterInfo
+### SMS_SetServerCenterInfo
 
 ```
 bool SMS_SetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
@@ -277,7 +277,7 @@ bool SMS_SetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
 
 ---
 
-#### SMS_GetServerCenterInfo
+### SMS_GetServerCenterInfo
 
 ```
 bool SMS_GetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
@@ -297,7 +297,7 @@ bool SMS_GetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
 
 ---
 
-#### SMS_ListMessageRequst
+### SMS_ListMessageRequst
 
 ```
 bool SMS_ListMessageRequst(SMS_Status_t smsStatus,SMS_Storage_t storage);
@@ -317,7 +317,7 @@ bool SMS_ListMessageRequst(SMS_Status_t smsStatus,SMS_Storage_t storage);
 
 ---
 
-#### SMS_DeleteMessage
+### SMS_DeleteMessage
 
 ```
 bool SMS_DeleteMessage(uint8_t index,SMS_Status_t status,SMS_Storage_t storage);
@@ -338,7 +338,7 @@ bool SMS_DeleteMessage(uint8_t index,SMS_Status_t status,SMS_Storage_t storage);
 
 ---
 
-#### SMS_GetStorageInfo
+### SMS_GetStorageInfo
 
 ```
 bool SMS_GetStorageInfo(SMS_Storage_Info_t* storageInfo, SMS_Storage_t storage);
@@ -359,7 +359,7 @@ bool SMS_GetStorageInfo(SMS_Storage_Info_t* storageInfo, SMS_Storage_t storage);
 
 ---
 
-#### SMS_SetNewMessageStorage
+### SMS_SetNewMessageStorage
 
 ```
 bool SMS_SetNewMessageStorage(SMS_Storage_t storage);
@@ -379,7 +379,7 @@ bool SMS_SetNewMessageStorage(SMS_Storage_t storage);
 
 ---
 
-#### SMS_GetCharset
+### SMS_GetCharset
 
 ```
 const char* SMS_GetCharset(Charset_t charset);
@@ -399,7 +399,7 @@ const char* SMS_GetCharset(Charset_t charset);
 
 ---
 
-#### SMS_Unicode2LocalLanguage
+### SMS_Unicode2LocalLanguage
 
 ```
 bool SMS_Unicode2LocalLanguage(uint8_t* unicodeIn, uint16_t unicodeLenIn, Charset_t localLanguage, uint8_t** localOut, uint32_t* localLenOut);
@@ -423,7 +423,7 @@ unicode转本地语言
 
 ---
 
-#### SMS_LocalLanguage2Unicode
+### SMS_LocalLanguage2Unicode
 
 ```
 bool SMS_LocalLanguage2Unicode(uint8_t* localIn, uint16_t localLenIn, Charset_t localLanguage, uint8_t** unicodeOut, uint32_t* unicodeLenOut);

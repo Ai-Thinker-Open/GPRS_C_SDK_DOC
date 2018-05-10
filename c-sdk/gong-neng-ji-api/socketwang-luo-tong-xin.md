@@ -6,7 +6,7 @@ DNS
 例程：[demo/socket](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/socket/src/demo_socket.c)
 
 
-## 一：枚举类型
+## 枚举类型
 
 #### TCP_UDP_t
 
@@ -21,7 +21,7 @@ typedef enum{
 
 ---
 
-#### API_Socket_Error_t
+### API_Socket_Error_t
 
 错误信息
 
@@ -66,10 +66,10 @@ typedef enum{
 ```
 
 
-## 二：功能函数
+## 功能函数
 
 
-#### Socket_TcpipConnect
+### Socket_TcpipConnect
 
 ```
 int      Socket_TcpipConnect(TCP_UDP_t tcpOrUdp, const char* ip,uint16_t port);
@@ -91,7 +91,7 @@ int      Socket_TcpipConnect(TCP_UDP_t tcpOrUdp, const char* ip,uint16_t port);
 
 ---
 
-#### Socket_TcpipWrite
+### Socket_TcpipWrite
 
 ```
 int      Socket_TcpipWrite(int socketFd, uint8_t* data, uint16_t length);
@@ -113,7 +113,7 @@ int      Socket_TcpipWrite(int socketFd, uint8_t* data, uint16_t length);
 
 ---
 
-#### Socket_TcpipRead
+### Socket_TcpipRead
 
 ```
 int      Socket_TcpipRead( int socketFd, uint8_t* data, uint16_t length);
@@ -135,7 +135,7 @@ int      Socket_TcpipRead( int socketFd, uint8_t* data, uint16_t length);
 
 ---
 
-#### Socket_TcpipClose
+### Socket_TcpipClose
 
 ```
 bool     Socket_TcpipClose(int socketFd);

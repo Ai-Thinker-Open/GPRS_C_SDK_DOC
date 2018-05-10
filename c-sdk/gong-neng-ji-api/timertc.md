@@ -7,9 +7,9 @@ time（RTC）
 例程：[demo/time](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/time/src/demo_time.c)
 
 
-## 一：时间相关类型
+## 时间相关类型
 
-#### time_t
+### time_t
 
 用整数来表示时间
 
@@ -19,7 +19,7 @@ typedef long         time_t;
 
 ---
 
-#### clock_t
+### clock_t
 
 用整数来表示时间
 
@@ -29,9 +29,9 @@ typedef long         clock_t;
 
 ---
 
-## 二：宏定义
+## 宏定义
 
-## CLOCKS_PER_SEC
+### CLOCKS_PER_SEC
 
 系统clock转秒
 
@@ -41,7 +41,7 @@ typedef long         clock_t;
 
 ---
 
-## CLOCKS_PER_MSEC
+### CLOCKS_PER_MSEC
 
 系统clock转ms
 
@@ -52,9 +52,9 @@ typedef long         clock_t;
 ---
 
 
-## 三：结构体类型
+## 结构体类型
 
-#### tm
+### tm
 
 时间表示，包括年月日时分秒
 
@@ -74,7 +74,7 @@ typedef struct tm{
 
 ---
 
-#### timeval_t
+### timeval_t
 
 时间，秒和毫秒表示
 （tv_usec这里实际上是毫秒不是微妙）
@@ -88,7 +88,7 @@ typedef struct timeval {
 
 ---
 
-#### timezone_t
+### timezone_t
 
 时区类型
 
@@ -101,7 +101,7 @@ typedef struct timezone {
 
 ---
 
-#### RTC_Time_t
+### RTC_Time_t
 
 RTC时间
 
@@ -119,10 +119,10 @@ typedef struct{
 
 ---
 
-## 四：功能函数
+## 功能函数
 
 
-#### gettimeofday
+### gettimeofday
 
 ```
 int gettimeofday(timeval_t *tv, timezone_t *tz);
@@ -143,7 +143,7 @@ int gettimeofday(timeval_t *tv, timezone_t *tz);
 
 ---
 
-#### TIME_SetIsAutoUpdateRtcTime
+### TIME_SetIsAutoUpdateRtcTime
 
 ```
 void TIME_SetIsAutoUpdateRtcTime(bool isAutoUpdate);
@@ -164,7 +164,7 @@ void TIME_SetIsAutoUpdateRtcTime(bool isAutoUpdate);
 
 ---
 
-#### TIME_IsAutoUpdateRtcTime
+### TIME_IsAutoUpdateRtcTime
 
 ```
 bool TIME_IsAutoUpdateRtcTime();
@@ -184,7 +184,7 @@ bool TIME_IsAutoUpdateRtcTime();
 
 ---
 
-#### TIME_SetRtcTime
+### TIME_SetRtcTime
 
 ```
 bool TIME_SetRtcTime(RTC_Time_t* time);
@@ -204,7 +204,7 @@ bool TIME_SetRtcTime(RTC_Time_t* time);
 
 ---
 
-#### TIME_GetRtcTIme
+### TIME_GetRtcTIme
 
 ```
 bool TIME_GetRtcTIme(RTC_Time_t* time);
@@ -224,7 +224,7 @@ bool TIME_GetRtcTIme(RTC_Time_t* time);
 
 ---
 
-#### clock
+### clock
 
 ```
 clock_t clock(void);

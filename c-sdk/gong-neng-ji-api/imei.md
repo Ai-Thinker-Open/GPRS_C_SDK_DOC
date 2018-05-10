@@ -7,7 +7,7 @@ IMEI是一串长度为15个字节的字符串，每个模组对应唯一IMEI号�
 
 ## 函数
 
-#### INFO_GetIMEI
+### INFO_GetIMEI
 
 ```
 bool INFO_GetIMEI(uint8_t* pImei);

@@ -8,9 +8,9 @@ A9/A9G模组有两个10位ADC接口，可以测量0~1.8V电压
 ---
 
 
-## 一：枚举类型
+## 枚举类型
 
-#### ADC_Channel_t
+### ADC_Channel_t
 
 ADC通道，总共两个通道，ADC0和ADC1
 
@@ -24,7 +24,7 @@ typedef enum
 ```
 ---
 
-#### ADC_Sample_Period_t
+### ADC_Sample_Period_t
 
 ADC采样周期
 
@@ -45,9 +45,9 @@ typedef enum
 
 ---
 
-## 二：结构体类型
+## 结构体类型
 
-#### ADC_Config_t
+### ADC_Config_t
 
 ADC配置信息，包含了通道值和采样周期
 
@@ -60,9 +60,9 @@ typedef struct
 ```
 
 
-## 三：功能函数
+## 功能函数
 
-#### ADC_Init
+### ADC_Init
 
 ```
 void ADC_Init(ADC_Config_t adcConfig);
@@ -82,7 +82,7 @@ void ADC_Init(ADC_Config_t adcConfig);
 
 ---
 
-#### ADC_Read
+### ADC_Read
 
 ```
 bool ADC_Read(ADC_Channel_t channel, uint16_t* value, uint16_t* mV);
@@ -104,7 +104,7 @@ bool ADC_Read(ADC_Channel_t channel, uint16_t* value, uint16_t* mV);
 
 ---
 
-#### ADC_Close
+### ADC_Close
 
 ```
 void ADC_Close(ADC_Channel_t channel);

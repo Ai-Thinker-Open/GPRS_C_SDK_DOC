@@ -7,9 +7,9 @@
 
 ---
 
-## 一：枚举类型
+## 枚举类型
 
-#### UART_Port_t
+### UART_Port_t
 
 串口编号
 
@@ -24,7 +24,7 @@ typedef enum{
 
 ---
 
-#### UART_Baud_Rate_t
+### UART_Baud_Rate_t
 
 波特率
 
@@ -54,7 +54,7 @@ typedef enum{
 
 ---
 
-#### UART_Data_Bits_t
+### UART_Data_Bits_t
 
 数据位
 
@@ -68,7 +68,7 @@ typedef enum{
 
 ---
 
-#### UART_Stop_Bits_t
+### UART_Stop_Bits_t
 
 停止位
 
@@ -82,7 +82,7 @@ typedef enum{
 
 ---
 
-#### UART_Parity_t
+### UART_Parity_t
 
 校验位
 
@@ -99,7 +99,7 @@ UART_PARITY_MAX
 
 ---
 
-#### UART_Error_t
+### UART_Error_t
 
 串口错误
 
@@ -117,9 +117,9 @@ typedef enum{
 
 ---
 
-## 二：结构体类型
+## 结构体类型
 
-#### UART_Callback_Param_t
+### UART_Callback_Param_t
 
 回调函数参数
 
@@ -133,7 +133,7 @@ char *buf;//the receive buf
 
 ---
 
-#### UART_Config_t
+### UART_Config_t
 
 串口初始化参数
 
@@ -152,9 +152,9 @@ typedef struct{
 ---
 
 
-## 三：功能函数
+## 功能函数
 
-#### UART_Callback_t
+### UART_Callback_t
 
 ```
 typedef void (*UART_Callback_t)(UART_Callback_Param_t param);
@@ -175,7 +175,7 @@ typedef void (*UART_Callback_t)(UART_Callback_Param_t param);
 
 ---
 
-#### UART_Error_Callback_t
+### UART_Error_Callback_t
 
 ```
 typedef void (*UART_Error_Callback_t)(UART_Error_t error);
@@ -196,7 +196,7 @@ typedef void (*UART_Error_Callback_t)(UART_Error_t error);
 
 ---
 
-#### UART_Init
+### UART_Init
 
 ```
 bool     UART_Init(UART_Port_t uartN, UART_Config_t config);
@@ -218,7 +218,7 @@ bool     UART_Init(UART_Port_t uartN, UART_Config_t config);
 ---
 
 
-#### UART_Write
+### UART_Write
 
 ```
 uint32_t UART_Write(UART_Port_t uartN, uint8_t* dataToWrite, uint32_t length);
@@ -241,7 +241,7 @@ uint32_t UART_Write(UART_Port_t uartN, uint8_t* dataToWrite, uint32_t length);
 ---
 
 
-#### UART_Read
+### UART_Read
 
 ```
 uint32_t UART_Read(UART_Port_t uartN, uint8_t* dataToRead, uint32_t length, uint32_t timeOutMs);
@@ -265,7 +265,7 @@ uint32_t UART_Read(UART_Port_t uartN, uint8_t* dataToRead, uint32_t length, uint
 ---
 
 
-#### UART_Close
+### UART_Close
 
 ```
 bool     UART_Close(UART_Port_t uartN);

@@ -7,7 +7,7 @@ ICCD是SIM卡的唯一标识,长度为20的字符串。
 
 ## 函数
 
-#### SIM_GetICCID
+### SIM_GetICCID
 
 ```
 bool SIM_GetICCID(uint8_t* iccid);

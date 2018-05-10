@@ -8,9 +8,9 @@ Power Manager 电源管理
 例程：[demo/pm](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/pm/src/demo_pm.c)
 
 
-## 一：枚举类型
+## 枚举类型
 
-#### Power_Type_t
+### Power_Type_t
 
 外设电源
 
@@ -26,7 +26,7 @@ typedef enum{
 
 ---
 
-#### Power_On_Cause_t
+### Power_On_Cause_t
 
 开机原因
 
@@ -44,10 +44,10 @@ typedef enum{
 ---
 
 
-## 二：功能函数
+## 功能函数
 
 
-#### PM_PowerEnable
+### PM_PowerEnable
 
 ```
 bool PM_PowerEnable(Power_Type_t powerType, bool isOn);
@@ -68,7 +68,7 @@ bool PM_PowerEnable(Power_Type_t powerType, bool isOn);
 
 ---
 
-#### PM_SleepMode
+### PM_SleepMode
 
 ```
 void PM_SleepMode(bool isSleepMode);
@@ -89,7 +89,7 @@ void PM_SleepMode(bool isSleepMode);
 
 ---
 
-#### PM_Voltage
+### PM_Voltage
 
 ```
 uint16_t PM_Voltage(uint8_t* percent);
@@ -109,7 +109,7 @@ uint16_t PM_Voltage(uint8_t* percent);
 
 ---
 
-#### PM_ShutDown
+### PM_ShutDown
 
 ```
 void PM_ShutDown();
@@ -129,7 +129,7 @@ void PM_ShutDown();
 
 ---
 
-#### PM_Restart
+### PM_Restart
 
 ```
 void PM_Restart();
