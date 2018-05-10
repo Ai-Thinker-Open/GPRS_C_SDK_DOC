@@ -13,7 +13,7 @@ A9/A9G有两个SPI接口，使用的时候注意与哪些引脚复用了的，�
 
 SPI最大支持频率
 
-```
+```c
 #define SPI_FREQ_MAX 13000000
 ```
 
@@ -25,7 +25,7 @@ SPI最大支持频率
 
 SPI编号，共两个SPI
 
-```
+```c
 typedef enum
 {
     SPI1      = 1 ,
@@ -38,7 +38,7 @@ typedef enum
 
 SPI CS引脚，每个SPI都有两个CS引脚可供选择
 
-```
+```c
 typedef enum
 {
     SPI_CS_0  = 0 ,
@@ -52,7 +52,7 @@ typedef enum
 
 SPI模式，分为轮询、中断、DMA轮询、DMA中断四种模式
 
-```
+```c
 typedef enum
 {
     /// Direct polling: The application sends/receives the data directly to/from
@@ -93,7 +93,7 @@ typedef enum
 
 SPI 支持3线和4线模式
 
-```
+```c
 typedef enum{
 	
 	SPI_LINE_3  = 3    ,   ///  Half-Duplex Mode
@@ -106,7 +106,7 @@ typedef enum{
 
 SPI 数据位
 
-```
+```c
 typedef enum{
 	SPI_DATA_BITS_8 = 8 ,
 	SPI_DATA_BITS_16 = 16,
@@ -121,7 +121,7 @@ typedef enum{
 
 SPI中断标志
 
-```
+```c
 typedef struct
 {
 	/// Rx FIFO overflow
@@ -143,7 +143,7 @@ typedef struct
 
 SPI配置
 
-```
+```c
 typedef struct
 {
 	/// Select the Chip Select
@@ -200,7 +200,7 @@ typedef struct
 
 ### SPI_Irq_Handler_t
 
-```
+```c
 typedef void (*SPI_Irq_Handler_t)(SPI_Irq_Flags_t flags);
 ```
 
@@ -220,7 +220,7 @@ SPI 中断回调函数
 
 ### SPI_Init
 
-```
+```c
 bool SPI_Init(SPI_ID_t spiN, SPI_Config_t spiConfig);
 ```
 
@@ -241,7 +241,7 @@ bool SPI_Init(SPI_ID_t spiN, SPI_Config_t spiConfig);
 
 ### SPI_Close
 
-```
+```c
 bool SPI_Close(SPI_ID_t spiN);
 ```
 
@@ -261,7 +261,7 @@ bool SPI_Close(SPI_ID_t spiN);
 
 ### SPI_Write
 
-```
+```c
 uint32_t SPI_Write(SPI_ID_t spiN, const uint8_t *data, uint32_t length);
 ```
 
@@ -283,7 +283,7 @@ uint32_t SPI_Write(SPI_ID_t spiN, const uint8_t *data, uint32_t length);
 
 ### SPI_Read
 
-```
+```c
 uint32_t SPI_Read(SPI_ID_t spiN, uint8_t *data, uint32_t length);
 ```
 
@@ -305,7 +305,7 @@ uint32_t SPI_Read(SPI_ID_t spiN, uint8_t *data, uint32_t length);
 
 ### SPI_IsTxDone
 
-```
+```c
 bool SPI_IsTxDone(SPI_ID_t spiN);
 ```
 
@@ -326,7 +326,7 @@ bool SPI_IsTxDone(SPI_ID_t spiN);
 
 ### SPI_IsTxDmaDone
 
-```
+```c
 bool SPI_IsTxDmaDone(SPI_ID_t spiN);
 ```
 
@@ -347,7 +347,7 @@ bool SPI_IsTxDmaDone(SPI_ID_t spiN);
 
 ### SPI_IsRxDmaDone
 
-```
+```c
 bool SPI_IsRxDmaDone(SPI_ID_t spiN);
 ```
 
@@ -367,7 +367,7 @@ bool SPI_IsRxDmaDone(SPI_ID_t spiN);
 
 ### SPI_ClearTxDmaDone
 
-```
+```c
 void SPI_ClearTxDmaDone(SPI_ID_t spiN);
 ```
 
@@ -387,7 +387,7 @@ void SPI_ClearTxDmaDone(SPI_ID_t spiN);
 
 ### SPI_FlushFIFOs
 
-```
+```c
 void SPI_FlushFIFOs(SPI_ID_t spiN);
 ```
 
@@ -407,7 +407,7 @@ void SPI_FlushFIFOs(SPI_ID_t spiN);
 
 ### SPI_SetIrqHandler
 
-```
+```c
 void SPI_SetIrqHandler(SPI_ID_t spiN, SPI_Irq_Handler_t handler);
 ```
 
@@ -428,7 +428,7 @@ void SPI_SetIrqHandler(SPI_ID_t spiN, SPI_Irq_Handler_t handler);
 
 ### SPI_SetIrqMask
 
-```
+```c
 void SPI_SetIrqMask(SPI_ID_t spiN, SPI_Irq_Flags_t irqMask);
 ```
 

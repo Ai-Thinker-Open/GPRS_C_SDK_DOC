@@ -13,7 +13,7 @@ CALL 电话语音电话
 
 电话号码最长长度
 
-```
+```c
 #define  SMS_PHONE_NUMBER_MAX_LEN  21
 ```
 
@@ -21,7 +21,7 @@ CALL 电话语音电话
 
 短信消息体最长长度（字节）
 
-```
+```c
 #define  SMS_BODY_MAX_LEN  176
 ```
 
@@ -32,7 +32,7 @@ CALL 电话语音电话
 
 短信格式，目前仅支持文本格式
 
-```
+```c
 typedef enum{
     // SMS_FORMAT_PDU  = 0, // not support now
     SMS_FORMAT_TEXT = 1, // default
@@ -46,7 +46,7 @@ typedef enum{
 
 错误信息
 
-```
+```c
 typedef enum{
     SMS_ERROR_DECODE_ERROR = 0,
     SMS_ERROR_MAX
@@ -59,7 +59,7 @@ typedef enum{
 
 编码格式，包括ascii和unicode
 
-```
+```c
 typedef enum{
     SMS_ENCODE_TYPE_ASCII  = 0,
     SMS_ENCODE_TYPE_UNICODE   ,
@@ -73,7 +73,7 @@ typedef enum{
 
 号码地区类型
 
-```
+```c
 typedef enum{
     SMS_NUMBER_TYPE_UNKNOWN         = 129 ,
     SMS_NUMBER_TYPE_INTERNATIONAL   = 145 ,
@@ -87,7 +87,7 @@ typedef enum{
 
 短信状态
 
-```
+```c
 typedef enum{
     SMS_STATUS_UNREAD                    = 0x01 ,
     SMS_STATUS_READ                      = 0x02 ,
@@ -107,7 +107,7 @@ typedef enum{
 
 短信储存位置
 
-```
+```c
 typedef enum{
     SMS_STORAGE_FLASH    = 1,
     SMS_STORAGE_SIM_CARD = 2,
@@ -123,7 +123,7 @@ typedef enum{
 
 短信参数
 
-```
+```c
 typedef struct
 {
     uint8_t fo;  // default: 17
@@ -139,7 +139,7 @@ typedef struct
 
 短信中心信息
 
-```
+```c
 typedef struct{
     char*          addr;
     SMS_Number_Type_t addrType;
@@ -152,7 +152,7 @@ typedef struct{
 
 短消息
 
-```
+```c
 typedef struct{
     //header
     uint8_t           index;
@@ -173,7 +173,7 @@ typedef struct{
 
 短消息储存信息
 
-```
+```c
 typedef struct{
     uint16_t used;
     uint16_t total;
@@ -194,7 +194,7 @@ typedef struct{
 
 ### SMS_SetFormat
 
-```
+```c
 bool SMS_SetFormat(SMS_Format_t format, SIM_ID_t simID);
 ```
 
@@ -215,7 +215,7 @@ bool SMS_SetFormat(SMS_Format_t format, SIM_ID_t simID);
 
 ### SMS_SetParameter
 
-```
+```c
 bool SMS_SetParameter(SMS_Parameter_t* smsParameter,SIM_ID_t simID);
 ```
 
@@ -236,7 +236,7 @@ bool SMS_SetParameter(SMS_Parameter_t* smsParameter,SIM_ID_t simID);
 
 ### SMS_SendMessage
 
-```
+```c
 bool SMS_SendMessage(const char* phoneNumber, const uint8_t* message,  uint8_t length, SIM_ID_t simID);
 ```
 
@@ -259,7 +259,7 @@ bool SMS_SendMessage(const char* phoneNumber, const uint8_t* message,  uint8_t l
 
 ### SMS_SetServerCenterInfo
 
-```
+```c
 bool SMS_SetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
 ```
 
@@ -279,7 +279,7 @@ bool SMS_SetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
 
 ### SMS_GetServerCenterInfo
 
-```
+```c
 bool SMS_GetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
 ```
 
@@ -299,7 +299,7 @@ bool SMS_GetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
 
 ### SMS_ListMessageRequst
 
-```
+```c
 bool SMS_ListMessageRequst(SMS_Status_t smsStatus,SMS_Storage_t storage);
 ```
 
@@ -319,7 +319,7 @@ bool SMS_ListMessageRequst(SMS_Status_t smsStatus,SMS_Storage_t storage);
 
 ### SMS_DeleteMessage
 
-```
+```c
 bool SMS_DeleteMessage(uint8_t index,SMS_Status_t status,SMS_Storage_t storage);
 ```
 
@@ -340,7 +340,7 @@ bool SMS_DeleteMessage(uint8_t index,SMS_Status_t status,SMS_Storage_t storage);
 
 ### SMS_GetStorageInfo
 
-```
+```c
 bool SMS_GetStorageInfo(SMS_Storage_Info_t* storageInfo, SMS_Storage_t storage);
 ```
 
@@ -361,7 +361,7 @@ bool SMS_GetStorageInfo(SMS_Storage_Info_t* storageInfo, SMS_Storage_t storage);
 
 ### SMS_SetNewMessageStorage
 
-```
+```c
 bool SMS_SetNewMessageStorage(SMS_Storage_t storage);
 ```
 
@@ -381,7 +381,7 @@ bool SMS_SetNewMessageStorage(SMS_Storage_t storage);
 
 ### SMS_GetCharset
 
-```
+```c
 const char* SMS_GetCharset(Charset_t charset);
 ```
 
@@ -401,7 +401,7 @@ const char* SMS_GetCharset(Charset_t charset);
 
 ### SMS_Unicode2LocalLanguage
 
-```
+```c
 bool SMS_Unicode2LocalLanguage(uint8_t* unicodeIn, uint16_t unicodeLenIn, Charset_t localLanguage, uint8_t** localOut, uint32_t* localLenOut);
 ```
 
@@ -425,7 +425,7 @@ unicode转本地语言
 
 ### SMS_LocalLanguage2Unicode
 
-```
+```c
 bool SMS_LocalLanguage2Unicode(uint8_t* localIn, uint16_t localLenIn, Charset_t localLanguage, uint8_t** unicodeOut, uint32_t* unicodeLenOut);
 ```
 

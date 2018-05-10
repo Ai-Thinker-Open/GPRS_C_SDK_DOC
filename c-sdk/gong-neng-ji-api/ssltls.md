@@ -13,7 +13,7 @@ SSL/TLS
 
 SSL/TLS版本
 
-```
+```c
 typedef enum{
     SSL_VERSION_SSLv3 = 0,
     SSL_VERSION_TLSv1    ,
@@ -29,7 +29,7 @@ typedef enum{
 
 错误信息
 
-```
+```c
 typedef enum{
     SSL_ERROR_NONE       =  0x00 ,
     SSL_ERROR_PARAM      = -0x01 ,
@@ -49,7 +49,7 @@ typedef enum{
 
 验证模式
 
-```
+```c
 typedef enum{
     SSL_VERIFY_MODE_NONE     = 0,
     SSL_VERIFY_MODE_OPTIONAL = 1,
@@ -66,7 +66,7 @@ typedef enum{
 
 SSL/TLS配置
 
-```
+```c
 typedef struct{
     const char*       caCert;
     const char*       caCrl;
@@ -91,7 +91,7 @@ typedef struct{
 
 ### SSL_Init
 
-```
+```c
 SSL_Error_t SSL_Init(SSL_Config_t* sslConfig);
 ```
 
@@ -111,7 +111,7 @@ SSL_Error_t SSL_Init(SSL_Config_t* sslConfig);
 
 ### SSL_Connect
 
-```
+```c
 SSL_Error_t SSL_Connect(SSL_Config_t* sslConfig, const char* server, const char* port);
 ```
 
@@ -133,7 +133,7 @@ SSL_Error_t SSL_Connect(SSL_Config_t* sslConfig, const char* server, const char*
 
 ### SSL_Write
 
-```
+```c
 int SSL_Write(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
 ```
 
@@ -156,7 +156,7 @@ SSL/TLS发送数据（阻塞）
 
 ### SSL_Read
 
-```
+```c
 int SSL_Read(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
 ```
 
@@ -179,7 +179,7 @@ int SSL_Read(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
 
 ### SSL_Close
 
-```
+```c
 SSL_Error_t SSL_Close(SSL_Config_t* sslConfig);
 ```
 
@@ -199,7 +199,7 @@ SSL_Error_t SSL_Close(SSL_Config_t* sslConfig);
 
 ### SSL_Destroy
 
-```
+```c
 SSL_Error_t SSL_Destroy(SSL_Config_t* sslConfig);
 ```
 

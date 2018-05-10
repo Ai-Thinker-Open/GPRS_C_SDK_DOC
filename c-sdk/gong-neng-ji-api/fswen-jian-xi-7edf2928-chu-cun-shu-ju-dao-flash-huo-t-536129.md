@@ -15,7 +15,7 @@ SDK当前未提供flash相关操作，但是提供了使用起来更为方便简
 
 TF卡开机自动挂载的位置
 
-```
+```c
 #define FS_TFLASH_ROOT "/t"
 ```
 
@@ -25,7 +25,7 @@ TF卡开机自动挂载的位置
 
 只读
 
-```
+```c
 #define FS_O_RDONLY                0
 ```
 
@@ -35,7 +35,7 @@ TF卡开机自动挂载的位置
 
 只写
 
-```
+```c
 #define FS_O_WRONLY                1
 ```
 
@@ -45,7 +45,7 @@ TF卡开机自动挂载的位置
 
 读写
 
-```
+```c
 #define FS_O_RDWR                  2
 ```
 
@@ -55,7 +55,7 @@ TF卡开机自动挂载的位置
 
 读写文件操作时，用于取出flag的低2位（判断文件权限）
 
-```
+```c
 #define FS_O_ACCMODE               3
 ```
 
@@ -66,7 +66,7 @@ TF卡开机自动挂载的位置
 如果文件存在，不产生影响，不存在则建立，返回成功
 如果文件存在且有`FS_O_EXCL`，则返回失败
 
-```
+```c
 #define FS_O_CREAT                 00100
 ```
 
@@ -76,7 +76,7 @@ TF卡开机自动挂载的位置
 
 如果它和`FS_O_CREAT`同时设定，且文件已经存在，则创建文件操作会失败，返回-1
 
-```
+```c
 #define FS_O_EXCL                  00200
 ```
 
@@ -86,7 +86,7 @@ TF卡开机自动挂载的位置
 
 如果文件存在，则以只写或只读打开，并删除文件之前的内容
 
-```
+```c
 #define FS_O_TRUNC                 01000
 ```
 
@@ -96,7 +96,7 @@ TF卡开机自动挂载的位置
 
 追加
 
-```
+```c
 #define FS_O_APPEND                02000
 ```
 
@@ -106,7 +106,7 @@ TF卡开机自动挂载的位置
 
 文件属性标记
 
-```
+```c
 #define FS_ATTR_MARK       0x0
 ```
 
@@ -116,7 +116,7 @@ TF卡开机自动挂载的位置
 
 文件属性只读
 
-```
+```c
 #define FS_ATTR_RO            0x00000001
 ```
 
@@ -126,7 +126,7 @@ TF卡开机自动挂载的位置
 
 文件属性隐藏
 
-```
+```c
 #define FS_ATTR_HIDDEN    0x00000002
 ```
 
@@ -136,7 +136,7 @@ TF卡开机自动挂载的位置
 
 文件属性系统文件
 
-```
+```c
 #define FS_ATTR_SYSTEM    0x00000004
 ```
 
@@ -146,7 +146,7 @@ TF卡开机自动挂载的位置
 
 卷标
 
-```
+```c
 #define FS_ATTR_VOLUME    0x00000008
 ```
 
@@ -156,7 +156,7 @@ TF卡开机自动挂载的位置
 
 文件夹
 
-```
+```c
 #define FS_ATTR_DIR           0x00000010
 ```
 
@@ -166,7 +166,7 @@ TF卡开机自动挂载的位置
 
 压缩文件
 
-```
+```c
 #define FS_ATTR_ARCHIVE   0x00000020
 ```
 
@@ -176,7 +176,7 @@ TF卡开机自动挂载的位置
 
 文件开头
 
-```
+```c
 #define FS_SEEK_SET                 0
 ```
 
@@ -186,7 +186,7 @@ TF卡开机自动挂载的位置
 
 当前位置
 
-```
+```c
 #define FS_SEEK_CUR                 1
 ```
 
@@ -196,7 +196,7 @@ TF卡开机自动挂载的位置
 
 末尾位置
 
-```
+```c
 #define FS_SEEK_END                 2
 ```
 
@@ -206,7 +206,7 @@ TF卡开机自动挂载的位置
 
 TF卡名称
 
-```
+```c
 #define FS_DEVICE_NAME_T_FLASH  "TF"
 ```
 
@@ -216,7 +216,7 @@ TF卡名称
 
 Flash名称
 
-```
+```c
 #define FS_DEVICE_NAME_FLASH    "FLASH"
 ```
 
@@ -226,7 +226,7 @@ Flash名称
 
 错误信息,错误信息详细信息请看[api_inc_fs.h](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_inc_fs.h)
 
-```
+```c
 #define ERR_FS_IS_DIRECTORY                                -4200001
 #define ERR_FS_NOT_DIRECTORY                               -4200002
 #define ERR_FS_NO_DIR_ENTRY                                -4200003
@@ -285,7 +285,7 @@ Flash名称
 
 文件系统空间信息，包括总空间和已经使用的空间信息
 
-```
+```c
 typedef struct
 {
     UINT64 totalSize;    // Total size
@@ -301,7 +301,7 @@ typedef struct
 
 ### API_FS_Open
 
-```
+```c
 int32_t  API_FS_Open(
     PCSTR    fileName,
     uint32_t operationFlag,
@@ -328,7 +328,7 @@ int32_t  API_FS_Open(
 
 ### API_FS_Close
 
-```
+```c
 int32_t  API_FS_Close(
     int32_t fd
 );
@@ -350,7 +350,7 @@ int32_t  API_FS_Close(
 
 ### API_FS_Read
 
-```
+```c
 int32_t  API_FS_Read(
     int32_t  fd,
     uint8_t* pBuffer,
@@ -376,7 +376,7 @@ int32_t  API_FS_Read(
 
 ### API_FS_Write
 
-```
+```c
 int32_t  API_FS_Write(
     int32_t  fd,
     uint8_t* pBuffer,
@@ -402,7 +402,7 @@ int32_t  API_FS_Write(
 
 ### API_FS_Flush
 
-```
+```c
 uint32_t API_FS_Flush(
     int32_t fd
 );
@@ -424,7 +424,7 @@ uint32_t API_FS_Flush(
 
 ### API_FS_Create
 
-```
+```c
 int32_t API_FS_Create(
     PCSTR fileName,
     uint32_t mode
@@ -448,7 +448,7 @@ int32_t API_FS_Create(
 
 ### API_FS_Delete
 
-```
+```c
 int32_t  API_FS_Delete(
     PCSTR fileName
 );
@@ -470,7 +470,7 @@ int32_t  API_FS_Delete(
 
 ### API_FS_Seek
 
-```
+```c
 int64_t API_FS_Seek(
     int32_t  fd,
     int64_t  offset,
@@ -496,7 +496,7 @@ int64_t API_FS_Seek(
 
 ### API_FS_IsEndOfFile
 
-```
+```c
 int32_t API_FS_IsEndOfFile(
     int32_t fd
 );
@@ -518,7 +518,7 @@ int32_t API_FS_IsEndOfFile(
 
 ### API_FS_Rename
 
-```
+```c
 int32_t API_FS_Rename(
     PCSTR oldName,
     PCSTR newName
@@ -542,7 +542,7 @@ int32_t API_FS_Rename(
 
 ### API_FS_GetFileName
 
-```
+```c
 int32_t  API_FS_GetFileName(
     int32_t  fd,
     int32_t  nameBufferLen,
@@ -568,7 +568,7 @@ int32_t  API_FS_GetFileName(
 
 ### API_FS_GetFileSize
 
-```
+```c
 int64_t  API_FS_GetFileSize(
     int32_t fd
 );
@@ -590,7 +590,7 @@ int64_t  API_FS_GetFileSize(
 
 ### API_FS_GetDirSize
 
-```
+```c
 int64_t  API_FS_GetDirSize(
     PCSTR     fileName,
     uint64_t* size
@@ -614,7 +614,7 @@ int64_t  API_FS_GetDirSize(
 
 ### API_FS_GetCurDir
 
-```
+```c
 int32_t  API_FS_GetCurDir(
     uint32_t size,
     PSTR     pCurDir
@@ -638,7 +638,7 @@ int32_t  API_FS_GetCurDir(
 
 ### API_FS_ChangeDir
 
-```
+```c
 int32_t  API_FS_ChangeDir(
     PCSTR pDirName
 );
@@ -660,7 +660,7 @@ int32_t  API_FS_ChangeDir(
 
 ### API_FS_Mkdir
 
-```
+```c
 int32_t API_FS_Mkdir(
     PCSTR fileName,
     uint32_t mode
@@ -684,7 +684,7 @@ int32_t API_FS_Mkdir(
 
 ### API_FS_Rmdir
 
-```
+```c
 int32_t API_FS_Rmdir(
     PCSTR dirName
 );
@@ -706,7 +706,7 @@ int32_t API_FS_Rmdir(
 
 ### API_FS_GetFSInfo
 
-```
+```c
 int32_t API_FS_GetFSInfo(
     PCSTR         pDevName,
     API_FS_INFO* pFsInfo

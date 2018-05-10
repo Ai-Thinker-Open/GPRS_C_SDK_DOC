@@ -14,7 +14,7 @@ GPS输出的原始信息格式为`NMEA`标准，比如坐标(`2236.3934,11350.38
 
 ### GPS_Open
 
-```
+```c
 bool GPS_Open(UART_Callback_t gpsReceivedCallback);
 ```
 
@@ -32,7 +32,7 @@ bool GPS_Open(UART_Callback_t gpsReceivedCallback);
 
 ### GPS_Close
 
-```
+```c
 bool GPS_Close();
 ```
 

@@ -14,7 +14,7 @@ Power Manager 电源管理
 
 外设电源
 
-```
+```c
 typedef enum{
     POWER_TYPE_VPAD = 0,            // GPIO0  ~ GPIO7  and GPIO25 ~ GPIO36    2.8V   //always on
     POWER_TYPE_MMC,                 // GPIO8  ~ GPIO13                        1.9V
@@ -30,7 +30,7 @@ typedef enum{
 
 开机原因
 
-```
+```c
 typedef enum{
     POWER_ON_CAUSE_KEY = 0  ,
     POWER_ON_CAUSE_CHARGE   ,
@@ -49,7 +49,7 @@ typedef enum{
 
 ### PM_PowerEnable
 
-```
+```c
 bool PM_PowerEnable(Power_Type_t powerType, bool isOn);
 ```
 
@@ -70,7 +70,7 @@ bool PM_PowerEnable(Power_Type_t powerType, bool isOn);
 
 ### PM_SleepMode
 
-```
+```c
 void PM_SleepMode(bool isSleepMode);
 ```
 
@@ -91,7 +91,7 @@ void PM_SleepMode(bool isSleepMode);
 
 ### PM_Voltage
 
-```
+```c
 uint16_t PM_Voltage(uint8_t* percent);
 ```
 
@@ -111,7 +111,7 @@ uint16_t PM_Voltage(uint8_t* percent);
 
 ### PM_ShutDown
 
-```
+```c
 void PM_ShutDown();
 ```
 
@@ -131,7 +131,7 @@ void PM_ShutDown();
 
 ### PM_Restart
 
-```
+```c
 void PM_Restart();
 ```
 

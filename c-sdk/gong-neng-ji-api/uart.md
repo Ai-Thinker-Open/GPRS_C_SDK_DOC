@@ -13,7 +13,7 @@
 
 串口编号
 
-```
+```c
 typedef enum{
     UART1   = 1,
     UART2   = 2,
@@ -28,7 +28,7 @@ typedef enum{
 
 波特率
 
-```
+```c
 typedef enum{
     UART_BAUD_RATE_1200                     = 1200,
     UART_BAUD_RATE_2400                     = 2400,
@@ -58,7 +58,7 @@ typedef enum{
 
 数据位
 
-```
+```c
 typedef enum{
     UART_DATA_BITS_7                        = 7,
     UART_DATA_BITS_8                        = 8,
@@ -72,7 +72,7 @@ typedef enum{
 
 停止位
 
-```
+```c
 typedef enum{
     UART_STOP_BITS_1                         = 1,
     UART_STOP_BITS_2                           ,
@@ -86,7 +86,7 @@ typedef enum{
 
 校验位
 
-```
+```c
 typedef enum{
 UART_PARITY_NONE = 0,
 UART_PARITY_ODD ,
@@ -103,7 +103,7 @@ UART_PARITY_MAX
 
 串口错误
 
-```
+```c
 typedef enum{
     UART_ERROR_RX_LINE_ERROR,
     UART_ERROR_RX_OVER_FLOW_ERROR,
@@ -123,7 +123,7 @@ typedef enum{
 
 回调函数参数
 
-```
+```c
 typedef struct{
 UART_Port_t port;
 uint32_t length;
@@ -137,7 +137,7 @@ char *buf;//the receive buf
 
 串口初始化参数
 
-```
+```c
 typedef struct{
     UART_Baud_Rate_t      baudRate;
     UART_Data_Bits_t      dataBits;
@@ -156,7 +156,7 @@ typedef struct{
 
 ### UART_Callback_t
 
-```
+```c
 typedef void (*UART_Callback_t)(UART_Callback_Param_t param);
 ```
 
@@ -177,7 +177,7 @@ typedef void (*UART_Callback_t)(UART_Callback_Param_t param);
 
 ### UART_Error_Callback_t
 
-```
+```c
 typedef void (*UART_Error_Callback_t)(UART_Error_t error);
 ```
 
@@ -198,7 +198,7 @@ typedef void (*UART_Error_Callback_t)(UART_Error_t error);
 
 ### UART_Init
 
-```
+```c
 bool     UART_Init(UART_Port_t uartN, UART_Config_t config);
 ```
 
@@ -220,7 +220,7 @@ bool     UART_Init(UART_Port_t uartN, UART_Config_t config);
 
 ### UART_Write
 
-```
+```c
 uint32_t UART_Write(UART_Port_t uartN, uint8_t* dataToWrite, uint32_t length);
 ```
 
@@ -243,7 +243,7 @@ uint32_t UART_Write(UART_Port_t uartN, uint8_t* dataToWrite, uint32_t length);
 
 ### UART_Read
 
-```
+```c
 uint32_t UART_Read(UART_Port_t uartN, uint8_t* dataToRead, uint32_t length, uint32_t timeOutMs);
 ```
 
@@ -267,7 +267,7 @@ uint32_t UART_Read(UART_Port_t uartN, uint8_t* dataToRead, uint32_t length, uint
 
 ### UART_Close
 
-```
+```c
 bool     UART_Close(UART_Port_t uartN);
 ```
 

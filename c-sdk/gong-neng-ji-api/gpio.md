@@ -3,11 +3,11 @@ GPIO (General Purpose Input Output)通用输入输出接口
 
 
 要保证引脚功能可以正常使用，在配置IO之前必须将对应IO口的电源打开，使用
-```
+```c
 bool PM_PowerEnable(Power_Type_t powerType, bool isOn)
-```
+```c
 函数来打开对应的IO口电源,不同IO口对应的电源如下：
-```
+```c
 typedef enum{
     POWER_TYPE_VPAD = 0,            // GPIO0  ~ GPIO7  and GPIO25 ~ GPIO36    2.8V   //always on
     POWER_TYPE_MMC,                 // GPIO8  ~ GPIO13                        1.9V
@@ -36,7 +36,7 @@ typedef enum{
 
 引脚
 
-```
+```c
 typedef enum{
     GPIO_PIN0 = 0, //IO 可中断
     GPIO_PIN1,     //IO 可中断
@@ -83,7 +83,7 @@ typedef enum{
 
 IO模式
 
-```
+```c
 typedef enum{
     GPIO_MODE_OUTPUT = 0,   // 输出模式
     GPIO_MODE_INPUT,        // 输入模式
@@ -98,7 +98,7 @@ typedef enum{
 
 高低电平
 
-```
+```c
 typedef enum{
     GPIO_LEVEL_LOW  = 0,  //低电平
     GPIO_LEVEL_HIGH = 1   //高电平
@@ -111,7 +111,7 @@ typedef enum{
 
 中断类型
 
-```
+```c
 typedef enum {
     GPIO_INT_TYPE_HIGH_LEVEL = 0,      //高电平中断
     GPIO_INT_TYPE_LOW_LEVEL,           //低电平中断
@@ -131,7 +131,7 @@ typedef enum {
 
 中断回调函数参数类型
 
-```
+```c
 typedef struct{
     GPIO_PIN pin;
 }GPIO_INT_callback_param_t;
@@ -143,7 +143,7 @@ typedef struct{
 
 中断回调函数类型
 
-```
+```c
 typedef void (*PCallbackINT)(GPIO_INT_callback_param_t* param);
 ```
 
@@ -153,7 +153,7 @@ typedef void (*PCallbackINT)(GPIO_INT_callback_param_t* param);
 
 中断配置选项
 
-```
+```c
 typedef struct{
     uint16_t        debounce; //去抖时间（ms）
     GPIO_INT_TYPE   type    ;
@@ -167,7 +167,7 @@ typedef struct{
 
 GPIO配置选项
 
-```
+```c
 typedef struct{
     GPIO_PIN          pin         ;  //引脚
     GPIO_MODE         mode        ;  //模式
@@ -184,7 +184,7 @@ typedef struct{
 
 ### GPIO_Init
 
-```
+```c
 bool GPIO_Init(GPIO_config_t config);
 ```
 
@@ -204,7 +204,7 @@ bool GPIO_Init(GPIO_config_t config);
 
 ### GPIO_GetConfig
 
-```
+```c
 void GPIO_GetConfig(GPIO_PIN pin,GPIO_config_t* config);
 ```
 
@@ -223,7 +223,7 @@ void GPIO_GetConfig(GPIO_PIN pin,GPIO_config_t* config);
 
 ### GPIO_SetLevel
 
-```
+```c
 bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
 ```
 
@@ -246,7 +246,7 @@ bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
 
 ### GPIO_Set
 
-```
+```c
 bool GPIO_Set(GPIO_PIN pin, GPIO_LEVEL  level);
 ```
 
@@ -268,7 +268,7 @@ bool GPIO_Set(GPIO_PIN pin, GPIO_LEVEL  level);
 
 ### GPIO_GetLevel
 
-```
+```c
 bool GPIO_GetLevel(GPIO_config_t gpioConf, GPIO_LEVEL* level);
 ```
 
@@ -290,7 +290,7 @@ bool GPIO_GetLevel(GPIO_config_t gpioConf, GPIO_LEVEL* level);
 
 ### GPIO_Get
 
-```
+```c
 bool GPIO_Get(GPIO_PIN pin, GPIO_LEVEL* level);
 ```
 
@@ -313,7 +313,7 @@ bool GPIO_Get(GPIO_PIN pin, GPIO_LEVEL* level);
 
 ### GPIO_Close
 
-```
+```c
 bool GPIO_Close(GPIO_PIN pin);
 ```
 

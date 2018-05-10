@@ -12,7 +12,7 @@ DNS
 
 DNS状态
 
-```
+```c
 typedef enum{
     DNS_STATUS_ERROR = -1,
     DNS_STATUS_OK    =  0,
@@ -29,7 +29,7 @@ typedef enum{
 
 ### DNS_CALLBACK_FUNC_T
 
-```
+```c
 typedef VOID (*DNS_CALLBACK_FUNC_T)(DNS_Status_t status, void* param);
 ```
 
@@ -50,7 +50,7 @@ DNS解析回调函数
 
 ### DNS_GetHostByName
 
-```
+```c
 DNS_Status_t     DNS_GetHostByName(const char* domain, char* ip);
 ```
 
@@ -72,7 +72,7 @@ DNS_Status_t     DNS_GetHostByName(const char* domain, char* ip);
 
 ### DNS_GetHostByNameEX
 
-```
+```c
 DNS_Status_t     DNS_GetHostByNameEX(const char *hostname, char* ip, DNS_CALLBACK_FUNC_T func, void* param);
 ```
 
@@ -95,7 +95,7 @@ DNS_Status_t     DNS_GetHostByNameEX(const char *hostname, char* ip, DNS_CALLBAC
 
 ### DNS_GetHostByName2
 
-```
+```c
 int32_t          DNS_GetHostByName2(const char* domain, char* ip);
 ```
 

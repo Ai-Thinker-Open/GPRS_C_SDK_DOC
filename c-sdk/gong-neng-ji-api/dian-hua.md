@@ -12,7 +12,7 @@ CALL 电话语音电话
 
 DTMF 增益
 
-```
+```c
 typedef enum
 {
     CALL_DTMF_GAIN_0dB = 0,
@@ -30,7 +30,7 @@ typedef enum
 
 错误信息
 
-```
+```c
 typedef enum{
     CALL_ERROR_NONE              = 0  ,
     CALL_ERROR_NO_DIAL_TONE           ,  //TERMINAL USER HAS POWERED OFF
@@ -53,7 +53,7 @@ typedef enum{
 
 ### CALL_Dial
 
-```
+```c
 bool CALL_Dial(const char* number);
 ```
 
@@ -73,7 +73,7 @@ bool CALL_Dial(const char* number);
 
 ### CALL_HangUp
 
-```
+```c
 bool CALL_HangUp();
 ```
 
@@ -93,7 +93,7 @@ bool CALL_HangUp();
 
 ### CALL_Answer
 
-```
+```c
 bool CALL_Answer();
 ```
 
@@ -113,7 +113,7 @@ bool CALL_Answer();
 
 ### CALL_DTMF
 
-```
+```c
 bool CALL_DTMF(char dtmf, CALL_DTMF_Gain_t attenuation, uint8_t duration, uint8_t speakerGain, bool send);
 ```
 

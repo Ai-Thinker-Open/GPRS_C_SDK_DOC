@@ -12,7 +12,7 @@ DNS
 
 TCP、UDP选择
 
-```
+```c
 typedef enum{
     TCP = 0,
     UDP =1
@@ -25,7 +25,7 @@ typedef enum{
 
 错误信息
 
-```
+```c
 typedef enum{
     /** No error, everything OK. */
     API_SOCKET_ERROR_NONE = 0,
@@ -71,7 +71,7 @@ typedef enum{
 
 ### Socket_TcpipConnect
 
-```
+```c
 int      Socket_TcpipConnect(TCP_UDP_t tcpOrUdp, const char* ip,uint16_t port);
 ```
 
@@ -93,7 +93,7 @@ int      Socket_TcpipConnect(TCP_UDP_t tcpOrUdp, const char* ip,uint16_t port);
 
 ### Socket_TcpipWrite
 
-```
+```c
 int      Socket_TcpipWrite(int socketFd, uint8_t* data, uint16_t length);
 ```
 
@@ -115,7 +115,7 @@ int      Socket_TcpipWrite(int socketFd, uint8_t* data, uint16_t length);
 
 ### Socket_TcpipRead
 
-```
+```c
 int      Socket_TcpipRead( int socketFd, uint8_t* data, uint16_t length);
 ```
 
@@ -137,7 +137,7 @@ int      Socket_TcpipRead( int socketFd, uint8_t* data, uint16_t length);
 
 ### Socket_TcpipClose
 
-```
+```c
 bool     Socket_TcpipClose(int socketFd);
 ```
 

@@ -13,7 +13,7 @@ A9/A9G有三个I2C接口，使用的时候注意与哪些引脚复用了的，�
 
 默认超时时间
 
-```
+```c
 #define I2C_DEFAULT_TIME_OUT 10 //10ms
 ```
 
@@ -23,7 +23,7 @@ A9/A9G有三个I2C接口，使用的时候注意与哪些引脚复用了的，�
 
 I2C编号
 
-```
+```c
 typedef enum
 {
 I2C1 = 1 ,
@@ -37,7 +37,7 @@ I2C_ID_MAX
 
 I2C支持的频率
 
-```
+```c
 typedef enum
 {
 I2C_FREQ_100K,
@@ -50,7 +50,7 @@ I2C_FREQ_MAX
 
 I2C错误信息
 
-```
+```c
 typedef enum{
 I2C_ERROR_NONE = 0 ,
 /// A resource reset is required
@@ -74,7 +74,7 @@ I2C_ERROR_MAX
 
 I2C标志位，功能函数中带`Raw`的函数使用
 
-```
+```c
 typedef enum{
 I2C_CMD_MASK_MASTER_NACK = (1<<0) ,
 I2C_CMD_MASK_MASTER_READ = (1<<4) ,
@@ -92,7 +92,7 @@ I2C_CMD_MASK_MAX
 
 I2C配置
 
-```
+```c
 typedef struct{
 I2C_FREQ_t freq;
 } I2C_Config_t;
@@ -106,7 +106,7 @@ I2C_FREQ_t freq;
 
 ### I2C_Init
 
-```
+```c
 bool I2C_Init(I2C_ID_t i2c, I2C_Config_t config);
 ```
 
@@ -127,7 +127,7 @@ bool I2C_Init(I2C_ID_t i2c, I2C_Config_t config);
 
 ### I2C_Transmit
 
-```
+```c
 I2C_Error_t I2C_Transmit(I2C_ID_t i2c, uint16_t slaveAddr, uint8_t* pData, uint16_t length, uint32_t timeOut);
 ```
 
@@ -151,7 +151,7 @@ I2C_Error_t I2C_Transmit(I2C_ID_t i2c, uint16_t slaveAddr, uint8_t* pData, uint1
 
 ### I2C_Receive
 
-```
+```c
 I2C_Error_t I2C_Receive(I2C_ID_t i2c, uint16_t slaveAddr, uint8_t* pData, uint16_t length, uint32_t timeOut);
 ```
 
@@ -175,7 +175,7 @@ I2C_Error_t I2C_Receive(I2C_ID_t i2c, uint16_t slaveAddr, uint8_t* pData, uint16
 
 ### I2C_WriteMem
 
-```
+```c
 I2C_Error_t I2C_WriteMem(I2C_ID_t i2c, uint16_t slaveAddr, uint32_t memAddr, uint8_t memSize, uint8_t* pData, uint16_t length, uint32_t timeOut);
 ```
 
@@ -201,7 +201,7 @@ I2C_Error_t I2C_WriteMem(I2C_ID_t i2c, uint16_t slaveAddr, uint32_t memAddr, uin
 
 ### I2C_ReadMem
 
-```
+```c
 I2C_Error_t I2C_ReadMem(I2C_ID_t i2c, uint16_t slaveAddr, uint32_t memAddr, uint8_t memSize, uint8_t* pData, uint16_t length, uint32_t timeOut);
 ```
 
@@ -227,7 +227,7 @@ I2C_Error_t I2C_ReadMem(I2C_ID_t i2c, uint16_t slaveAddr, uint32_t memAddr, uint
 
 ### I2C_WriteRawByte
 
-```
+```c
 I2C_Error_t I2C_WriteRawByte(I2C_ID_t i2c, uint8_t sendByte, I2C_CMD_Mask_t cmdMask, uint32_t timeOut);
 ```
 
@@ -250,7 +250,7 @@ I2C_Error_t I2C_WriteRawByte(I2C_ID_t i2c, uint8_t sendByte, I2C_CMD_Mask_t cmdM
 
 ### I2C_ReadRawByte
 
-```
+```c
 uint8_t I2C_ReadRawByte(I2C_ID_t i2c, I2C_CMD_Mask_t cmdMask, uint32_t timeOut);
 ```
 
@@ -272,7 +272,7 @@ uint8_t I2C_ReadRawByte(I2C_ID_t i2c, I2C_CMD_Mask_t cmdMask, uint32_t timeOut);
 
 ### I2C_Close
 
-```
+```c
 bool I2C_Close(I2C_ID_t i2c);
 ```
 

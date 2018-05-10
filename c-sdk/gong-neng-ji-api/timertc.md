@@ -13,7 +13,7 @@ time（RTC）
 
 用整数来表示时间
 
-```
+```c
 typedef long         time_t;
 ```
 
@@ -23,7 +23,7 @@ typedef long         time_t;
 
 用整数来表示时间
 
-```
+```c
 typedef long         clock_t;
 ```
 
@@ -35,7 +35,7 @@ typedef long         clock_t;
 
 系统clock转秒
 
-```
+```c
 #define CLOCKS_PER_SEC   (16384.0)
 ```
 
@@ -45,7 +45,7 @@ typedef long         clock_t;
 
 系统clock转ms
 
-```
+```c
 #define CLOCKS_PER_MSEC  (16.384)
 ```
 
@@ -58,7 +58,7 @@ typedef long         clock_t;
 
 时间表示，包括年月日时分秒
 
-```
+```c
 typedef struct tm{
     int tm_sec;         /* 秒，范围从 0 到 59        */
     int tm_min;         /* 分，范围从 0 到 59        */
@@ -79,7 +79,7 @@ typedef struct tm{
 时间，秒和毫秒表示
 （tv_usec这里实际上是毫秒不是微妙）
 
-```
+```c
 typedef struct timeval {
     long long    tv_sec;         /* seconds */
     long         tv_usec;        /* and microseconds!!!but millisecond instead here(实际数据是ms)!! */
@@ -92,7 +92,7 @@ typedef struct timeval {
 
 时区类型
 
-```
+```c
 typedef struct timezone {
     int tz_minuteswest;
     int tz_dsttime;
@@ -105,7 +105,7 @@ typedef struct timezone {
 
 RTC时间
 
-```
+```c
 typedef struct{
     uint16_t year;
     uint8_t  month;
@@ -124,7 +124,7 @@ typedef struct{
 
 ### gettimeofday
 
-```
+```c
 int gettimeofday(timeval_t *tv, timezone_t *tz);
 ```
 
@@ -145,7 +145,7 @@ int gettimeofday(timeval_t *tv, timezone_t *tz);
 
 ### TIME_SetIsAutoUpdateRtcTime
 
-```
+```c
 void TIME_SetIsAutoUpdateRtcTime(bool isAutoUpdate);
 ```
 
@@ -166,7 +166,7 @@ void TIME_SetIsAutoUpdateRtcTime(bool isAutoUpdate);
 
 ### TIME_IsAutoUpdateRtcTime
 
-```
+```c
 bool TIME_IsAutoUpdateRtcTime();
 ```
 
@@ -186,7 +186,7 @@ bool TIME_IsAutoUpdateRtcTime();
 
 ### TIME_SetRtcTime
 
-```
+```c
 bool TIME_SetRtcTime(RTC_Time_t* time);
 ```
 
@@ -206,7 +206,7 @@ bool TIME_SetRtcTime(RTC_Time_t* time);
 
 ### TIME_GetRtcTIme
 
-```
+```c
 bool TIME_GetRtcTIme(RTC_Time_t* time);
 ```
 
@@ -226,7 +226,7 @@ bool TIME_GetRtcTIme(RTC_Time_t* time);
 
 ### clock
 
-```
+```c
 clock_t clock(void);
 ```
 
