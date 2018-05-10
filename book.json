@@ -29,8 +29,8 @@
         },
         "sharing": {
             "weibo": true,
-            "facebook": true,
-            "twitter": true,
+            "facebook": false,
+            "twitter": false,
             "google": false,
             "instapaper": false,
             "vk": false,
