@@ -1,7 +1,7 @@
 Start My First Code
 =====
 
-To ensure that you can compile code, Download firmware to GPRS module / development board, then we can begin our first code ~ ~.
+To ensure that you can compile code, Download firmware to GPRS module / development board, then we can begin our first code ~ ~
 
 The following code can be found in the [`demo/first`](https://github.Let's code from `Hello word`project 
 
