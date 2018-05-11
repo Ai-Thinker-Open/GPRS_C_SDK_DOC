@@ -1,4 +1,4 @@
-Basic knowledgement：GPS
+Basic knowledgement: GPS
 ===
 
 

@@ -1,4 +1,4 @@
-Basic knowledgement：GSM/GPRS
+Basic knowledgement: GSM/GPRS
 ====
 
 ## GSM
@@ -37,7 +37,7 @@ The GPRS network assigns a **maximum** of 8 timeslots to each user to transmit d
 
 It is important to note that Class 8/10/12 does not mean that there are 8/10/12 channels that can be used, and that there are only 5 total channels, and the classification here illustrates the maximum number of upstream and downlink channels that can be used.
 
-**GPRS transmission speed**：In theory, the greater the class value is, the faster the speed is, but the speed is limited by the minimum speed limit for both the base station and the GPRS device (GPRS module, cell phone). For example, the GPRS device supports Class 12, but the base station only supports Class 10, which will receive the Class 10 limit, and it is also related to the encoding methods, signals, interference and other factors.
+**GPRS transmission speed**: In theory, the greater the class value is, the faster the speed is, but the speed is limited by the minimum speed limit for both the base station and the GPRS device (GPRS module, cell phone). For example, the GPRS device supports Class 12, but the base station only supports Class 10, which will receive the Class 10 limit, and it is also related to the encoding methods, signals, interference and other factors.
 
 #### （3）GPRS Encoding method
 

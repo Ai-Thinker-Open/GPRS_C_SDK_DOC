@@ -4,11 +4,11 @@ Code Style And Directory Structure
 ## Directory Structure
 
 It is composed mainly of the following folders:
-* app：user app folder
-* demo：examples
+* app: user app folder
+* demo: examples
 * include: header files
-* init：initilize code, do not edit
-* platform：lib files
+* init: initilize code, do not edit
+* platform: lib files
 
 You can find API in `include` folder, and examples in `demo` folder.
 
@@ -32,7 +32,7 @@ Lower camel case, e.g.:`int ballNumber;`
 
 ### Macro definition
 
-Upper case with"`_`", e.g.：`#define BUFFER_MAX_LENGTH 10`
+Upper case with"`_`", e.g.: `#define BUFFER_MAX_LENGTH 10`
 
 ### File Encoding Format
 

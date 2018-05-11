@@ -29,7 +29,7 @@
   * [UART](c-sdk/function-api/uart.md)
   * [OS](c-sdk/function-api/os.md)
   * [IMEI](c-sdk/function-api/imei.md)
-  * [ICCID](c-sdk/function-api/ccid.md)
+  * [ICCID](c-sdk/function-api/iccid.md)
   * [GPS](c-sdk/function-api/gps.md)
   * [I2C](c-sdk/function-api/iic.md)
   * [SPI](c-sdk/function-api/spi.md)

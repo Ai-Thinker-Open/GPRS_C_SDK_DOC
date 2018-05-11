@@ -6,9 +6,9 @@
 Ai-Thinker GPRS C SDK documentation
 
 
-Code of CSDK：[GPRS_C_SDK](https://github.com/Ai-Thinker-Open/GPRS-C-SDK)
+Code of CSDK: [GPRS_C_SDK](https://github.com/Ai-Thinker-Open/GPRS-C-SDK)
 
-Source code of documention：[GPRS_C_SDK_DOC](https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC)
+Source code of documention: [GPRS_C_SDK_DOC](https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC)
 
 [Click Me To Read Online](https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en) ( [中文](https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh) )
 
@@ -20,7 +20,7 @@ Source code of documention：[GPRS_C_SDK_DOC](https://github.com/Ai-Thinker-Open
 Ai-Thinker GPRS module models are mainly **A9**, **A9G**.
 A9 mainly has GSM/GPRS (2G) related functions; A9G also integrates a GPS chip to facilitate the positioning related applications. For more functions, refer to hardware introduction section.
 
-Module can be bought at taobao or other ways ：[taobao link](https://anxinke.taobao.com/category-1303500786.htm?spm=2013.1.w5002-16491372996.5.3c354c53OwDR7Y&search=y&catName=GPRS%C4%A3%D7%E9%C7%F8)
+Module can be bought at taobao or other ways : [taobao link](https://anxinke.taobao.com/category-1303500786.htm?spm=2013.1.w5002-16491372996.5.3c354c53OwDR7Y&search=y&catName=GPRS%C4%A3%D7%E9%C7%F8)
 
 ## Development
 

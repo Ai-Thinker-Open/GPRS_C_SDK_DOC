@@ -15,7 +15,7 @@ GPRS C SDK Build environment installation
 
 ## Download tool chain, debug tool and SDK
 
-* Download CSDTK4.2：[baidu cloud](https://pan.baidu.com/s/1Oa5tvWW2Flfl5UJITk980g)
+* Download CSDTK4.2: [baidu cloud](https://pan.baidu.com/s/1Oa5tvWW2Flfl5UJITk980g)
 
 * [download SDK](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/releases)
 
@@ -40,7 +40,7 @@ Then use `./build.bat` script to build project:
   * `./build.bat clean all`:clear all the build files
   * `./build.bat demo $PROJ release`:build a release version, e.g.:`./build.bat demo gpio release`，if the last parameter is not `release`, it will be default to `debug` version. The GDB can be used to debug errors after system crashed in `debug` version, but `release` version can not, it will auto restart system when system crashed!
 
-**e.g.：**
+**e.g.: **
 ```
 ./build.sh demo gpio
 ```
@@ -57,6 +57,6 @@ There's two hex file,(`*_B*.lod` and `*_flash.lod`), you must burn the bigger on
 
 * Way A: github [add issue](https://github.com/Ai-Thinker-Open/GPRS-C-SDK/issues/new)
 
-* Way B：[Ai-Thinker forum](http://bbs.ai-thinker.com/forum.php?mod=forumdisplay&fid=37)
+* Way B: [Ai-Thinker forum](http://bbs.ai-thinker.com/forum.php?mod=forumdisplay&fid=37)
 
 

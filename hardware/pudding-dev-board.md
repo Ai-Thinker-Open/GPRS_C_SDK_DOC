@@ -23,9 +23,9 @@ A9/A9G development board:pudding
 
 ## Schematic
 
-* A9 schematic：http://wiki.ai-thinker.com/_media/gprs/a9/a9-dev_v1.2.pdf
-* A9G schematic：http://wiki.ai-thinker.com/_media/gprs/a9g/a9g-dev_v1.2.pdf
-* A9 schematic lib：http://wiki.ai-thinker.com/_media/gprs/a9g/a9g-dev_v1.2.zip
-* A9G schematic lib：http://wiki.ai-thinker.com/_media/gprs/a9/a9-dev_v1.2.zip
+* A9 schematic: http://wiki.ai-thinker.com/_media/gprs/a9/a9-dev_v1.2.pdf
+* A9G schematic: http://wiki.ai-thinker.com/_media/gprs/a9g/a9g-dev_v1.2.pdf
+* A9 schematic lib: http://wiki.ai-thinker.com/_media/gprs/a9g/a9g-dev_v1.2.zip
+* A9G schematic lib: http://wiki.ai-thinker.com/_media/gprs/a9/a9-dev_v1.2.zip
 
 
