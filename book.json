@@ -28,12 +28,12 @@
             "label": ""
         },
         "sharing": {
-            "facebook": true,
-            "twitter": true,
+            "facebook": false,
+            "twitter": false,
             "google": false,
             "instapaper": false,
             "vk": false,
-            "weibo": true,
+            "weibo": false,
             "all": [
                 "facebook",
                 "twitter",
