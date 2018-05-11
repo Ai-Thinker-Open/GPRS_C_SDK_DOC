@@ -14,7 +14,7 @@
         "anchor-navigation-ex",
         "sharing",
         "my-toolbar",
-        "analytics"
+        "ga"
     ],
     "pluginsConfig": {
         "github": {
@@ -73,8 +73,8 @@
                 "level3Icon": "fa fa-angle-double-right"
             }
         },
-        "analytics": {
-            "google": "UA-119047820-1"
+        "ga": {
+            "token": "UA-119047820-1"
         }
     }
 }
