@@ -50,16 +50,10 @@ GPRS defines four channel coding methods, CS-1 to CS-4, with different coding ra
 
 1. **Register**:The GPRS device connects to the base station and registers to the network, and ensure that there is enough strong signal. At that time, GSM service can be used, e.g.:call and SMS.
 
-
-
 2. **GPRS attachment**: Establishing a communication channel from GPRS device to GPRS network, actually attached to SGSN (serving GPRS support node).
-
-
 
 3. **GPRS PDP Context (packet Data protocol context) activation**: Get IP from the GPRS gateway. After activation, the device can communication with publick network(Internet). 
 GGSN (gateway GPRS Support Node) is the key part of the GPRS network, the interaction between the GPRS network and the external packet switching network. From the external network, GGSN is a subnet router, which is responsible for exchanging the information between the SGSN and the external network, and is responsible for the functions of authentication, flow rate and so on.
-
-
 
 4. **to connect with public network devices**: Because the device has been built up to the public network connection, only need to connect directly through a certain protocol, such as the establishment of TCP connection, UDP connection, etc.
 
