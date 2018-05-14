@@ -2,7 +2,8 @@ GPIO (General Purpose Input Output)通用输入输出接口
 ===
 
 
-要保证引脚功能可以正常使用，在配置IO之前必须将对应IO口的电源打开，使用
+**Open power of GPIO first before config GPIO**
+
 ```c
 bool PM_PowerEnable(Power_Type_t powerType, bool isOn)
 ```c
@@ -18,14 +19,16 @@ typedef enum{
 ```
 
 > 比如：
-* 需要使用GPIO5，则需要调用`PM_PowerEnable(POWER_TYPE_VPAD,true);`
-* 需要调用I2C2,因为I2C2是复用IO19和20，所以调用`PM_PowerEnable(POWER_TYPE_CAM,true);`
+* Use GPIO5, call `PM_PowerEnable(POWER_TYPE_VPAD,true);`
+* Use I2C2, we should config IO19 and IO20, so call `PM_PowerEnable(POWER_TYPE_CAM,true);`
 
-模组引脚除了通用IO功能外，部分引脚还有复用功能，具体见[开发板中的引脚图](../../ying-jian/kai-fa-ban-pudding.md/#引脚图)
+In addition to the general IO function, some of the pins also have multiplexing functions. 
+
+![](../../assets/pudding_pin.png)
 
 
 
-例示代码请参考[CSDK demo/gpio](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/gpio/src/demo_gpio.c)
+Example:[CSDK demo/gpio](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/gpio/src/demo_gpio.c)
 
 ---
 
@@ -34,7 +37,7 @@ typedef enum{
 
 ### GPIO_PIN
 
-引脚
+GPIO Pins
 
 ```c
 typedef enum{
@@ -81,13 +84,13 @@ typedef enum{
 
 ### GPIO_MODE
 
-IO模式
+IO mode
 
 ```c
 typedef enum{
-    GPIO_MODE_OUTPUT = 0,   // 输出模式
-    GPIO_MODE_INPUT,        // 输入模式
-    GPIO_MODE_INPUT_INT,    // 中断模式
+    GPIO_MODE_OUTPUT = 0,   
+    GPIO_MODE_INPUT,        
+    GPIO_MODE_INPUT_INT,    // interrupt mode
     GPIO_MODE_MAX
 }GPIO_MODE;
 ```
@@ -96,12 +99,12 @@ typedef enum{
 
 ### GPIO_LEVEL
 
-高低电平
+gpio level
 
 ```c
 typedef enum{
-    GPIO_LEVEL_LOW  = 0,  //低电平
-    GPIO_LEVEL_HIGH = 1   //高电平
+    GPIO_LEVEL_LOW  = 0,  
+    GPIO_LEVEL_HIGH = 1   
 }GPIO_LEVEL;
 ```
 
@@ -109,15 +112,15 @@ typedef enum{
 
 ### GPIO_INT_TYPE
 
-中断类型
+Interrupt type
 
 ```c
 typedef enum {
-    GPIO_INT_TYPE_HIGH_LEVEL = 0,      //高电平中断
-    GPIO_INT_TYPE_LOW_LEVEL,           //低电平中断
-    GPIO_INT_TYPE_RISING_EDGE,         //上升沿中断
-    GPIO_INT_TYPE_FALLING_EDGE,        //下降沿中断
-    GPIO_INT_TYPE_RISING_FALLING_EDGE, //上升沿和下降沿中断
+    GPIO_INT_TYPE_HIGH_LEVEL = 0,     
+    GPIO_INT_TYPE_LOW_LEVEL,          
+    GPIO_INT_TYPE_RISING_EDGE,        
+    GPIO_INT_TYPE_FALLING_EDGE,       
+    GPIO_INT_TYPE_RISING_FALLING_EDGE,
     GPIO_INT_TYPE_MAX
 }GPIO_INT_TYPE;
 ```
@@ -129,7 +132,7 @@ typedef enum {
 
 ### GPIO_INT_callback_param_t
 
-中断回调函数参数类型
+interrupt callbak parameter type
 
 ```c
 typedef struct{
@@ -141,7 +144,7 @@ typedef struct{
 
 ### PCallbackINT
 
-中断回调函数类型
+Interrupt callback type
 
 ```c
 typedef void (*PCallbackINT)(GPIO_INT_callback_param_t* param);
@@ -151,7 +154,7 @@ typedef void (*PCallbackINT)(GPIO_INT_callback_param_t* param);
 
 ### GPIO_INT_config_t
 
-中断配置选项
+Interrupt configuration
 
 ```c
 typedef struct{
@@ -165,14 +168,14 @@ typedef struct{
 
 ### GPIO_config_t
 
-GPIO配置选项
+GPIO configuration
 
 ```c
 typedef struct{
-    GPIO_PIN          pin         ;  //引脚
-    GPIO_MODE         mode        ;  //模式
-    GPIO_LEVEL        defaultLevel;  //默认电平
-    GPIO_INT_config_t intConfig   ;  //中断配置（中断模式需要配置）
+    GPIO_PIN          pin         ; 
+    GPIO_MODE         mode        ; 
+    GPIO_LEVEL        defaultLevel; 
+    GPIO_INT_config_t intConfig   ; 
 }GPIO_config_t;
 ```
 
@@ -190,15 +193,15 @@ bool GPIO_Init(GPIO_config_t config);
 
 ##### Brief
 
-初始化IO
+Initialize GPIO
 
 ##### Parameters
 
-* config：初始化配置
+* config：GPIO configuration
 
 ##### Return
 
-* bool：配置成功/失败
+* bool：config success or fail
 
 ----
 
@@ -210,11 +213,11 @@ void GPIO_GetConfig(GPIO_PIN pin,GPIO_config_t* config);
 
 ##### Brief
 
-获取GPIO配置
+Get GPIO configuration
 
 ##### Parameters
 
-* config：GPIO配置变量地址
+* config：GPIO config
 
 ##### Return
 
@@ -229,16 +232,16 @@ bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
 
 ##### Brief
 
-设置GPIO电平
+Config GPIO output level
 
 ##### Parameters
 
-* gpioConf：GPIO初始化配置变量
-* level:电平高低
+* gpioConf：GPIO init configuration variable
+* level:  high or low level
 
 ##### Return
 
-* bool：是否设置成功
+* bool： is set success
 
 ---
 
@@ -246,22 +249,23 @@ bool GPIO_SetLevel(GPIO_config_t gpioConf, GPIO_LEVEL  level);
 
 ### GPIO_Set
 
+
 ```c
 bool GPIO_Set(GPIO_PIN pin, GPIO_LEVEL  level);
 ```
 
 ##### Brief
 
-设置GPIO电平，与`GPIO_SetLevel`功能一样，只是参数不一样
+Setting the GPIO level is just like the `GPIO_SetLevel` function, but the parameters are different.
 
 ##### Parameters
 
-* pin:GPIO口
-* level:电平高低
+* pin:GPIO pin
+* level: high or low level
 
 ##### Return
 
-* bool：是否设置成功
+* bool: set success or not
 
 ---
 
@@ -274,16 +278,16 @@ bool GPIO_GetLevel(GPIO_config_t gpioConf, GPIO_LEVEL* level);
 
 ##### Brief
 
-获取GPIO电平
+Get level of GPIO
 
 ##### Parameters
 
-* gpioConf:GPIO初始化配置变量
-* level:电平高低结果Return，变量指针
+* gpioConf:GPIO init configuratioin variable
+* level: level of GPIO
 
 ##### Return
 
-* bool：是否获取成功
+* bool：Is get success
 
 ---
 
@@ -296,16 +300,16 @@ bool GPIO_Get(GPIO_PIN pin, GPIO_LEVEL* level);
 
 ##### Brief
 
-获取GPIO电平，功能与`GPIO_GetLevel`一样，只是参数不同
+Get GPIO level, the same function with `GPIO_GetLevel`, but parameter not the same
 
 ##### Parameters
 
-* pin:GPIO口
-* level:电平高低结果Return，变量指针
+* pin:GPIO pin
+* level: level of GPIO
 
 ##### Return
 
-* bool：是否获取成功
+* bool：Is get success
 
 ---
 
@@ -319,15 +323,15 @@ bool GPIO_Close(GPIO_PIN pin);
 
 ##### Brief
 
-关闭GPIO口，复位GPIO到默认状态
+Close GPIO and release resources of GPIO
 
 ##### Parameters
 
-* pin:GPIO口
+* pin:GPIO pin
 
 ##### Return
 
-* bool：是否成功
+* bool：Is close success
 
 ---
 

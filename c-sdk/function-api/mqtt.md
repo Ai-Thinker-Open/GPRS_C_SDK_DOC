@@ -1,9 +1,9 @@
 MQTT
 ====
 
-MQTT是一种基于订阅发布模型的协议，在实时聊天（IM）、物联网等领域中有广泛应用
+MQTT is a protocol based on subscription publishing model. It is widely used in real time chat (IM) and Internet of things.
 
-例程：
+example:
 [demo/mqtt](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt/src/demo_mqtt.c)
 [demo/mqtt_ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt_ssl/src/demo_mqtt.c)
 
@@ -11,7 +11,7 @@ MQTT是一种基于订阅发布模型的协议，在实时聊天（IM）、物�
 
 ### MQTT_Error_t
 
-MQTT错误信息
+MQTT error code
 
 ```c
 typedef enum{
@@ -58,7 +58,7 @@ typedef enum{
 
 ### MQTT_SSL_Version_t
 
-MQTT SSL支持的版本
+MQTT SSL version
 
 ```c
 typedef enum{
@@ -74,7 +74,7 @@ typedef enum{
 
 ### MQTT_SSL_Verify_Mode_t
 
-验证模式
+Verify mode
 
 ```c
 typedef enum{
@@ -89,7 +89,7 @@ typedef enum{
 
 ### MQTT_Connection_Status_t
 
-MQTT连接状态
+MQTT connection status
 
 ```c
 typedef enum
@@ -119,7 +119,7 @@ typedef enum
 
 ### MQTT_Flags_t
 
-MQTT标志位
+MQTT flags
 
 ```c
 typedef enum{
@@ -137,7 +137,7 @@ typedef enum{
 
 ### MQTT_Client_t
 
-MQTT对象
+MQTT object
 
 ```c
 typedef struct{
@@ -149,7 +149,7 @@ typedef struct{
 
 ### MQTT_Connect_Info_t
 
-MQTT连接配置信息
+MQTT connection configuration
 
 ```c
 typedef struct{
@@ -200,13 +200,13 @@ typedef void (*MQTT_Connection_Callback_t)(MQTT_Client_t* client, void* arg, MQT
 
 #### Function
 
-连接回调函数
+Connection callback
 
 #### Parameters
 
-* client：MQTT客户端对象
-* arg：connect函数传的参数
-* status:MQTT连接状态
+* client：MQTT client object
+* arg：parameter from connect function
+* status:MQTT
 
 #### Return
 
@@ -222,12 +222,12 @@ typedef void (*MQTT_Request_Callback_t)(void* arg, MQTT_Error_t err);
 
 #### Function
 
-MQTT请求回调函数
+MQTT request callback
 
 #### Parameters
 
-* arg：发起请求时传的参数
-* err：错误信息
+* arg：param from request function
+* err：error code
 
 #### Return
 
@@ -243,13 +243,13 @@ typedef void (*MQTT_InPub_Callback_t)(void* arg, const char* topic, uint32_t pay
 
 #### Function
 
-MQTT收到消息头回调函数，没有消息体，消息体在`MQTT_InPub_Data_Callback_t`中传入
+MQTT data header callback when received publish request
 
 #### Parameters
 
-* arg：设置回调函数时传的参数
-* topic：收到消息的主题
-* payloadLen：消息体长度
+* arg：the param from callback function setting function
+* topic：topic of message
+* payloadLen：payload length of message 
 
 #### Return
 
@@ -265,14 +265,14 @@ typedef void (*MQTT_InPub_Data_Callback_t)(void* arg, const uint8_t* data, uint1
 
 #### Function
 
-MQTT收到消息的消息体,`MQTT_InPub_Callback_t`后产生
+MQTT message body, receive before `MQTT_InPub_Callback_t`
 
 #### Parameters
 
-* arg：设置回调函数时传入的参数
-* data：消息体数据
-* len：消息体数据长度
-* flags：标记，因为长数据可能被分段传输，`MQTT_FLAG_DATA_LAST`表示是消息的最后一段
+* arg：the param from callback function setting function
+* data：payload data
+* len：payload data length
+* flags：flag, `MQTT_FLAG_DATA_LAST` means this message is the last slice data
 
 #### Return
 
@@ -288,7 +288,7 @@ MQTT_Client_t* MQTT_ClientNew();
 
 #### Function
 
-创建MQTT客户端对象
+Create a MQTT client object
 
 #### Parameters
 
@@ -296,7 +296,7 @@ None
 
 #### Return
 
-* MQTT客户端对象
+* MQTT client object
 
 ---
 
@@ -309,20 +309,20 @@ MQTT_Error_t   MQTT_Connect(MQTT_Client_t* client, const char* domainOrIp,uint16
 
 #### Function
 
-连接MQTT服务器(broker)
+Connect the MQTT server(broker)
 
 #### Parameters
 
-* client：MQTT客户端对象
-* domainOrIp：服务器地址
-* port：服务器端口
-* callback：连接成功回调函数
-* arg：需要传递给成功回调函数的参数
-* connectInfo:连接配置
+* client:MQTT client object
+* domainOrIp: server address
+* port: server port
+* callback: connect the successful callback function
+* Arg: parameters that need to be passed to the successful callback function
+* connectInfo: connection configuration
 
 #### Return
 
-* MQTT连接错误信息
+* MQTT Conenction error
 
 ---
 
@@ -334,15 +334,15 @@ MQTT_Error_t   MQTT_Disconnect(MQTT_Client_t* client);
 
 #### Function
 
-断开与MQTT服务器(broker)的连接
+Disconnect the connection to the MQTT server (broker)
 
 #### Parameters
 
-* client：MQTT客户端对象
+* client：MQTT client object
 
 #### Return
 
-* MQTT连接错误信息
+* MQTT connection error
 
 ---
 
@@ -354,14 +354,14 @@ void           MQTT_SetInPubCallback(MQTT_Client_t* client, MQTT_InPub_Callback_
 
 #### Function
 
-设置MQTT接收到订阅的消息时的回调函数
+Setting the callback function when MQTT receives the subscription message
 
 #### Parameters
 
-* client：MQTT客户端对象
-* inpubCallback：接收到订阅消息时的回调函数
-* dataInpubCallback：接收到订阅消息时的消息体回调函数
-* arg：需要传递给成功回调函数的参数
+* client:MQTT client object
+* inpubCallback: callback function when the subscription message is received.
+* dataInpubCallback: message volume callback function when the subscription message is received.
+* Arg: parameters that need to be passed to the successful callback function
 
 #### Return
 
@@ -377,19 +377,19 @@ MQTT_Error_t   MQTT_Subscribe(MQTT_Client_t* client, const char* topic, uint8_t 
 
 #### Function
 
-向MQTT服务器(broker)发起订阅主题请求
+Subscribe to a subscription subject request to the MQTT server (broker)
 
 #### Parameters
 
-* client：MQTT客户端对象
-* topic：主题
-* qos：服务质量
-* callback：订阅主题回调函数
-* arg：需要传递给回调函数的参数
+* client:MQTT client object
+* topic: topic
+* QoS: quality of service
+* callback: subscribe to the topic callback function
+* Arg: parameters that need to be passed to the callback function
 
 #### Return
 
-* MQTT连接错误信息
+* MQTT connection error information
 
 ---
 
@@ -401,18 +401,18 @@ MQTT_Error_t   MQTT_Unsubscribe(MQTT_Client_t* client, const char* topic, MQTT_R
 
 #### Function
 
-从MQTT服务器(broker)取消订阅主题
+Cancel the subscription topic from the MQTT server (broker)
 
 #### Parameters
 
-* client：MQTT客户端对象
-* topic：主题
-* callback：订阅主题回调函数
-* arg：需要传递给回调函数的参数
+* client:MQTT client object
+* topic: topic
+* callback: subscribe to the topic callback function
+* Arg: parameters that need to be passed to the callback function
 
 #### Return
 
-* MQTT连接错误信息
+* MQTT connection error information
 
 ---
 
@@ -425,24 +425,24 @@ MQTT_Error_t   MQTT_Publish(MQTT_Client_t* client, const char* topic, const void
 
 #### Function
 
-向MQTT服务器(broker)发布消息
+Publish messages to the MQTT server (broker)
 
 #### Parameters
 
-* client：MQTT客户端对象
-* topic：主题
-* port：服务器端口
-* payload：消息体
-* payloadLen：消息体长度
-* dup：标示发送重复数
-* qos：服务质量
-* retain:需要服务器持久保存消息
-* callback：发布请求回调函数
-* arg：需要传递给回调函数的参数
+* client:MQTT client object
+* topic: topic
+* port: server port
+* payload: message body
+* payloadLen: message body length
+* DUP: indicating the number of sending repeats
+* QoS: quality of service
+* retain: needs the server to keep the message persisted
+* callback: publish request callback function
+* Arg: parameters that need to be passed to the callback function
 
 #### Return
 
-* MQTT连接错误信息
+* MQTT connection error information
 
 ---
 
@@ -454,14 +454,14 @@ uint8_t MQTT_IsConnected(MQTT_Client_t* client);
 
 #### Function
 
-查询是否已经连接MQTT服务器(broker)
+Whether the query has been connected to the MQTT server (broker)
 
 #### Parameters
 
-* client：MQTT客户端对象
+* client：MQTT client object
 
 #### Return
 
-* 如果已经连接，返回0，否则返回错误信息
+* If it is connected, it returns 0, otherwise the error message is returned.
 
 ---

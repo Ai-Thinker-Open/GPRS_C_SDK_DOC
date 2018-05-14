@@ -1,22 +1,23 @@
-GPRS相关及基站信息获取
+GPRS related and base station information
 ====
 
-模组上电后会自动注册GSM网络，注册成功后便可以通话、发送短信，
-要实现上网功能则还需要激活GPRS网络，GPRS的基本知识在本文基础知识部分已经阐述了，这里边不再进行说明。
+After the module is powered up, it will automatically register the GSM network. After successful registration, you can call and send SMS.
+To achieve the Internet function, we need to activate the GPRS network. The basic knowledge of GPRS has been explained in the basic knowledge part of this article.
 
-我们知道激活GPRS网络需要进行附着和上下文激活两个步骤，
-而且这两个步骤有先后顺序，先进行附着再进行上下文激活。
-网络相关的事件及参数可以在[api_event.h](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_event.h)中找到
+We know that activating the GPRS network requires two steps: attachment and context activation.
+Moreover, these two steps have priority in order to first attach and then activate context.
 
-
-例程：[demo/network](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/network/src/demo_network.c)
+Network related events and parameters can be find in [api_event.h](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_event.h)
 
 
-## 宏定义
+examples:[demo/network](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/network/src/demo_network.c)
+
+
+## Macro definition
 
 ### PDP_APN_MAX_LENGTH
 
-APN最长长度
+APN max length
 
 ```c
 #define PDP_APN_MAX_LENGTH         64
@@ -26,7 +27,7 @@ APN最长长度
 
 ### PDP_USER_NAME_MAX_LENGTH
 
-PDP用户名最长长度
+PDP username max length
 
 ```c
 #define PDP_USER_NAME_MAX_LENGTH   64
@@ -36,7 +37,7 @@ PDP用户名最长长度
 
 ### PDP_USER_PASSWD_MAX_LENGTH
 
-PDP用户密码最长长度
+PDP user password
 
 ```c
 #define PDP_USER_PASSWD_MAX_LENGTH 64
@@ -49,7 +50,7 @@ PDP用户密码最长长度
 
 ### Network_Status_t
 
-网络状态
+Network status
 
 ```c
 typedef enum{
@@ -72,7 +73,7 @@ typedef enum{
 
 ### Network_PDP_Context_t
 
-PDP上下文参数设置
+PDP context parameters 
 
 ```c
 typedef struct{
@@ -86,7 +87,7 @@ typedef struct{
 
 ### Network_Location_t
 
-基站信息
+Base stattion information
 
 ```c
 typedef struct 
@@ -106,7 +107,7 @@ typedef struct
 
 ### Network_Error_t
 
-网络错误信息
+Network error information
 
 ```c
 typedef enum{
@@ -129,11 +130,11 @@ typedef void (*Network_Callback_Func_t)(Network_Status_t status);
 
 #### Function
 
-网络回调函数，由用户定义
+Network callback, defined by user
 
 #### Parameters
 
-* status：网络状态
+* status：Network status 
 
 #### Return
 
@@ -149,11 +150,11 @@ void Network_SetStatusChangedCallback(Network_Callback_Func_t callback);
 
 #### Function
 
-设置网络回调函数,除了使用回调函数，也可以在主任务接收来自底层的事件（建议）
+Setting up the callback function of the network, besides using the callback function, can also receive events from the bottom of the main task(recommend).
 
 #### Parameters
 
-* callback:网路状态回调函数
+* callback: Network status callback function
 
 #### Return
 
@@ -169,7 +170,7 @@ bool Network_StartAttach();
 
 #### Function
 
-开始附着网络
+Start attach network
 
 #### Parameters
 
@@ -177,7 +178,7 @@ None
 
 #### Return
 
-* true：成功执行附着网络，附着成功后会产生事件，false：附着失败，可能是已经附着或者无法附着
+* true: successful execution of attached network. After successful attachment, events will occur. False: failure of attachment may be attached or unable to be attached.
 
 ---
 
@@ -189,7 +190,7 @@ bool Network_StartDetach();
 
 #### Function
 
-去附着网络
+Detach network
 
 #### Parameters
 
@@ -197,7 +198,7 @@ None
 
 #### Return
 
-* true：执行去附着成功，false：执行去附着失败
+* true：success，false：fail
 
 ---
 
@@ -209,15 +210,15 @@ bool Network_StartActive(Network_PDP_Context_t context);
 
 #### Function
 
-开始上下文激活
+Start context activation
 
 #### Parameters
 
-* context：上下文设置，根据不同的运营商和网络设置
+* context：PDP context settings
 
 #### Return
 
-* 执行激活是否成功，如果失败，请检查信号以及是否已经附着了网络
+* If activation is successful, if it fails, check the signal and whether the network has been attached.
 
 ---
 
@@ -229,15 +230,15 @@ bool Network_StartDeactive(uint8_t contextID);
 
 #### Function
 
-上下文去激活
+Deactive context
 
 #### Parameters
 
-* contextID：上下文ID，这里作保留，目前传入值始终为1
+* contextID：Context ID, reserved, fixed to 1
 
 #### Return
 
-* 去激活是否成功执行，具体是否成功会产生事件
+* return true execute success, or false, Whether activation is successful or not will produce an event.
 
 ---
 
@@ -249,16 +250,16 @@ bool Network_GetIp(char* ip, uint8_t size);
 
 #### Function
 
-获得GPRS ip地址，注意这里的ip地址不是公网地址，而是局域网地址
+Get GPRS ip address, Note that the IP address here is not the public network address, but the LAN address.
 
 #### Parameters
 
-* ip：获取到的ip地址点分十进制表示
-* size：字符串长度
+* ip：ip address
+* size：ip string length
 
 #### Return
 
-* 是否成功获取ip地址
+* Is succeed to get ip
 
 ---
 
@@ -270,7 +271,7 @@ bool Network_GetCellInfoRequst();
 
 #### Function
 
-发起获取附近基站信息请求，信息会以事件（`API_EVENT_ID_NETWORK_CELL_INFO`）产生
+Get base station information request, cell information will report by event `API_EVENT_ID_NETWORK_CELL_INFO`
 
 #### Parameters
 
@@ -278,7 +279,7 @@ None
 
 #### Return
 
-* 发起获取基站信息请求是否成功
+* Is get base station information success
 
 ---
 

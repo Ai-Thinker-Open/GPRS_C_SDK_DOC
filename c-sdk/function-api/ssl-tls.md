@@ -4,7 +4,7 @@ SSL/TLS
 如果对SSL/TLS不是很熟悉，觉得各种证书很混乱，可以参照[这篇文章](https://www.jianshu.com/p/231b4196a6f5)生成证书
 
 
-例程：[demo/ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/ssl/src/demo_ssl.c)
+example:[demo/ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/ssl/src/demo_ssl.c)
 
 
 ## Enumerated type

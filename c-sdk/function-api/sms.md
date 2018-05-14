@@ -4,10 +4,10 @@ CALL 电话语音电话
 常用短信功能
 
 
-例程：[demo/sms](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/sms/src/demo_sms.c)
+example:[demo/sms](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/sms/src/demo_sms.c)
 
 
-## 宏定义
+## Macro definition
 
 ### SMS_PHONE_NUMBER_MAX_LEN
 

@@ -1,9 +1,9 @@
-串口
+UART (Serial port)
 =====
 
-模组共有三个UART，串口1、串口2以及下载调试串口HST串口
+The module has three UART, serial port 1, serial port 2 and download and debug serial HST serial port.
 
-例程:[`demo/uart`](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/uart/src/demo_uart.c)
+example:[`demo/uart`](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/uart/src/demo_uart.c)
 
 ---
 
@@ -11,7 +11,7 @@
 
 ### UART_Port_t
 
-串口编号
+Port id
 
 ```c
 typedef enum{
@@ -26,7 +26,7 @@ typedef enum{
 
 ### UART_Baud_Rate_t
 
-波特率
+Baud rate
 
 ```c
 typedef enum{
@@ -56,7 +56,7 @@ typedef enum{
 
 ### UART_Data_Bits_t
 
-数据位
+Data bits
 
 ```c
 typedef enum{
@@ -70,7 +70,7 @@ typedef enum{
 
 ### UART_Stop_Bits_t
 
-停止位
+Stop bits
 
 ```c
 typedef enum{
@@ -84,7 +84,7 @@ typedef enum{
 
 ### UART_Parity_t
 
-校验位
+Parity
 
 ```c
 typedef enum{
@@ -101,7 +101,7 @@ UART_PARITY_MAX
 
 ### UART_Error_t
 
-串口错误
+Error code
 
 ```c
 typedef enum{
@@ -121,7 +121,7 @@ typedef enum{
 
 ### UART_Callback_Param_t
 
-回调函数参数
+Callback function parameter
 
 ```c
 typedef struct{
@@ -135,7 +135,7 @@ char *buf;//the receive buf
 
 ### UART_Config_t
 
-串口初始化参数
+Serial initialization parameters
 
 ```c
 typedef struct{
@@ -162,12 +162,12 @@ typedef void (*UART_Callback_t)(UART_Callback_Param_t param);
 
 #### Function
 
-串口回调函数，由用户定义 
+Serial callback function, defined by the user
 
 
 #### Parameters
 
-* param：回调参数
+* param：callback parameters
 
 #### Return
 
@@ -183,12 +183,12 @@ typedef void (*UART_Error_Callback_t)(UART_Error_t error);
 
 #### Function
 
-串口错误回调函数，由用户定义
+Serial error callback function, defined by the user
 
 
 #### Parameters
 
-* error：错误信息
+* error：error info
 
 #### Return
 
@@ -204,16 +204,16 @@ bool     UART_Init(UART_Port_t uartN, UART_Config_t config);
 
 #### Function
 
-串口初始化
+Initialize UART
 
 #### Parameters
 
-* uartN:串口号
-* config:串口配置
+* uartN: uart id
+* config: uart configuration
 
 #### Return
 
-* bool:是否初始化成功
+* bool:Initialize success or not
 
 ---
 
@@ -226,17 +226,17 @@ uint32_t UART_Write(UART_Port_t uartN, uint8_t* dataToWrite, uint32_t length);
 
 #### Function
 
-向串口写（发送）数据
+Send data to UART
 
 #### Parameters
 
-* uartN:串口号
-* dataToWrite:需要写的数据
-* length:数据长度
+* uartN: UART id
+* dataToWrite: data to write
+* length: data length
 
 #### Return
 
-* 成功写到串口的长度
+* Successfully written to the length of the serial port
 
 ---
 
@@ -249,18 +249,18 @@ uint32_t UART_Read(UART_Port_t uartN, uint8_t* dataToRead, uint32_t length, uint
 
 #### Function
 
-从串口读取数据
+Reading data from the serial port
 
 #### Parameters
 
-* uartN:串口号
-* dataToWrite:读取的数据存放的位置
-* length:需要读取的数据长度
-* timeOutMs:超时时间，单位是毫秒
+* uartN: serial number
+* the location of the data stored by the dataToWrite: read
+* the length of the data to be read by length:
+* timeOutMs: timeout time, the unit is milliseconds
 
 #### Return
 
-* 从串口成功读取到的数据长度
+* Data length read successfully from serial port
 
 ---
 
@@ -273,15 +273,15 @@ bool     UART_Close(UART_Port_t uartN);
 
 #### Function
 
-关闭串口
+Close UART
 
 #### Parameters
 
-* uartN:串口
+* uartN: id
 
 #### Return
 
-* 是否关闭成功
+* Close success or not
 
 ---
 

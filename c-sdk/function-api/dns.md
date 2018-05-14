@@ -1,16 +1,16 @@
 DNS
 ====
 
-域名解析服务，需要GPRS网络已经能正常使用的前提下使用
+Get ip from domain name
 
-例程：[demo/dns](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/dns/src/demo_dns.c)
+example：[demo/dns](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/dns/src/demo_dns.c)
 
 
 ## Enumerated type
 
 ### DNS_Status_t
 
-DNS状态
+DNS status
 
 ```c
 typedef enum{
@@ -35,12 +35,12 @@ typedef VOID (*DNS_CALLBACK_FUNC_T)(DNS_Status_t status, void* param);
 
 #### Function
 
-DNS解析回调函数
+DNS callback funtion
 
 #### Parameters
 
-* status:DNS状态
-* param：调用解析时传的参数
+* status:DNS status
+* param：parameter
 
 #### Return
 
@@ -56,17 +56,16 @@ DNS_Status_t     DNS_GetHostByName(const char* domain, char* ip);
 
 #### Function
 
-解析域名到IP地址，因为域名解析有时候时间很长，为了不阻塞程序，所以返回值有可能是`DNS_STATUS_WAIT`，
-及域名解析还未完成，完成后会产生事件
+Resolve domain names to IP addresses, because domain name resolution sometimes takes a long time. In order not to block programs, the return value may be `DNS_STATUS_WAIT`, that is, domain name resolution has not yet been completed, and events will happen after completion.
 
 #### Parameters
 
-* domain：域名
-* ip：解析到的ip地址存放的位置，请保证输出长度足够IP地址的点分十进制表示的长度
+* domain： domain name
+* ip：ip address output, ensure array have enough length, e.g:`127.0.0.1`
 
 #### Return
 
-* DNS_STATUS_OK：成功，DNS_STATUS_ERROR：错误，DNS_STATUS_WAIT：仍在解析，解析完成后会产生事件
+* DNS_STATUS_OK：success, DNS_STATUS_ERROR: error, DNS_STATUS_WAIT：wait for resolve
 
 ---
 
@@ -78,18 +77,18 @@ DNS_Status_t     DNS_GetHostByNameEX(const char *hostname, char* ip, DNS_CALLBAC
 
 #### Function
 
-解析域名到IP地址，成功后调用回调函数
+Resolve the domain name to the IP address, and call the callback function after success.
 
 #### Parameters
 
-* hostname：域名
-* ip：解析到的ip，请保证输出长度足够IP地址的点分十进制表示的长度，若返回`DNS_STATUS_OK`则有效，其它无效
-* fuc:回调函数
-* param:需要传给回调函数的参数
+* hostname：domain name
+* ip：ip address output, ensure array have enough length, e.g:`127.0.0.1`
+* fuc: callback function
+* param:the parameter to callback function
 
 #### Return
 
-* DNS_STATUS_OK：成功，DNS_STATUS_ERROR：错误，DNS_STATUS_WAIT：仍在解析，解析完成后会产生回调
+* DNS_STATUS_OK: success, DNS_STATUS_ERROR: error, DNS_STATUS_WAIT:wait for result
 
 ---
 
@@ -101,15 +100,15 @@ int32_t          DNS_GetHostByName2(const char* domain, char* ip);
 
 #### Function
 
-**阻塞**式解析域名到IP地址，使用简单，但是性能不佳
+Parsing domain name to IP address with block way, easy to use, but poor performance.
 
 #### Parameters
 
-* hostname：域名
-* ip：解析到的ip，请保证输出长度足够IP地址的点分十进制表示的长度
+* hostname：domain name
+* ip：ip address output, ensure array have enough length, e.g:`127.0.0.1`
 
 #### Return
 
-* 0：成功 其它：错误代码
+* 0: success, other:error code
 
 ---

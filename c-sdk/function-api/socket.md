@@ -1,16 +1,16 @@
-DNS
+Socket
 ====
 
-域名解析服务，需要GPRS网络已经能正常使用的前提下使用
+Socket service requires GPRS network to be used normally.
 
-例程：[demo/socket](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/socket/src/demo_socket.c)
+example:[demo/socket](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/socket/src/demo_socket.c)
 
 
 ## Enumerated type
 
 #### TCP_UDP_t
 
-TCP、UDP选择
+TCP、UDP
 
 ```c
 typedef enum{
@@ -23,7 +23,7 @@ typedef enum{
 
 ### API_Socket_Error_t
 
-错误信息
+Error code
 
 ```c
 typedef enum{
@@ -77,17 +77,17 @@ int      Socket_TcpipConnect(TCP_UDP_t tcpOrUdp, const char* ip,uint16_t port);
 
 #### Function
 
-连接服务器
+Connect server
 
 #### Parameters
 
-* tcpOrUdp:选择TCP协议还是UDP
-* ip：要连接的ip地址
-* port：要连接的服务器端口
+* tcpOrUdp: selects the TCP protocol or UDP
+* IP: the IP address to be connected
+* port: the server port to be connected
 
 #### Return
 
-* 若成功，返回文件描述符fd，若失败，返回错误信息`API_Socket_Error_t`
+* If successful, return the file descriptor FD. If it fails, return the error message `API_Socket_Error_t`
 
 ---
 
@@ -99,17 +99,17 @@ int      Socket_TcpipWrite(int socketFd, uint8_t* data, uint16_t length);
 
 #### Function
 
-向服务器发送数据
+Sending data to the server
 
 #### Parameters
 
-* socketFd:建立的socket连接文件描述符，`Socket_TcpipConnect`成功后的返回值
-* data：需要发送的数据
-* length：需要发送的数据的长度
+* the socket connection file descriptor established by socketFd:, and the return value after successful `Socket_TcpipConnect`.
+* data: data to be sent
+* length: the length of the data to be sent
 
 #### Return
 
-* 成功发送的数据长度或者错误代码
+* the data length or error code that is successfully sent
 
 ---
 
@@ -121,17 +121,17 @@ int      Socket_TcpipRead( int socketFd, uint8_t* data, uint16_t length);
 
 #### Function
 
-连接建立后，收到来自服务器的信息会产生事件，在事件触发后调用read函数即可读取数据
+After the connection is established, information received from the server will generate events. After the event is triggered, the read function can be called to read the data.
 
 #### Parameters
 
-* socketFd:建立的socket连接文件描述符，`Socket_TcpipConnect`成功后的返回值
-* data：接收到的数据存放的位置
-* length：需要发送的数据的长度
+* the socket connection file descriptor established by socketFd:, and the return value after successful `Socket_TcpipConnect`.
+* data: the location of the received data storage
+* length: the length of the data to be sent
 
 #### Return
 
-* 读取到的数据的长度或者错误代码
+* the length of the data read or the error code
 
 ---
 
@@ -143,14 +143,14 @@ bool     Socket_TcpipClose(int socketFd);
 
 #### Function
 
-关闭socket连接
+Close socket connection
 
 #### Parameters
 
-* socketFd:建立的socket连接文件描述符，`Socket_TcpipConnect`成功后的返回值
+* socketFd:The socket connection file descriptor established, the return value after successful `Socket_TcpipConnect`.
 
 #### Return
 
-* 是否成功关闭socket连接
+* Whether or not the socket connection is successfully closed
 
 ---

@@ -1,11 +1,10 @@
-ICCID(Integrate circuit card identity 集成电路卡识别码)
+ICCID(Integrate circuit card identity )
 ===
 
-ICCD是SIM卡的唯一标识,长度为20的字符串。
+ICCD is the unique identification of the SIM card with a length of 20.
+example:[demo/iccid](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/iccid/src/demo_iccid.c)
 
-例程：[demo/iccid](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/iccid/src/demo_iccid.c)
-
-## 函数
+## Function
 
 ### SIM_GetICCID
 
@@ -15,13 +14,13 @@ bool SIM_GetICCID(uint8_t* iccid);
 
 #### Function
 
-获取SIM卡ICCID值
+Get the ICCID value of the SIM card
 
 #### Parameters
 
-* iccid：获取到的iccid值存放位置，数组长度>=20
+* iccid：The location of the obtained iccid value storage, the length of the array should >= 20
 
 #### Return
 
-* 是否成功获取ICCID值，如果失败请检查卡是否插好
+* Whether the ICCID value is successfully acquired or not, if not please check if the card is inserted.
 

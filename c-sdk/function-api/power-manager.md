@@ -1,18 +1,18 @@
-Power Manager 电源管理
+Power Manager 
 ====
 
-包含了一些基本的电源相关的操作，外设电源设置、关机、重启、低功耗等
+It contains some basic power related operations, peripheral power settings, shutdown, restart, low power consumption, etc.
 
-电源按键按下释放会产生事件：`API_EVENT_ID_KEY_DOWN`，`API_EVENT_ID_KEY_UP`
+Release of power button will cause an event: `API_EVENT_ID_KEY_DOWN`, `API_EVENT_ID_KEY_UP`
 
-例程：[demo/pm](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/pm/src/demo_pm.c)
+example:[demo/pm](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/pm/src/demo_pm.c)
 
 
 ## Enumerated type
 
 ### Power_Type_t
 
-外设电源
+Peripherals power supply
 
 ```c
 typedef enum{
@@ -28,7 +28,7 @@ typedef enum{
 
 ### Power_On_Cause_t
 
-开机原因
+Cause of opening
 
 ```c
 typedef enum{
@@ -55,16 +55,16 @@ bool PM_PowerEnable(Power_Type_t powerType, bool isOn);
 
 #### Function
 
-使能外设电源，重要，在使用外设时一定要先打开电源，否则无法使用
+It is important to enable peripheral power. When you use peripherals, you must turn on the power supply before you can use it.
 
 #### Parameters
 
-* powerType：外设电源
-* isOn：开关
+* powerType: peripherals power supply
+* isOn: switch
 
 #### Return
 
-* 是否成功设置
+* Whether or not it has been successfully set up
 
 ---
 
@@ -76,12 +76,13 @@ void PM_SleepMode(bool isSleepMode);
 
 #### Function
 
-低功耗模式，低功耗模式会降低主频到32kHz，程序依然会运行，可以再调用这个函数恢复。
-同时可以关闭外设及其电源来降低功耗
+Low power mode, low power mode will reduce the main frequency to 32kHz, the program will still run, and can be called back to restore this function.
+
+At the same time, it can turn off peripherals and their power to reduce power consumption.
 
 #### Parameters
 
-* isSleepMode：是否进入低功耗模式，true进入
+* isSleepMode：Whether or not to enter a low power mode, true enters
 
 #### Return
 
@@ -97,15 +98,15 @@ uint16_t PM_Voltage(uint8_t* percent);
 
 #### Function
 
-查看电池电压
+Check the battery voltage
 
 #### Parameters
 
-* percent:电池电量百分比
+* percent:Percentage of battery power
 
 #### Return
 
-* 电压值，单位：毫伏
+* Voltage value, unit: milli V
 
 ---
 
@@ -117,7 +118,7 @@ void PM_ShutDown();
 
 #### Function
 
-关机
+Turn off the machine
 
 #### Parameters
 
@@ -137,7 +138,7 @@ void PM_Restart();
 
 #### Function
 
-系统重启
+Reboot system
 
 #### Parameters
 

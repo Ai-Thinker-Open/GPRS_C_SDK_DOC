@@ -1,17 +1,18 @@
 I2C
 ====
 
-A9/A9G有三个I2C接口，使用的时候注意与哪些引脚复用了的，引脚情况查看pudding开发板引脚图
-只支持主模式
+A9/A9G has three I2C interfaces. When using it, pay attention to which pins are multiplexed and pin view the pin diagram of pudding development board.
+And open power first
+Only support the master mode
 
-例程：[demo/i2c](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/i2c/src/demo_i2c.c)
+example:[demo/i2c](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/i2c/src/demo_i2c.c)
 
 
-## 宏定义
+## Macro definition
 
 ### I2C_DEFAULT_TIME_OUT
 
-默认超时时间
+default timeout time
 
 ```c
 #define I2C_DEFAULT_TIME_OUT 10 //10ms
@@ -21,7 +22,7 @@ A9/A9G有三个I2C接口，使用的时候注意与哪些引脚复用了的，�
 
 #### I2C_ID_t
 
-I2C编号
+I2C ID
 
 ```c
 typedef enum
@@ -35,7 +36,7 @@ I2C_ID_MAX
 
 ### I2C_FREQ_t
 
-I2C支持的频率
+I2C frequency
 
 ```c
 typedef enum
@@ -48,7 +49,7 @@ I2C_FREQ_MAX
 
 ### I2C_Error_t
 
-I2C错误信息
+I2C error information
 
 ```c
 typedef enum{
@@ -72,7 +73,7 @@ I2C_ERROR_MAX
 
 ### I2C_CMD_Mask_t
 
-I2C标志位，Function中带`Raw`的函数使用
+The I2C flag bit, the function of the Function with `Raw`
 
 ```c
 typedef enum{
@@ -90,7 +91,7 @@ I2C_CMD_MASK_MAX
 
 ### I2C_Config_t
 
-I2C配置
+I2C configuration
 
 ```c
 typedef struct{
@@ -112,16 +113,16 @@ bool I2C_Init(I2C_ID_t i2c, I2C_Config_t config);
 
 #### Function
 
-初始化I2C
+Initialize I2C
 
 #### Parameters
 
-* i2c：I2C编号
-* config：I2C初始化配置
+* i2c：I2C ID
+* config：I2C initialize configuration
 
 #### Return
 
-* 是否成功设置I2C
+* Is success to config I2C
 
 ---
 
@@ -133,15 +134,15 @@ I2C_Error_t I2C_Transmit(I2C_ID_t i2c, uint16_t slaveAddr, uint8_t* pData, uint1
 
 #### Function
 
-通过I2C发送数据
+Send data with I2C
 
 #### Parameters
 
-* i2c：I2C编号
-* slaveAddr:从机地址
+* i2c：I2C ID
+* slaveAddr:slave address
 * pData:需要发送的数据
-* length：长度
-* timeOut:超时时间，单位毫秒
+* length：length
+* timeOut:time out , unit: ms
 
 #### Return
 
@@ -161,15 +162,15 @@ I2C_Error_t I2C_Receive(I2C_ID_t i2c, uint16_t slaveAddr, uint8_t* pData, uint16
 
 #### Parameters
 
-* i2c：I2C编号
-* slaveAddr:从机地址
-* pData:接收到的数据存放位置
-* length：长度
-* timeOut:超时时间，单位毫秒
+* i2c：I2C ID
+* slaveAddr:slave address
+* pData:The location of the received data storage
+* length：length
+* timeOut:time out , unit: ms
 
 #### Return
 
-* 是否成功接收数据
+* Whether or not to receive data successfully
 
 ---
 
@@ -181,21 +182,21 @@ I2C_Error_t I2C_WriteMem(I2C_ID_t i2c, uint16_t slaveAddr, uint32_t memAddr, uin
 
 #### Function
 
-通过I2C写从器件寄存器
+Write slave's register
 
 #### Parameters
 
-* i2c：I2C编号
-* slaveAddr:从机地址
-* memAddr：从机寄存器地址
-* memSize：从机寄存器地址长度，单位字节，即memAddr的字节数，最大为4
-* pData:要写的数据的数据
-* length：写数据长度
-* timeOut:超时时间，单位毫秒
+* i2c：I2C ID
+* slaveAddr:slave address
+* memAddr：slave register address
+* memSize：slave register address length,unit:byte, max 4
+* pData: data to write
+* length：length of data to write
+* timeOut:time out , unit: ms
 
 #### Return
 
-* 是否成功写入数据
+* Whether the data is written successfully
 
 ---
 
@@ -207,21 +208,21 @@ I2C_Error_t I2C_ReadMem(I2C_ID_t i2c, uint16_t slaveAddr, uint32_t memAddr, uint
 
 #### Function
 
-通过I2C读从器件寄存器
+Read register of slave
 
 #### Parameters
 
-* i2c：I2C编号
-* slaveAddr:从机地址
-* memAddr：从机寄存器地址
-* memSize：从机寄存器地址长度，单位字节，即memAddr的字节数，最大为4
-* pData:读取的数据存放的位置
-* length：读取数据长度，单位字节
-* timeOut:超时时间，单位毫秒
+* i2c：I2C ID
+* slaveAddr:slave address
+* memAddr：slave register address
+* memSize： slave register address length,unit:byte, max 4
+* pData: data read
+* length：length of read data read
+* timeOut:time out , unit: ms
 
 #### Return
 
-* 是否成功读取从机寄存器数据
+* Whether the data is read successfully
 
 ---
 
@@ -233,18 +234,18 @@ I2C_Error_t I2C_WriteRawByte(I2C_ID_t i2c, uint8_t sendByte, I2C_CMD_Mask_t cmdM
 
 #### Function
 
-通过I2C写单个字节数据
+Write byte raw
 
 #### Parameters
 
-* i2c：I2C编号
-* sendByte:需要发送的数据，一个字节
-* cmdMask：附加的命令，`I2C_CMD_Mask_t`中的值
-* timeOut:超时时间，单位毫秒
+* i2c：I2C ID
+* sendByte: data to send, one byte
+* cmdMask：command value from `I2C_CMD_Mask_t`
+* timeOut:time out , unit: ms
 
 #### Return
 
-* 是否成功写入数据
+* Whether the data is written successfully
 
 ---
 
@@ -256,17 +257,17 @@ uint8_t I2C_ReadRawByte(I2C_ID_t i2c, I2C_CMD_Mask_t cmdMask, uint32_t timeOut);
 
 #### Function
 
-通过I2C读单个字节数据
+Read one byte raw
 
 #### Parameters
 
-* i2c：I2C编号
-* cmdMask：附加的命令，`I2C_CMD_Mask_t`中的值
-* timeOut:超时时间，单位毫秒
+* i2c：I2C ID
+* cmdMask： command value from `I2C_CMD_Mask_t`
+* timeOut:time out , unit: ms
 
 #### Return
 
-* 读取到的值
+* the value read
 
 ---
 
@@ -278,14 +279,14 @@ bool I2C_Close(I2C_ID_t i2c);
 
 #### Function
 
-关闭I2C
+Close I2C
 
 #### Parameters
 
-* i2c：I2C编号
+* i2c：I2C ID
 
 #### Return
 
-* 是否成功关闭I2C
+* Close success or not
 
 ---

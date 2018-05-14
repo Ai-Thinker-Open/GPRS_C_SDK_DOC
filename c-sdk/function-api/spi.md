@@ -4,10 +4,10 @@ SPI
 A9/A9G有两个SPI接口，使用的时候注意与哪些引脚复用了的，引脚情况查看pudding开发板引脚图
 
 
-例程：[demo/spi](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/spi/src/demo_spi.c)
+example:[demo/spi](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/spi/src/demo_spi.c)
 
 
-## 宏定义
+## Macro definition
 
 ### SPI_FREQ_MAX
 

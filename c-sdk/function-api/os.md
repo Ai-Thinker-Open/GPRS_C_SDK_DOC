@@ -1,17 +1,17 @@
 操作系统(OS)
 ===
 
-一个轻量级的操作系统，包含了基本的任务操作、消息机制等等
+A lightweight operating system that includes basic task operations, message mechanisms, and so on.
 
-例程: [`demo/os`](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/os/src/demo_os.c)
+example: [`demo/os`](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/os/src/demo_os.c)
 
 ---
 
-## 宏定义
+## Macro definition
 
 ### OS_WAIT_FOREVER 
 
-超时时间特殊值，阻塞等待（永远等待）
+Timeout time special value, blocking wait (always waiting)
 
 ```c
 #define OS_WAIT_FOREVER 0xFFFFFFFF
@@ -21,7 +21,7 @@
 
 ### OS_NO_WAIT 
 
-超时时间特殊值，不等待
+Timeout time special value, not waiting
 
 ```
 #define OS_NO_WAIT 0x0
@@ -31,7 +31,7 @@
 
 ### OS_EVENT_PRI_NORMAL 
 
-事件优先级普通,`OS_SendEvent`的nOption参数的值
+Event priority is common, the value of nOption parameter of `OS_SendEvent`.
 
 ```c
 #define OS_EVENT_PRI_NORMAL 0
@@ -41,7 +41,7 @@
 
 ### OS_EVENT_PRI_URGENT 
 
-事件优先级紧急，`OS_SendEvent`的nOption参数的值
+Event priority is urgent, the value of nOption parameter of `OS_SendEvent`.
 
 
 ```c
@@ -52,7 +52,7 @@
 
 ### OS_CREATE_DEFAULT   
 
-函数`OS_CreateTask`的`nCreationFlags`参数的值，表示创建任务后自动开始执行任务
+The value of the `nCreationFlags` parameter of the function `OS_CreateTask` indicates that the task is automatically started after the creation of the task.
 
 ```c
 #define OS_CREATE_DEFAULT   0
@@ -62,7 +62,7 @@
 
 ### OS_CREATE_SUSPENDED 
 
-函数`OS_CreateTask`的`nCreationFlags`参数的值，表示创建任务后不自动开始执行任务
+The value of the `nCreationFlags` parameter of the function `OS_CreateTask` indicates that the task is not automatically started after the creation of the task.
 
 ```c
 #define OS_CREATE_SUSPENDED 1
@@ -71,11 +71,11 @@
 ---
 
 
-## 结构体
+## Struct
 
 ### OS_Heap_Status_t
 
-堆状态，包括总大小和已经使用了的大小
+Heap status, including the total size and the size that has been used.
 
 ```c
 typedef struct{
@@ -96,11 +96,11 @@ typedef void (*PTASK_FUNC_T)(PVOID pParameter);
 
 #### Function
 
-创建的任务主函数，由用户定义
+The created task master function, defined by the user
 
 #### Parameters
 
-* pParameter:调用这个函数的时候传入的参数
+* pParameter:Parameters passed in when this function is called
 
 #### Return
 
@@ -117,11 +117,11 @@ void OS_SetUserMainHandle(HANDLE* appMainHandle);
 
 #### Function
 
-设置主任务，主任务用来接收来自底层的消息，这个函数必须在开机的时候创建主任务后立即调用，否则可能导致底层无法向应用层发布消息
+The primary task is set up. The primary task is used to receive messages from the bottom. This function must be called immediately after the main task is created when the machine is started, otherwise the underlying layer can not be released to the application layer.
 
 #### Parameters
 
-* appMainHandle:创建的主任务返回的指针（句柄）
+* appMainHandle:The pointer returned by the created primary task (handle)
 
 #### Return
 
@@ -145,7 +145,7 @@ HANDLE OS_CreateTask(
 
 #### Function
 
-创建一个新的任务
+Create a new task
 
 #### Parameters
 

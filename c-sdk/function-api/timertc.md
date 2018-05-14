@@ -1,17 +1,17 @@
 time（RTC）
 ====
 
-基本的RTC时间以及系统时间戳，以及网络实践同步等
+Basic RTC time and system timestamp, as well as network practice synchronization.
 
 
-例程：[demo/time](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/time/src/demo_time.c)
+example:[demo/time](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/time/src/demo_time.c)
 
 
 ## 时间相关类型
 
 ### time_t
 
-用整数来表示时间
+Use integers to represent time
 
 ```c
 typedef long         time_t;
@@ -21,7 +21,7 @@ typedef long         time_t;
 
 ### clock_t
 
-用整数来表示时间
+Use integers to represent time
 
 ```c
 typedef long         clock_t;
@@ -29,11 +29,11 @@ typedef long         clock_t;
 
 ---
 
-## 宏定义
+## Macro definition
 
 ### CLOCKS_PER_SEC
 
-系统clock转秒
+System clock convert to second
 
 ```c
 #define CLOCKS_PER_SEC   (16384.0)
@@ -43,7 +43,7 @@ typedef long         clock_t;
 
 ### CLOCKS_PER_MSEC
 
-系统clock转ms
+System clock convert to microsecond
 
 ```c
 #define CLOCKS_PER_MSEC  (16.384)
@@ -56,7 +56,7 @@ typedef long         clock_t;
 
 ### tm
 
-时间表示，包括年月日时分秒
+Time representation, including days and days
 
 ```c
 typedef struct tm{
@@ -76,7 +76,7 @@ typedef struct tm{
 
 ### timeval_t
 
-时间，秒和微妙表示
+Time, seconds, and subtleties
 
 ```c
 typedef struct timeval {
@@ -89,7 +89,7 @@ typedef struct timeval {
 
 ### timezone_t
 
-时区类型
+Time zone type
 
 ```c
 typedef struct timezone {
@@ -102,7 +102,7 @@ typedef struct timezone {
 
 ### RTC_Time_t
 
-RTC时间
+RTC time
 
 ```c
 typedef struct{
@@ -129,16 +129,16 @@ int gettimeofday(timeval_t *tv, timezone_t *tz);
 
 #### Function
 
-获取系统时间，秒和毫秒
+Get system time, seconds, and microseconds
 
 #### Parameters
 
-* tv：时间信息，秒和毫秒
-* tz：未实现，始终为NULL
+* TV: time information, seconds and microseconds
+* TZ: unrealized, always NULL
 
 #### Return
 
-* 获取成功返回0，否则非0
+* The success returns 0, otherwise not 0
 
 ---
 
@@ -150,12 +150,13 @@ void TIME_SetIsAutoUpdateRtcTime(bool isAutoUpdate);
 
 #### Function
 
-附着到GPRS网络时，会获取到网络时间，如果设置为true，则将这个网络时间同步到RTC本地时间，
-设置为false则不会同步
+When you attach to the GPRS network, you will get the network time. If set to true, you will synchronize the network time to RTC local time.
+
+Set to false does not synchronize
 
 #### Parameters
 
-* isAutoUpdate：是否同步网络时间
+* isAutoUpdate：Whether or not the network time is synchronized
 
 #### Return
 
@@ -171,7 +172,7 @@ bool TIME_IsAutoUpdateRtcTime();
 
 #### Function
 
-查询当前配置，是否会自动从网路同步时间到本地时间
+Query whether the current configuration will automatically synchronize from the network to the local time.
 
 #### Parameters
 
@@ -179,7 +180,7 @@ None
 
 #### Return
 
-* 是否自动同步网络时间到本地，true：同步； false：不同步
+* Automatically synchronize network time to local, true: synchronization; false: asynchrony.
 
 ---
 
@@ -191,15 +192,15 @@ bool TIME_SetRtcTime(RTC_Time_t* time);
 
 #### Function
 
-设置本地RTC时间
+Set local RTC time
 
 #### Parameters
 
-* time:时间
+* time: time
 
 #### Return
 
-* 是否设备成功
+* Success or not
 
 ---
 
@@ -211,15 +212,15 @@ bool TIME_GetRtcTIme(RTC_Time_t* time);
 
 #### Function
 
-获取本地RTC时间
+Get local RTC time
 
 #### Parameters
 
-* time：时间
+* time:time 
 
 #### Return
 
-* 是否成功获取到时间
+* Get time success or not
 
 ---
 
@@ -231,7 +232,7 @@ clock_t clock(void);
 
 #### Function
 
-获取系统时钟，注意不是时间，需要转换，比如转换成秒需要除以16384，运算时注意是整数运算还是浮点运算
+Get the system clock, note that not time, need to change, for example, converted to seconds need to be divided by 16384.
 
 #### Parameters
 
@@ -239,7 +240,7 @@ None
 
 #### Return
 
-* 系统时钟
+* System clock
 
 ---
 

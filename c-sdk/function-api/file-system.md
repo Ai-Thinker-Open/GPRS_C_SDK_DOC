@@ -1,19 +1,19 @@
 File System
 ====
 
-SDK当前未提供flash相关操作，但是提供了使用起来更为方便简单的文件系统，
-需要持久化数据或者配置信息，只需要将其保存为文件即可，
-可以保存包内部flash，也可以保存到外部TF卡
+SDK does not currently provide flash related operations, but provides a more convenient and simple file system to use.
+You need to persist data or configuration information, just save it as a file.
+You can save data to flash internal or save it to the external TF card.
 
 
-例程：[demo/fs](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/fs/src/demo_fs.c)
+example:[demo/fs](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/fs/src/demo_fs.c)
 
 
-## 宏定义
+## Macro definition
 
 ### FS_TFLASH_ROOT
 
-TF卡开机自动挂载的位置
+The location of the TF Card auto mount on system start
 
 ```c
 #define FS_TFLASH_ROOT "/t"
@@ -23,7 +23,7 @@ TF卡开机自动挂载的位置
 
 ### FS_O_RDONLY
 
-只读
+Read only
 
 ```c
 #define FS_O_RDONLY                0
@@ -33,7 +33,7 @@ TF卡开机自动挂载的位置
 
 #### FS_O_WRONLY
 
-只写
+Write only
 
 ```c
 #define FS_O_WRONLY                1
@@ -43,7 +43,7 @@ TF卡开机自动挂载的位置
 
 ### FS_O_RDWR
 
-读写
+Read and Write
 
 ```c
 #define FS_O_RDWR                  2
@@ -53,7 +53,7 @@ TF卡开机自动挂载的位置
 
 ### FS_O_ACCMODE
 
-读写文件操作时，用于取出flag的低2位（判断文件权限）
+When reading and writing file operations, get the low 2 bits flag (read the file permissions).
 
 ```c
 #define FS_O_ACCMODE               3
@@ -63,8 +63,9 @@ TF卡开机自动挂载的位置
 
 ### FS_O_CREAT
 
-如果文件存在，不产生影响，不存在则建立，返回成功
-如果文件存在且有`FS_O_EXCL`，则返回失败
+If a file exists, it will not affect, if it does not exist, it will be established and return to success.
+
+If a file exists and has `FS_O_EXCL`, it returns fail.
 
 ```c
 #define FS_O_CREAT                 00100
@@ -74,7 +75,7 @@ TF卡开机自动挂载的位置
 
 ### FS_O_EXCL
 
-如果它和`FS_O_CREAT`同时设定，且文件已经存在，则创建文件操作会失败，返回-1
+If it is set at the same time as `FS_O_CREAT`, and the file already exists, then the creation of the file operation will fail and return -1.
 
 ```c
 #define FS_O_EXCL                  00200
@@ -84,7 +85,7 @@ TF卡开机自动挂载的位置
 
 ### FS_O_TRUNC
 
-如果文件存在，则以只写或只读打开，并删除文件之前的内容
+If the file is present, it will be opened with only write or read only, and delete the contents before the file.
 
 ```c
 #define FS_O_TRUNC                 01000
@@ -94,7 +95,7 @@ TF卡开机自动挂载的位置
 
 ### FS_O_APPEND
 
-追加
+Append data
 
 ```c
 #define FS_O_APPEND                02000
@@ -104,7 +105,7 @@ TF卡开机自动挂载的位置
 
 ### FS_ATTR_MARK
 
-文件属性标记
+File attribute flags
 
 ```c
 #define FS_ATTR_MARK       0x0
@@ -114,7 +115,7 @@ TF卡开机自动挂载的位置
 
 ### FS_ATTR_RO
 
-文件属性只读
+File attribute read only
 
 ```c
 #define FS_ATTR_RO            0x00000001
@@ -124,7 +125,7 @@ TF卡开机自动挂载的位置
 
 ### FS_ATTR_HIDDEN
 
-文件属性隐藏
+File attribute hidden
 
 ```c
 #define FS_ATTR_HIDDEN    0x00000002
@@ -134,7 +135,7 @@ TF卡开机自动挂载的位置
 
 ### FS_ATTR_SYSTEM
 
-文件属性系统文件
+File attribute system file
 
 ```c
 #define FS_ATTR_SYSTEM    0x00000004
@@ -144,7 +145,7 @@ TF卡开机自动挂载的位置
 
 ### FS_ATTR_VOLUME
 
-卷标
+File attribute volume
 
 ```c
 #define FS_ATTR_VOLUME    0x00000008
@@ -154,7 +155,7 @@ TF卡开机自动挂载的位置
 
 ### FS_ATTR_DIR
 
-文件夹
+File attribute folder
 
 ```c
 #define FS_ATTR_DIR           0x00000010
@@ -164,7 +165,7 @@ TF卡开机自动挂载的位置
 
 ### FS_ATTR_ARCHIVE
 
-压缩文件
+File attribute archive
 
 ```c
 #define FS_ATTR_ARCHIVE   0x00000020
@@ -174,7 +175,7 @@ TF卡开机自动挂载的位置
 
 ### FS_SEEK_SET
 
-文件开头
+File position start
 
 ```c
 #define FS_SEEK_SET                 0
@@ -184,7 +185,7 @@ TF卡开机自动挂载的位置
 
 ### FS_SEEK_CUR
 
-当前位置
+file current position
 
 ```c
 #define FS_SEEK_CUR                 1
@@ -194,7 +195,7 @@ TF卡开机自动挂载的位置
 
 ### FS_SEEK_END
 
-末尾位置
+file position end
 
 ```c
 #define FS_SEEK_END                 2
@@ -204,7 +205,7 @@ TF卡开机自动挂载的位置
 
 ### FS_DEVICE_NAME_T_FLASH
 
-TF卡名称
+TF card name
 
 ```c
 #define FS_DEVICE_NAME_T_FLASH  "TF"
@@ -214,7 +215,7 @@ TF卡名称
 
 ### FS_DEVICE_NAME_FLASH
 
-Flash名称
+Flash name
 
 ```c
 #define FS_DEVICE_NAME_FLASH    "FLASH"
@@ -224,7 +225,7 @@ Flash名称
 
 ### ERR_FS
 
-错误信息,错误信息详细信息请看[api_inc_fs.h](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_inc_fs.h)
+error code see:[api_inc_fs.h](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_inc_fs.h)
 
 ```c
 #define ERR_FS_IS_DIRECTORY                                -4200001
@@ -283,7 +284,7 @@ Flash名称
 
 ### API_FS_INFO
 
-文件系统空间信息，包括总空间和已经使用的空间信息
+File system size info
 
 ```c
 typedef struct
@@ -311,18 +312,18 @@ int32_t  API_FS_Open(
 
 #### Function
 
-打开文件
+Open file
 
 #### Parameters
 
-* fileName：文件名，注意文件名只接受unicode编码,
-先调用`LocalLanguage2UnicodeBigEndian`将字符格式转换为unicode编码
-* operationFlag：操作标记，比如只读、只写等(`FS_O_...`)，可以多个操作进行或运算传入
-* mode：模式,文件或文件夹属性，`FS_ATTR_...`，可以多个操作进行或运算传入
+* fileName：File name, note that the name of the file is only encoded by Unicode,
+First call `LocalLanguage2UnicodeBigEndian` to convert the character format to unicode encoding.
+* operationFlag：Operation marks, such as read-only, write only, and so on (`FS_O_...), can be carried out or calculated by multiple operations.
+* mode：Mode, file or folder attribute, `FS_ATTR_..., can be performed or calculated by multiple operations.
 
 #### Return
 
-* 如果成功返回大于等于零的文件描述符，负责返回错误代码
+* if success, return file descriptor id(>=0),or return error code
 
 ---
 
@@ -336,15 +337,15 @@ int32_t  API_FS_Close(
 
 #### Function
 
-关闭文件
+Close file
 
 #### Parameters
 
-* fd：文件描述符，`API_FS_Open`的返回值
+* fd：The file descriptor, the return value of the `API_FS_Open`
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 if success, or return error code
 
 ---
 
@@ -360,17 +361,17 @@ int32_t  API_FS_Read(
 
 #### Function
 
-读取数据
+read data
 
 #### Parameters
 
-* fd：文件描述符，`API_FS_Open`的返回值
-* pBuffer:读取到的数据存放的位置
-* length:读取数据的长度
+* fd：The file descriptor, the return value of the `API_FS_Open`
+* pBuffer:The location of the read data storage
+* length: Length of read data
 
 #### Return
 
-* 成功读取到的数据字节，错误则返回错误代码（负数）
+* data length of read success, or error code
 
 ---
 
@@ -386,17 +387,17 @@ int32_t  API_FS_Write(
 
 #### Function
 
-写入文件
+Write file
 
 #### Parameters
 
-* fd：文件描述符，`API_FS_Open`的返回值
-* pBuffer:读取到的数据存放的位置
-* length:读取数据的长度
+* fd：The file descriptor, the return value of the `API_FS_Open`
+* pBuffer: Data to write
+* length: Data length
 
 #### Return
 
-* 成功写入的数据字节，错误则返回错误代码（负数）
+* Write length, or return error code
 
 ---
 
@@ -410,15 +411,15 @@ uint32_t API_FS_Flush(
 
 #### Function
 
-刷新缓冲区
+Flush cache
 
 #### Parameters
 
-* fd：文件描述符，`API_FS_Open`的返回值
+* fd：The file descriptor, the return value of the `API_FS_Open`
 
 #### Return
 
-* 返回0或错误代码
+* 0 or error code
 
 ---
 
@@ -433,16 +434,16 @@ int32_t API_FS_Create(
 
 #### Function
 
-创建文件
+Create file
 
 #### Parameters
 
-* fileName:文件名，unicode编码
-* mode：文件属性`FS_ATTR_...`，可以多个属性或运算传入
+* fileName:file anme with unicode encoding
+* mode：file attribute `FS_ATTR_...`
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 or error code
 
 ---
 
@@ -456,15 +457,15 @@ int32_t  API_FS_Delete(
 
 #### Function
 
-删除文件
+Delete file
 
 #### Parameters
 
-* fileName:文件名，unicode编码
+* fileName:file name with unicode encoding
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* success reutrn 0 or return error code
 
 ---
 
@@ -480,17 +481,17 @@ int64_t API_FS_Seek(
 
 #### Function
 
-设置文件指针位置
+Set file pointer position
 
 #### Parameters
 
-* fd：文件描述符，`API_FS_Open`的返回值
-* offset：偏移，相对于origin的偏移字节数
-* origin：偏移的起始地址,具体位置或者特殊值：`FS_SEEK_...`
+* fd：The file descriptor, the return value of the `API_FS_Open`
+* offset：Offset, the number of offset bytes relative to origin
+* origin：The starting address, the specific location or the special value of the offset: `FS_SEEK_...
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* 0 or error code
 
 ---
 
@@ -504,15 +505,15 @@ int32_t API_FS_IsEndOfFile(
 
 #### Function
 
-判断文件指针是否在文件末尾
+Determine whether the file pointer is at the end of the file
 
 #### Parameters
 
-* fd：文件描述符，`API_FS_Open`的返回值
+* fd：The file descriptor, the return value of the `API_FS_Open`
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 or error code
 
 ---
 
@@ -527,16 +528,16 @@ int32_t API_FS_Rename(
 
 #### Function
 
-重命名文件
+Rename file name
 
 #### Parameters
 
-* oldName:旧文件名，unicode编码
-* newName:新文件名，unicode编码
+* oldName: old name with unicode encoding
+* newName: new name with unicode encoding
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 or error code
 
 ---
 
@@ -552,17 +553,17 @@ int32_t  API_FS_GetFileName(
 
 #### Function
 
-根据文件描述符获取文件名
+Obtaining the file name based on the file descriptor
 
 #### Parameters
 
-* fd：文件描述符，`API_FS_Open`的返回值
-* nameBufferLen：读取到的名字存放数组的长度
-* fileName：读取到的文件名
+* fd：The file descriptor, the return value of the `API_FS_Open`
+* nameBufferLen：buffer length
+* fileName：the name read
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 if success, or return error code
 
 ---
 
@@ -576,15 +577,15 @@ int64_t  API_FS_GetFileSize(
 
 #### Function
 
-获取文件大小
+Get file size
 
 #### Parameters
 
-* fd：文件描述符，`API_FS_Open`的返回值
+* fd：The file descriptor, the return value of the `API_FS_Open`
 
 #### Return
 
-* 文件大小，或者错误代码
+* file size or error code
 
 ---
 
@@ -599,16 +600,16 @@ int64_t  API_FS_GetDirSize(
 
 #### Function
 
-获取文件夹大小
+Get folder size
 
 #### Parameters
 
-* fileName：文件名，unicode编码
-* size：获取到的文件夹大小
+* fileName：file name with unicode encoding
+* size：folder size
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 if success, or return error code
 
 ---
 
@@ -623,16 +624,16 @@ int32_t  API_FS_GetCurDir(
 
 #### Function
 
-获取当前文件夹名称
+Get current folder name 
 
 #### Parameters
 
-* size：得到的文件夹名称存放数组长度
-* pCurDir：得到的文件夹名称存放数组
+* size：size of name buffer
+* pCurDir：name buffer
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 if success, or return error code
 
 ---
 
@@ -646,15 +647,15 @@ int32_t  API_FS_ChangeDir(
 
 #### Function
 
-切换当前文件夹
+Change current directory 
 
 #### Parameters
 
-* pDirName：文件夹名，unicode编码
+* pDirName：folder name with unicode encofing
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 if success, or return error code
 
 ---
 
@@ -669,16 +670,16 @@ int32_t API_FS_Mkdir(
 
 #### Function
 
-创建文件夹
+Creat folder
 
 #### Parameters
 
-* fileName：文件名，unicode编码
-* mode：文件夹属性，`FS_ATTR_...`
+* fileName：file name with unicode encoding
+* mode：folder attribute `FS_ATTR_...`
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 if success, or return error code
 
 ---
 
@@ -692,15 +693,15 @@ int32_t API_FS_Rmdir(
 
 #### Function
 
-删除文件夹
+Delete folder
 
 #### Parameters
 
-* dirName：文件夹名，unicode编码
+* dirName：folder name with unicode encofing
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 if success, or return error code
 
 ---
 
@@ -715,16 +716,16 @@ int32_t API_FS_GetFSInfo(
 
 #### Function
 
-获取储存空间大小信息
+Get file system size infomation
 
 #### Parameters
 
-* pDevName:设备名：`FS_DEVICE_NAME_...`
-* pFsInfo:返回的储存空间信息
+* pDevName: device name `FS_DEVICE_NAME_...`
+* pFsInfo: size infomation
 
 #### Return
 
-* 成功返回0，否则返回错误代码
+* return 0 if success, or return error code
 
 ---
 
