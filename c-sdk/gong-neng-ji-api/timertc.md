@@ -76,13 +76,12 @@ typedef struct tm{
 
 ### timeval_t
 
-时间，秒和毫秒表示
-（tv_usec这里实际上是毫秒不是微妙）
+时间，秒和微秒表示
 
 ```c
 typedef struct timeval {
-    long long    tv_sec;         /* seconds */
-    long         tv_usec;        /* and microseconds!!!but millisecond instead here(实际数据是ms)!! */
+    long long    tv_sec;        // seconds
+    long         tv_usec;       //microsecond
 }timeval_t;
 ```
 
@@ -130,12 +129,12 @@ int gettimeofday(timeval_t *tv, timezone_t *tz);
 
 ##### 功能
 
-获取系统时间，秒和毫秒
+获取系统时间，秒和微秒
 
 ##### 参数
 
 * tv：时间信息，秒和毫秒
-* tz：时区信息
+* tz：未实现，始终为NULL
 
 ##### 返回值
 
