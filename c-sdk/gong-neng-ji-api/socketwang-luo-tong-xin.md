@@ -1,7 +1,7 @@
-DNS
+Socket
 ====
 
-域名解析服务，需要GPRS网络已经能正常使用的前提下使用
+网络通信，需要GPRS网络已经能正常使用的前提下使用
 
 例程：[demo/socket](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/socket/src/demo_socket.c)
 
