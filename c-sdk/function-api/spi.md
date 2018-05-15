@@ -1,7 +1,9 @@
 SPI
 ====
 
-A9/A9G有两个SPI接口，使用的时候注意与哪些引脚复用了的，引脚情况查看pudding开发板引脚图
+A9/A9G has two SPI interfaces. When using it, pay attention to which pins are multiplexed and pin view the pin diagram of pudding development board.
+
+Open power first
 
 
 example:[demo/spi](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/spi/src/demo_spi.c)
@@ -11,7 +13,7 @@ example:[demo/spi](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/dem
 
 ### SPI_FREQ_MAX
 
-SPI最大支持频率
+SPI maximum support frequency
 
 ```c
 #define SPI_FREQ_MAX 13000000
@@ -23,7 +25,7 @@ SPI最大支持频率
 
 #### SPI_ID_t
 
-SPI编号，共两个SPI
+SPI number, two SPI
 
 ```c
 typedef enum
@@ -36,7 +38,7 @@ typedef enum
 
 ### SPI_CS_t
 
-SPI CS引脚，每个SPI都有两个CS引脚可供选择
+SPI CS pin, each SPI has two CS pins to choose from.
 
 ```c
 typedef enum
@@ -50,7 +52,7 @@ typedef enum
 
 ### SPI_Mode_t
 
-SPI模式，分为轮询、中断、DMA轮询、DMA中断四种模式
+SPI mode is divided into four modes: polling, interruption, DMA polling and DMA interruption.
 
 ```c
 typedef enum
@@ -91,7 +93,7 @@ typedef enum
 
 ### SPI_Line_t
 
-SPI 支持3线和4线模式
+SPI supports 3 line and 4 line mode
 
 ```c
 typedef enum{
@@ -104,7 +106,7 @@ typedef enum{
 
 ### SPI_Data_Bits_t
 
-SPI 数据位
+SPI data bits
 
 ```c
 typedef enum{
@@ -119,7 +121,7 @@ typedef enum{
 
 ### SPI_Irq_Flags_t
 
-SPI中断标志
+SPI interrupt flag
 
 ```c
 typedef struct
@@ -141,7 +143,7 @@ typedef struct
 
 ### SPI_Config_t
 
-SPI配置
+SPI configuration
 
 ```c
 typedef struct
@@ -206,11 +208,11 @@ typedef void (*SPI_Irq_Handler_t)(SPI_Irq_Flags_t flags);
 
 #### Function
 
-SPI 中断回调函数
+SPI interrupt callback function
 
 #### Parameters
 
-* flags:中断状态标志
+* flags: interrupt status flag
 
 #### Return
 
@@ -226,16 +228,16 @@ bool SPI_Init(SPI_ID_t spiN, SPI_Config_t spiConfig);
 
 #### Function
 
-初始化SPI
+Initialization of SPI
 
 #### Parameters
 
-* spiN:SPI编号
-* spiConfig：SPI配置
+* spiN:SPI number
+* spiConfig:SPI configuration
 
 #### Return
 
-* 是否成功初始化
+* whether or not it is successfully initialized
 
 ---
 
@@ -247,15 +249,15 @@ bool SPI_Close(SPI_ID_t spiN);
 
 #### Function
 
-关闭SPI
+Shut down SPI
 
 #### Parameters
 
-* spiN:SPI编号
+* spiN:SPI number
 
 #### Return
 
-* 是否成功关闭SPI
+* whether SPI has been successfully closed
 
 ---
 
@@ -267,17 +269,17 @@ uint32_t SPI_Write(SPI_ID_t spiN, const uint8_t *data, uint32_t length);
 
 #### Function
 
-向SPI写数据
+Write data to SPI
 
 #### Parameters
 
-* spiN:SPI编号
-* data：需要发送的数据
-* length：需要发送的数据的长度
+* spiN:SPI number
+* data: data to be sent
+* length: the length of the data to be sent
 
 #### Return
 
-* 成功发送的数据长度，如果在DMA模式下返回值为0，则表示DMA通道不可用
+* the length of the data sent successfully, if the return value in DMA mode is 0, it means that the DMA channel is not available.
 
 ---
 
@@ -289,17 +291,17 @@ uint32_t SPI_Read(SPI_ID_t spiN, uint8_t *data, uint32_t length);
 
 #### Function
 
-从SPI读取数据
+Reading data from SPI
 
 #### Parameters
 
-* spiN:SPI编号
-* data：读取的数据存放的位置
-* length：需要读取的数据的长度
+* spiN:SPI number
+* data: the location of the stored data read
+* length: the length of the data to be read
 
 #### Return
 
-* 读取到的数据长度，单位字节
+* read the length of the data, unit bytes
 
 ---
 
@@ -311,16 +313,17 @@ bool SPI_IsTxDone(SPI_ID_t spiN);
 
 #### Function
 
-检查最后一次传输是否已经完成，如果传输的数据很重要，在关闭SPI前这个函数最好被调用。
-在直接传输和DMA传输的过程中不应该被调用
+Check whether the last transmission has been completed. If the transmitted data is very important, this function is best invoked before closing the SPI.
+
+It should not be invoked in direct transmission and DMA transmission.
 
 #### Parameters
 
-* spiN:SPI编号
+* spiN:SPI number
 
 #### Return
 
-* 如果发送FIFO空，返回true；否则返回false
+* If FIFO is sent empty, return to true; otherwise, return false.
 
 ---
 
@@ -332,16 +335,17 @@ bool SPI_IsTxDmaDone(SPI_ID_t spiN);
 
 #### Function
 
-查询SPI DMA发送是否完成，在DMA模式发送新的数据时要保证之前的数据已经发送完成，可以用这个函数来轮询。
-需要注意的是DMA发送完成了但是发送FIFO可能不为空，及时这样也可以进行下一次DMA新的数据发送，关闭SPI之前必须要用`SPI_IsTxDone`检查SPI FIFO是否为空
+If you want to know whether the SPI DMA is complete or not, when you send new data in DMA mode, you need to ensure that the previous data has been sent to completion. You can use this function to poll.
+
+It is important to note that the DMA transmission is completed but the sending FIFO may not be empty, so that the next DMA new data can be sent in time, and before the SPI is closed, it is necessary to check whether the SPI FIFO is empty with `SPI_IsTxDone`.
 
 #### Parameters
 
-* spiN:SPI编号
+* spiN:SPI number
 
 #### Return
 
-* DMA传输是否完成
+* DMA transmission is completed
 
 ---
 
@@ -353,15 +357,15 @@ bool SPI_IsRxDmaDone(SPI_ID_t spiN);
 
 #### Function
 
-检查DMA接收数据是否完成
+Check whether the DMA received data is completed
 
 #### Parameters
 
-* spiN:SPI编号
+* spiN:SPI number
 
 #### Return
 
-* 是否成功接收数据完毕
+* whether the data has been successfully received
 
 ---
 
@@ -373,11 +377,11 @@ void SPI_ClearTxDmaDone(SPI_ID_t spiN);
 
 #### Function
 
-清除SPI DMA发送完成标志
+Clear the SPI DMA to send the completion flag
 
 #### Parameters
 
-* spiN:SPI编号
+* spiN:SPI number
 
 #### Return
 
@@ -393,11 +397,11 @@ void SPI_FlushFIFOs(SPI_ID_t spiN);
 
 #### Function
 
-刷新两个SPI的缓冲区（FIFO）
+Refresh the buffer of two SPI (FIFO)
 
 #### Parameters
 
-* spiN:SPI编号
+* spiN:SPI number
 
 #### Return
 
@@ -413,12 +417,12 @@ void SPI_SetIrqHandler(SPI_ID_t spiN, SPI_Irq_Handler_t handler);
 
 #### Function
 
-设置中断回调函数
+Setting the interrupt callback function
 
 #### Parameters
 
-* spiN:SPI编号
-* handler：中断回调函数
+* spiN:SPI number
+* handler: interrupt callback function
 
 #### Return
 
@@ -434,12 +438,12 @@ void SPI_SetIrqMask(SPI_ID_t spiN, SPI_Irq_Flags_t irqMask);
 
 #### Function
 
-设置中断标志位，即使能哪些中断标志位
+Set interrupt flag bits, even which interrupt flag bits can be.
 
 #### Parameters
 
-* spiN:SPI编号
-* irqMask：中断标志
+* spiN:SPI number
+* irqMask: interrupt sign
 
 #### Return
 

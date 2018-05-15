@@ -149,18 +149,18 @@ Create a new task
 
 #### Parameters
 
-* pTaskEntry:任务执行函数，PTASK_FUNC_T 类型
-* pParameter:需要传递给执行函数的参数
-* pStackAddr:自定义栈的地址，暂时不支持自定义，即值只能为`NULL `
-* nStackSize:栈大小
-* nPriority:任务优先级，>=0，每个任务优先级不同，值越小任务优先级越大
-* nCreationFlags: `OS_CREATE_DEFAULT `/`0`: 默认，创建任务后开始执行任务；`OS_CREATE_SUSPENDED`: 创建任务后不执行任务，需要手动调用start函数开启任务运行
-* nTimeSlice:保留，值为0
-* pTaskName:任务名称
+* pTaskEntry: task execution function, PTASK_FUNC_T type
+* pParameter: needs to be passed to the parameters of the execution function
+* pStackAddr: custom stack address, temporarily does not support custom, that is, the value can only be `NULL '.
+* nStackSize: stack size
+* nPriority: task priority, >=0, the priority of each task is different, the smaller the value, the larger the task priority.
+* nCreationFlags: `OS_CREATE_DEFAULT `/`0`: by default, the task is started after the task is created; `OS_CREATE_SUSPENDED`: the task is not executed after the task is created, and the start function is required to be invoked manually to open the task
+* nTimeSlice: reservation, value 0
+* pTaskName: task name
 
 #### Return
 
-* 创建的任务的指针（句柄），如果创建任务失败，则返回`NULL`
+* A pointer to the task created (handle), if the creation of a task fails, it returns `NULL`.
 
 ---
 
@@ -174,12 +174,12 @@ void OS_StartTask(
 
 #### Function
 
-开始执行任务
+Start the execution of the task
 
 #### Parameters
 
-* pHTask:任务句柄，`OS_CreateTask`的返回值
-* pParameter:需要传给任务函数的参数
+* pHTask: task handle, return value of `OS_CreateTask`.
+* pParameter: needs to pass to the parameter of the task function
 
 #### Return
 
@@ -196,11 +196,11 @@ void OS_StopTask(
 
 #### Function
 
-停止任务执行
+Stop task execution
 
 #### Parameters
 
-* pHTask:任务句柄，`OS_CreateTask`的返回值
+* pHTask: task handle, return value of `OS_CreateTask`.
 
 #### Return
 
@@ -217,15 +217,15 @@ bool OS_DeleteTask(
 
 #### Function
 
-删除任务
+Delete task
 
 #### Parameters
 
-* hTask:任务句柄，`OS_CreateTask`的返回值
+* hTask: task handle, return value of `OS_CreateTask`
 
 #### Return
 
-* 删除任务是否成功
+* delete whether the task is successful or not
 
 ---
 
@@ -238,15 +238,15 @@ bool OS_SuspendTask(
 
 #### Function
 
-挂起线程
+Hang up thread
 
 #### Parameters
 
-* hTask:任务句柄，`OS_CreateTask`的返回值
+* hTask: task handle, return value of `OS_CreateTask`
 
 #### Return
 
-* 挂起是否成功
+* whether to hang up or not
 
 ---
 
@@ -259,15 +259,15 @@ bool OS_ResumeTask(
 
 #### Function
 
-继续任务
+Continue the task
 
 #### Parameters
 
-* hTask:任务句柄，`OS_CreateTask`的返回值
+* hTask: task handle, return value of `OS_CreateTask`
 
 #### Return
 
-* 是否成功
+* whether or not it is successful
 
 ---
 
@@ -279,15 +279,15 @@ bool OS_Sleep(UINT32 nMillisecondes);
 
 #### Function
 
-阻塞毫秒级延时
+Blocking millisecond delay
 
 #### Parameters
 
-* nMillisecondes:阻塞延迟时间，单位毫秒
+* nMillisecondes: blocking delay time per unit millisecond
 
 #### Return
 
-* 是否成功（始终为true）
+* whether or not it is successful (always true)
 
 ---
 
@@ -299,11 +299,11 @@ void OS_SleepUs(UINT32 us);
 
 #### Function
 
-阻塞微妙级延时
+Blocking subtlety delay
 
 #### Parameters
 
-* us: 延时时间，单位微妙
+* us: delay time, unit subtlety
 
 #### Return
 
@@ -322,17 +322,17 @@ bool OS_WaitEvent(
 
 #### Function
 
-阻塞等待事件
+Blocking wait event
 
 #### Parameters
 
-* hTask:任务句柄，`OS_CreateTask`的返回值
-* pEvent:事件值，来自`OS_SendEvent`的参数
-* nTimeOut:等待超时时间，目前只支持阻塞等待，即值必须为`OS_WAIT_FOREVER`
+* hTask: task handle, return value of `OS_CreateTask`
+* pEvent: event value, parameters from `OS_SendEvent`
+* nTimeOut: is waiting for the timeout time. At present, it only supports blocking wait. The value must be `OS_WAIT_FOREVER`.
 
 #### Return
 
-* 成功等待到事件
+* successful waiting for the event
 
 ---
 
@@ -348,18 +348,18 @@ bool OS_SendEvent(
 
 #### Function
 
-向某个任务发送事件
+Send an event to a task
 
 #### Parameters
 
-* hTask:任务句柄，`OS_CreateTask`的返回值
-* pEvent: 事件发送的数据（指针）
-* nTimeOut:超时时间，目前只支持阻塞等待，即值必须为`OS_WAIT_FOREVER`
-* nOption:事件选项，`OS_EVENT_PRI_NORMAL`: 普通优先级，`OS_EVENT_PRI_URGENT`:紧急优先级
+* hTask: task handle, return value of `OS_CreateTask`
+* data sent by the pEvent: event (pointer)
+* nTimeOut: timeout time, currently supporting blocking wait only, the value must be `OS_WAIT_FOREVER`.
+* nOption: event option, `OS_EVENT_PRI_NORMAL`: general priority, `OS_EVENT_PRI_URGENT`: emergency priority.
 
 #### Return
 
-* 事件是否发送成功
+* whether the event was sent to success
 
 ---
 
@@ -372,15 +372,15 @@ bool OS_ResetEventQueue(
 
 #### Function
 
-重置事件队列
+Reset the event queue
 
 #### Parameters
 
-* hTask:任务句柄，`OS_CreateTask`的返回值
+Reset event queue * hTask: task handle, return value of `OS_CreateTask`.
 
 #### Return
 
-* 是否重置成功
+* whether to reset the success
 
 ---
 
@@ -393,15 +393,15 @@ bool OS_IsEventAvailable(
 
 #### Function
 
-判断某个任务是否有事件可以接收
+Judge whether or not a task has an event to be received
 
 #### Parameters
 
-* hTask:任务句柄，`OS_CreateTask`的返回值
+* hTask: task handle, return value of `OS_CreateTask`
 
 #### Return
 
-* 是否有事件可以接收
+* whether there is an event to be received
 
 ---
 
@@ -413,15 +413,15 @@ PVOID OS_Malloc (UINT32 nSize);
 
 #### Function
 
-动态分配内存
+Dynamically allocated memory
 
 #### Parameters
 
-* nSize:动态分配内存长度，单位是字节
+* nSize: dynamically allocates memory length, the unit is bytes
 
 #### Return
 
-* 动态分配内存块的首地址，若分配失败，则返回`NULL`
+* dynamically allocate the first address of the memory block. If the allocation fails, it will return to `NULL`.
 
 ---
 
@@ -433,16 +433,16 @@ PVOID OS_Realloc(VOID *ptr, UINT32 nSize);
 
 #### Function
 
-重新分配内存
+Redistribution of memory
 
 #### Parameters
 
-* ptr:动态分配的内存块首地址
-* nSize:新动态分配的内存块长度
+* ptr: dynamically allocated memory block first address
+* nSize: new dynamically allocated memory block length
 
 #### Return
 
-* 成功分配的内存块首地址，若为`NULL`，则分配失败
+* the first address of the memory block allocated successfully. If `NULL`, the allocation fails.
 
 ---
 
@@ -454,15 +454,15 @@ bool  OS_Free   (PVOID pMemBlock);
 
 #### Function
 
-释放动态分配的内存
+Release dynamically allocated memory
 
 #### Parameters
 
-* pMemBlock:动态分配的内存块首地址
+* pMemBlock: dynamically allocated memory block first address
 
 #### Return
 
-* 是否释放成功
+* whether to release success or not
 
 ---
 
@@ -474,15 +474,15 @@ bool OS_GetHeapUsageStatus(OS_Heap_Status_t* pOsHeapStatus);
 
 #### Function
 
-获取堆的使用情况
+Get the use of the heap
 
 #### Parameters
 
-* pOsHeapStatus:堆使用情况
+* pOsHeapStatus: reactor usage
 
 #### Return
 
-* 是否获取堆状态成功
+* whether to get heap status success
 
 ---
 
@@ -496,15 +496,15 @@ HANDLE OS_CreateSemaphore(
 
 #### Function
 
-创建一个信号量
+Create a semaphore
 
 #### Parameters
 
-* nInitCount:信号量初始化值，0表示资源被占用，n表示有n个资源值，每次wait将会等待资源值并减一，release操作将会将资源值加一
+* nInitCount: semaphore initialization value, 0 indicates that the resource is occupied, n indicates that there are n resource values, each wait will wait for the value of the resource and reduce one, and the release operation will add the value of the resource to one
 
 #### 返回值
 
-* 信号量句柄，如果失败，返回`NULL`
+* semaphore handle, if failed, return to `NULL`
 
 ---
 
@@ -517,15 +517,15 @@ bool OS_DeleteSemaphore(
 
 #### Function
 
-删除信号量
+Deleting the semaphore
 
 #### Parameters
 
-* hSem:信号量句柄，`OS_CreateSemaphore`的返回值
+* hSem: semaphore handle, return value of `OS_CreateSemaphore`.
 
 #### Return
 
-* 信号量是否删除成功
+* whether the signal is deleted or not
 
 ---
 
@@ -540,16 +540,17 @@ bool OS_WaitForSemaphore(
 
 #### Function
 
-等待信号量知道资源值大于0，并将资源值减一
+Wait for the semaphore to know that the resource value is greater than 0 and reduce the resource value.
 
 #### Parameters
 
-* hSem:信号量句柄，`OS_CreateSemaphore`的返回值
-* nTimeOut:超时值，暂时保留，即值为`OS_WAIT_FOREVER`
+* hSem: semaphore handle, return value of `OS_CreateSemaphore`.
+
+* nTimeOut: timeout value, temporarily reserved, or `OS_WAIT_FOREVER`
 
 #### Return
 
-* 是否成功获取到信号量（资源值）
+* whether the amount of signal (resource value) is successfully obtained
 
 ---
 
@@ -563,15 +564,15 @@ bool OS_ReleaseSemaphore(
 
 #### Function
 
-释放信号量，即资源值加一
+Release the semaphore, that is, the value of the resource plus one
 
 #### Parameters
 
-* hSem:信号量句柄，`OS_CreateSemaphore`的返回值
+* hSem: semaphore handle, return value of `OS_CreateSemaphore`.
 
 #### Return
 
-* 是否释放信号量（资源值）成功
+* whether to release the signal (resource value) success
 
 ---
 
@@ -583,7 +584,7 @@ HANDLE OS_CreateMutex(void);
 
 #### Function
 
-创建一个互斥量
+Create a mutual exclusion
 
 #### Parameters
 
@@ -591,7 +592,7 @@ None
 
 #### Return
 
-* 互斥量句柄，如果失败，返回`NULL`
+* mutex handle, if failed, return to `NULL`
 
 ---
 
@@ -603,11 +604,11 @@ void OS_DeleteMutex(HANDLE mutex);
 
 #### Function
 
-删除互斥量
+Deleting mutual exclusion
 
 #### Parameters
 
-* mutex:互斥量句柄，`OS_CreateMutex`的返回值
+* mutex: mutual exclusion handle, return value of `OS_CreateMutex`.
 
 #### Return
 
@@ -623,11 +624,11 @@ void OS_LockMutex(HANDLE mutex);
 
 #### Function
 
-锁互斥量，即占用资源
+Lock mutual exclusion, that is, occupying resources
 
 #### Parameters
 
-* mutex:互斥量句柄，`OS_CreateMutex`的返回值
+* mutex: mutual exclusion handle, return value of `OS_CreateMutex`.
 
 #### Return
 
@@ -643,11 +644,11 @@ void OS_UnlockMutex(HANDLE mutex);
 
 #### Function
 
-释放互斥量，即释放资源
+Release mutual exclusion, that is, release resources
 
 #### Parameters
 
-* mutex:互斥量句柄，`OS_CreateMutex`的返回值
+* mutex: mutual exclusion handle, return value of `OS_CreateMutex`.
 
 #### Return
 None
@@ -662,11 +663,11 @@ typedef void (*OS_CALLBACK_FUNC_T)(void* param);
 
 #### Function
 
-回调函数，由用户定义
+Callback function, defined by the user
 
 #### Parameters
 
-* param: 用户传入的参数
+* param: User incoming parameters
 
 #### Return
 
@@ -682,18 +683,18 @@ bool OS_StartCallbackTimer(HANDLE hTask, UINT32 ms, OS_CALLBACK_FUNC_T callback,
 
 #### Function
 
-开始软件计时器，设定时间到了后会触发回调函数
+Start the software timer and set the callback function when the time is set.
 
 #### Parameters
 
-* hTask:任务句柄，这个指定的任务里必须包含`OS_WaitEvent`函数调用（比如可以传主任务），否则不会触发回调
-* ms: 定时时间
-* callback: 回调函数
-* param: 传入回调函数的参数
+* hTask: task handle, which must include `OS_WaitEvent` function call (for example, the main task), otherwise the callback will not be triggered.
+* ms: timing time
+* callback: callback function
+* param: passes the parameters of the callback function
 
 #### Return
 
-* 创建定时器是否成功
+* to create a timer success
 
 ---
 
@@ -705,17 +706,19 @@ bool OS_StopCallbackTimer(HANDLE hTask, OS_CALLBACK_FUNC_T callback, void *param
 
 #### Function
 
-停止软件计时器
+Stop the software timer
 
 #### Parameters
 
-* hTask:任务句柄，这个指定的任务里必须包含`OS_WaitEvent`函数调用（比如可以传主任务），否则不会触发回调
-* callback: 回调函数
-* param: 传入回调函数的参数
+* hTask: task handle, which must include `OS_WaitEvent` function call (for example, the main task), otherwise the callback will not be triggered.
+
+* callback: callback function
+
+* param: passes the parameters of the callback function
 
 #### Return
 
-* 停止定时器是否成功
+* cessation of the success of the timer
 
 ---
 
@@ -727,17 +730,19 @@ uint32_t OS_QueryCallbackTimer(HANDLE hTask, OS_CALLBACK_FUNC_T callback, void *
 
 #### Function
 
-查询软件计时器还剩多少时间结束
+How much time is left to end the query software timer
 
 #### Parameters
 
-* hTask:任务句柄，这个指定的任务里必须包含`OS_WaitEvent`函数调用（比如可以传主任务），否则不会触发回调
-* callback: 回调函数
-* param: 传入回调函数的参数
+* hTask: task handle, which must include `OS_WaitEvent` function call (for example, the main task), otherwise the callback will not be triggered.
+
+* callback: callback function
+
+* param: passes the parameters of the callback function
 
 #### Return
 
-* 定时器离结束剩余的时间
+* the timer is out of the rest of the time
 
 ---
 

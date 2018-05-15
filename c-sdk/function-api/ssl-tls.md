@@ -1,7 +1,7 @@
 SSL/TLS
 ====
 
-如果对SSL/TLS不是很熟悉，觉得各种证书很混乱，可以参照[这篇文章](https://www.jianshu.com/p/231b4196a6f5)生成证书
+If you are not familiar with SSL/TLS and feel that all kinds of certificates are very confusing, you can refer to this [article](https://www.jianshu.com/p/231b4196a6f5) to generate certificate
 
 
 example:[demo/ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/ssl/src/demo_ssl.c)
@@ -11,7 +11,7 @@ example:[demo/ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/dem
 
 ### SSL_Version_t
 
-SSL/TLS版本
+SSL/TLS version
 
 ```c
 typedef enum{
@@ -27,7 +27,7 @@ typedef enum{
 
 ### SSL_Error_t
 
-错误信息
+error message
 
 ```c
 typedef enum{
@@ -47,7 +47,7 @@ typedef enum{
 
 ### SSL_Verify_Mode_t
 
-验证模式
+Validation mode
 
 ```c
 typedef enum{
@@ -64,7 +64,7 @@ typedef enum{
 
 ### SSL_Config_t
 
-SSL/TLS配置
+SSL/TLS configuration
 
 ```c
 typedef struct{
@@ -97,15 +97,15 @@ SSL_Error_t SSL_Init(SSL_Config_t* sslConfig);
 
 #### Function
 
-初始化SSL/TLS
+Init SSL/TLS
 
 #### Parameters
 
-* sslConfig:初始化配置参数
+* sslConfig:Initialization configuration parameters
 
 #### Return
 
-* 返回错误信息
+* Return error information
 
 ---
 
@@ -117,17 +117,17 @@ SSL_Error_t SSL_Connect(SSL_Config_t* sslConfig, const char* server, const char*
 
 #### Function
 
-用SSL/TLS协议连接服务器
+Connect the server with the SSL/TLS protocol
 
 #### Parameters
 
-* sslConfig:SSL/TLS配置信息
-* server:需要连接的SSL/TLS服务器
-* port：服务器端口
+* sslConfig:SSL/TLS configuration information
+* server: SSL/TLS server that needs to be connected
+* port: server port
 
 #### Return
 
-* 返回错误信息
+* Return error information
 
 ---
 
@@ -139,18 +139,18 @@ int SSL_Write(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs)
 
 #### Function
 
-SSL/TLS发送数据（阻塞）
+SSL/TLS Sending data (blocking)
 
 #### Parameters
 
-* sslConfig:SSL/TLS配置
-* data:发送给服务器的数据
-* length:发送给服务器的数据的长度
-* timeoutMs:发送超时时间（保留，暂不可用）
+* sslConfig:SSL/TLS configuration
+* data: data sent to the server
+* the length of the data sent to the server by length:
+* timeoutMs: sends timeout time (reserved, temporarily unavailable)
 
 #### Return
 
-* 成功发送的数据长度或错误代码
+* Data length or error code that is successfully sent
 
 ---
 
@@ -162,18 +162,18 @@ int SSL_Read(SSL_Config_t* sslConfig, uint8_t* data, int length, int timeoutMs);
 
 #### Function
 
-读取数据
+Read the data
 
 #### Parameters
 
-* sslConfig:SSL/TLS配置
-* data:接收到的数据
-* length:接收到的数据的长度
-* timeoutMs:接收超时时间
+* sslConfig:SSL/TLS configuration
+* data: received data
+* the length of the data received by length:
+* timeoutMs: receives timeout time
 
 #### Return
 
-* 成功接收的数据长度或者错误代码
+* The data length or error code that is successfully received
 
 ---
 
@@ -185,15 +185,15 @@ SSL_Error_t SSL_Close(SSL_Config_t* sslConfig);
 
 #### Function
 
-关闭连接
+Close connection
 
 #### Parameters
 
-* sslConfig:SSL/TLS配置
+* sslConfig:SSL/TLS configuration
 
 #### Return
 
-* 关闭错误信息
+* error message
 
 ---
 
@@ -205,15 +205,15 @@ SSL_Error_t SSL_Destroy(SSL_Config_t* sslConfig);
 
 #### Function
 
-释放SSL/TLS占用的空间
+Release the space occupied by SSL/TLS
 
 #### Parameters
 
-* sslConfig:SSL/TLS配置
+* sslConfig:SSL/TLS configuration
 
 #### Return
 
-* 释放错误信息
+* error code of release
 
 ---
 

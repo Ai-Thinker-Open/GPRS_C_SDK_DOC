@@ -1,7 +1,7 @@
-CALL 电话语音电话
+SMS
 ====
 
-常用短信功能
+Short message function
 
 
 example:[demo/sms](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/sms/src/demo_sms.c)
@@ -11,7 +11,7 @@ example:[demo/sms](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/dem
 
 ### SMS_PHONE_NUMBER_MAX_LEN
 
-电话号码最长长度
+The longest length of the telephone number
 
 ```c
 #define  SMS_PHONE_NUMBER_MAX_LEN  21
@@ -19,7 +19,7 @@ example:[demo/sms](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/dem
 
 ### SMS_BODY_MAX_LEN
 
-短信消息体最长长度（字节）
+The longest length of message message body (bytes)
 
 ```c
 #define  SMS_BODY_MAX_LEN  176
@@ -30,7 +30,7 @@ example:[demo/sms](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/dem
 
 ### SMS_Format_t
 
-短信格式，目前仅支持文本格式
+SMS format, currently only supporting text format
 
 ```c
 typedef enum{
@@ -44,7 +44,7 @@ typedef enum{
 
 ### SMS_Error_t
 
-错误信息
+error message
 
 ```c
 typedef enum{
@@ -57,7 +57,7 @@ typedef enum{
 
 ### SMS_Encode_Type_t
 
-编码格式，包括ascii和unicode
+Encoding format, including ASCII and Unicode
 
 ```c
 typedef enum{
@@ -71,7 +71,7 @@ typedef enum{
 
 ### SMS_Number_Type_t
 
-号码地区类型
+Number area type
 
 ```c
 typedef enum{
@@ -85,7 +85,7 @@ typedef enum{
 
 ### SMS_Status_t
 
-短信状态
+SMS status
 
 ```c
 typedef enum{
@@ -105,7 +105,7 @@ typedef enum{
 
 ### SMS_Storage_t
 
-短信储存位置
+SMS storage location
 
 ```c
 typedef enum{
@@ -121,7 +121,7 @@ typedef enum{
 
 ### SMS_Parameter_t
 
-短信参数
+Short message parameter
 
 ```c
 typedef struct
@@ -137,7 +137,7 @@ typedef struct
 
 ### SMS_Server_Center_Info_t
 
-短信中心信息
+SMS center information
 
 ```c
 typedef struct{
@@ -150,7 +150,7 @@ typedef struct{
 
 ### SMS_Message_Info_t
 
-短消息
+Short message
 
 ```c
 typedef struct{
@@ -171,7 +171,7 @@ typedef struct{
 
 ### SMS_Storage_Info_t
 
-短消息储存信息
+Short message storage information
 
 ```c
 typedef struct{
@@ -200,16 +200,17 @@ bool SMS_SetFormat(SMS_Format_t format, SIM_ID_t simID);
 
 #### Function
 
-设置短信格式
+Setting short message format
 
 #### Parameters
 
-* format:格式，目前仅支持字符格式
-* simID：卡ID，仅支持`SIM0`
+* format: format, currently only support character format
+
+* simID: card ID, only `SIM0`
 
 #### Return
 
-* 是否成功
+* whether or not it is successful
 
 ---
 
@@ -221,16 +222,16 @@ bool SMS_SetParameter(SMS_Parameter_t* smsParameter,SIM_ID_t simID);
 
 #### Function
 
-设置短信参数
+Setting short message parameters
 
 #### Parameters
 
-* smsParameter:短信参数
-* simID:卡ID，仅支持`SIM0`
+* smsParameter: short message parameters
+* simID: card ID, only `SIM0`
 
 #### Return
 
-* 是否成功
+* whether or not it is successful
 
 ---
 
@@ -242,18 +243,18 @@ bool SMS_SendMessage(const char* phoneNumber, const uint8_t* message,  uint8_t l
 
 #### Function
 
-发送短信
+Send text messages
 
 #### Parameters
 
-* phoneNumber：电话号码
-* message：短信内容，注意必须是unicode编码，可以用`SMS_LocalLanguage2Unicode`转换
-* length：短信长度（字节）
-* simID:固定为`SIM0`
+* phoneNumber: telephone number
+* message: note content, attention must be Unicode encoding, `SMS_LocalLanguage2Unicode` conversion can be used.
+* length: short message length (bytes)
+* simID: is fixed to `SIM0`
 
 #### Return
 
-* 是否成功发送
+* whether or not it is successfully sent
 
 ---
 
@@ -265,15 +266,15 @@ bool SMS_SetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
 
 #### Function
 
-设置短信中心信息
+Setting up SMS center information
 
 #### Parameters
 
-* serverCenterInfo：短信中心信息
+* serverCenterInfo：SMS center information
 
 #### Return
 
-* 是否成功设置短信中心信息
+* whether SMS center information is successfully set up
 
 ---
 
@@ -285,15 +286,15 @@ bool SMS_GetServerCenterInfo(SMS_Server_Center_Info_t* serverCenterInfo);
 
 #### Function
 
-获取短信中心信息
+Getting SMS center information
 
 #### Parameters
 
-* serverCenterInfo：短信中心信息
+* serverCenterInfo：SMS center information
 
 #### Return
 
-* 是否成功获取短信中心信息
+* whether or not a message center information is successfully obtained
 
 ---
 
@@ -305,15 +306,15 @@ bool SMS_ListMessageRequst(SMS_Status_t smsStatus,SMS_Storage_t storage);
 
 #### Function
 
-请求列出保存的短信，短信信息会以事件的方式产生`API_EVENT_ID_SMS_LIST_MESSAGE`，具体参数看[api_event.h](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_event.h)
+Request to list saved SMS, SMS message will produce `API_EVENT_ID_SMS_LIST_MESSAGE` by event. See [api_event.h](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_event.h)
 
 #### Parameters
 
-* smsStatus：选择列出哪些类型的短信，比如只列出未读消息`SMS_STATUS_UNREAD`
+* smsStatus：Choose which types of SMS to list, such as listing only unread messages `SMS_STATUS_UNREAD`
 
 #### Return
 
-* 是否成功请求读取短信
+* whether or not a message is successfully requested to read short messages
 
 ---
 
@@ -325,16 +326,16 @@ bool SMS_DeleteMessage(uint8_t index,SMS_Status_t status,SMS_Storage_t storage);
 
 #### Function
 
-删除保存的短信
+Delete saved SMS
 
 #### Parameters
 
-* index：保存的短信的下标
-* storage：选择储存位置，flash还是SIM卡
+* index: the subscript of the saved SMS
+* storage: select the storage location, flash or SIM card
 
 #### Return
 
-* 是否成功删除短信
+* whether or not to delete messages successfully
 
 ---
 
@@ -346,16 +347,16 @@ bool SMS_GetStorageInfo(SMS_Storage_Info_t* storageInfo, SMS_Storage_t storage);
 
 #### Function
 
-获取短信储存信息
+Get message storage information
 
 #### Parameters
 
-* storageInfo：储存信息
-* storage：选择要查询的储存位置
+* storageInfo: storage information
+* storage: select the location of the storage to query
 
 #### Return
 
-* 是否成功查询
+* whether or not the query is successful
 
 ---
 
@@ -367,15 +368,15 @@ bool SMS_SetNewMessageStorage(SMS_Storage_t storage);
 
 #### Function
 
-选择新收到的消息储存的位置
+Select the location of the newly received message store
 
 #### Parameters
 
-* storage：新消息储存的位置
+* storage：The location of the new message storage
 
 #### Return
 
-* 是否成功设置新消息储存位置
+* Whether the new message storage location is set up successfully
 
 ---
 
@@ -387,15 +388,15 @@ const char* SMS_GetCharset(Charset_t charset);
 
 #### Function
 
-获取特定字符集的ascii名称
+Getting the ASCII name of a specific character set
 
 #### Parameters
 
-* charset：字符集
+* charset：character set
 
 #### Return
 
-* 对应字符集的ascii名称
+* The ASCII name of the corresponding character set
 
 ---
 
@@ -407,19 +408,19 @@ bool SMS_Unicode2LocalLanguage(uint8_t* unicodeIn, uint16_t unicodeLenIn, Charse
 
 #### Function
 
-unicode转本地语言
+Unicode to local language
 
 #### Parameters
 
-* unicodeIn：unicode编码的消息
-* unicodeLenIn：unicode编码的消息长度
-* localLanguage：要转换成的本地语言
-* localOut:转换好的本地语言
-* localLenOut：转换好的本地语言长度
+* unicodeIn:unicode encoded messages
+* unicodeLenIn:unicode encoded message length
+* localLanguage: the local language to be converted into
+* localOut: converts a good local language
+* localLenOut: the converted local language length
 
 #### Return
 
-* 是否成功转换
+* Whether or not the conversion is successful
 
 ---
 
@@ -431,20 +432,20 @@ bool SMS_LocalLanguage2Unicode(uint8_t* localIn, uint16_t localLenIn, Charset_t 
 
 #### Function
 
-本地语言转unicode编码
+Local language conversion to unicode coding
 
 #### Parameters
 
-* localIn：本地语言消息体
-* localLenIn：本地语言消息体长度
-* localLanguage：本地编码格式
-* unicodeOut：转换好的unicode编码消息体
-* unicodeLenOut：转换好的unicode编码消息体长度
+* localIn: local language message body
+* localLenIn: the length of the local language message body
+* localLanguage: local coding format
+* unicodeOut: a converted Unicode encoded message body
+* unicodeLenOut: the length of the converted Unicode encoding message body.
 
 
 #### Return
 
-* 是否成功转换
+* Whether or not the conversion is successful
 
 ---
 
