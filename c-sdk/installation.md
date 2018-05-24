@@ -33,6 +33,12 @@ GPRS C SDK Build environment installation
 
 ![](/assets/open_with_cmd.png)
 
+Type `./build.bat app` or `build.bat app` to build app project, ensure our environment is ok.
+
+![](../assets/compile.png)
+
+**If comes `NO CSDTK` error**, you may need to restart you system(mostly appears on Win7).
+
 Then use `./build.bat` script to build project:
   * `./build.bat $PROJ`:compile app module，e.g.:`./build.batsh app` to compile the source code of app folder
   * `./build.bat demo $PROJ`:compile demo project, e.g.:`./build.bat demo gpio` to compile gpio demo
