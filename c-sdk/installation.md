@@ -15,7 +15,7 @@ GPRS C SDK Build environment installation
 
 ## Download tool chain, debug tool and SDK
 
-* Download CSDTK4.2: [baidu cloud](https://pan.baidu.com/s/1KMh3JYAJVU6Jf264saDB3A),[MEGA cloud](https://mega.nz/#!uGYkhLgC!EYkCkc1TeIVGHPTqQAST4VIofUIUxnGLhHgCet-NBrU)，[direct link](http://test.ai-thinker.com/csdk/CSDTK42.7z)
+* Download CSDTK4.2: [baidu cloud](https://pan.baidu.com/s/1KMh3JYAJVU6Jf264saDB3A),[MEGA cloud](https://mega.nz/#!bDxFyBxT!zD4vIGBbq9_Hc4geclqjzUt-rel8SM2ljVcrjpMimDQ)，[direct link](http://test.ai-thinker.com/csdk/CSDTK42.7z)
 
 * [download SDK](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/releases)
 
