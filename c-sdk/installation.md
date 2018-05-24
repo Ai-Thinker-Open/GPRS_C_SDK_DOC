@@ -22,7 +22,9 @@ GPRS C SDK Build environment installation
 ## installation
 
 * Decompression to a folder, such as `C:\CSDTK`, **path please DO NOT bring Chinese!**
-* Run `config_env_admin.bat` file in CSDTK
+* Run `config_env_admin.bat` file in CSDTK to set environment value
+> What the script does is to create an environment variable named `GPRS_CSDTK42_PATH`, which has a variable directory value of CSDTK. If the script fails, you can build it by yourself
+> ![](../assets/env.png)
 
 
 ## Compile
@@ -37,9 +39,9 @@ Type `./build.bat app` or `build.bat app` to build app project, ensure our envir
 
 ![](../assets/compile.png)
 
-**If comes `NO CSDTK` error**, you may need to restart you system(mostly appears on Win7).
+**If comes with `NO CSDTK` error**, you may need to restart you system(mostly appears on Win7).
 
-Then use `./build.bat` script to build project:
+Then you can use `./build.bat` script to build project:
   * `./build.bat $PROJ`:compile app module，e.g.:`./build.batsh app` to compile the source code of app folder
   * `./build.bat demo $PROJ`:compile demo project, e.g.:`./build.bat demo gpio` to compile gpio demo
   * `./build.bat clean $PROJ`:clear the build files of `$PROJ`
