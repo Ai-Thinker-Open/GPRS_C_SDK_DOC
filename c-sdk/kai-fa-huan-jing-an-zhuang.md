@@ -21,7 +21,9 @@ GPRS C SDK 开发环境搭建
 ## 安装
 
 * 解压到某个文件夹,比如`C:\CSDTK`,**路径请不要带中文！**
-* 运行CSDTk目录下的`config_env_admin.bat`文件
+* 运行CSDTk目录下的`config_env_admin.bat`文件来设置环境变量
+> 这个脚本做的事情就是新建一个名为`GPRS_CSDTK42_PATH`的环境变量，变量值为CSDTK的目录路径。 如果脚本建立失败也可以自己手动建
+> ![](../assets/env.png)
 
 
 ## 编译
@@ -32,7 +34,13 @@ GPRS C SDK 开发环境搭建
 
 ![](/assets/open_with_cmd.png)
 
-然后在CMD或powershell窗口中使用`build.bat`脚本来编译工程，有以下参数：
+使用`./build.bat app` 或者 `build.bat app`来编译工程，测试环境是否可用，如果正常，会出现以下结果：
+
+![](../assets/compile.png)
+
+如果提示`NO CSDTK,Please install CSDTK first!`，则是环境变量没有生效（在win7下可能会出现），可以重启电脑以生效
+
+保证环境可以使用后，就可以在CMD或powershell窗口中使用`build.bat`脚本来编译工程，有以下参数：
   * 使用 `./build.bat $PROJ`来编译你的应用模块，如 `./build.batsh app` 则是编译app目录下的源码
   * 使用 `./build.bat demo $PROJ` 来编译demo目录下的特定例程，比如`./build.bat demo gpio`
   * 使用 `./build.bat clean $PROJ` 清除`$PROJ`目录的中间文件
