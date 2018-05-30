@@ -113,8 +113,8 @@ typedef struct{
     uint8_t  minute;
     uint8_t  second;
     int8_t   timeZone;        // timezone hour
-    int8_t   timeZoneMinutes; // timezone minutes,
-                              // so `timezone = timeZone+timeZoneMinutes`
+    int8_t   timeZoneMinutes; // timezone minutes that less than 1 hours
+                              // so `timezone = timeZone+timeZoneMinutes/60`
 }RTC_Time_t;
 ```
 
