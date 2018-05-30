@@ -112,7 +112,9 @@ typedef struct{
     uint8_t  hour;
     uint8_t  minute;
     uint8_t  second;
-    int8_t   timeZone;
+    int8_t   timeZone;        // timezone hour
+    int8_t   timeZoneMinutes; // timezone minutes,
+                              // so `timezone = timeZone+timeZoneMinutes`
 }RTC_Time_t;
 ```
 
