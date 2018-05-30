@@ -112,7 +112,9 @@ typedef struct{
     uint8_t  hour;
     uint8_t  minute;
     uint8_t  second;
-    int8_t   timeZone;
+    int8_t   timeZone;        // 时区小时数
+    int8_t   timeZoneMinutes; // 时区不足小时的分钟数
+                              // 所以 `时区 = timeZone+timeZoneMinutes/60`
 }RTC_Time_t;
 ```
 
