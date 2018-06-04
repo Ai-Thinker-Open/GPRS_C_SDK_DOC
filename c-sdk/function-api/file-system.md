@@ -513,7 +513,7 @@ Determine whether the file pointer is at the end of the file
 
 #### Return
 
-* return 0 or error code
+* return 1 if is the end of file , return 0 if not, or error code
 
 ---
 

@@ -43,5 +43,5 @@
   * [Power Manager](c-sdk/function-api/power-manager.md)
   * [Call](c-sdk/function-api/call.md)
   * [SMS](c-sdk/function-api/sms.md)
-  * FOTA
+  * [FOTA](c-sdk/function-api/fota.md)
 
