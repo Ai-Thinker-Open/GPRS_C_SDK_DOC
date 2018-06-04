@@ -43,5 +43,5 @@
   * [PM\(电源管理\)](c-sdk/gong-neng-ji-api/pmdian-yuan-guan-740629.md)
   * [电话](c-sdk/gong-neng-ji-api/dian-hua.md)
   * [SMS\(短信\)](c-sdk/gong-neng-ji-api/smsduan-4fe129.md)
-  * FOTA\(远程固件升级\)
+  * [FOTA\(远程固件升级\)](c-sdk/gong-neng-ji-api/fota.md)
 
