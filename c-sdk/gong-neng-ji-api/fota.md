@@ -23,7 +23,7 @@ FOTA
 ```
 后面我们生成的升级包就需要将名字改成`V3.0tonew.pack`
 
-3. `./build.bat demo fota` 编译生成老版本固件，在`hex/fota`文件夹下可以看到`fota_*_debug.lod`和`fota_*_debug_ota.lod`,备份`fota_*_debug_ota.lod`为`old.lod`
+1. `./build.bat demo fota` 编译生成老版本固件，在`hex/fota`文件夹下可以看到`fota_*_debug.lod`和`fota_*_debug_ota.lod`,备份`fota_*_debug_ota.lod`为`old.lod`,同时备份好旧固件或者直接备份`hex/fota`文件夹
 
 4. 修改代码，及新的代码比如这里修改
 ```
