@@ -24,7 +24,7 @@ e.g.:
 ```
 so the `V3.0tonew.pack` is the new upgrade pack name
 
-3. `./build.bat demo fota` compile old version firmware, `fota_*_debug.lod` and `fota_*_debug_ota.lod` can be find in `hex/fota` folder, back up `fota_*_debug_ota.lod` as `old.lod`
+3. `./build.bat demo fota` compile old version firmware, `fota_*_debug.lod` and `fota_*_debug_ota.lod` can be find in `hex/fota` folder, back up `fota_*_debug_ota.lod` as `old.lod`,and back up `hex/fota` folder
 
 4. edit new version code,e.g.:
 ```
