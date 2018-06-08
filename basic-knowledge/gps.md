@@ -2,14 +2,18 @@ Basic knowledgement: GPS
 ===
 
 
+## GNSS
 
-**GPS**:Global Positioning System,sets up by the United States, the global coverage rate is as high as 98%, with a total of 24 satellites.
+Global Navigation Satellite System, is the general name of the global satellite navigation system. The GPS, as widely said, is just one of the positioning systems. As follows:
 
-The earliest developed and used positioning system in the world
+**GPS**:Global Positioning System,sets up by the United States, the global coverage rate is as high as 98%, with a total of 24 satellites. The earliest developed and used positioning system in the world
 
-In addition to GPS, there are China's BeiDou Navigation Satellite System(**BDS**), the Russian **GLONASS** system, the European Galileo system (**Galileo** satellite navigation system), and Japan's **QZSS**.
+**BDS**: Chinese BeiDou Navigation Satellite System
+**GLONASS**: Build from Russian
+**Galileo**: The European Galileo system  satellite navigation system
+**QZSS**: Japan made it.
 
-In addition to the satellite positioning system, there are **SBAS** (Satellite-Based Augmentation System), star based enhancement system, and satellite navigation enhancement signal transponder through the geostationary orbit (GEO) satellite, which can broadcast ephemeris error, satellite clock error, ionospheric delay and so on. The improvement of positioning accuracy of satellite navigation system has become a means of competing development for all space powers. Currently, many SBAS systems have been established in the world, such as the WAAS of the United States (Wide Area Augmentation System), the SDCM of Russia (System for Differential Corrections and), the European Union, and Japan. Mentation System) and GAGAN in India (GPS Aided Geo Augmented Navigation).
+**SBAS**: In addition to the satellite positioning system, there are SBAS (Satellite-Based Augmentation System), star based enhancement system, and satellite navigation enhancement signal transponder through the geostationary orbit (GEO) satellite, which can broadcast ephemeris error, satellite clock error, ionospheric delay and so on. The improvement of positioning accuracy of satellite navigation system has become a means of competing development for all space powers. Currently, many SBAS systems have been established in the world, such as the WAAS of the United States (Wide Area Augmentation System), the SDCM of Russia (System for Differential Corrections and), the European Union, and Japan. Mentation System) and GAGAN in India (GPS Aided Geo Augmented Navigation).
 
 
 ## WGS84,CGCS2000 standard(coordinate system)

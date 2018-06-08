@@ -15,7 +15,7 @@
 ## Basic Knowledge
 
 * [GSM/GPRS](basic-knowledge/gsmgprs.md)
-* [GPS](basic-knowledge/gps.md)
+* [GNSS(GPS)](basic-knowledge/gps.md)
 
 ## C SDK
 
