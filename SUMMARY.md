@@ -15,7 +15,7 @@
 ## 基础知识
 
 * [GSM/GPRS](ji-chu-zhi-shi/gsmgprs.md)
-* [GPS](ji-chu-zhi-shi/gps.md)
+* [GNSS(GPS)](ji-chu-zhi-shi/gps.md)
 
 ## C SDK
 
