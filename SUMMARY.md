@@ -44,4 +44,6 @@
   * [电话](c-sdk/gong-neng-ji-api/dian-hua.md)
   * [SMS\(短信\)](c-sdk/gong-neng-ji-api/smsduan-4fe129.md)
   * [FOTA\(远程固件升级\)](c-sdk/gong-neng-ji-api/fota.md)
+  * [LBS](c-sdk/gong-neng-ji-api/lbs.md)
+  * [Gizwits\(机智云\)](c-sdk/gong-neng-ji-api/gizwits.md)
 
