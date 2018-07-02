@@ -47,6 +47,23 @@ typedef enum{
 
 ---
 
+## 结构体
+
+### CALL_Status_t
+
+电话状态信息
+
+```c
+typedef struct {
+    uint8_t index;
+    uint8_t direction;
+    uint8_t status;
+    uint8_t mode;
+    bool    multiparty;
+    char    number[22];
+    uint8_t numberType;
+}CALL_Status_t;
+```
 
 ## 功能函数
 
@@ -134,3 +151,39 @@ bool CALL_DTMF(char dtmf, CALL_DTMF_Gain_t attenuation, uint8_t duration, uint8_
 
 ---
 
+### CALL_Status
+
+```c
+bool CALL_Status(CALL_Status_t** callStatus, uint8_t* count);
+```
+
+##### 功能
+
+查询电话状态信息，注意在调用后要调用OS_free对内存进行释放，比如：
+```c
+    CALL_Status_t* callStatus = NULL;
+    uint8_t count;
+    bool ret = CALL_Status(&callStatus,count);
+    uint8_t i;
+    if(ret)
+    {
+        for(i=0;i<count;++i)
+        {
+            Trace(1,"index:%d,direction:%d,status:%d,mode:%d,mpty:%d,number:%s,number type:%d",
+                        callStatus[i].index,callStatus[i].direction,callStatus[i].status,callStatus[i].mode,
+                        callStatus[i].multiparty,callStatus[i].number,callStatus[i].numberType);
+        }
+        OS_Free(callStatus);
+    }
+```
+
+##### 参数
+
+* callStatus: 指向存放状态信息数据块的指针
+* count: 电话状态信息个数
+
+##### 返回值
+
+* 是否成功获取到电话状态信息，如果成功返回true，否则为false，
+
+---
