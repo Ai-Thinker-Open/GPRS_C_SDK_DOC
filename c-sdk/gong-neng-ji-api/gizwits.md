@@ -42,7 +42,7 @@ typedef enum{
 
 ### Gizwits_Config_t
 
-I2C配置Gizwits配置
+Gizwits配置,必须配置`IMEI`、`pk`、`pk_secret`、`alive`，pk和pk secret可以在机智云控制面板中创建的应用中找到
 
 ```c
 typedef struct 
@@ -128,7 +128,7 @@ int GIZWITS_Connect(Gizwits_t* gizwits, Gizwits_Config_t* config, const char* co
 
 ##### 功能
 
-连接机智云
+连接机智云，如果配置对象中的did值为空，则会先注册机智云再登录，需要注意的是，每次重新注册，用户绑定的设备将会自动解绑，即如果设备重新注册，就算之前已经绑定了这个设备的用户也需要重新扫码绑定
 
 ##### 参数
 
