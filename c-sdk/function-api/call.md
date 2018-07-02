@@ -134,3 +134,41 @@ Make a DTMF tone, if received a DTMF tone , event `API_EVENT_ID_CALL_DTMF` will 
 
 ---
 
+### CALL_Status
+
+```c
+bool CALL_Status(CALL_Status_t** callStatus, uint8_t* count);
+```
+
+##### Function
+
+query call infomation while make a call or received call, you must call `OS_Free()` to free memory later
+e.g.
+```c
+    CALL_Status_t* callStatus = NULL;
+    uint8_t count;
+    bool ret = CALL_Status(&callStatus,count);
+    uint8_t i;
+    if(ret)
+    {
+        for(i=0;i<count;++i)
+        {
+            Trace(1,"index:%d,direction:%d,status:%d,mode:%d,mpty:%d,number:%s,number type:%d",
+                        callStatus[i].index,callStatus[i].direction,callStatus[i].status,callStatus[i].mode,
+                        callStatus[i].multiparty,callStatus[i].number,callStatus[i].numberType);
+        }
+        OS_Free(callStatus);
+    }
+```
+
+##### Parameters
+
+* callStatus: The pointer to the call infomation, and value is NULL
+* count: call infomation count
+
+##### Return
+
+* return true if got call infomation, or false
+
+---
+

@@ -44,4 +44,5 @@
   * [Call](c-sdk/function-api/call.md)
   * [SMS](c-sdk/function-api/sms.md)
   * [FOTA](c-sdk/function-api/fota.md)
-
+  * [LBS](c-sdk/function-api/lbs.md)
+  * [Gizwits](c-sdk/function-api/gizwits.md)
