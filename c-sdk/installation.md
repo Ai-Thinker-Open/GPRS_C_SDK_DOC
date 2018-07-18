@@ -46,7 +46,7 @@ Then you can use `./build.bat` script to build project:
   * `./build.bat demo $PROJ`:compile demo project, e.g.:`./build.bat demo gpio` to compile gpio demo
   * `./build.bat clean $PROJ`:clear the build files of `$PROJ`
   * `./build.bat clean all`:clear all the build files
-  * `./build.bat demo $PROJ release`:build a release version, e.g.:`./build.bat demo gpio release`，if the last parameter is not `release`, it will be default to `debug` version. The GDB can be used to debug errors after system crashed in `debug` version, but `release` version can not, it will auto restart system when system crashed!
+  * `./build.bat demo $PROJ release`:build a release version, e.g.:`./build.bat demo gpio release`，if the last parameter is not `release`, it will be default to `debug` version. **The GDB can be used to debug errors after system crashed in `debug` version, but `release` version can not, watch dog activate in release version,it will auto restart system when system crashed!**
 
 **e.g.: **
 ```
