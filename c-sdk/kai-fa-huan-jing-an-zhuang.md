@@ -14,7 +14,7 @@ GPRS C SDK 开发环境搭建
 
 ## 下载工具链以及下载调试工具及SDK
 
-* 下载CSDTK4.2：[百度云下载](https://pan.baidu.com/s/1NaemQzc8KTpsO5zecTxROQ)，[MEGA网盘下载](https://mega.nz/#!7OoAlQwB!sqjMns4a077Hnxv4EZ0o02J4S2WmblrCBsyg3U8BiCg)，[直接链接](http://test.ai-thinker.com/csdk/CSDTK42.7z)
+* 下载CSDTK4.2：[百度云下载](https://pan.baidu.com/s/16ZIQ9YbZdcVz-zvpzEFXbA)，[MEGA网盘下载](https://mega.nz/#!uKAlRA7Z!UPHn3ZoLY8X33iMIKcBcUYFwrhmNYe-x_dyOdrm_d6I)，[直接链接](http://test.ai-thinker.com/csdk/CSDTK42.7z)
 
 * [下载SDK](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/releases)
 
