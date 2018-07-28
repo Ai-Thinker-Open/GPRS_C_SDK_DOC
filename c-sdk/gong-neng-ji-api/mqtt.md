@@ -7,6 +7,9 @@ MQTT是一种基于订阅发布模型的协议，在实时聊天（IM）、物�
 [demo/mqtt](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt/src/demo_mqtt.c)
 [demo/mqtt_ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt_ssl/src/demo_mqtt.c)
 
+**注意**：
+MQTT相关的连接、断开连接、（取消）订阅发布等函数**只能在线程中调用**，不能在中断回调函数中调用，否则无法使用,参见例程的用法
+
 ## 枚举类型
 
 ### MQTT_Error_t
