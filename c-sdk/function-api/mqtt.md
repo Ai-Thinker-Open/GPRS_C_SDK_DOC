@@ -7,6 +7,10 @@ example:
 [demo/mqtt](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt/src/demo_mqtt.c)
 [demo/mqtt_ssl](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt_ssl/src/demo_mqtt.c)
 
+
+**Pay Attention**:
+The Function related to MQTT only can be called in thread(task), can't call in interrup callback function, or errors occurs, refer to the demo code.
+
 ## Enumerated type
 
 ### MQTT_Error_t
