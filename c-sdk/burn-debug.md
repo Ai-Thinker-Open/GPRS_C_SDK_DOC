@@ -8,13 +8,30 @@ GPRS Burn(Download) and Debug
 
 * The power can be connected to the lithium battery voltage (ie 3.8v ~ 4.2v) (VBAT pin), can also be connected to 5v power supply (5v input pin or USB input), it should be noted that, if using lithium battery power supply You need to press <kbd> POWER KEY </kbd> for about 3 seconds to power on the module, USB power will automatically power on the power. In the download or debugging to ensure that has been switched on.
 
+
+## If Linux
+
+* Install dependences
+
+```
+sudo apt install build-essential libqt4-qt3support itcl3 itk3 iwidgets4
+```
+
+* Create a link file for serial port as follow, and later you can fill in the coolwatcher's chart with `1`,the `COM1` must upper-case
+
+```
+sudo ln -s /dev/ttyUSB0 comport/COM1
+```
+
+* Then double click `coolwatcher` to run software
+
 ## Download steps
 
 * Update `coolwatcher` to the latest version(coolwatcher is in the CSDTK folder)
 
-* Open`CSDTK/cooltools/coolwatcher.exe`
+* Open`CSDTK/cooltools/coolwatcher.exe` or `CSDTK/cooltools/coolwatcher` in Linux
 
-* Select the 8955 for the options on the left and the `lastcomport` for the right to download the port for debugging the serial port (` HST`) for the connection module. Then click ok
+* Select the 8955 for the options on the left, and fill the `lastcomport` chart with port number of HOST serial (` HST`) for the connection module. Then click ok
 
 ![coolwatcher startup options](../assets/coolwatcher_open.png)
 
