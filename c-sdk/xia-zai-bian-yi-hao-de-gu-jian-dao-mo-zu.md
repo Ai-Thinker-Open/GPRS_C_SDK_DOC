@@ -8,6 +8,24 @@ GPRS 下载调试说明
 
 * 电源可以接锂电池电压（即3.8v~4.2v）（VBAT引脚）,也可以接5v电源（5v输入引脚或者USB输入），需要注意的是，如果使用锂电池供电，上电后需要按<kbd>POWER KEY</kbd>3秒左右让模块开机，USB供电则会上电自动开机。 在下载或者调试时要确保已经开机。
 
+
+## Linux
+
+* Install dependences
+
+```
+sudo apt install build-essential libqt4-qt3support itcl3 itk3 iwidgets4
+```
+
+* Create a link file for serial port as follow, and later you can fill in the coolwatcher's chart with `1`,the `COM1` must upper-case
+
+```
+sudo ln -s /dev/ttyUSB0 comport/COM1
+```
+
+* Then double click `coolwatcher` to run software
+
+
 ## 下载步骤
 
 * 将`coolwatcher更新到最新版本`(coolwatcher在CSDTK文件夹下)
