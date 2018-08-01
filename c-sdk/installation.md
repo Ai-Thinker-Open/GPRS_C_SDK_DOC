@@ -17,7 +17,11 @@ GPRS C SDK Build environment installation
 
 * Download CSDTK4.2: [baidu cloud](https://pan.baidu.com/s/16ZIQ9YbZdcVz-zvpzEFXbA),[MEGA cloud](https://mega.nz/#!uKAlRA7Z!UPHn3ZoLY8X33iMIKcBcUYFwrhmNYe-x_dyOdrm_d6I)，[direct link](http://test.ai-thinker.com/csdk/CSDTK42.7z)
 
-* [download SDK](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/releases)
+* Get SDK
+  * [download SDK](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/releases)
+  * or clone by git:`git clone https://github.com/Ai-Thinker-Open/GPRS_C_SDK.git --recursive` (pay attention `--recursive` is needed, or compile will fail for lake of files)
+  * Check C_SDK `platform/csdk` folder, there should be some folders and file, if not, you may get source code with wrong way, check and download again
+  ![](../assets/sdk_download_en.png)
 
 ## installation
 
