@@ -1,4 +1,4 @@
-GPRS C SDK Build environment installation
+GPRS C SDK Build environment installation on Linux
 ====
 
 ## Pay Attention
