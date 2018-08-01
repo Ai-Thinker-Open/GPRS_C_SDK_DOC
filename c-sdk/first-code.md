@@ -14,8 +14,8 @@ So our goal: a complete code structure, and can print `Hello GPRS` continuously.
 | Contents | Description |
 | --- | --- |
 |app|  application code here|
-build | build files |
-demo | examples |
+|build | build files |
+|demo | examples |
 | doc | SDK-related documentation|
 | hex | last generated burnable file(burn files) |
 | include | SDK api include directory |
@@ -36,13 +36,12 @@ LOCAL_NAME := demo/first
 LOCAL_API_DEPENDS := \
 
 LOCAL_ADD_INCLUDE := include\
-                    include/std_inc \
-                    include/api_inc \
+                     include/std_inc \
+                     include/api_inc \
 
 
 # Set this to any non-null string to signal a module which 
-# generates a binary (must contain a "main" entry point). 
-# If left null, only a library will be generated.
+# generates a binary 
 IS_ENTRY_POINT := no
 
 ## ------------------------------------ ##

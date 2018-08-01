@@ -75,13 +75,13 @@ work GPRS_C_SDK
 ```
 
 Then you can use `./build.sh` script to build project:
-  * `./build.sh $PROJ`:compile app module，e.g.:`./build.batsh app` to compile the source code of app folder
+  * `./build.sh $PROJ`:compile app module，e.g.:`./build.sh app` to compile the source code of app folder
   * `./build.sh demo $PROJ`:compile demo project, e.g.:`./build.sh demo gpio` to compile gpio demo
   * `./build.sh clean $PROJ`:clear the build files of `$PROJ`
   * `./build.sh clean all`:clear all the build files
   * `./build.sh demo $PROJ release`:build a release version, e.g.:`./build.sh demo gpio release`，if the last parameter is not `release`, it will be default to `debug` version. **The GDB can be used to debug errors after system crashed in `debug` version, but `release` version can not, watch dog activate in release version,it will auto restart system when system crashed!**
 
-**e.g.: **
+e.g.:
 ```
 ./build.sh demo gpio
 ```

@@ -9,7 +9,7 @@ GPRS Burn(Download) and Debug
 * The power can be connected to the lithium battery voltage (ie 3.8v ~ 4.2v) (VBAT pin), can also be connected to 5v power supply (5v input pin or USB input), it should be noted that, if using lithium battery power supply You need to press <kbd> POWER KEY </kbd> for about 3 seconds to power on the module, USB power will automatically power on the power. In the download or debugging to ensure that has been switched on.
 
 
-## If Linux
+## Linux
 
 * Install dependences
 
