@@ -16,7 +16,7 @@ GPRS C SDK Build environment installation on Linux
 * Download CSDTK4.2 Linux version: 
   * [baidu cloud](https://pan.baidu.com/s/1FzEvkt9z41QdvUdLxZJvug)
   * [MEGA cloud](https://mega.nz/#!LHhxWTrJ!rR7RzMxOOq4zwfGhpVLfe7DmdwEfhIiTLArb8OFqJM0)
-  * [direct link](http://test.ai-thinker.com/csdk/CSDTK42_Linux.7z)
+  * [direct link](http://test.ai-thinker.com/csdk/CSDTK42_Linux.tar.gz)
 
 * Get SDK
   * [download SDK](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/releases)
