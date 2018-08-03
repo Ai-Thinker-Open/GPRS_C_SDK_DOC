@@ -21,6 +21,7 @@
 
 * [Installation Windows](c-sdk/installation.md)
 * [Installation Linux](c-sdk/installation_linux.md)
+* [Installation Docker](c-sdk/installation_docker.md)
 * [Burn & Debug](c-sdk/burn-debug.md)
 * [First Code](c-sdk/first-code.md)
 * [Code Style](c-sdk/code-style.md)
