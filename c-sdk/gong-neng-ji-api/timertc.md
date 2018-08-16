@@ -14,7 +14,7 @@ time（RTC）
 用整数来表示时间
 
 ```c
-typedef long         time_t;
+typedef int32_t         time_t;
 ```
 
 ---
@@ -80,7 +80,7 @@ typedef struct tm{
 
 ```c
 typedef struct timeval {
-    long long    tv_sec;        // seconds
+    time_t    tv_sec;        // seconds
     long         tv_usec;       //microsecond
 }timeval_t;
 ```
@@ -135,7 +135,7 @@ int gettimeofday(timeval_t *tv, timezone_t *tz);
 
 ##### 参数
 
-* tv：时间信息，秒和毫秒
+* tv：时间信息，秒和微妙(实际上系统无法到微妙级,值是毫秒*1000得到)
 * tz：未实现，始终为NULL
 
 ##### 返回值
