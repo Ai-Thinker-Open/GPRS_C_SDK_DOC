@@ -14,7 +14,7 @@ example:[demo/time](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/de
 Use integers to represent time
 
 ```c
-typedef long         time_t;
+typedef int32_t         time_t;
 ```
 
 ---
@@ -80,7 +80,7 @@ Time, seconds, and subtleties
 
 ```c
 typedef struct timeval {
-    long long    tv_sec;        // seconds
+    time_t       tv_sec;        // seconds
     long         tv_usec;       //microsecond
 }timeval_t;
 ```
