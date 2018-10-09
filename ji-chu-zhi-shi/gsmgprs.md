@@ -51,5 +51,16 @@ GGSN(gateway GPRS Support Node)是GPRS网络中的关键部分，是GPRS网络�
 4. 与公网设备建立连接：因为设备已经建立好于公网的连接，只需要直接通过某种协议连接即可，比如建立TCP连接、UDP连接等
 
 
+#### IMEI SN IMSI CCID区别
+
+SN是模块序列号,一般情况可以不用理会
+
+IMEI是设备号码,全球唯一,会发送到基站网络进行校验,在一些地区如果IMEI号码错误可能导致无法联网
+
+IMSI： International Mobile SubscriberIdentification Number 国际移动用户识别码，是区别移动用户的标志，储存在SIM卡中，可用于区别移动用户的有效信息。其总长度不超过15位，同样使用0～9的数字。其中MCC是移动用户所属国家代号，占3位数字，中国的MCC规定为460；MNC是移动网号码，最多由两位数字组成，用于识别移动用户所归属的移动通信网；MSIN是移动用户识别码，用以识别某一移动通信网中的移动用户。例如开头是46000是中国移动用户，46001是联通用户，46003是电信用户
+
+ICCID：Integrate circuit card identity 集成电路卡识别码（固化在手机SIM卡中),ICCID为IC卡的唯一识别号码，共有20位数字组成
+
+
 
 

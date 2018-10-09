@@ -7,6 +7,7 @@ GPRS C SDK 开发环境搭建
 * SDK没有特定的IDE，用户自己选择代码编辑器编辑代码。
 
 * 在修改代码时，一定不能使用windows自带的记事本和写字板，请使用更加专业的编辑器(推荐使用如[vscode](https://code.visualstudio.com/)，[sublime](https://www.sublimetext.com/)，[atom](https://atom.io/)，[eclipse](http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/oxygen2),source insight等，或者其它你熟悉的编辑器。)
+> 比如使用VS Code, 它支持函数跳转等基本功能(在vscode里面搜索C/C++插件安装),多使用搜索功能(侧边栏搜索图标)会很方便
 
 * 请修改编辑器设置，文件结尾符号设置为unix风格(`<LF>`(`\n`)结尾)(设置方法请自行到网络查找)
 
