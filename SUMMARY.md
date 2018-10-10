@@ -24,6 +24,7 @@
 * [使用docker编译](c-sdk/installation_docker.md)
 * [下载固件到模组及调试](c-sdk/xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.md)
 * [开始第一份代码](c-sdk/kai-shi-di-yi-fen-dai-ma.md)
+* [如何使用vscode写C代码](more/vscode.md)
 * [代码风格及结构](c-sdk/dai-ma-feng-ge-ji-ming-ming-gui-ze.md)
 * [功能及API](c-sdk/gong-neng-ji-api.md)
   * [GPIO](c-sdk/gong-neng-ji-api/gpio.md)
