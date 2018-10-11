@@ -466,6 +466,6 @@ Whether the query has been connected to the MQTT server (broker)
 
 #### Return
 
-* If it is connected, it returns 0, otherwise the error message is returned.
+* return 0 If not connected, or return other value
 
 ---
