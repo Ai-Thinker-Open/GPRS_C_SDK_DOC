@@ -465,6 +465,6 @@ uint8_t MQTT_IsConnected(MQTT_Client_t* client);
 
 ##### 返回值
 
-* 如果已经连接，返回0，否则返回错误信息
+* 如果已经连接，返回非0值，否则返回0
 
 ---
