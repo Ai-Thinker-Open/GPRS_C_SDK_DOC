@@ -1,7 +1,7 @@
 time（RTC）
 ====
 
-基本的RTC时间以及系统时间戳，以及网络实践同步等
+基本的RTC时间以及系统时间戳，以及网络时间同步等
 
 
 例程：[demo/time](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/time/src/demo_time.c)
