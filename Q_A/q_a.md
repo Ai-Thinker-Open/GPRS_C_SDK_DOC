@@ -62,6 +62,39 @@ SDK集成了文件系统,文件系统就是flash上的,所以对文件系统的�
 如果使用release版本或者添加了看门狗功能,有可能是程序出现了问题,一般是指针越界操作导致的
 
 
+## 编译函数重定义错误
+
+```
+multiple definition of `****'
+```
+
+如果报的错误是函数重定义并且后面跟着一大段文字如下:
+
+```
+multiple definition of `****'
+mips-elf-ld: Dwarf Error: Can't find .debug_ranges section.
+mips-elf-ld: Dwarf Error: Can't find .debug_ranges section.
+mips-elf-ld: Dwarf Error: Can't find .debug_ranges section.
+mips-elf-ld: Dwarf Error: Can't find .debug_ranges section.
+```
+
+则是因为函数名与已有的库中的函数名重复.
+
+解决办法: 
+* 方法一: 修改函数名
+* 方法二: 将重定义的函数名添加到`platform/compilation/platform_symbols_to_strip`文件中即可编译通过(可以简单地理解成屏蔽了库中的函数)
+> 这里这个文件是将库elf文件中的函数的标志去掉,这样链接时就不会报错了
+
+另外一个原因可能是代码中确实有重定义即多个函数名相同的函数
+
+
+## 阿里云在windows编译报错
+
+比如阿里云在windows上编译报错,是因为阿里云官方的makefile语法不适配cygwin导致的,
+阿里云的代码目前只能在linux编译,也许后面会解决
+
+
+
 ## 文档和代码不一致或者文档没有说明怎么办?
 
 在开发中的代码可能文档更新不及时,尽量先看已有的文档,在api每个文档的开头都会有重要提示,如果不看可能会遇到坑,
