@@ -29,7 +29,7 @@ GPRS C SDK Build environment installation on Linux
 ### Install dependences for compile tool
 
 ```
-sudo apt install build-essential gcc-multilib g++-multilib libqt4-qt3support libzip-dev zlib1g lib32z1
+sudo apt install build-essential gcc-multilib g++-multilib libzip-dev zlib1g lib32z1
 ```
 
 ### Install dependences for coolwatcher
@@ -37,6 +37,13 @@ sudo apt install build-essential gcc-multilib g++-multilib libqt4-qt3support lib
 ```
 sudo apt install build-essential libqt4-qt3support itcl3 itk3 iwidgets4
 ```
+
+and maybe other compatible libs in ther latest ubuntu
+
+```
+sudo apt install libpng12-0 libusb-0.1-4
+```
+
 
 ### CSDTK set up
 
