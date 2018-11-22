@@ -51,6 +51,7 @@
   * [Gizwits\(机智云\)](c-sdk/gong-neng-ji-api/gizwits.md)
 * [常见问题](Q_A/q_a.md)
 * 进阶
+  * [Flash 分区布局](more/flash_map.md)
   * [如果将SDK生成一个lib库文件](more/gen_lib.md)
   * [移植脚本语言MicroPython](more/mpy.md)
 

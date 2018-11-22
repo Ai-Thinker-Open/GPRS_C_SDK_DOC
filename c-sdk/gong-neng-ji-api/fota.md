@@ -3,6 +3,37 @@ FOTA
 
 参考例程 [demo/fota](https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/fota/src/demo_fota.c)
 
+## 升级流程简介
+
+考虑到流量使用以及flash空间占用，升级使用了查分升级的方式，类似Android中的App增量更新，每次升级必须在上一次的基础上进行升级，因此每次生成固件后需要保留旧固件方便以后升级使用
+每次的升级包最大64kB，
+如果使用到了FOTA功能，堆需要预留最大64kB的空间，以及文件系统也需要预留64kB
+
+* 应用程序通过串口或者网络获取升级包并保存到flash中的文件系统中
+
+* 获取升级包完毕后会自动重启进入升级序列
+
+> 这时会通过HST口打印事件，事件的数值及其含义如下：
+```
+#define FOTA_EVENT_START_CHECK        0xf07a0000
+#define FOTA_EVENT_VERSION_ERROR      0xf07a0001
+#define FOTA_EVENT_STATUS_EMPTY       0xf07a0002
+#define FOTA_EVENT_STATUS_DOWNLOADING 0xf07a0003
+#define FOTA_EVENT_STATUS_DOWNLOADED  0xf07a0004
+#define FOTA_EVENT_STATUS_UPGRADING   0xf07a0005
+#define FOTA_EVENT_STATUS_UPGRADED    0xf07a0006
+#define FOTA_EVENT_AREA_INVALID       0xf07a0007
+#define FOTA_EVENT_UPGRADE_START      0xf07a0008
+#define FOTA_EVENT_UPGRADE_PROGRESS   0xf07a0009
+#define FOTA_EVENT_UPGRADE_FAILED     0xf07a000a
+#define FOTA_EVENT_UPGRADE_DONE       0xf07a000b
+```
+> 升级过程也会汇报进度，事件共4个字节，前两个是总进度，后两个字节则是当前进度即值为(total << 16) | current
+> 升级过程会备份一些数据到FOTA备份分区，以便升级过程中断电造成升级失败，分区详情见Flash分区文档
+
+* 如果在升级过程中出现了错误，比如断电，下次上电会继续升级过程直到升级完成,因此断电不会造成固件损坏
+
+
 ## 例程使用
 
 例程做的事情就是开机后从服务器获得升级包进行固件升级或者接收来自串口的升级包进行固件升级，
@@ -24,6 +55,7 @@ FOTA
 后面我们生成的升级包就需要将名字改成`V3.0tonew.pack`
 
 1. `./build.bat demo fota` 编译生成老版本固件，在`hex/fota`文件夹下可以看到`fota_*_debug.lod`和`fota_*_debug_ota.lod`,备份`hex/fota/fota_*_debug_ota.lod`为`hex/fota/old.lod`,同时备份好旧固件或者直接备份`hex/fota`文件夹
+> 新版不再生成`*_ota.lod`这个文件，使用完整的lod文件即可
 
 4. 修改代码，及新的代码比如这里修改
 ```

@@ -91,7 +91,7 @@ mips-elf-ld: Dwarf Error: Can't find .debug_ranges section.
 解决办法: 
 * 方法一: 修改函数名
 * 方法二: 将重定义的函数名添加到`platform/compilation/platform_symbols_to_strip`文件中即可编译通过(可以简单地理解成屏蔽了库中的函数)
-> 这里这个文件是将库elf文件中的函数的标志去掉,这样链接时就不会报错了
+> 这里这个文件是将库elf文件中的函数的标志去掉,这样链接时就不会报错了，但是这样有可能会导致debug时找不到函数名
 
 另外一个原因可能是代码中确实有重定义即多个函数名相同的函数
 
