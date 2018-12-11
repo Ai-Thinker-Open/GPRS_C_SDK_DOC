@@ -26,7 +26,7 @@ Module can be bought at taobao or other ways : [taobao link](https://anxinke.tao
 
 The development of modules mainly provides two kinds of interfaces:
 
-（A） **AT Command**: As a module connect with  MCU with UART
+（A） **AT Command**: a module connect with  MCU with UART
    * It's a easy way to operate GSM/GPRS module, and requires MCU to send command to the module through a serial port(UART), and you just need to find the command you need in AT Command Documentation
    * AT firmware is the default firmware， you can set up immediately, more refer to [Ai-Thinker Wiki](http://wiki.ai-thinker.com/gprs)
    * This document does not contains any infomation of AT Command
