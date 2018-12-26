@@ -14,7 +14,8 @@
         "anchor-navigation-ex",
         "sharing",
         "my-toolbar",
-        "ga"
+        "ga",
+        "toggle-chapters"
     ],
     "pluginsConfig": {
         "github": {
