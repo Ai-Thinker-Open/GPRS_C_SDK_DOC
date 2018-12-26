@@ -1,0 +1,1062 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SMS · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="fota.html" />
+    
+    
+    <link rel="prev" href="call.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">introduces</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../hardware/a9.html">
+            
+                <a href="../../hardware/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../hardware/a9g.html">
+            
+                <a href="../../hardware/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../hardware/pudding-dev-board.html">
+            
+                <a href="../../hardware/pudding-dev-board.html">
+            
+                    
+                    pudding dev board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../hardware/usb-uart-module.html">
+            
+                <a href="../../hardware/usb-uart-module.html">
+            
+                    
+                    USB-UART module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../hardware/sim-card.html">
+            
+                <a href="../../hardware/sim-card.html">
+            
+                    
+                    SIM Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Knowledge</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../basic-knowledge/gsmgprs.html">
+            
+                <a href="../../basic-knowledge/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../basic-knowledge/gps.html">
+            
+                <a href="../../basic-knowledge/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Installation Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    Installation Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../burn-debug.html">
+            
+                <a href="../burn-debug.html">
+            
+                    
+                    Burn & Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../first-code.html">
+            
+                <a href="../first-code.html">
+            
+                    
+                    First Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../code-style.html">
+            
+                <a href="../code-style.html">
+            
+                    
+                    Code Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../function-api.html">
+            
+                <a href="../function-api.html">
+            
+                    
+                    Function & API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" data-path="iccid.html">
+            
+                <a href="iccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.11" data-path="file-system.html">
+            
+                <a href="file-system.html">
+            
+                    
+                    FS(Flash/TF Card)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.12" data-path="gprs-network.html">
+            
+                <a href="gprs-network.html">
+            
+                    
+                    GPRS Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.14" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.15" data-path="ssl-tls.html">
+            
+                <a href="ssl-tls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.17" data-path="power-manager.html">
+            
+                <a href="power-manager.html">
+            
+                    
+                    Power Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.18" data-path="call.html">
+            
+                <a href="call.html">
+            
+                    
+                    Call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.7.19" data-path="sms.html">
+            
+                <a href="sms.html">
+            
+                    
+                    SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >SMS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#sms"><b> </b>SMS</a></li><ul><li><span class="title-icon "></span><a href="#macro-definition"><b>1. </b>Macro definition</a></li><ul><li><span class="title-icon "></span><a href="#smsphonenumbermaxlen"><b>1.1. </b>SMS_PHONE_NUMBER_MAX_LEN</a></li><li><span class="title-icon "></span><a href="#smsbodymaxlen"><b>1.2. </b>SMS_BODY_MAX_LEN</a></li></ul><li><span class="title-icon "></span><a href="#enumerated-type"><b>2. </b>Enumerated type</a></li><ul><li><span class="title-icon "></span><a href="#smsformatt"><b>2.1. </b>SMS_Format_t</a></li><li><span class="title-icon "></span><a href="#smserrort"><b>2.2. </b>SMS_Error_t</a></li><li><span class="title-icon "></span><a href="#smsencodetypet"><b>2.3. </b>SMS_Encode_Type_t</a></li><li><span class="title-icon "></span><a href="#smsnumbertypet"><b>2.4. </b>SMS_Number_Type_t</a></li><li><span class="title-icon "></span><a href="#smsstatust"><b>2.5. </b>SMS_Status_t</a></li><li><span class="title-icon "></span><a href="#smsstoraget"><b>2.6. </b>SMS_Storage_t</a></li></ul><li><span class="title-icon "></span><a href="#struct"><b>3. </b>Struct</a></li><ul><li><span class="title-icon "></span><a href="#smsparametert"><b>3.1. </b>SMS_Parameter_t</a></li><li><span class="title-icon "></span><a href="#smsservercenterinfot"><b>3.2. </b>SMS_Server_Center_Info_t</a></li><li><span class="title-icon "></span><a href="#smsmessageinfot"><b>3.3. </b>SMS_Message_Info_t</a></li><li><span class="title-icon "></span><a href="#smsstorageinfot"><b>3.4. </b>SMS_Storage_Info_t</a></li></ul><li><span class="title-icon "></span><a href="#function"><b>4. </b>Function</a></li><ul><li><span class="title-icon "></span><a href="#smssetformat"><b>4.1. </b>SMS_SetFormat</a></li><li><span class="title-icon "></span><a href="#smssetparameter"><b>4.2. </b>SMS_SetParameter</a></li><li><span class="title-icon "></span><a href="#smssendmessage"><b>4.3. </b>SMS_SendMessage</a></li><li><span class="title-icon "></span><a href="#smssetservercenterinfo"><b>4.4. </b>SMS_SetServerCenterInfo</a></li><li><span class="title-icon "></span><a href="#smsgetservercenterinfo"><b>4.5. </b>SMS_GetServerCenterInfo</a></li><li><span class="title-icon "></span><a href="#smslistmessagerequst"><b>4.6. </b>SMS_ListMessageRequst</a></li><li><span class="title-icon "></span><a href="#smsdeletemessage"><b>4.7. </b>SMS_DeleteMessage</a></li><li><span class="title-icon "></span><a href="#smsgetstorageinfo"><b>4.8. </b>SMS_GetStorageInfo</a></li><li><span class="title-icon "></span><a href="#smssetnewmessagestorage"><b>4.9. </b>SMS_SetNewMessageStorage</a></li><li><span class="title-icon "></span><a href="#smsgetcharset"><b>4.10. </b>SMS_GetCharset</a></li><li><span class="title-icon "></span><a href="#smsunicode2locallanguage"><b>4.11. </b>SMS_Unicode2LocalLanguage</a></li><li><span class="title-icon "></span><a href="#smslocallanguage2unicode"><b>4.12. </b>SMS_LocalLanguage2Unicode</a></li></ul></ul></ul></div><a href="#sms" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sms"><a name="sms" class="anchor-navigation-ex-anchor" href="#sms"><i class="fa fa-link" aria-hidden="true"></i></a> SMS</h1>
+<p>Short message function</p>
+<p>example:<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/sms/src/demo_sms.c" target="_blank">demo/sms</a></p>
+<h2 id="macro-definition"><a name="macro-definition" class="anchor-navigation-ex-anchor" href="#macro-definition"><i class="fa fa-link" aria-hidden="true"></i></a>1. Macro definition</h2>
+<h3 id="smsphonenumbermaxlen"><a name="smsphonenumbermaxlen" class="anchor-navigation-ex-anchor" href="#smsphonenumbermaxlen"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. SMS_PHONE_NUMBER_MAX_LEN</h3>
+<p>The longest length of the telephone number</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span>  SMS_PHONE_NUMBER_MAX_LEN  21</span>
+</code></pre>
+<h3 id="smsbodymaxlen"><a name="smsbodymaxlen" class="anchor-navigation-ex-anchor" href="#smsbodymaxlen"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. SMS_BODY_MAX_LEN</h3>
+<p>The longest length of message message body (bytes)</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span>  SMS_BODY_MAX_LEN  176</span>
+</code></pre>
+<h2 id="enumerated-type"><a name="enumerated-type" class="anchor-navigation-ex-anchor" href="#enumerated-type"><i class="fa fa-link" aria-hidden="true"></i></a>2. Enumerated type</h2>
+<h3 id="smsformatt"><a name="smsformatt" class="anchor-navigation-ex-anchor" href="#smsformatt"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. SMS_Format_t</h3>
+<p>SMS format, currently only supporting text format</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    <span class="hljs-comment">// SMS_FORMAT_PDU  = 0, // not support now</span>
+    SMS_FORMAT_TEXT = <span class="hljs-number">1</span>, <span class="hljs-comment">// default</span>
+    SMS_FORMAT_MAX
+} SMS_Format_t;
+</code></pre>
+<hr>
+<h3 id="smserrort"><a name="smserrort" class="anchor-navigation-ex-anchor" href="#smserrort"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. SMS_Error_t</h3>
+<p>error message</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    SMS_ERROR_DECODE_ERROR = <span class="hljs-number">0</span>,
+    SMS_ERROR_MAX
+} SMS_Error_t;
+</code></pre>
+<hr>
+<h3 id="smsencodetypet"><a name="smsencodetypet" class="anchor-navigation-ex-anchor" href="#smsencodetypet"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. SMS_Encode_Type_t</h3>
+<p>Encoding format, including ASCII and Unicode</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    SMS_ENCODE_TYPE_ASCII  = <span class="hljs-number">0</span>,
+    SMS_ENCODE_TYPE_UNICODE   ,
+    SMS_ENCODE_TYPE_MAX
+} SMS_Encode_Type_t;
+</code></pre>
+<hr>
+<h3 id="smsnumbertypet"><a name="smsnumbertypet" class="anchor-navigation-ex-anchor" href="#smsnumbertypet"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. SMS_Number_Type_t</h3>
+<p>Number area type</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    SMS_NUMBER_TYPE_UNKNOWN         = <span class="hljs-number">129</span> ,
+    SMS_NUMBER_TYPE_INTERNATIONAL   = <span class="hljs-number">145</span> ,
+    SMS_NUMBER_TYPE_NATIONAL        = <span class="hljs-number">161</span>
+} SMS_Number_Type_t; <span class="hljs-comment">//SMS_Server_Center_Addr_Type_t;</span>
+</code></pre>
+<hr>
+<h3 id="smsstatust"><a name="smsstatust" class="anchor-navigation-ex-anchor" href="#smsstatust"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. SMS_Status_t</h3>
+<p>SMS status</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    SMS_STATUS_UNREAD                    = <span class="hljs-number">0x01</span> ,
+    SMS_STATUS_READ                      = <span class="hljs-number">0x02</span> ,
+    SMS_STATUS_UNSENT                    = <span class="hljs-number">0x04</span> ,
+    SMS_STATUS_SENT_NOT_SR_REQ           = <span class="hljs-number">0x08</span> ,
+    SMS_STATUS_SENT_SR_REQ_NOT_RECV      = <span class="hljs-number">0x10</span> ,
+    SMS_STATUS_SENT_SR_REQ_NOT_STORE     = <span class="hljs-number">0x20</span> ,
+    SMS_STATUS_SENT_SR_REQ_RECV_STORE    = <span class="hljs-number">0x40</span> ,
+    SMS_STATUS_ALL                       = <span class="hljs-number">0x80</span> ,
+    SMS_STATUS_MAX
+} SMS_Status_t;
+</code></pre>
+<hr>
+<h3 id="smsstoraget"><a name="smsstoraget" class="anchor-navigation-ex-anchor" href="#smsstoraget"><i class="fa fa-link" aria-hidden="true"></i></a>2.6. SMS_Storage_t</h3>
+<p>SMS storage location</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    SMS_STORAGE_FLASH    = <span class="hljs-number">1</span>,
+    SMS_STORAGE_SIM_CARD = <span class="hljs-number">2</span>,
+    SMS_STORAGE_MAX
+} SMS_Storage_t;
+</code></pre>
+<hr>
+<h2 id="struct"><a name="struct" class="anchor-navigation-ex-anchor" href="#struct"><i class="fa fa-link" aria-hidden="true"></i></a>3. Struct</h2>
+<h3 id="smsparametert"><a name="smsparametert" class="anchor-navigation-ex-anchor" href="#smsparametert"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. SMS_Parameter_t</h3>
+<p>Short message parameter</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>
+{
+    <span class="hljs-keyword">uint8_t</span> fo;  <span class="hljs-comment">// default: 17</span>
+    <span class="hljs-keyword">uint8_t</span> vp;  <span class="hljs-comment">// default: 167</span>
+    <span class="hljs-keyword">uint8_t</span> pid; <span class="hljs-comment">// default: 0</span>
+    <span class="hljs-keyword">uint8_t</span> dcs; <span class="hljs-comment">// default: 0:English 7bit, 4:English 8 bit, 8:Unicode 2 Bytes(UCS2)</span>
+} SMS_Parameter_t;
+</code></pre>
+<hr>
+<h3 id="smsservercenterinfot"><a name="smsservercenterinfot" class="anchor-navigation-ex-anchor" href="#smsservercenterinfot"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. SMS_Server_Center_Info_t</h3>
+<p>SMS center information</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-keyword">char</span>*          addr;
+    SMS_Number_Type_t addrType;
+} SMS_Server_Center_Info_t;
+</code></pre>
+<hr>
+<h3 id="smsmessageinfot"><a name="smsmessageinfot" class="anchor-navigation-ex-anchor" href="#smsmessageinfot"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. SMS_Message_Info_t</h3>
+<p>Short message</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-comment">//header</span>
+    <span class="hljs-keyword">uint8_t</span>           index;
+    SMS_Status_t      status;
+    SMS_Number_Type_t phoneNumberType;
+    <span class="hljs-keyword">char</span>              phoneNumber[SMS_PHONE_NUMBER_MAX_LEN];
+    RTC_Time_t        time;
+
+    <span class="hljs-comment">//body</span>
+    <span class="hljs-keyword">uint16_t</span>          dataLen;
+    <span class="hljs-keyword">uint8_t</span>*          data;
+} SMS_Message_Info_t;
+</code></pre>
+<hr>
+<h3 id="smsstorageinfot"><a name="smsstorageinfot" class="anchor-navigation-ex-anchor" href="#smsstorageinfot"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. SMS_Storage_Info_t</h3>
+<p>Short message storage information</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-keyword">uint16_t</span> used;
+    <span class="hljs-keyword">uint16_t</span> total;
+    <span class="hljs-keyword">uint16_t</span> unReadRecords;
+    <span class="hljs-keyword">uint16_t</span> readRecords;
+    <span class="hljs-keyword">uint16_t</span> sentRecords;
+    <span class="hljs-keyword">uint16_t</span> unsentRecords;
+    <span class="hljs-keyword">uint16_t</span> unknownRecords;
+    <span class="hljs-keyword">uint16_t</span> storageId;
+} SMS_Storage_Info_t;
+</code></pre>
+<hr>
+<h2 id="function"><a name="function" class="anchor-navigation-ex-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>4. Function</h2>
+<h3 id="smssetformat"><a name="smssetformat" class="anchor-navigation-ex-anchor" href="#smssetformat"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. SMS_SetFormat</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_SetFormat</span><span class="hljs-params">(SMS_Format_t format, SIM_ID_t simID)</span></span>;
+</code></pre>
+<h4 id="function_1"><a name="function_1" class="anchor-navigation-ex-anchor" href="#function_1"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Setting short message format</p>
+<h4 id="parameters"><a name="parameters" class="anchor-navigation-ex-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><p>format: format, currently only support character format</p>
+</li>
+<li><p>simID: card ID, only <code>SIM0</code></p>
+</li>
+</ul>
+<h4 id="return"><a name="return" class="anchor-navigation-ex-anchor" href="#return"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not it is successful</li>
+</ul>
+<hr>
+<h3 id="smssetparameter"><a name="smssetparameter" class="anchor-navigation-ex-anchor" href="#smssetparameter"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. SMS_SetParameter</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_SetParameter</span><span class="hljs-params">(SMS_Parameter_t* smsParameter,SIM_ID_t simID)</span></span>;
+</code></pre>
+<h4 id="function_2"><a name="function_2" class="anchor-navigation-ex-anchor" href="#function_2"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Setting short message parameters</p>
+<h4 id="parameters_1"><a name="parameters_1" class="anchor-navigation-ex-anchor" href="#parameters_1"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>smsParameter: short message parameters</li>
+<li>simID: card ID, only <code>SIM0</code></li>
+</ul>
+<h4 id="return_1"><a name="return_1" class="anchor-navigation-ex-anchor" href="#return_1"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not it is successful</li>
+</ul>
+<hr>
+<h3 id="smssendmessage"><a name="smssendmessage" class="anchor-navigation-ex-anchor" href="#smssendmessage"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. SMS_SendMessage</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_SendMessage</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* phoneNumber, <span class="hljs-keyword">const</span> uint8_t* message,  uint8_t length, SIM_ID_t simID)</span></span>;
+</code></pre>
+<h4 id="function_3"><a name="function_3" class="anchor-navigation-ex-anchor" href="#function_3"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Send text messages</p>
+<h4 id="parameters_2"><a name="parameters_2" class="anchor-navigation-ex-anchor" href="#parameters_2"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>phoneNumber: telephone number</li>
+<li>message: note content, attention must be Unicode encoding, <code>SMS_LocalLanguage2Unicode</code> conversion can be used.</li>
+<li>length: short message length (bytes)</li>
+<li>simID: is fixed to <code>SIM0</code></li>
+</ul>
+<h4 id="return_2"><a name="return_2" class="anchor-navigation-ex-anchor" href="#return_2"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not it is successfully sent</li>
+</ul>
+<hr>
+<h3 id="smssetservercenterinfo"><a name="smssetservercenterinfo" class="anchor-navigation-ex-anchor" href="#smssetservercenterinfo"><i class="fa fa-link" aria-hidden="true"></i></a>4.4. SMS_SetServerCenterInfo</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_SetServerCenterInfo</span><span class="hljs-params">(SMS_Server_Center_Info_t* serverCenterInfo)</span></span>;
+</code></pre>
+<h4 id="function_4"><a name="function_4" class="anchor-navigation-ex-anchor" href="#function_4"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Setting up SMS center information</p>
+<h4 id="parameters_3"><a name="parameters_3" class="anchor-navigation-ex-anchor" href="#parameters_3"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>serverCenterInfo&#xFF1A;SMS center information</li>
+</ul>
+<h4 id="return_3"><a name="return_3" class="anchor-navigation-ex-anchor" href="#return_3"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether SMS center information is successfully set up</li>
+</ul>
+<hr>
+<h3 id="smsgetservercenterinfo"><a name="smsgetservercenterinfo" class="anchor-navigation-ex-anchor" href="#smsgetservercenterinfo"><i class="fa fa-link" aria-hidden="true"></i></a>4.5. SMS_GetServerCenterInfo</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_GetServerCenterInfo</span><span class="hljs-params">(SMS_Server_Center_Info_t* serverCenterInfo)</span></span>;
+</code></pre>
+<h4 id="function_5"><a name="function_5" class="anchor-navigation-ex-anchor" href="#function_5"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Getting SMS center information</p>
+<h4 id="parameters_4"><a name="parameters_4" class="anchor-navigation-ex-anchor" href="#parameters_4"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>serverCenterInfo&#xFF1A;SMS center information</li>
+</ul>
+<h4 id="return_4"><a name="return_4" class="anchor-navigation-ex-anchor" href="#return_4"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not a message center information is successfully obtained</li>
+</ul>
+<hr>
+<h3 id="smslistmessagerequst"><a name="smslistmessagerequst" class="anchor-navigation-ex-anchor" href="#smslistmessagerequst"><i class="fa fa-link" aria-hidden="true"></i></a>4.6. SMS_ListMessageRequst</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_ListMessageRequst</span><span class="hljs-params">(SMS_Status_t smsStatus,SMS_Storage_t storage)</span></span>;
+</code></pre>
+<h4 id="function_6"><a name="function_6" class="anchor-navigation-ex-anchor" href="#function_6"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Request to list saved SMS, SMS message will produce <code>API_EVENT_ID_SMS_LIST_MESSAGE</code> by event. See <a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_event.h" target="_blank">api_event.h</a></p>
+<h4 id="parameters_5"><a name="parameters_5" class="anchor-navigation-ex-anchor" href="#parameters_5"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>smsStatus&#xFF1A;Choose which types of SMS to list, such as listing only unread messages <code>SMS_STATUS_UNREAD</code></li>
+</ul>
+<h4 id="return_5"><a name="return_5" class="anchor-navigation-ex-anchor" href="#return_5"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not a message is successfully requested to read short messages</li>
+</ul>
+<hr>
+<h3 id="smsdeletemessage"><a name="smsdeletemessage" class="anchor-navigation-ex-anchor" href="#smsdeletemessage"><i class="fa fa-link" aria-hidden="true"></i></a>4.7. SMS_DeleteMessage</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_DeleteMessage</span><span class="hljs-params">(uint8_t index,SMS_Status_t status,SMS_Storage_t storage)</span></span>;
+</code></pre>
+<h4 id="function_7"><a name="function_7" class="anchor-navigation-ex-anchor" href="#function_7"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Delete saved SMS</p>
+<h4 id="parameters_6"><a name="parameters_6" class="anchor-navigation-ex-anchor" href="#parameters_6"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>index: the subscript of the saved SMS</li>
+<li>storage: select the storage location, flash or SIM card</li>
+</ul>
+<h4 id="return_6"><a name="return_6" class="anchor-navigation-ex-anchor" href="#return_6"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not to delete messages successfully</li>
+</ul>
+<hr>
+<h3 id="smsgetstorageinfo"><a name="smsgetstorageinfo" class="anchor-navigation-ex-anchor" href="#smsgetstorageinfo"><i class="fa fa-link" aria-hidden="true"></i></a>4.8. SMS_GetStorageInfo</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_GetStorageInfo</span><span class="hljs-params">(SMS_Storage_Info_t* storageInfo, SMS_Storage_t storage)</span></span>;
+</code></pre>
+<h4 id="function_8"><a name="function_8" class="anchor-navigation-ex-anchor" href="#function_8"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Get message storage information</p>
+<h4 id="parameters_7"><a name="parameters_7" class="anchor-navigation-ex-anchor" href="#parameters_7"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>storageInfo: storage information</li>
+<li>storage: select the location of the storage to query</li>
+</ul>
+<h4 id="return_7"><a name="return_7" class="anchor-navigation-ex-anchor" href="#return_7"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not the query is successful</li>
+</ul>
+<hr>
+<h3 id="smssetnewmessagestorage"><a name="smssetnewmessagestorage" class="anchor-navigation-ex-anchor" href="#smssetnewmessagestorage"><i class="fa fa-link" aria-hidden="true"></i></a>4.9. SMS_SetNewMessageStorage</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_SetNewMessageStorage</span><span class="hljs-params">(SMS_Storage_t storage)</span></span>;
+</code></pre>
+<h4 id="function_9"><a name="function_9" class="anchor-navigation-ex-anchor" href="#function_9"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Select the location of the newly received message store</p>
+<h4 id="parameters_8"><a name="parameters_8" class="anchor-navigation-ex-anchor" href="#parameters_8"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>storage&#xFF1A;The location of the new message storage</li>
+</ul>
+<h4 id="return_8"><a name="return_8" class="anchor-navigation-ex-anchor" href="#return_8"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>Whether the new message storage location is set up successfully</li>
+</ul>
+<hr>
+<h3 id="smsgetcharset"><a name="smsgetcharset" class="anchor-navigation-ex-anchor" href="#smsgetcharset"><i class="fa fa-link" aria-hidden="true"></i></a>4.10. SMS_GetCharset</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* <span class="hljs-title">SMS_GetCharset</span><span class="hljs-params">(Charset_t charset)</span></span>;
+</code></pre>
+<h4 id="function_10"><a name="function_10" class="anchor-navigation-ex-anchor" href="#function_10"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Getting the ASCII name of a specific character set</p>
+<h4 id="parameters_9"><a name="parameters_9" class="anchor-navigation-ex-anchor" href="#parameters_9"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>charset&#xFF1A;character set</li>
+</ul>
+<h4 id="return_9"><a name="return_9" class="anchor-navigation-ex-anchor" href="#return_9"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>The ASCII name of the corresponding character set</li>
+</ul>
+<hr>
+<h3 id="smsunicode2locallanguage"><a name="smsunicode2locallanguage" class="anchor-navigation-ex-anchor" href="#smsunicode2locallanguage"><i class="fa fa-link" aria-hidden="true"></i></a>4.11. SMS_Unicode2LocalLanguage</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_Unicode2LocalLanguage</span><span class="hljs-params">(uint8_t* unicodeIn, uint16_t unicodeLenIn, Charset_t localLanguage, uint8_t** localOut, uint32_t* localLenOut)</span></span>;
+</code></pre>
+<h4 id="function_11"><a name="function_11" class="anchor-navigation-ex-anchor" href="#function_11"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Unicode to local language</p>
+<h4 id="parameters_10"><a name="parameters_10" class="anchor-navigation-ex-anchor" href="#parameters_10"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>unicodeIn:unicode encoded messages</li>
+<li>unicodeLenIn:unicode encoded message length</li>
+<li>localLanguage: the local language to be converted into</li>
+<li>localOut: converts a good local language</li>
+<li>localLenOut: the converted local language length</li>
+</ul>
+<h4 id="return_10"><a name="return_10" class="anchor-navigation-ex-anchor" href="#return_10"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>Whether or not the conversion is successful</li>
+</ul>
+<hr>
+<h3 id="smslocallanguage2unicode"><a name="smslocallanguage2unicode" class="anchor-navigation-ex-anchor" href="#smslocallanguage2unicode"><i class="fa fa-link" aria-hidden="true"></i></a>4.12. SMS_LocalLanguage2Unicode</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SMS_LocalLanguage2Unicode</span><span class="hljs-params">(uint8_t* localIn, uint16_t localLenIn, Charset_t localLanguage, uint8_t** unicodeOut, uint32_t* unicodeLenOut)</span></span>;
+</code></pre>
+<h4 id="function_12"><a name="function_12" class="anchor-navigation-ex-anchor" href="#function_12"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Local language conversion to unicode coding</p>
+<h4 id="parameters_11"><a name="parameters_11" class="anchor-navigation-ex-anchor" href="#parameters_11"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>localIn: local language message body</li>
+<li>localLenIn: the length of the local language message body</li>
+<li>localLanguage: local coding format</li>
+<li>unicodeOut: a converted Unicode encoded message body</li>
+<li>unicodeLenOut: the length of the converted Unicode encoding message body.</li>
+</ul>
+<h4 id="return_11"><a name="return_11" class="anchor-navigation-ex-anchor" href="#return_11"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>Whether or not the conversion is successful</li>
+</ul>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="call.html" class="navigation navigation-prev " aria-label="Previous page: Call">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="fota.html" class="navigation navigation-next " aria-label="Next page: FOTA">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SMS","level":"4.7.19","depth":2,"next":{"title":"FOTA","level":"4.7.20","depth":2,"path":"c-sdk/function-api/fota.md","ref":"c-sdk/function-api/fota.md","articles":[]},"previous":{"title":"Call","level":"4.7.18","depth":2,"path":"c-sdk/function-api/call.md","ref":"c-sdk/function-api/call.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"中文","text":"中文","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["facebook","twitter","google","instapaper","vk","weibo"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"en","gitbook":"*","description":"GPRS C SDK documention"},"file":{"path":"c-sdk/function-api/sms.md","mtime":"2018-12-11T02:48:24.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T02:49:35.562Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

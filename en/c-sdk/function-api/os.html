@@ -1,0 +1,1257 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>OS · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="imei.html" />
+    
+    
+    <link rel="prev" href="uart.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">introduces</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../hardware/a9.html">
+            
+                <a href="../../hardware/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../hardware/a9g.html">
+            
+                <a href="../../hardware/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../hardware/pudding-dev-board.html">
+            
+                <a href="../../hardware/pudding-dev-board.html">
+            
+                    
+                    pudding dev board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../hardware/usb-uart-module.html">
+            
+                <a href="../../hardware/usb-uart-module.html">
+            
+                    
+                    USB-UART module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../hardware/sim-card.html">
+            
+                <a href="../../hardware/sim-card.html">
+            
+                    
+                    SIM Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Knowledge</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../basic-knowledge/gsmgprs.html">
+            
+                <a href="../../basic-knowledge/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../basic-knowledge/gps.html">
+            
+                <a href="../../basic-knowledge/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Installation Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    Installation Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../burn-debug.html">
+            
+                <a href="../burn-debug.html">
+            
+                    
+                    Burn & Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../first-code.html">
+            
+                <a href="../first-code.html">
+            
+                    
+                    First Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../code-style.html">
+            
+                <a href="../code-style.html">
+            
+                    
+                    Code Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../function-api.html">
+            
+                <a href="../function-api.html">
+            
+                    
+                    Function & API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.7.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" data-path="iccid.html">
+            
+                <a href="iccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.11" data-path="file-system.html">
+            
+                <a href="file-system.html">
+            
+                    
+                    FS(Flash/TF Card)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.12" data-path="gprs-network.html">
+            
+                <a href="gprs-network.html">
+            
+                    
+                    GPRS Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.14" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.15" data-path="ssl-tls.html">
+            
+                <a href="ssl-tls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.17" data-path="power-manager.html">
+            
+                <a href="power-manager.html">
+            
+                    
+                    Power Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.18" data-path="call.html">
+            
+                <a href="call.html">
+            
+                    
+                    Call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.19" data-path="sms.html">
+            
+                <a href="sms.html">
+            
+                    
+                    SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >OS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os"><b> </b>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;(OS)</a></li><ul><li><span class="title-icon "></span><a href="#macro-definition"><b>1. </b>Macro definition</a></li><ul><li><span class="title-icon "></span><a href="#oswaitforever"><b>1.1. </b>OS_WAIT_FOREVER</a></li><li><span class="title-icon "></span><a href="#osnowait"><b>1.2. </b>OS_NO_WAIT</a></li><li><span class="title-icon "></span><a href="#oseventprinormal"><b>1.3. </b>OS_EVENT_PRI_NORMAL</a></li><li><span class="title-icon "></span><a href="#oseventpriurgent"><b>1.4. </b>OS_EVENT_PRI_URGENT</a></li><li><span class="title-icon "></span><a href="#oscreatedefault"><b>1.5. </b>OS_CREATE_DEFAULT</a></li><li><span class="title-icon "></span><a href="#oscreatesuspended"><b>1.6. </b>OS_CREATE_SUSPENDED</a></li></ul><li><span class="title-icon "></span><a href="#struct"><b>2. </b>Struct</a></li><ul><li><span class="title-icon "></span><a href="#osheapstatust"><b>2.1. </b>OS_Heap_Status_t</a></li></ul><li><span class="title-icon "></span><a href="#function"><b>3. </b>Function</a></li><ul><li><span class="title-icon "></span><a href="#ptaskfunct"><b>3.1. </b>PTASK_FUNC_T</a></li><li><span class="title-icon "></span><a href="#ossetusermainhandle"><b>3.2. </b>OS_SetUserMainHandle</a></li><li><span class="title-icon "></span><a href="#oscreatetask"><b>3.3. </b>OS_CreateTask</a></li><li><span class="title-icon "></span><a href="#osstarttask"><b>3.4. </b>OS_StartTask</a></li><li><span class="title-icon "></span><a href="#osstoptask"><b>3.5. </b>OS_StopTask</a></li><li><span class="title-icon "></span><a href="#osdeletetask"><b>3.6. </b>OS_DeleteTask</a></li><li><span class="title-icon "></span><a href="#ossuspendtask"><b>3.7. </b>OS_SuspendTask</a></li><li><span class="title-icon "></span><a href="#osresumetask"><b>3.8. </b>OS_ResumeTask</a></li><li><span class="title-icon "></span><a href="#ossleep"><b>3.9. </b>OS_Sleep</a></li><li><span class="title-icon "></span><a href="#ossleepus"><b>3.10. </b>OS_SleepUs</a></li><li><span class="title-icon "></span><a href="#oswaitevent"><b>3.11. </b>OS_WaitEvent</a></li><li><span class="title-icon "></span><a href="#ossendevent"><b>3.12. </b>OS_SendEvent</a></li><li><span class="title-icon "></span><a href="#osreseteventqueue"><b>3.13. </b>OS_ResetEventQueue</a></li><li><span class="title-icon "></span><a href="#osiseventavailable"><b>3.14. </b>OS_IsEventAvailable</a></li><li><span class="title-icon "></span><a href="#osmalloc"><b>3.15. </b>OS_Malloc</a></li><li><span class="title-icon "></span><a href="#osrealloc"><b>3.16. </b>OS_Realloc</a></li><li><span class="title-icon "></span><a href="#osfree"><b>3.17. </b>OS_Free</a></li><li><span class="title-icon "></span><a href="#osgetheapusagestatus"><b>3.18. </b>OS_GetHeapUsageStatus</a></li><li><span class="title-icon "></span><a href="#oscreatesemaphore"><b>3.19. </b>OS_CreateSemaphore</a></li><li><span class="title-icon "></span><a href="#osdeletesemaphore"><b>3.20. </b>OS_DeleteSemaphore</a></li><li><span class="title-icon "></span><a href="#oswaitforsemaphore"><b>3.21. </b>OS_WaitForSemaphore</a></li><li><span class="title-icon "></span><a href="#osreleasesemaphore"><b>3.22. </b>OS_ReleaseSemaphore</a></li><li><span class="title-icon "></span><a href="#oscreatemutex"><b>3.23. </b>OS_CreateMutex</a></li><li><span class="title-icon "></span><a href="#osdeletemutex"><b>3.24. </b>OS_DeleteMutex</a></li><li><span class="title-icon "></span><a href="#oslockmutex"><b>3.25. </b>OS_LockMutex</a></li><li><span class="title-icon "></span><a href="#osunlockmutex"><b>3.26. </b>OS_UnlockMutex</a></li><li><span class="title-icon "></span><a href="#oscallbackfunct"><b>3.27. </b>OS_CALLBACK_FUNC_T</a></li><li><span class="title-icon "></span><a href="#osstartcallbacktimer"><b>3.28. </b>OS_StartCallbackTimer</a></li><li><span class="title-icon "></span><a href="#osstopcallbacktimer"><b>3.29. </b>OS_StopCallbackTimer</a></li><li><span class="title-icon "></span><a href="#osquerycallbacktimer"><b>3.30. </b>OS_QueryCallbackTimer</a></li></ul></ul></ul></div><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os"><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os"><i class="fa fa-link" aria-hidden="true"></i></a> &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;(OS)</h1>
+<p>A lightweight operating system that includes basic task operations, message mechanisms, and so on.</p>
+<p>example: <a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/os/src/demo_os.c" target="_blank"><code>demo/os</code></a></p>
+<hr>
+<h2 id="macro-definition"><a name="macro-definition" class="anchor-navigation-ex-anchor" href="#macro-definition"><i class="fa fa-link" aria-hidden="true"></i></a>1. Macro definition</h2>
+<h3 id="oswaitforever"><a name="oswaitforever" class="anchor-navigation-ex-anchor" href="#oswaitforever"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. OS_WAIT_FOREVER</h3>
+<p>Timeout time special value, blocking wait (always waiting)</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_WAIT_FOREVER 0xFFFFFFFF</span>
+</code></pre>
+<hr>
+<h3 id="osnowait"><a name="osnowait" class="anchor-navigation-ex-anchor" href="#osnowait"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. OS_NO_WAIT</h3>
+<p>Timeout time special value, not waiting</p>
+<pre><code>#define OS_NO_WAIT 0x0
+</code></pre><hr>
+<h3 id="oseventprinormal"><a name="oseventprinormal" class="anchor-navigation-ex-anchor" href="#oseventprinormal"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. OS_EVENT_PRI_NORMAL</h3>
+<p>Event priority is common, the value of nOption parameter of <code>OS_SendEvent</code>.</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_EVENT_PRI_NORMAL 0</span>
+</code></pre>
+<hr>
+<h3 id="oseventpriurgent"><a name="oseventpriurgent" class="anchor-navigation-ex-anchor" href="#oseventpriurgent"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. OS_EVENT_PRI_URGENT</h3>
+<p>Event priority is urgent, the value of nOption parameter of <code>OS_SendEvent</code>.</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_EVENT_PRI_URGENT 1</span>
+</code></pre>
+<hr>
+<h3 id="oscreatedefault"><a name="oscreatedefault" class="anchor-navigation-ex-anchor" href="#oscreatedefault"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. OS_CREATE_DEFAULT</h3>
+<p>The value of the <code>nCreationFlags</code> parameter of the function <code>OS_CreateTask</code> indicates that the task is automatically started after the creation of the task.</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_CREATE_DEFAULT   0</span>
+</code></pre>
+<hr>
+<h3 id="oscreatesuspended"><a name="oscreatesuspended" class="anchor-navigation-ex-anchor" href="#oscreatesuspended"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. OS_CREATE_SUSPENDED</h3>
+<p>The value of the <code>nCreationFlags</code> parameter of the function <code>OS_CreateTask</code> indicates that the task is not automatically started after the creation of the task.</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_CREATE_SUSPENDED 1</span>
+</code></pre>
+<hr>
+<h2 id="struct"><a name="struct" class="anchor-navigation-ex-anchor" href="#struct"><i class="fa fa-link" aria-hidden="true"></i></a>2. Struct</h2>
+<h3 id="osheapstatust"><a name="osheapstatust" class="anchor-navigation-ex-anchor" href="#osheapstatust"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. OS_Heap_Status_t</h3>
+<p>Heap status, including the total size and the size that has been used.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-keyword">uint32_t</span> usedSize;
+    <span class="hljs-keyword">uint32_t</span> totalSize;
+}OS_Heap_Status_t;
+</code></pre>
+<hr>
+<h2 id="function"><a name="function" class="anchor-navigation-ex-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>3. Function</h2>
+<h3 id="ptaskfunct"><a name="ptaskfunct" class="anchor-navigation-ex-anchor" href="#ptaskfunct"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. PTASK_FUNC_T</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*PTASK_FUNC_T)</span><span class="hljs-params">(PVOID pParameter)</span></span>;
+</code></pre>
+<h4 id="function_1"><a name="function_1" class="anchor-navigation-ex-anchor" href="#function_1"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>The created task master function, defined by the user</p>
+<h4 id="parameters"><a name="parameters" class="anchor-navigation-ex-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>pParameter:Parameters passed in when this function is called</li>
+</ul>
+<h4 id="return"><a name="return" class="anchor-navigation-ex-anchor" href="#return"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="ossetusermainhandle"><a name="ossetusermainhandle" class="anchor-navigation-ex-anchor" href="#ossetusermainhandle"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. OS_SetUserMainHandle</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_SetUserMainHandle</span><span class="hljs-params">(HANDLE* appMainHandle)</span></span>;
+</code></pre>
+<h4 id="function_2"><a name="function_2" class="anchor-navigation-ex-anchor" href="#function_2"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>The primary task is set up. The primary task is used to receive messages from the bottom. This function must be called immediately after the main task is created when the machine is started, otherwise the underlying layer can not be released to the application layer.</p>
+<h4 id="parameters_1"><a name="parameters_1" class="anchor-navigation-ex-anchor" href="#parameters_1"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>appMainHandle:The pointer returned by the created primary task (handle)</li>
+</ul>
+<h4 id="return_1"><a name="return_1" class="anchor-navigation-ex-anchor" href="#return_1"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="oscreatetask"><a name="oscreatetask" class="anchor-navigation-ex-anchor" href="#oscreatetask"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. OS_CreateTask</h3>
+<pre><code class="lang-c"><span class="hljs-function">HANDLE <span class="hljs-title">OS_CreateTask</span><span class="hljs-params">(
+    PTASK_FUNC_T pTaskEntry,
+    PVOID pParameter,
+    PVOID pStackAddr,
+    UINT16 nStackSize,
+    UINT8 nPriority,
+    UINT16 nCreationFlags,
+    UINT16 nTimeSlice,
+    PCSTR pTaskName)</span></span>;
+</code></pre>
+<h4 id="function_3"><a name="function_3" class="anchor-navigation-ex-anchor" href="#function_3"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Create a new task</p>
+<h4 id="parameters_2"><a name="parameters_2" class="anchor-navigation-ex-anchor" href="#parameters_2"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>pTaskEntry: task execution function, PTASK_FUNC_T type</li>
+<li>pParameter: needs to be passed to the parameters of the execution function</li>
+<li>pStackAddr: custom stack address, temporarily does not support custom, that is, the value can only be `NULL &apos;.</li>
+<li>nStackSize: stack size</li>
+<li>nPriority: task priority, &gt;=0, the priority of each task is different, the smaller the value, the larger the task priority.</li>
+<li>nCreationFlags: <code>OS_CREATE_DEFAULT</code>/<code>0</code>: by default, the task is started after the task is created; <code>OS_CREATE_SUSPENDED</code>: the task is not executed after the task is created, and the start function is required to be invoked manually to open the task</li>
+<li>nTimeSlice: reservation, value 0</li>
+<li>pTaskName: task name</li>
+</ul>
+<h4 id="return_2"><a name="return_2" class="anchor-navigation-ex-anchor" href="#return_2"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>A pointer to the task created (handle), if the creation of a task fails, it returns <code>NULL</code>.</li>
+</ul>
+<hr>
+<h3 id="osstarttask"><a name="osstarttask" class="anchor-navigation-ex-anchor" href="#osstarttask"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. OS_StartTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_StartTask</span><span class="hljs-params">(
+    HANDLE pHTask,
+    PVOID pParameter)</span></span>;
+</code></pre>
+<h4 id="function_4"><a name="function_4" class="anchor-navigation-ex-anchor" href="#function_4"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Start the execution of the task</p>
+<h4 id="parameters_3"><a name="parameters_3" class="anchor-navigation-ex-anchor" href="#parameters_3"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>pHTask: task handle, return value of <code>OS_CreateTask</code>.</li>
+<li>pParameter: needs to pass to the parameter of the task function</li>
+</ul>
+<h4 id="return_3"><a name="return_3" class="anchor-navigation-ex-anchor" href="#return_3"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="osstoptask"><a name="osstoptask" class="anchor-navigation-ex-anchor" href="#osstoptask"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. OS_StopTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_StopTask</span><span class="hljs-params">(
+    HANDLE pHTask)</span></span>;
+</code></pre>
+<h4 id="function_5"><a name="function_5" class="anchor-navigation-ex-anchor" href="#function_5"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Stop task execution</p>
+<h4 id="parameters_4"><a name="parameters_4" class="anchor-navigation-ex-anchor" href="#parameters_4"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>pHTask: task handle, return value of <code>OS_CreateTask</code>.</li>
+</ul>
+<h4 id="return_4"><a name="return_4" class="anchor-navigation-ex-anchor" href="#return_4"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="osdeletetask"><a name="osdeletetask" class="anchor-navigation-ex-anchor" href="#osdeletetask"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. OS_DeleteTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_DeleteTask</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h4 id="function_6"><a name="function_6" class="anchor-navigation-ex-anchor" href="#function_6"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Delete task</p>
+<h4 id="parameters_5"><a name="parameters_5" class="anchor-navigation-ex-anchor" href="#parameters_5"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hTask: task handle, return value of <code>OS_CreateTask</code></li>
+</ul>
+<h4 id="return_5"><a name="return_5" class="anchor-navigation-ex-anchor" href="#return_5"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>delete whether the task is successful or not</li>
+</ul>
+<hr>
+<h3 id="ossuspendtask"><a name="ossuspendtask" class="anchor-navigation-ex-anchor" href="#ossuspendtask"><i class="fa fa-link" aria-hidden="true"></i></a>3.7. OS_SuspendTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_SuspendTask</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h4 id="function_7"><a name="function_7" class="anchor-navigation-ex-anchor" href="#function_7"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Hang up thread</p>
+<h4 id="parameters_6"><a name="parameters_6" class="anchor-navigation-ex-anchor" href="#parameters_6"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hTask: task handle, return value of <code>OS_CreateTask</code></li>
+</ul>
+<h4 id="return_6"><a name="return_6" class="anchor-navigation-ex-anchor" href="#return_6"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether to hang up or not</li>
+</ul>
+<hr>
+<h3 id="osresumetask"><a name="osresumetask" class="anchor-navigation-ex-anchor" href="#osresumetask"><i class="fa fa-link" aria-hidden="true"></i></a>3.8. OS_ResumeTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_ResumeTask</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h4 id="function_8"><a name="function_8" class="anchor-navigation-ex-anchor" href="#function_8"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Continue the task</p>
+<h4 id="parameters_7"><a name="parameters_7" class="anchor-navigation-ex-anchor" href="#parameters_7"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hTask: task handle, return value of <code>OS_CreateTask</code></li>
+</ul>
+<h4 id="return_7"><a name="return_7" class="anchor-navigation-ex-anchor" href="#return_7"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not it is successful</li>
+</ul>
+<hr>
+<h3 id="ossleep"><a name="ossleep" class="anchor-navigation-ex-anchor" href="#ossleep"><i class="fa fa-link" aria-hidden="true"></i></a>3.9. OS_Sleep</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_Sleep</span><span class="hljs-params">(UINT32 nMillisecondes)</span></span>;
+</code></pre>
+<h4 id="function_9"><a name="function_9" class="anchor-navigation-ex-anchor" href="#function_9"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Blocking millisecond delay</p>
+<h4 id="parameters_8"><a name="parameters_8" class="anchor-navigation-ex-anchor" href="#parameters_8"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>nMillisecondes: blocking delay time per unit millisecond</li>
+</ul>
+<h4 id="return_8"><a name="return_8" class="anchor-navigation-ex-anchor" href="#return_8"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not it is successful (always true)</li>
+</ul>
+<hr>
+<h3 id="ossleepus"><a name="ossleepus" class="anchor-navigation-ex-anchor" href="#ossleepus"><i class="fa fa-link" aria-hidden="true"></i></a>3.10. OS_SleepUs</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_SleepUs</span><span class="hljs-params">(UINT32 us)</span></span>;
+</code></pre>
+<h4 id="function_10"><a name="function_10" class="anchor-navigation-ex-anchor" href="#function_10"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Blocking subtlety delay</p>
+<h4 id="parameters_9"><a name="parameters_9" class="anchor-navigation-ex-anchor" href="#parameters_9"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>us: delay time, unit subtlety</li>
+</ul>
+<h4 id="return_9"><a name="return_9" class="anchor-navigation-ex-anchor" href="#return_9"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="oswaitevent"><a name="oswaitevent" class="anchor-navigation-ex-anchor" href="#oswaitevent"><i class="fa fa-link" aria-hidden="true"></i></a>3.11. OS_WaitEvent</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_WaitEvent</span><span class="hljs-params">(
+    HANDLE   hTask,
+    PVOID*   pEvent,
+    UINT32   nTimeOut)</span></span>;
+</code></pre>
+<h4 id="function_11"><a name="function_11" class="anchor-navigation-ex-anchor" href="#function_11"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Blocking wait event</p>
+<h4 id="parameters_10"><a name="parameters_10" class="anchor-navigation-ex-anchor" href="#parameters_10"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hTask: task handle, return value of <code>OS_CreateTask</code></li>
+<li>pEvent: event value, parameters from <code>OS_SendEvent</code></li>
+<li>nTimeOut: is waiting for the timeout time. At present, it only supports blocking wait. The value must be <code>OS_WAIT_FOREVER</code>.</li>
+</ul>
+<h4 id="return_10"><a name="return_10" class="anchor-navigation-ex-anchor" href="#return_10"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>successful waiting for the event</li>
+</ul>
+<hr>
+<h3 id="ossendevent"><a name="ossendevent" class="anchor-navigation-ex-anchor" href="#ossendevent"><i class="fa fa-link" aria-hidden="true"></i></a>3.12. OS_SendEvent</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_SendEvent</span><span class="hljs-params">(
+    HANDLE hTask,
+    PVOID  pEvent,
+    UINT32 nTimeOut,
+    UINT16 nOption)</span></span>;
+</code></pre>
+<h4 id="function_12"><a name="function_12" class="anchor-navigation-ex-anchor" href="#function_12"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Send an event to a task</p>
+<h4 id="parameters_11"><a name="parameters_11" class="anchor-navigation-ex-anchor" href="#parameters_11"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hTask: task handle, return value of <code>OS_CreateTask</code></li>
+<li>data sent by the pEvent: event (pointer)</li>
+<li>nTimeOut: timeout time, currently supporting blocking wait only, the value must be <code>OS_WAIT_FOREVER</code>.</li>
+<li>nOption: event option, <code>OS_EVENT_PRI_NORMAL</code>: general priority, <code>OS_EVENT_PRI_URGENT</code>: emergency priority.</li>
+</ul>
+<h4 id="return_11"><a name="return_11" class="anchor-navigation-ex-anchor" href="#return_11"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether the event was sent to success</li>
+</ul>
+<hr>
+<h3 id="osreseteventqueue"><a name="osreseteventqueue" class="anchor-navigation-ex-anchor" href="#osreseteventqueue"><i class="fa fa-link" aria-hidden="true"></i></a>3.13. OS_ResetEventQueue</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_ResetEventQueue</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h4 id="function_13"><a name="function_13" class="anchor-navigation-ex-anchor" href="#function_13"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Reset the event queue</p>
+<h4 id="parameters_12"><a name="parameters_12" class="anchor-navigation-ex-anchor" href="#parameters_12"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>Reset event queue * hTask: task handle, return value of <code>OS_CreateTask</code>.</p>
+<h4 id="return_12"><a name="return_12" class="anchor-navigation-ex-anchor" href="#return_12"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether to reset the success</li>
+</ul>
+<hr>
+<h3 id="osiseventavailable"><a name="osiseventavailable" class="anchor-navigation-ex-anchor" href="#osiseventavailable"><i class="fa fa-link" aria-hidden="true"></i></a>3.14. OS_IsEventAvailable</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_IsEventAvailable</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h4 id="function_14"><a name="function_14" class="anchor-navigation-ex-anchor" href="#function_14"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Judge whether or not a task has an event to be received</p>
+<h4 id="parameters_13"><a name="parameters_13" class="anchor-navigation-ex-anchor" href="#parameters_13"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hTask: task handle, return value of <code>OS_CreateTask</code></li>
+</ul>
+<h4 id="return_13"><a name="return_13" class="anchor-navigation-ex-anchor" href="#return_13"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether there is an event to be received</li>
+</ul>
+<hr>
+<h3 id="osmalloc"><a name="osmalloc" class="anchor-navigation-ex-anchor" href="#osmalloc"><i class="fa fa-link" aria-hidden="true"></i></a>3.15. OS_Malloc</h3>
+<pre><code class="lang-c"><span class="hljs-function">PVOID <span class="hljs-title">OS_Malloc</span> <span class="hljs-params">(UINT32 nSize)</span></span>;
+</code></pre>
+<h4 id="function_15"><a name="function_15" class="anchor-navigation-ex-anchor" href="#function_15"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Dynamically allocated memory</p>
+<h4 id="parameters_14"><a name="parameters_14" class="anchor-navigation-ex-anchor" href="#parameters_14"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>nSize: dynamically allocates memory length, the unit is bytes</li>
+</ul>
+<h4 id="return_14"><a name="return_14" class="anchor-navigation-ex-anchor" href="#return_14"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>dynamically allocate the first address of the memory block. If the allocation fails, it will return to <code>NULL</code>.</li>
+</ul>
+<hr>
+<h3 id="osrealloc"><a name="osrealloc" class="anchor-navigation-ex-anchor" href="#osrealloc"><i class="fa fa-link" aria-hidden="true"></i></a>3.16. OS_Realloc</h3>
+<pre><code class="lang-c"><span class="hljs-function">PVOID <span class="hljs-title">OS_Realloc</span><span class="hljs-params">(VOID *ptr, UINT32 nSize)</span></span>;
+</code></pre>
+<h4 id="function_16"><a name="function_16" class="anchor-navigation-ex-anchor" href="#function_16"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Redistribution of memory</p>
+<h4 id="parameters_15"><a name="parameters_15" class="anchor-navigation-ex-anchor" href="#parameters_15"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>ptr: dynamically allocated memory block first address</li>
+<li>nSize: new dynamically allocated memory block length</li>
+</ul>
+<h4 id="return_15"><a name="return_15" class="anchor-navigation-ex-anchor" href="#return_15"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>the first address of the memory block allocated successfully. If <code>NULL</code>, the allocation fails.</li>
+</ul>
+<hr>
+<h3 id="osfree"><a name="osfree" class="anchor-navigation-ex-anchor" href="#osfree"><i class="fa fa-link" aria-hidden="true"></i></a>3.17. OS_Free</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span>  <span class="hljs-title">OS_Free</span>   <span class="hljs-params">(PVOID pMemBlock)</span></span>;
+</code></pre>
+<h4 id="function_17"><a name="function_17" class="anchor-navigation-ex-anchor" href="#function_17"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Release dynamically allocated memory</p>
+<h4 id="parameters_16"><a name="parameters_16" class="anchor-navigation-ex-anchor" href="#parameters_16"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>pMemBlock: dynamically allocated memory block first address</li>
+</ul>
+<h4 id="return_16"><a name="return_16" class="anchor-navigation-ex-anchor" href="#return_16"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether to release success or not</li>
+</ul>
+<hr>
+<h3 id="osgetheapusagestatus"><a name="osgetheapusagestatus" class="anchor-navigation-ex-anchor" href="#osgetheapusagestatus"><i class="fa fa-link" aria-hidden="true"></i></a>3.18. OS_GetHeapUsageStatus</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_GetHeapUsageStatus</span><span class="hljs-params">(OS_Heap_Status_t* pOsHeapStatus)</span></span>;
+</code></pre>
+<h4 id="function_18"><a name="function_18" class="anchor-navigation-ex-anchor" href="#function_18"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Get the use of the heap</p>
+<h4 id="parameters_17"><a name="parameters_17" class="anchor-navigation-ex-anchor" href="#parameters_17"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>pOsHeapStatus: reactor usage</li>
+</ul>
+<h4 id="return_17"><a name="return_17" class="anchor-navigation-ex-anchor" href="#return_17"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether to get heap status success</li>
+</ul>
+<hr>
+<h3 id="oscreatesemaphore"><a name="oscreatesemaphore" class="anchor-navigation-ex-anchor" href="#oscreatesemaphore"><i class="fa fa-link" aria-hidden="true"></i></a>3.19. OS_CreateSemaphore</h3>
+<pre><code class="lang-c"><span class="hljs-function">HANDLE <span class="hljs-title">OS_CreateSemaphore</span><span class="hljs-params">(
+    UINT32 nInitCount <span class="hljs-comment">// Specify the initial count of the semaphore</span>
+    )</span></span>;
+</code></pre>
+<h4 id="function_19"><a name="function_19" class="anchor-navigation-ex-anchor" href="#function_19"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Create a semaphore</p>
+<h4 id="parameters_18"><a name="parameters_18" class="anchor-navigation-ex-anchor" href="#parameters_18"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>nInitCount: semaphore initialization value, 0 indicates that the resource is occupied, n indicates that there are n resource values, each wait will wait for the value of the resource and reduce one, and the release operation will add the value of the resource to one</li>
+</ul>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;"><a name="&#x8FD4;&#x56DE;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h4>
+<ul>
+<li>semaphore handle, if failed, return to <code>NULL</code></li>
+</ul>
+<hr>
+<h3 id="osdeletesemaphore"><a name="osdeletesemaphore" class="anchor-navigation-ex-anchor" href="#osdeletesemaphore"><i class="fa fa-link" aria-hidden="true"></i></a>3.20. OS_DeleteSemaphore</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_DeleteSemaphore</span><span class="hljs-params">(
+    HANDLE hSem)</span></span>;
+</code></pre>
+<h4 id="function_20"><a name="function_20" class="anchor-navigation-ex-anchor" href="#function_20"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Deleting the semaphore</p>
+<h4 id="parameters_19"><a name="parameters_19" class="anchor-navigation-ex-anchor" href="#parameters_19"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hSem: semaphore handle, return value of <code>OS_CreateSemaphore</code>.</li>
+</ul>
+<h4 id="return_18"><a name="return_18" class="anchor-navigation-ex-anchor" href="#return_18"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether the signal is deleted or not</li>
+</ul>
+<hr>
+<h3 id="oswaitforsemaphore"><a name="oswaitforsemaphore" class="anchor-navigation-ex-anchor" href="#oswaitforsemaphore"><i class="fa fa-link" aria-hidden="true"></i></a>3.21. OS_WaitForSemaphore</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_WaitForSemaphore</span><span class="hljs-params">(
+    HANDLE hSem,    <span class="hljs-comment">// Specify the handle to a counting semaphore</span>
+    UINT32 nTimeOut <span class="hljs-comment">// the time-out value</span>
+    )</span></span>;
+</code></pre>
+<h4 id="function_21"><a name="function_21" class="anchor-navigation-ex-anchor" href="#function_21"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Wait for the semaphore to know that the resource value is greater than 0 and reduce the resource value.</p>
+<h4 id="parameters_20"><a name="parameters_20" class="anchor-navigation-ex-anchor" href="#parameters_20"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><p>hSem: semaphore handle, return value of <code>OS_CreateSemaphore</code>.</p>
+</li>
+<li><p>nTimeOut: timeout value, temporarily reserved, or <code>OS_WAIT_FOREVER</code></p>
+</li>
+</ul>
+<h4 id="return_19"><a name="return_19" class="anchor-navigation-ex-anchor" href="#return_19"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether the amount of signal (resource value) is successfully obtained</li>
+</ul>
+<hr>
+<h3 id="osreleasesemaphore"><a name="osreleasesemaphore" class="anchor-navigation-ex-anchor" href="#osreleasesemaphore"><i class="fa fa-link" aria-hidden="true"></i></a>3.22. OS_ReleaseSemaphore</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_ReleaseSemaphore</span><span class="hljs-params">(
+    HANDLE hSem <span class="hljs-comment">//Specify the counting semaphore</span>
+    )</span></span>;
+</code></pre>
+<h4 id="function_22"><a name="function_22" class="anchor-navigation-ex-anchor" href="#function_22"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Release the semaphore, that is, the value of the resource plus one</p>
+<h4 id="parameters_21"><a name="parameters_21" class="anchor-navigation-ex-anchor" href="#parameters_21"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hSem: semaphore handle, return value of <code>OS_CreateSemaphore</code>.</li>
+</ul>
+<h4 id="return_20"><a name="return_20" class="anchor-navigation-ex-anchor" href="#return_20"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether to release the signal (resource value) success</li>
+</ul>
+<hr>
+<h3 id="oscreatemutex"><a name="oscreatemutex" class="anchor-navigation-ex-anchor" href="#oscreatemutex"><i class="fa fa-link" aria-hidden="true"></i></a>3.23. OS_CreateMutex</h3>
+<pre><code class="lang-c"><span class="hljs-function">HANDLE <span class="hljs-title">OS_CreateMutex</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+</code></pre>
+<h4 id="function_23"><a name="function_23" class="anchor-navigation-ex-anchor" href="#function_23"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Create a mutual exclusion</p>
+<h4 id="parameters_22"><a name="parameters_22" class="anchor-navigation-ex-anchor" href="#parameters_22"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>None</p>
+<h4 id="return_21"><a name="return_21" class="anchor-navigation-ex-anchor" href="#return_21"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>mutex handle, if failed, return to <code>NULL</code></li>
+</ul>
+<hr>
+<h3 id="osdeletemutex"><a name="osdeletemutex" class="anchor-navigation-ex-anchor" href="#osdeletemutex"><i class="fa fa-link" aria-hidden="true"></i></a>3.24. OS_DeleteMutex</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_DeleteMutex</span><span class="hljs-params">(HANDLE mutex)</span></span>;
+</code></pre>
+<h4 id="function_24"><a name="function_24" class="anchor-navigation-ex-anchor" href="#function_24"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Deleting mutual exclusion</p>
+<h4 id="parameters_23"><a name="parameters_23" class="anchor-navigation-ex-anchor" href="#parameters_23"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>mutex: mutual exclusion handle, return value of <code>OS_CreateMutex</code>.</li>
+</ul>
+<h4 id="return_22"><a name="return_22" class="anchor-navigation-ex-anchor" href="#return_22"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="oslockmutex"><a name="oslockmutex" class="anchor-navigation-ex-anchor" href="#oslockmutex"><i class="fa fa-link" aria-hidden="true"></i></a>3.25. OS_LockMutex</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_LockMutex</span><span class="hljs-params">(HANDLE mutex)</span></span>;
+</code></pre>
+<h4 id="function_25"><a name="function_25" class="anchor-navigation-ex-anchor" href="#function_25"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Lock mutual exclusion, that is, occupying resources</p>
+<h4 id="parameters_24"><a name="parameters_24" class="anchor-navigation-ex-anchor" href="#parameters_24"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>mutex: mutual exclusion handle, return value of <code>OS_CreateMutex</code>.</li>
+</ul>
+<h4 id="return_23"><a name="return_23" class="anchor-navigation-ex-anchor" href="#return_23"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="osunlockmutex"><a name="osunlockmutex" class="anchor-navigation-ex-anchor" href="#osunlockmutex"><i class="fa fa-link" aria-hidden="true"></i></a>3.26. OS_UnlockMutex</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_UnlockMutex</span><span class="hljs-params">(HANDLE mutex)</span></span>;
+</code></pre>
+<h4 id="function_26"><a name="function_26" class="anchor-navigation-ex-anchor" href="#function_26"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Release mutual exclusion, that is, release resources</p>
+<h4 id="parameters_25"><a name="parameters_25" class="anchor-navigation-ex-anchor" href="#parameters_25"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>mutex: mutual exclusion handle, return value of <code>OS_CreateMutex</code>.</li>
+</ul>
+<h4 id="return_24"><a name="return_24" class="anchor-navigation-ex-anchor" href="#return_24"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="oscallbackfunct"><a name="oscallbackfunct" class="anchor-navigation-ex-anchor" href="#oscallbackfunct"><i class="fa fa-link" aria-hidden="true"></i></a>3.27. OS_CALLBACK_FUNC_T</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*OS_CALLBACK_FUNC_T)</span><span class="hljs-params">(<span class="hljs-keyword">void</span>* param)</span></span>;
+</code></pre>
+<h4 id="function_27"><a name="function_27" class="anchor-navigation-ex-anchor" href="#function_27"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Callback function, defined by the user</p>
+<h4 id="parameters_26"><a name="parameters_26" class="anchor-navigation-ex-anchor" href="#parameters_26"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>param: User incoming parameters</li>
+</ul>
+<h4 id="return_25"><a name="return_25" class="anchor-navigation-ex-anchor" href="#return_25"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="osstartcallbacktimer"><a name="osstartcallbacktimer" class="anchor-navigation-ex-anchor" href="#osstartcallbacktimer"><i class="fa fa-link" aria-hidden="true"></i></a>3.28. OS_StartCallbackTimer</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_StartCallbackTimer</span><span class="hljs-params">(HANDLE hTask, UINT32 ms, OS_CALLBACK_FUNC_T callback, <span class="hljs-keyword">void</span>* param)</span></span>;
+</code></pre>
+<h4 id="function_28"><a name="function_28" class="anchor-navigation-ex-anchor" href="#function_28"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Start the software timer and set the callback function when the time is set.</p>
+<h4 id="parameters_27"><a name="parameters_27" class="anchor-navigation-ex-anchor" href="#parameters_27"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>hTask: task handle, which must include <code>OS_WaitEvent</code> function call (for example, the main task), otherwise the callback will not be triggered.</li>
+<li>ms: timing time</li>
+<li>callback: callback function</li>
+<li>param: passes the parameters of the callback function</li>
+</ul>
+<h4 id="return_26"><a name="return_26" class="anchor-navigation-ex-anchor" href="#return_26"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>to create a timer success</li>
+</ul>
+<hr>
+<h3 id="osstopcallbacktimer"><a name="osstopcallbacktimer" class="anchor-navigation-ex-anchor" href="#osstopcallbacktimer"><i class="fa fa-link" aria-hidden="true"></i></a>3.29. OS_StopCallbackTimer</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_StopCallbackTimer</span><span class="hljs-params">(HANDLE hTask, OS_CALLBACK_FUNC_T callback, <span class="hljs-keyword">void</span> *param)</span></span>;
+</code></pre>
+<h4 id="function_29"><a name="function_29" class="anchor-navigation-ex-anchor" href="#function_29"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Stop the software timer</p>
+<h4 id="parameters_28"><a name="parameters_28" class="anchor-navigation-ex-anchor" href="#parameters_28"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><p>hTask: task handle, which must include <code>OS_WaitEvent</code> function call (for example, the main task), otherwise the callback will not be triggered.</p>
+</li>
+<li><p>callback: callback function</p>
+</li>
+<li><p>param: passes the parameters of the callback function</p>
+</li>
+</ul>
+<h4 id="return_27"><a name="return_27" class="anchor-navigation-ex-anchor" href="#return_27"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>cessation of the success of the timer</li>
+</ul>
+<hr>
+<h3 id="osquerycallbacktimer"><a name="osquerycallbacktimer" class="anchor-navigation-ex-anchor" href="#osquerycallbacktimer"><i class="fa fa-link" aria-hidden="true"></i></a>3.30. OS_QueryCallbackTimer</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">uint32_t</span> OS_QueryCallbackTimer(HANDLE hTask, OS_CALLBACK_FUNC_T callback, <span class="hljs-keyword">void</span> *param);
+</code></pre>
+<h4 id="function_30"><a name="function_30" class="anchor-navigation-ex-anchor" href="#function_30"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>How much time is left to end the query software timer</p>
+<h4 id="parameters_29"><a name="parameters_29" class="anchor-navigation-ex-anchor" href="#parameters_29"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li><p>hTask: task handle, which must include <code>OS_WaitEvent</code> function call (for example, the main task), otherwise the callback will not be triggered.</p>
+</li>
+<li><p>callback: callback function</p>
+</li>
+<li><p>param: passes the parameters of the callback function</p>
+</li>
+</ul>
+<h4 id="return_28"><a name="return_28" class="anchor-navigation-ex-anchor" href="#return_28"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>the timer is out of the rest of the time</li>
+</ul>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="uart.html" class="navigation navigation-prev " aria-label="Previous page: UART">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="imei.html" class="navigation navigation-next " aria-label="Next page: IMEI">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"OS","level":"4.7.4","depth":2,"next":{"title":"IMEI","level":"4.7.5","depth":2,"path":"c-sdk/function-api/imei.md","ref":"c-sdk/function-api/imei.md","articles":[]},"previous":{"title":"UART","level":"4.7.3","depth":2,"path":"c-sdk/function-api/uart.md","ref":"c-sdk/function-api/uart.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"中文","text":"中文","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["facebook","twitter","google","instapaper","vk","weibo"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"en","gitbook":"*","description":"GPRS C SDK documention"},"file":{"path":"c-sdk/function-api/os.md","mtime":"2018-12-11T02:48:24.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T02:49:35.562Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

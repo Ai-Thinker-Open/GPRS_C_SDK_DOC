@@ -1,0 +1,918 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Burn & Debug · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="first-code.html" />
+    
+    
+    <link rel="prev" href="installation_docker.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">introduces</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../hardware/a9.html">
+            
+                <a href="../hardware/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../hardware/a9g.html">
+            
+                <a href="../hardware/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../hardware/pudding-dev-board.html">
+            
+                <a href="../hardware/pudding-dev-board.html">
+            
+                    
+                    pudding dev board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../hardware/usb-uart-module.html">
+            
+                <a href="../hardware/usb-uart-module.html">
+            
+                    
+                    USB-UART module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../hardware/sim-card.html">
+            
+                <a href="../hardware/sim-card.html">
+            
+                    
+                    SIM Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Knowledge</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../basic-knowledge/gsmgprs.html">
+            
+                <a href="../basic-knowledge/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../basic-knowledge/gps.html">
+            
+                <a href="../basic-knowledge/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="installation_linux.html">
+            
+                <a href="installation_linux.html">
+            
+                    
+                    Installation Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="installation_docker.html">
+            
+                <a href="installation_docker.html">
+            
+                    
+                    Installation Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="burn-debug.html">
+            
+                <a href="burn-debug.html">
+            
+                    
+                    Burn & Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="first-code.html">
+            
+                <a href="first-code.html">
+            
+                    
+                    First Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="code-style.html">
+            
+                <a href="code-style.html">
+            
+                    
+                    Code Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="function-api.html">
+            
+                <a href="function-api.html">
+            
+                    
+                    Function & API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="function-api/gpio.html">
+            
+                <a href="function-api/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="function-api/adc.html">
+            
+                <a href="function-api/adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="function-api/uart.html">
+            
+                <a href="function-api/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.4" data-path="function-api/os.html">
+            
+                <a href="function-api/os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" data-path="function-api/imei.html">
+            
+                <a href="function-api/imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" data-path="function-api/iccid.html">
+            
+                <a href="function-api/iccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" data-path="function-api/gps.html">
+            
+                <a href="function-api/gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.8" data-path="function-api/iic.html">
+            
+                <a href="function-api/iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.9" data-path="function-api/spi.html">
+            
+                <a href="function-api/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.10" data-path="function-api/timertc.html">
+            
+                <a href="function-api/timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.11" data-path="function-api/file-system.html">
+            
+                <a href="function-api/file-system.html">
+            
+                    
+                    FS(Flash/TF Card)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.12" data-path="function-api/gprs-network.html">
+            
+                <a href="function-api/gprs-network.html">
+            
+                    
+                    GPRS Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.13" data-path="function-api/dns.html">
+            
+                <a href="function-api/dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.14" data-path="function-api/socket.html">
+            
+                <a href="function-api/socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.15" data-path="function-api/ssl-tls.html">
+            
+                <a href="function-api/ssl-tls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.16" data-path="function-api/mqtt.html">
+            
+                <a href="function-api/mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.17" data-path="function-api/power-manager.html">
+            
+                <a href="function-api/power-manager.html">
+            
+                    
+                    Power Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.18" data-path="function-api/call.html">
+            
+                <a href="function-api/call.html">
+            
+                    
+                    Call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.19" data-path="function-api/sms.html">
+            
+                <a href="function-api/sms.html">
+            
+                    
+                    SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.20" data-path="function-api/fota.html">
+            
+                <a href="function-api/fota.html">
+            
+                    
+                    FOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.21" data-path="function-api/lbs.html">
+            
+                <a href="function-api/lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.22" data-path="function-api/gizwits.html">
+            
+                <a href="function-api/gizwits.html">
+            
+                    
+                    Gizwits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Burn & Debug</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#gprs-burndownload-and-debug"><b> </b>GPRS Burn(Download) and Debug</a></li><ul><li><span class="title-icon "></span><a href="#hardware-connection"><b>1. </b>hardware connection</a></li><li><span class="title-icon "></span><a href="#linux"><b>2. </b>Linux</a></li><li><span class="title-icon "></span><a href="#download-steps"><b>3. </b>Download steps</a></li><li><span class="title-icon "></span><a href="#coolwatcher-connect-fail"><b>4. </b>Coolwatcher Connect Fail</a></li><li><span class="title-icon "></span><a href="#coolwatcher-download-fail"><b>5. </b>Coolwatcher Download Fail</a></li><li><span class="title-icon "></span><a href="#debug"><b>6. </b>Debug</a></li></ul></ul></div><a href="#gprs-burndownload-and-debug" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="gprs-burndownload-and-debug"><a name="gprs-burndownload-and-debug" class="anchor-navigation-ex-anchor" href="#gprs-burndownload-and-debug"><i class="fa fa-link" aria-hidden="true"></i></a> GPRS Burn(Download) and Debug</h1>
+<h2 id="hardware-connection"><a name="hardware-connection" class="anchor-navigation-ex-anchor" href="#hardware-connection"><i class="fa fa-link" aria-hidden="true"></i></a>1. hardware connection</h2>
+<ul>
+<li><p>Module Debugging The download interface is the <code>HST</code> interface. The pins<code>HST_RX</code> and <code>HST_TX</code> are respectively connected to the<code>TX</code> and <code>RX</code> pins of the USB to serial module (cross connection,<code>HST_RX</code> then <code>TX</code>)</p>
+</li>
+<li><p>The power can be connected to the lithium battery voltage (ie 3.8v ~ 4.2v) (VBAT pin), can also be connected to 5v power supply (5v input pin or USB input), it should be noted that, if using lithium battery power supply You need to press <kbd> POWER KEY </kbd> for about 3 seconds to power on the module, USB power will automatically power on the power. In the download or debugging to ensure that has been switched on.</p>
+</li>
+</ul>
+<h2 id="linux"><a name="linux" class="anchor-navigation-ex-anchor" href="#linux"><i class="fa fa-link" aria-hidden="true"></i></a>2. Linux</h2>
+<ul>
+<li>Install dependences</li>
+</ul>
+<pre><code>sudo apt install build-essential libqt4-qt3support itcl3 itk3 iwidgets4
+</code></pre><ul>
+<li>Create a link file for serial port as follow, and later you can fill in the coolwatcher&apos;s chart with <code>1</code>,the <code>COM1</code> must upper-case</li>
+</ul>
+<pre><code>sudo ln -s /dev/ttyUSB0 comport/COM1
+</code></pre><ul>
+<li>Then double click <code>coolwatcher</code> to run software</li>
+</ul>
+<h2 id="download-steps"><a name="download-steps" class="anchor-navigation-ex-anchor" href="#download-steps"><i class="fa fa-link" aria-hidden="true"></i></a>3. Download steps</h2>
+<ul>
+<li><p>Update <code>coolwatcher</code> to the latest version(coolwatcher is in the CSDTK folder)</p>
+</li>
+<li><p>Open<code>CSDTK/cooltools/coolwatcher.exe</code> or <code>CSDTK/cooltools/coolwatcher</code> in Linux</p>
+</li>
+<li><p>Select the 8955 for the options on the left, and fill the <code>lastcomport</code> chart with port number of HOST serial (<code>HST</code>) for the connection module. Then click ok</p>
+</li>
+</ul>
+<p><img src="../assets/coolwatcher_open.png" alt="coolwatcher startup options"></p>
+<ul>
+<li>Wait for the connection to succeed, the following screen appears</li>
+</ul>
+<p><img src="../assets/coolwatcher_download.png" alt="coolwatcher main interface and download button"></p>
+<blockquote>
+<p>If there is a connection failure, please refer to [coolwatcher can not connect reason] (#coolwatcher can not connect) part</p>
+</blockquote>
+<ul>
+<li><p>If first time open coolwatcher, click <kbd>DRY</kbd> icon&#xFF0C;select the file whose name contains <code>8955 ramrun spi32m .lod</code>,&#xFF08;onder project <code>platform/ramrun</code> or coolwatcher&apos;s <code>cooltools\chipgen\Modem2G\toolpool\plugins\fastpf\flash_programmers</code> folder&#xFF09;&#x3002;
+Only need to set once, will remember later.</p>
+</li>
+<li><p>Click <kbd>lod</kbd> icon, select fimware(<em>.lod) in the <code>hex</code> folder in the GPRS project,  There&apos;s two hex file,(`</em>_B<em>.lod<code>and</code></em>_flash.lod`), you must burn the bigger one to dev board at the first time, then you can just burn the little one to reduce the doanload time. And you must download the bigger if you update the SDK version.</p>
+</li>
+<li><p>Click <kbd>download</kbd> icon to download, then progress bar can be find in the right corner</p>
+</li>
+</ul>
+<p><img src="../assets/coolwatcher_downloading.png" alt=""></p>
+<blockquote>
+<p>if burn fail,refer to  <a href="#coolwatcher-download-fail">coolwatcher Download Fail</a> sectioin.</p>
+</blockquote>
+<h2 id="coolwatcher-connect-fail"><a name="coolwatcher-connect-fail" class="anchor-navigation-ex-anchor" href="#coolwatcher-connect-fail"><i class="fa fa-link" aria-hidden="true"></i></a>4. Coolwatcher Connect Fail</h2>
+<p><img src="../assets/coolwatcher_connect_fail.png" alt=""></p>
+<p>Solutions:</p>
+<ul>
+<li><p>Ensure that the serial port and the module are connected (note that the USB port on the development board is not a serial port, and the serial port is connected to the <code>HST_RX</code> and<code>HST_TX</code> pins through the USB to serial port module)</p>
+</li>
+<li><p>Ensure that the serial port is not occupied by other software</p>
+</li>
+<li><p>Check the serial number is wrong, set the serial number when restarting, or do not restart click the lower right corner <kbd> CoolHost </kbd> icon to set &lt;/br&gt;
+<img src="../assets/coolwatcher_connect_settings.png" alt="CoolHost settings"></p>
+</li>
+</ul>
+<p>Then click <kbd> connect </kbd> to reconnect the serial port</p>
+<h2 id="coolwatcher-download-fail"><a name="coolwatcher-download-fail" class="anchor-navigation-ex-anchor" href="#coolwatcher-download-fail"><i class="fa fa-link" aria-hidden="true"></i></a>5. Coolwatcher Download Fail</h2>
+<p><img src="../assets/coolwatcher_download_fail.png" alt=""></p>
+<ul>
+<li><p><a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/issues/1" target="_blank">ramrun file error</a>, try using project directory <code>platform / ramrun</code> and coolwatcher<code>CSDTK\cooltools\chipgen\Modem2G\toolpool\plugins\fastpf\flash_programmers</code> directory <code>*_8955_*_spi32m_ramrun.lod</code></p>
+</li>
+<li><p>It is possible that the program has entered sleep mode and is reset by the module reset button before downloading</p>
+</li>
+<li><p>Serial port may be lost, the lower right corner of the taskbar double-click the <kbd>CoolHost</kbd> icon to reconnect the serial port, and then download</p>
+</li>
+<li><p>Serial port other problems, unplug the USB to serial port module re-insert the computer, and then re-connect the serial port</p>
+</li>
+<li><p>Boot into the program into the sleep mode or thread using the <code>while (1)</code> dead loop and completely take up resources, such as:</p>
+<pre><code>void LoopTask(VOID *pData)
+{
+  uint64_t count = 0;
+  while(1)
+  {
+      ++count;
+      if(count == 3000)
+      {
+          count = 0;
+          Trace(1,&quot;Test Test&quot;);
+      }
+  }
+}
+</code></pre></li>
+</ul>
+<p><strong>Solution:</strong> Press the module reset button, the USB transfer serial port module data transmission indicator flashing (that is, the module has been started and send data to the serial port) press the download button for a second, not to try on how many times
+In order to completely prevent this problem, it is recommended not to write such a program, it is best to use the time in the loop trigger or delay at least <code>OS_Sleep ()</code>)</p>
+<pre><code>void LoopTask (VOID * pData)
+{
+    uint64_t count = 0;
+    while (1)
+    {
+        ++ count;
+        if (count == 3000)
+        {
+            count = 0;
+            Trace (1, &quot;Test Test&quot;);
+            OS_Sleep (100);
+        }
+    }
+}
+</code></pre><p>or</p>
+<pre><code>void LoopTask (VOID * pData)
+{
+    uint64_t count = 0;
+    while (1)
+    {
+        ++ count;
+        if (count == 3000)
+        {
+            count = 0;
+            Trace (1, &quot;Test Test&quot;);
+
+        }
+    }
+    OS_Sleep (1);
+}
+</code></pre><p>Or event handling</p>
+<pre><code>void AppMainTask (VOID * pData)
+{
+    API_Event_t * event = NULL;
+
+    while (1)
+    {
+        if (OS_WaitEvent (mainTaskHandle, &amp; event, OS_TIME_OUT_WAIT_FOREVER))
+        {
+            EventDispatch (event);
+            OS_Free (event-&gt; pParam1);
+            OS_Free (event);
+        }
+    }
+}
+</code></pre><h2 id="debug"><a name="debug" class="anchor-navigation-ex-anchor" href="#debug"><i class="fa fa-link" aria-hidden="true"></i></a>6. Debug</h2>
+<h4 id="log-tool-tracer"><a name="log-tool-tracer" class="anchor-navigation-ex-anchor" href="#log-tool-tracer"><i class="fa fa-link" aria-hidden="true"></i></a>Log Tool: Tracer</h4>
+<ul>
+<li>View debug information: Open <code>Plugins</code>-&gt; <code>Active Tracer</code>, the interface and function as shown below</li>
+</ul>
+<p><img src="../assets/coolwatcher_trace.png" alt="tracer"></p>
+<p>Need to set up Tracer before use, set as follows 1 ~ 6 steps:</p>
+<p><img src="../assets/coolwatcher_trace_settings.png" alt="Tracer Settings"></p>
+<ul>
+<li>The program needs to output the debugging information You can call <code>Trace (uint16_t nIndex, PCSTR fmt, ...)</code> in <code>api_debug.h</code>, where<code>nIndex</code> corresponds to <code>MMI 01</code> ~<code>MMI 16</code></li>
+</ul>
+<h4 id="tracer-problems"><a name="tracer-problems" class="anchor-navigation-ex-anchor" href="#tracer-problems"><i class="fa fa-link" aria-hidden="true"></i></a>Tracer Problems</h4>
+<ul>
+<li><p>Sometimes I expect the debug data is not displayed, it may be the upper right corner of the pause to display the latest button, forgot to turn off! !</p>
+</li>
+<li><p>Tracer may not power on when system just power on, some early info may can not diaply</p>
+</li>
+</ul>
+<h4 id="crash-handling"><a name="crash-handling" class="anchor-navigation-ex-anchor" href="#crash-handling"><i class="fa fa-link" aria-hidden="true"></i></a>Crash handling</h4>
+<p>Here simulated an exception, null pointer assignment exception, the general emergence of such problems are the problem of indiscriminate flight!
+Open GBD, and set the select elf file</p>
+<p><img src="../assets/coolwatcher_gdb_launch.png" alt="Pointer exception"></p>
+<p><img src="../assets/coolwatcher_gdb_settings.png" alt="Select elf file"></p>
+<p>Open the GBD terminal and enter <code>bt</code> or<code>bt f</code> to view the message</p>
+<p><img src="../assets/coolwatcher_gdb_error_info.png" alt="Abnormal information"></p>
+<p>It should be noted that this GDB does not support set break point with this software(coolwatcher), break point only can be set in the code.</p>
+<p>See more problems in <a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/issues?utf8=%E2%9C%93&amp;q=" target="_blank">issue</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="installation_docker.html" class="navigation navigation-prev " aria-label="Previous page: Installation Docker">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="first-code.html" class="navigation navigation-next " aria-label="Next page: First Code">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Burn & Debug","level":"4.4","depth":1,"next":{"title":"First Code","level":"4.5","depth":1,"path":"c-sdk/first-code.md","ref":"c-sdk/first-code.md","articles":[]},"previous":{"title":"Installation Docker","level":"4.3","depth":1,"path":"c-sdk/installation_docker.md","ref":"c-sdk/installation_docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"中文","text":"中文","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["facebook","twitter","google","instapaper","vk","weibo"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"en","gitbook":"*","description":"GPRS C SDK documention"},"file":{"path":"c-sdk/burn-debug.md","mtime":"2018-12-11T02:48:24.970Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T02:49:35.562Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1075 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>GPIO · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="adc.html" />
+    
+    
+    <link rel="prev" href="../gong-neng-ji-api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">硬件</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../ying-jian/a9.html">
+            
+                <a href="../../ying-jian/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../ying-jian/a9g.html">
+            
+                <a href="../../ying-jian/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                <a href="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                    
+                    开发板pudding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                <a href="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                    
+                    USB转串口模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../ying-jian/simqia.html">
+            
+                <a href="../../ying-jian/simqia.html">
+            
+                    
+                    SIM卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                <a href="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../ji-chu-zhi-shi/gps.html">
+            
+                <a href="../../ji-chu-zhi-shi/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../kai-fa-huan-jing-an-zhuang.html">
+            
+                <a href="../kai-fa-huan-jing-an-zhuang.html">
+            
+                    
+                    Windows开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Linux开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    使用docker编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                <a href="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                    
+                    下载固件到模组及调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                <a href="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                    
+                    开始第一份代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../more/vscode.html">
+            
+                <a href="../../more/vscode.html">
+            
+                    
+                    如何使用vscode写C代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                <a href="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                    
+                    代码风格及结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../gong-neng-ji-api.html">
+            
+                <a href="../gong-neng-ji-api.html">
+            
+                    
+                    功能及API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.8.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.6" data-path="ccid.html">
+            
+                <a href="ccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.11" data-path="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                <a href="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                    
+                    FS(文件系统)(储存数据到flash或T卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.12" data-path="gprswang-7edc28-ji-7ad929.html">
+            
+                <a href="gprswang-7edc28-ji-7ad929.html">
+            
+                    
+                    GPRS网络(基站信息等)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.14" data-path="socketwang-luo-tong-xin.html">
+            
+                <a href="socketwang-luo-tong-xin.html">
+            
+                    
+                    socket网络通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.15" data-path="ssltls.html">
+            
+                <a href="ssltls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.17" data-path="pmdian-yuan-guan-740629.html">
+            
+                <a href="pmdian-yuan-guan-740629.html">
+            
+                    
+                    PM(电源管理)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.18" data-path="dian-hua.html">
+            
+                <a href="dian-hua.html">
+            
+                    
+                    电话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.19" data-path="smsduan-4fe129.html">
+            
+                <a href="smsduan-4fe129.html">
+            
+                    
+                    SMS(短信)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA(远程固件升级)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits(机智云)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../../Q_A/q_a.html">
+            
+                <a href="../../Q_A/q_a.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    Flash 分区布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.2" data-path="../../more/gen_lib.html">
+            
+                <a href="../../more/gen_lib.html">
+            
+                    
+                    如果将SDK生成一个lib库文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.3" data-path="../../more/mpy.html">
+            
+                <a href="../../more/mpy.html">
+            
+                    
+                    移植脚本语言MicroPython
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >GPIO</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#gpio-general-purpose-input-output&#x901A;&#x7528;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x63A5;&#x53E3;"><b> </b>GPIO (General Purpose Input Output)&#x901A;&#x7528;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x63A5;&#x53E3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><b>1. </b>&#x679A;&#x4E3E;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#gpiopin"><b>1.1. </b>GPIO_PIN</a></li><li><span class="title-icon "></span><a href="#gpiomode"><b>1.2. </b>GPIO_MODE</a></li><li><span class="title-icon "></span><a href="#gpiolevel"><b>1.3. </b>GPIO_LEVEL</a></li><li><span class="title-icon "></span><a href="#gpiointtype"><b>1.4. </b>GPIO_INT_TYPE</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><b>2. </b>&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#gpiointcallbackparamt"><b>2.1. </b>GPIO_INT_callback_param_t</a></li><li><span class="title-icon "></span><a href="#pcallbackint"><b>2.2. </b>PCallbackINT</a></li><li><span class="title-icon "></span><a href="#gpiointconfigt"><b>2.3. </b>GPIO_INT_config_t</a></li><li><span class="title-icon "></span><a href="#gpioconfigt"><b>2.4. </b>GPIO_config_t</a></li></ul><li><span class="title-icon "></span><a href="#&#x529F;&#x80FD;&#x51FD;&#x6570;&#x63A5;&#x53E3;"><b>3. </b>&#x529F;&#x80FD;&#x51FD;&#x6570;&#x63A5;&#x53E3;</a></li><ul><li><span class="title-icon "></span><a href="#gpioinit"><b>3.1. </b>GPIO_Init</a></li><li><span class="title-icon "></span><a href="#gpiogetconfig"><b>3.2. </b>GPIO_GetConfig</a></li><li><span class="title-icon "></span><a href="#gpiosetlevel"><b>3.3. </b>GPIO_SetLevel</a></li><li><span class="title-icon "></span><a href="#gpioset"><b>3.4. </b>GPIO_Set</a></li><li><span class="title-icon "></span><a href="#gpiogetlevel"><b>3.5. </b>GPIO_GetLevel</a></li><li><span class="title-icon "></span><a href="#gpioget"><b>3.6. </b>GPIO_Get</a></li><li><span class="title-icon "></span><a href="#gpioclose"><b>3.7. </b>GPIO_Close</a></li></ul></ul></ul></div><a href="#gpio-general-purpose-input-output&#x901A;&#x7528;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x63A5;&#x53E3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="gpio-general-purpose-input-output&#x901A;&#x7528;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x63A5;&#x53E3;"><a name="gpio-general-purpose-input-output&#x901A;&#x7528;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#gpio-general-purpose-input-output&#x901A;&#x7528;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a> GPIO (General Purpose Input Output)&#x901A;&#x7528;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x63A5;&#x53E3;</h1>
+<p>&#x8981;&#x4FDD;&#x8BC1;&#x5F15;&#x811A;&#x529F;&#x80FD;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x5728;&#x914D;&#x7F6E;IO&#x4E4B;&#x524D;&#x5FC5;&#x987B;&#x5C06;&#x5BF9;&#x5E94;IO&#x53E3;&#x7684;&#x7535;&#x6E90;&#x6253;&#x5F00;&#xFF0C;&#x4F7F;&#x7528;</p>
+<pre><code class="lang-c">bool PM_PowerEnable(Power_Type_t powerType, bool isOn)
+```c
+&#x51FD;&#x6570;&#x6765;&#x6253;&#x5F00;&#x5BF9;&#x5E94;&#x7684;IO&#x53E3;&#x7535;&#x6E90;,&#x4E0D;&#x540C;IO&#x53E3;&#x5BF9;&#x5E94;&#x7684;&#x7535;&#x6E90;&#x5982;&#x4E0B;&#xFF1A;
+```c
+typedef enum{
+    POWER_TYPE_VPAD = 0,            // GPIO0  ~ GPIO7  and GPIO25 ~ GPIO36    2.8V   //always on
+    POWER_TYPE_MMC,                 // GPIO8  ~ GPIO13                        1.9V
+    POWER_TYPE_LCD,                 // GPIO14 ~ GPIO18                        1.9V
+    POWER_TYPE_CAM,                 // GPIO19 ~ GPIO24                        1.9V
+    POWER_TYPE_MAX
+}Power_Type_t;
+</code></pre>
+<blockquote>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x9700;&#x8981;&#x4F7F;&#x7528;GPIO5&#xFF0C;&#x5219;&#x9700;&#x8981;&#x8C03;&#x7528;<code>PM_PowerEnable(POWER_TYPE_VPAD,true);</code></li>
+<li>&#x9700;&#x8981;&#x8C03;&#x7528;I2C2,&#x56E0;&#x4E3A;I2C2&#x662F;&#x590D;&#x7528;IO19&#x548C;20&#xFF0C;&#x6240;&#x4EE5;&#x8C03;&#x7528;<code>PM_PowerEnable(POWER_TYPE_CAM,true);</code></li>
+</ul>
+</blockquote>
+<p>&#x6A21;&#x7EC4;&#x5F15;&#x811A;&#x9664;&#x4E86;&#x901A;&#x7528;IO&#x529F;&#x80FD;&#x5916;&#xFF0C;&#x90E8;&#x5206;&#x5F15;&#x811A;&#x8FD8;&#x6709;&#x590D;&#x7528;&#x529F;&#x80FD;&#xFF0C;&#x5177;&#x4F53;&#x89C1;<a href="../../ying-jian/kai-fa-ban-pudding.html#&#x5F15;&#x811A;&#x56FE;">&#x5F00;&#x53D1;&#x677F;&#x4E2D;&#x7684;&#x5F15;&#x811A;&#x56FE;</a></p>
+<p>&#x4F8B;&#x793A;&#x4EE3;&#x7801;&#x8BF7;&#x53C2;&#x8003;<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/gpio/src/demo_gpio.c" target="_blank">CSDK demo/gpio</a></p>
+<hr>
+<h2 id="&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><a name="&#x679A;&#x4E3E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x679A;&#x4E3E;&#x7C7B;&#x578B;</h2>
+<h3 id="gpiopin"><a name="gpiopin" class="anchor-navigation-ex-anchor" href="#gpiopin"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. GPIO_PIN</h3>
+<p>&#x5F15;&#x811A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    GPIO_PIN0 = <span class="hljs-number">0</span>, <span class="hljs-comment">//IO &#x53EF;&#x4E2D;&#x65AD;</span>
+    GPIO_PIN1,     <span class="hljs-comment">//IO &#x53EF;&#x4E2D;&#x65AD;</span>
+    GPIO_PIN2,     <span class="hljs-comment">//IO &#x53EF;&#x4E2D;&#x65AD;</span>
+    GPIO_PIN3,     <span class="hljs-comment">//IO &#x53EF;&#x4E2D;&#x65AD;</span>
+    GPIO_PIN4,     <span class="hljs-comment">//IO &#x53EF;&#x4E2D;&#x65AD;</span>
+    GPIO_PIN5,     <span class="hljs-comment">//IO &#x53EF;&#x4E2D;&#x65AD;</span>
+    GPIO_PIN6,     <span class="hljs-comment">//IO &#x53EF;&#x4E2D;&#x65AD;</span>
+    GPIO_PIN7,     <span class="hljs-comment">//IO &#x53EF;&#x4E2D;&#x65AD;</span>
+    GPIO_PIN8,
+    GPIO_PIN9,
+    GPIO_PIN10,
+    GPIO_PIN11,
+    GPIO_PIN12,
+    GPIO_PIN13,
+    GPIO_PIN14,
+    GPIO_PIN15,
+    GPIO_PIN16,
+    GPIO_PIN17,
+    GPIO_PIN18,
+    GPIO_PIN19,
+    GPIO_PIN20,
+    GPIO_PIN21,
+    GPIO_PIN22,
+    GPIO_PIN23,
+    GPIO_PIN24,
+    GPIO_PIN25,
+    GPIO_PIN26,
+    GPIO_PIN27,
+    GPIO_PIN28,
+    GPIO_PIN29,
+    GPIO_PIN30,
+    GPIO_PIN31,
+    GPIO_PIN32,
+    GPIO_PIN33,
+    GPIO_PIN34,
+    GPIO_PIN_MAX
+}GPIO_PIN;
+</code></pre>
+<hr>
+<h3 id="gpiomode"><a name="gpiomode" class="anchor-navigation-ex-anchor" href="#gpiomode"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. GPIO_MODE</h3>
+<p>IO&#x6A21;&#x5F0F;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    GPIO_MODE_OUTPUT = <span class="hljs-number">0</span>,   <span class="hljs-comment">// &#x8F93;&#x51FA;&#x6A21;&#x5F0F;</span>
+    GPIO_MODE_INPUT,        <span class="hljs-comment">// &#x8F93;&#x5165;&#x6A21;&#x5F0F;</span>
+    GPIO_MODE_INPUT_INT,    <span class="hljs-comment">// &#x4E2D;&#x65AD;&#x6A21;&#x5F0F;</span>
+    GPIO_MODE_MAX
+}GPIO_MODE;
+</code></pre>
+<hr>
+<h3 id="gpiolevel"><a name="gpiolevel" class="anchor-navigation-ex-anchor" href="#gpiolevel"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. GPIO_LEVEL</h3>
+<p>&#x9AD8;&#x4F4E;&#x7535;&#x5E73;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    GPIO_LEVEL_LOW  = <span class="hljs-number">0</span>,  <span class="hljs-comment">//&#x4F4E;&#x7535;&#x5E73;</span>
+    GPIO_LEVEL_HIGH = <span class="hljs-number">1</span>   <span class="hljs-comment">//&#x9AD8;&#x7535;&#x5E73;</span>
+}GPIO_LEVEL;
+</code></pre>
+<hr>
+<h3 id="gpiointtype"><a name="gpiointtype" class="anchor-navigation-ex-anchor" href="#gpiointtype"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. GPIO_INT_TYPE</h3>
+<p>&#x4E2D;&#x65AD;&#x7C7B;&#x578B;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span> {
+    GPIO_INT_TYPE_HIGH_LEVEL = <span class="hljs-number">0</span>,      <span class="hljs-comment">//&#x9AD8;&#x7535;&#x5E73;&#x4E2D;&#x65AD;</span>
+    GPIO_INT_TYPE_LOW_LEVEL,           <span class="hljs-comment">//&#x4F4E;&#x7535;&#x5E73;&#x4E2D;&#x65AD;</span>
+    GPIO_INT_TYPE_RISING_EDGE,         <span class="hljs-comment">//&#x4E0A;&#x5347;&#x6CBF;&#x4E2D;&#x65AD;</span>
+    GPIO_INT_TYPE_FALLING_EDGE,        <span class="hljs-comment">//&#x4E0B;&#x964D;&#x6CBF;&#x4E2D;&#x65AD;</span>
+    GPIO_INT_TYPE_RISING_FALLING_EDGE, <span class="hljs-comment">//&#x4E0A;&#x5347;&#x6CBF;&#x548C;&#x4E0B;&#x964D;&#x6CBF;&#x4E2D;&#x65AD;</span>
+    GPIO_INT_TYPE_MAX
+}GPIO_INT_TYPE;
+</code></pre>
+<hr>
+<h2 id="&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><a name="&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;</h2>
+<h3 id="gpiointcallbackparamt"><a name="gpiointcallbackparamt" class="anchor-navigation-ex-anchor" href="#gpiointcallbackparamt"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. GPIO_INT_callback_param_t</h3>
+<p>&#x4E2D;&#x65AD;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x7C7B;&#x578B;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    GPIO_PIN pin;
+}GPIO_INT_callback_param_t;
+</code></pre>
+<hr>
+<h3 id="pcallbackint"><a name="pcallbackint" class="anchor-navigation-ex-anchor" href="#pcallbackint"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. PCallbackINT</h3>
+<p>&#x4E2D;&#x65AD;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7C7B;&#x578B;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*PCallbackINT)</span><span class="hljs-params">(GPIO_INT_callback_param_t* param)</span></span>;
+</code></pre>
+<hr>
+<h3 id="gpiointconfigt"><a name="gpiointconfigt" class="anchor-navigation-ex-anchor" href="#gpiointconfigt"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. GPIO_INT_config_t</h3>
+<p>&#x4E2D;&#x65AD;&#x914D;&#x7F6E;&#x9009;&#x9879;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-keyword">uint16_t</span>        debounce; <span class="hljs-comment">//&#x53BB;&#x6296;&#x65F6;&#x95F4;&#xFF08;ms&#xFF09;</span>
+    GPIO_INT_TYPE   type    ;
+    PCallbackINT    callback;
+}GPIO_INT_config_t;
+</code></pre>
+<hr>
+<h3 id="gpioconfigt"><a name="gpioconfigt" class="anchor-navigation-ex-anchor" href="#gpioconfigt"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. GPIO_config_t</h3>
+<p>GPIO&#x914D;&#x7F6E;&#x9009;&#x9879;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    GPIO_PIN          pin         ;  <span class="hljs-comment">//&#x5F15;&#x811A;</span>
+    GPIO_MODE         mode        ;  <span class="hljs-comment">//&#x6A21;&#x5F0F;</span>
+    GPIO_LEVEL        defaultLevel;  <span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x7535;&#x5E73;</span>
+    GPIO_INT_config_t intConfig   ;  <span class="hljs-comment">//&#x4E2D;&#x65AD;&#x914D;&#x7F6E;&#xFF08;&#x4E2D;&#x65AD;&#x6A21;&#x5F0F;&#x9700;&#x8981;&#x914D;&#x7F6E;&#xFF09;</span>
+}GPIO_config_t;
+</code></pre>
+<hr>
+<h2 id="&#x529F;&#x80FD;&#x51FD;&#x6570;&#x63A5;&#x53E3;"><a name="&#x529F;&#x80FD;&#x51FD;&#x6570;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;&#x51FD;&#x6570;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x529F;&#x80FD;&#x51FD;&#x6570;&#x63A5;&#x53E3;</h2>
+<h3 id="gpioinit"><a name="gpioinit" class="anchor-navigation-ex-anchor" href="#gpioinit"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. GPIO_Init</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">GPIO_Init</span><span class="hljs-params">(GPIO_config_t config)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;"><a name="&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521D;&#x59CB;&#x5316;IO</p>
+<h5 id="&#x53C2;&#x6570;"><a name="&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>config&#xFF1A;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;"><a name="&#x8FD4;&#x56DE;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>bool&#xFF1A;&#x914D;&#x7F6E;&#x6210;&#x529F;/&#x5931;&#x8D25;</li>
+</ul>
+<hr>
+<h3 id="gpiogetconfig"><a name="gpiogetconfig" class="anchor-navigation-ex-anchor" href="#gpiogetconfig"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. GPIO_GetConfig</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GPIO_GetConfig</span><span class="hljs-params">(GPIO_PIN pin,GPIO_config_t* config)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_1"><a name="&#x529F;&#x80FD;_1" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x83B7;&#x53D6;GPIO&#x914D;&#x7F6E;</p>
+<h5 id="&#x53C2;&#x6570;_1"><a name="&#x53C2;&#x6570;_1" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>config&#xFF1A;GPIO&#x914D;&#x7F6E;&#x53D8;&#x91CF;&#x5730;&#x5740;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_1"><a name="&#x8FD4;&#x56DE;&#x503C;_1" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<hr>
+<h3 id="gpiosetlevel"><a name="gpiosetlevel" class="anchor-navigation-ex-anchor" href="#gpiosetlevel"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. GPIO_SetLevel</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">GPIO_SetLevel</span><span class="hljs-params">(GPIO_config_t gpioConf, GPIO_LEVEL  level)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_2"><a name="&#x529F;&#x80FD;_2" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8BBE;&#x7F6E;GPIO&#x7535;&#x5E73;</p>
+<h5 id="&#x53C2;&#x6570;_2"><a name="&#x53C2;&#x6570;_2" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>gpioConf&#xFF1A;GPIO&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x53D8;&#x91CF;</li>
+<li>level:&#x7535;&#x5E73;&#x9AD8;&#x4F4E;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_2"><a name="&#x8FD4;&#x56DE;&#x503C;_2" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>bool&#xFF1A;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="gpioset"><a name="gpioset" class="anchor-navigation-ex-anchor" href="#gpioset"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. GPIO_Set</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">GPIO_Set</span><span class="hljs-params">(GPIO_PIN pin, GPIO_LEVEL  level)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_3"><a name="&#x529F;&#x80FD;_3" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8BBE;&#x7F6E;GPIO&#x7535;&#x5E73;&#xFF0C;&#x4E0E;<code>GPIO_SetLevel</code>&#x529F;&#x80FD;&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x53C2;&#x6570;&#x4E0D;&#x4E00;&#x6837;</p>
+<h5 id="&#x53C2;&#x6570;_3"><a name="&#x53C2;&#x6570;_3" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pin:GPIO&#x53E3;</li>
+<li>level:&#x7535;&#x5E73;&#x9AD8;&#x4F4E;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_3"><a name="&#x8FD4;&#x56DE;&#x503C;_3" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>bool&#xFF1A;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="gpiogetlevel"><a name="gpiogetlevel" class="anchor-navigation-ex-anchor" href="#gpiogetlevel"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. GPIO_GetLevel</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">GPIO_GetLevel</span><span class="hljs-params">(GPIO_config_t gpioConf, GPIO_LEVEL* level)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_4"><a name="&#x529F;&#x80FD;_4" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x83B7;&#x53D6;GPIO&#x7535;&#x5E73;</p>
+<h5 id="&#x53C2;&#x6570;_4"><a name="&#x53C2;&#x6570;_4" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>gpioConf:GPIO&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x53D8;&#x91CF;</li>
+<li>level:&#x7535;&#x5E73;&#x9AD8;&#x4F4E;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x53D8;&#x91CF;&#x6307;&#x9488;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_4"><a name="&#x8FD4;&#x56DE;&#x503C;_4" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>bool&#xFF1A;&#x662F;&#x5426;&#x83B7;&#x53D6;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="gpioget"><a name="gpioget" class="anchor-navigation-ex-anchor" href="#gpioget"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. GPIO_Get</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">GPIO_Get</span><span class="hljs-params">(GPIO_PIN pin, GPIO_LEVEL* level)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_5"><a name="&#x529F;&#x80FD;_5" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x83B7;&#x53D6;GPIO&#x7535;&#x5E73;&#xFF0C;&#x529F;&#x80FD;&#x4E0E;<code>GPIO_GetLevel</code>&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x53C2;&#x6570;&#x4E0D;&#x540C;</p>
+<h5 id="&#x53C2;&#x6570;_5"><a name="&#x53C2;&#x6570;_5" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pin:GPIO&#x53E3;</li>
+<li>level:&#x7535;&#x5E73;&#x9AD8;&#x4F4E;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x53D8;&#x91CF;&#x6307;&#x9488;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_5"><a name="&#x8FD4;&#x56DE;&#x503C;_5" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>bool&#xFF1A;&#x662F;&#x5426;&#x83B7;&#x53D6;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="gpioclose"><a name="gpioclose" class="anchor-navigation-ex-anchor" href="#gpioclose"><i class="fa fa-link" aria-hidden="true"></i></a>3.7. GPIO_Close</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">GPIO_Close</span><span class="hljs-params">(GPIO_PIN pin)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_6"><a name="&#x529F;&#x80FD;_6" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5173;&#x95ED;GPIO&#x53E3;&#xFF0C;&#x590D;&#x4F4D;GPIO&#x5230;&#x9ED8;&#x8BA4;&#x72B6;&#x6001;</p>
+<h5 id="&#x53C2;&#x6570;_6"><a name="&#x53C2;&#x6570;_6" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pin:GPIO&#x53E3;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_6"><a name="&#x8FD4;&#x56DE;&#x503C;_6" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>bool&#xFF1A;&#x662F;&#x5426;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../gong-neng-ji-api.html" class="navigation navigation-prev " aria-label="Previous page: 功能及API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="adc.html" class="navigation navigation-next " aria-label="Next page: ADC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"GPIO","level":"4.8.1","depth":2,"next":{"title":"ADC","level":"4.8.2","depth":2,"path":"c-sdk/gong-neng-ji-api/adc.md","ref":"c-sdk/gong-neng-ji-api/adc.md","articles":[]},"previous":{"title":"功能及API","level":"4.8","depth":1,"path":"c-sdk/gong-neng-ji-api.md","ref":"c-sdk/gong-neng-ji-api.md","articles":[{"title":"GPIO","level":"4.8.1","depth":2,"path":"c-sdk/gong-neng-ji-api/gpio.md","ref":"c-sdk/gong-neng-ji-api/gpio.md","articles":[]},{"title":"ADC","level":"4.8.2","depth":2,"path":"c-sdk/gong-neng-ji-api/adc.md","ref":"c-sdk/gong-neng-ji-api/adc.md","articles":[]},{"title":"UART","level":"4.8.3","depth":2,"path":"c-sdk/gong-neng-ji-api/uart.md","ref":"c-sdk/gong-neng-ji-api/uart.md","articles":[]},{"title":"OS","level":"4.8.4","depth":2,"path":"c-sdk/gong-neng-ji-api/os.md","ref":"c-sdk/gong-neng-ji-api/os.md","articles":[]},{"title":"IMEI","level":"4.8.5","depth":2,"path":"c-sdk/gong-neng-ji-api/imei.md","ref":"c-sdk/gong-neng-ji-api/imei.md","articles":[]},{"title":"ICCID","level":"4.8.6","depth":2,"path":"c-sdk/gong-neng-ji-api/ccid.md","ref":"c-sdk/gong-neng-ji-api/ccid.md","articles":[]},{"title":"GPS","level":"4.8.7","depth":2,"path":"c-sdk/gong-neng-ji-api/gps.md","ref":"c-sdk/gong-neng-ji-api/gps.md","articles":[]},{"title":"I2C","level":"4.8.8","depth":2,"path":"c-sdk/gong-neng-ji-api/iic.md","ref":"c-sdk/gong-neng-ji-api/iic.md","articles":[]},{"title":"SPI","level":"4.8.9","depth":2,"path":"c-sdk/gong-neng-ji-api/spi.md","ref":"c-sdk/gong-neng-ji-api/spi.md","articles":[]},{"title":"time(RTC)","level":"4.8.10","depth":2,"path":"c-sdk/gong-neng-ji-api/timertc.md","ref":"c-sdk/gong-neng-ji-api/timertc.md","articles":[]},{"title":"FS(文件系统)(储存数据到flash或T卡)","level":"4.8.11","depth":2,"path":"c-sdk/gong-neng-ji-api/fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.md","ref":"c-sdk/gong-neng-ji-api/fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.md","articles":[]},{"title":"GPRS网络(基站信息等)","level":"4.8.12","depth":2,"path":"c-sdk/gong-neng-ji-api/gprswang-7edc28-ji-7ad929.md","ref":"c-sdk/gong-neng-ji-api/gprswang-7edc28-ji-7ad929.md","articles":[]},{"title":"DNS","level":"4.8.13","depth":2,"path":"c-sdk/gong-neng-ji-api/dns.md","ref":"c-sdk/gong-neng-ji-api/dns.md","articles":[]},{"title":"socket网络通信","level":"4.8.14","depth":2,"path":"c-sdk/gong-neng-ji-api/socketwang-luo-tong-xin.md","ref":"c-sdk/gong-neng-ji-api/socketwang-luo-tong-xin.md","articles":[]},{"title":"SSL/TLS","level":"4.8.15","depth":2,"path":"c-sdk/gong-neng-ji-api/ssltls.md","ref":"c-sdk/gong-neng-ji-api/ssltls.md","articles":[]},{"title":"MQTT","level":"4.8.16","depth":2,"path":"c-sdk/gong-neng-ji-api/mqtt.md","ref":"c-sdk/gong-neng-ji-api/mqtt.md","articles":[]},{"title":"PM(电源管理)","level":"4.8.17","depth":2,"path":"c-sdk/gong-neng-ji-api/pmdian-yuan-guan-740629.md","ref":"c-sdk/gong-neng-ji-api/pmdian-yuan-guan-740629.md","articles":[]},{"title":"电话","level":"4.8.18","depth":2,"path":"c-sdk/gong-neng-ji-api/dian-hua.md","ref":"c-sdk/gong-neng-ji-api/dian-hua.md","articles":[]},{"title":"SMS(短信)","level":"4.8.19","depth":2,"path":"c-sdk/gong-neng-ji-api/smsduan-4fe129.md","ref":"c-sdk/gong-neng-ji-api/smsduan-4fe129.md","articles":[]},{"title":"FOTA(远程固件升级)","level":"4.8.20","depth":2,"path":"c-sdk/gong-neng-ji-api/fota.md","ref":"c-sdk/gong-neng-ji-api/fota.md","articles":[]},{"title":"LBS","level":"4.8.21","depth":2,"path":"c-sdk/gong-neng-ji-api/lbs.md","ref":"c-sdk/gong-neng-ji-api/lbs.md","articles":[]},{"title":"Gizwits(机智云)","level":"4.8.22","depth":2,"path":"c-sdk/gong-neng-ji-api/gizwits.md","ref":"c-sdk/gong-neng-ji-api/gizwits.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga","toggle-chapters"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"English","text":"English","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["weibo","facebook","twitter","google","instapaper","vk"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"zh-hans","gitbook":"*","description":"GPRS C SDK 文档"},"file":{"path":"c-sdk/gong-neng-ji-api/gpio.md","mtime":"2018-12-26T09:37:35.977Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T09:38:38.959Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

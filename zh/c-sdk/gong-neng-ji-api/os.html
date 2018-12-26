@@ -1,0 +1,1427 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>OS · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="imei.html" />
+    
+    
+    <link rel="prev" href="uart.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">硬件</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../ying-jian/a9.html">
+            
+                <a href="../../ying-jian/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../ying-jian/a9g.html">
+            
+                <a href="../../ying-jian/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                <a href="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                    
+                    开发板pudding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                <a href="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                    
+                    USB转串口模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../ying-jian/simqia.html">
+            
+                <a href="../../ying-jian/simqia.html">
+            
+                    
+                    SIM卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                <a href="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../ji-chu-zhi-shi/gps.html">
+            
+                <a href="../../ji-chu-zhi-shi/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../kai-fa-huan-jing-an-zhuang.html">
+            
+                <a href="../kai-fa-huan-jing-an-zhuang.html">
+            
+                    
+                    Windows开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Linux开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    使用docker编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                <a href="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                    
+                    下载固件到模组及调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                <a href="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                    
+                    开始第一份代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../more/vscode.html">
+            
+                <a href="../../more/vscode.html">
+            
+                    
+                    如何使用vscode写C代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                <a href="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                    
+                    代码风格及结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../gong-neng-ji-api.html">
+            
+                <a href="../gong-neng-ji-api.html">
+            
+                    
+                    功能及API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.8.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.8.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.6" data-path="ccid.html">
+            
+                <a href="ccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.11" data-path="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                <a href="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                    
+                    FS(文件系统)(储存数据到flash或T卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.12" data-path="gprswang-7edc28-ji-7ad929.html">
+            
+                <a href="gprswang-7edc28-ji-7ad929.html">
+            
+                    
+                    GPRS网络(基站信息等)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.14" data-path="socketwang-luo-tong-xin.html">
+            
+                <a href="socketwang-luo-tong-xin.html">
+            
+                    
+                    socket网络通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.15" data-path="ssltls.html">
+            
+                <a href="ssltls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.17" data-path="pmdian-yuan-guan-740629.html">
+            
+                <a href="pmdian-yuan-guan-740629.html">
+            
+                    
+                    PM(电源管理)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.18" data-path="dian-hua.html">
+            
+                <a href="dian-hua.html">
+            
+                    
+                    电话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.19" data-path="smsduan-4fe129.html">
+            
+                <a href="smsduan-4fe129.html">
+            
+                    
+                    SMS(短信)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA(远程固件升级)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits(机智云)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../../Q_A/q_a.html">
+            
+                <a href="../../Q_A/q_a.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    Flash 分区布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.2" data-path="../../more/gen_lib.html">
+            
+                <a href="../../more/gen_lib.html">
+            
+                    
+                    如果将SDK生成一个lib库文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.3" data-path="../../more/mpy.html">
+            
+                <a href="../../more/mpy.html">
+            
+                    
+                    移植脚本语言MicroPython
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >OS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os"><b> </b>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;(OS)</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B8F;&#x5B9A;&#x4E49;"><b>1. </b>&#x5B8F;&#x5B9A;&#x4E49;</a></li><ul><li><span class="title-icon "></span><a href="#oswaitforever"><b>1.1. </b>OS_WAIT_FOREVER</a></li><li><span class="title-icon "></span><a href="#osnowait"><b>1.2. </b>OS_NO_WAIT</a></li><li><span class="title-icon "></span><a href="#oseventprinormal"><b>1.3. </b>OS_EVENT_PRI_NORMAL</a></li><li><span class="title-icon "></span><a href="#oseventpriurgent"><b>1.4. </b>OS_EVENT_PRI_URGENT</a></li><li><span class="title-icon "></span><a href="#oscreatedefault"><b>1.5. </b>OS_CREATE_DEFAULT</a></li><li><span class="title-icon "></span><a href="#oscreatesuspended"><b>1.6. </b>OS_CREATE_SUSPENDED</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ED3;&#x6784;&#x4F53;"><b>2. </b>&#x7ED3;&#x6784;&#x4F53;</a></li><ul><li><span class="title-icon "></span><a href="#osheapstatust"><b>2.1. </b>OS_Heap_Status_t</a></li></ul><li><span class="title-icon "></span><a href="#&#x529F;&#x80FD;&#x51FD;&#x6570;"><b>3. </b>&#x529F;&#x80FD;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#ptaskfunct"><b>3.1. </b>PTASK_FUNC_T</a></li><li><span class="title-icon "></span><a href="#ossetusermainhandle"><b>3.2. </b>OS_SetUserMainHandle</a></li><li><span class="title-icon "></span><a href="#oscreatetask"><b>3.3. </b>OS_CreateTask</a></li><li><span class="title-icon "></span><a href="#osstarttask"><b>3.4. </b>OS_StartTask</a></li><li><span class="title-icon "></span><a href="#osstoptask"><b>3.5. </b>OS_StopTask</a></li><li><span class="title-icon "></span><a href="#osdeletetask"><b>3.6. </b>OS_DeleteTask</a></li><li><span class="title-icon "></span><a href="#ossuspendtask"><b>3.7. </b>OS_SuspendTask</a></li><li><span class="title-icon "></span><a href="#osresumetask"><b>3.8. </b>OS_ResumeTask</a></li><li><span class="title-icon "></span><a href="#ossleep"><b>3.9. </b>OS_Sleep</a></li><li><span class="title-icon "></span><a href="#ossleepus"><b>3.10. </b>OS_SleepUs</a></li><li><span class="title-icon "></span><a href="#oswaitevent"><b>3.11. </b>OS_WaitEvent</a></li><li><span class="title-icon "></span><a href="#ossendevent"><b>3.12. </b>OS_SendEvent</a></li><li><span class="title-icon "></span><a href="#osreseteventqueue"><b>3.13. </b>OS_ResetEventQueue</a></li><li><span class="title-icon "></span><a href="#osiseventavailable"><b>3.14. </b>OS_IsEventAvailable</a></li><li><span class="title-icon "></span><a href="#osmalloc"><b>3.15. </b>OS_Malloc</a></li><li><span class="title-icon "></span><a href="#osrealloc"><b>3.16. </b>OS_Realloc</a></li><li><span class="title-icon "></span><a href="#osfree"><b>3.17. </b>OS_Free</a></li><li><span class="title-icon "></span><a href="#osgetheapusagestatus"><b>3.18. </b>OS_GetHeapUsageStatus</a></li><li><span class="title-icon "></span><a href="#oscreatesemaphore"><b>3.19. </b>OS_CreateSemaphore</a></li><li><span class="title-icon "></span><a href="#osdeletesemaphore"><b>3.20. </b>OS_DeleteSemaphore</a></li><li><span class="title-icon "></span><a href="#oswaitforsemaphore"><b>3.21. </b>OS_WaitForSemaphore</a></li><li><span class="title-icon "></span><a href="#osreleasesemaphore"><b>3.22. </b>OS_ReleaseSemaphore</a></li><li><span class="title-icon "></span><a href="#oscreatemutex"><b>3.23. </b>OS_CreateMutex</a></li><li><span class="title-icon "></span><a href="#osdeletemutex"><b>3.24. </b>OS_DeleteMutex</a></li><li><span class="title-icon "></span><a href="#oslockmutex"><b>3.25. </b>OS_LockMutex</a></li><li><span class="title-icon "></span><a href="#osunlockmutex"><b>3.26. </b>OS_UnlockMutex</a></li><li><span class="title-icon "></span><a href="#oscallbackfunct"><b>3.27. </b>OS_CALLBACK_FUNC_T</a></li><li><span class="title-icon "></span><a href="#osstartcallbacktimer"><b>3.28. </b>OS_StartCallbackTimer</a></li><li><span class="title-icon "></span><a href="#osstopcallbacktimer"><b>3.29. </b>OS_StopCallbackTimer</a></li><li><span class="title-icon "></span><a href="#osquerycallbacktimer"><b>3.30. </b>OS_QueryCallbackTimer</a></li></ul></ul></ul></div><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os"><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;os"><i class="fa fa-link" aria-hidden="true"></i></a> &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;(OS)</h1>
+<p>&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x57FA;&#x672C;&#x7684;&#x4EFB;&#x52A1;&#x64CD;&#x4F5C;&#x3001;&#x6D88;&#x606F;&#x673A;&#x5236;&#x7B49;&#x7B49;</p>
+<p>&#x4F8B;&#x7A0B;&#xFF1A;<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/os/src/demo_os.c" target="_blank"><code>demo/os</code></a></p>
+<hr>
+<h2 id="&#x5B8F;&#x5B9A;&#x4E49;"><a name="&#x5B8F;&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x5B8F;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5B8F;&#x5B9A;&#x4E49;</h2>
+<h3 id="oswaitforever"><a name="oswaitforever" class="anchor-navigation-ex-anchor" href="#oswaitforever"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. OS_WAIT_FOREVER</h3>
+<p>&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x7279;&#x6B8A;&#x503C;&#xFF0C;&#x963B;&#x585E;&#x7B49;&#x5F85;&#xFF08;&#x6C38;&#x8FDC;&#x7B49;&#x5F85;&#xFF09;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_WAIT_FOREVER 0xFFFFFFFF</span>
+</code></pre>
+<hr>
+<h3 id="osnowait"><a name="osnowait" class="anchor-navigation-ex-anchor" href="#osnowait"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. OS_NO_WAIT</h3>
+<p>&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x7279;&#x6B8A;&#x503C;&#xFF0C;&#x4E0D;&#x7B49;&#x5F85;</p>
+<pre><code>#define OS_NO_WAIT 0x0
+</code></pre><hr>
+<h3 id="oseventprinormal"><a name="oseventprinormal" class="anchor-navigation-ex-anchor" href="#oseventprinormal"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. OS_EVENT_PRI_NORMAL</h3>
+<p>&#x4E8B;&#x4EF6;&#x4F18;&#x5148;&#x7EA7;&#x666E;&#x901A;,<code>OS_SendEvent</code>&#x7684;nOption&#x53C2;&#x6570;&#x7684;&#x503C;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_EVENT_PRI_NORMAL 0</span>
+</code></pre>
+<hr>
+<h3 id="oseventpriurgent"><a name="oseventpriurgent" class="anchor-navigation-ex-anchor" href="#oseventpriurgent"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. OS_EVENT_PRI_URGENT</h3>
+<p>&#x4E8B;&#x4EF6;&#x4F18;&#x5148;&#x7EA7;&#x7D27;&#x6025;&#xFF0C;<code>OS_SendEvent</code>&#x7684;nOption&#x53C2;&#x6570;&#x7684;&#x503C;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_EVENT_PRI_URGENT 1</span>
+</code></pre>
+<hr>
+<h3 id="oscreatedefault"><a name="oscreatedefault" class="anchor-navigation-ex-anchor" href="#oscreatedefault"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. OS_CREATE_DEFAULT</h3>
+<p>&#x51FD;&#x6570;<code>OS_CreateTask</code>&#x7684;<code>nCreationFlags</code>&#x53C2;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x540E;&#x81EA;&#x52A8;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x4EFB;&#x52A1;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_CREATE_DEFAULT   0</span>
+</code></pre>
+<hr>
+<h3 id="oscreatesuspended"><a name="oscreatesuspended" class="anchor-navigation-ex-anchor" href="#oscreatesuspended"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. OS_CREATE_SUSPENDED</h3>
+<p>&#x51FD;&#x6570;<code>OS_CreateTask</code>&#x7684;<code>nCreationFlags</code>&#x53C2;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x540E;&#x4E0D;&#x81EA;&#x52A8;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x4EFB;&#x52A1;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> OS_CREATE_SUSPENDED 1</span>
+</code></pre>
+<hr>
+<h2 id="&#x7ED3;&#x6784;&#x4F53;"><a name="&#x7ED3;&#x6784;&#x4F53;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x6784;&#x4F53;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x7ED3;&#x6784;&#x4F53;</h2>
+<h3 id="osheapstatust"><a name="osheapstatust" class="anchor-navigation-ex-anchor" href="#osheapstatust"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. OS_Heap_Status_t</h3>
+<p>&#x5806;&#x72B6;&#x6001;&#xFF0C;&#x5305;&#x62EC;&#x603B;&#x5927;&#x5C0F;&#x548C;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x4E86;&#x7684;&#x5927;&#x5C0F;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-keyword">uint32_t</span> usedSize;
+    <span class="hljs-keyword">uint32_t</span> totalSize;
+}OS_Heap_Status_t;
+</code></pre>
+<hr>
+<h2 id="&#x529F;&#x80FD;&#x51FD;&#x6570;"><a name="&#x529F;&#x80FD;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x529F;&#x80FD;&#x51FD;&#x6570;</h2>
+<h3 id="ptaskfunct"><a name="ptaskfunct" class="anchor-navigation-ex-anchor" href="#ptaskfunct"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. PTASK_FUNC_T</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*PTASK_FUNC_T)</span><span class="hljs-params">(PVOID pParameter)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;"><a name="&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521B;&#x5EFA;&#x7684;&#x4EFB;&#x52A1;&#x4E3B;&#x51FD;&#x6570;&#xFF0C;&#x7531;&#x7528;&#x6237;&#x5B9A;&#x4E49;</p>
+<h5 id="&#x53C2;&#x6570;"><a name="&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pParameter:&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;"><a name="&#x8FD4;&#x56DE;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="ossetusermainhandle"><a name="ossetusermainhandle" class="anchor-navigation-ex-anchor" href="#ossetusermainhandle"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. OS_SetUserMainHandle</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_SetUserMainHandle</span><span class="hljs-params">(HANDLE* appMainHandle)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_1"><a name="&#x529F;&#x80FD;_1" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8BBE;&#x7F6E;&#x4E3B;&#x4EFB;&#x52A1;&#xFF0C;&#x4E3B;&#x4EFB;&#x52A1;&#x7528;&#x6765;&#x63A5;&#x6536;&#x6765;&#x81EA;&#x5E95;&#x5C42;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x5728;&#x5F00;&#x673A;&#x7684;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#x4E3B;&#x4EFB;&#x52A1;&#x540E;&#x7ACB;&#x5373;&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x5E95;&#x5C42;&#x65E0;&#x6CD5;&#x5411;&#x5E94;&#x7528;&#x5C42;&#x53D1;&#x5E03;&#x6D88;&#x606F;</p>
+<h5 id="&#x53C2;&#x6570;_1"><a name="&#x53C2;&#x6570;_1" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>appMainHandle:&#x521B;&#x5EFA;&#x7684;&#x4E3B;&#x4EFB;&#x52A1;&#x8FD4;&#x56DE;&#x7684;&#x6307;&#x9488;&#xFF08;&#x53E5;&#x67C4;&#xFF09;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_1"><a name="&#x8FD4;&#x56DE;&#x503C;_1" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="oscreatetask"><a name="oscreatetask" class="anchor-navigation-ex-anchor" href="#oscreatetask"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. OS_CreateTask</h3>
+<pre><code class="lang-c"><span class="hljs-function">HANDLE <span class="hljs-title">OS_CreateTask</span><span class="hljs-params">(
+    PTASK_FUNC_T pTaskEntry,
+    PVOID pParameter,
+    PVOID pStackAddr,
+    UINT16 nStackSize,
+    UINT8 nPriority,
+    UINT16 nCreationFlags,
+    UINT16 nTimeSlice,
+    PCSTR pTaskName)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_2"><a name="&#x529F;&#x80FD;_2" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4EFB;&#x52A1;</p>
+<h5 id="&#x53C2;&#x6570;_2"><a name="&#x53C2;&#x6570;_2" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pTaskEntry:&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x51FD;&#x6570;&#xFF0C;PTASK_FUNC_T &#x7C7B;&#x578B;</li>
+<li>pParameter:&#x9700;&#x8981;&#x4F20;&#x9012;&#x7ED9;&#x6267;&#x884C;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+<li>pStackAddr:&#x81EA;&#x5B9A;&#x4E49;&#x6808;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x6682;&#x65F6;&#x4E0D;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x5373;&#x503C;&#x53EA;&#x80FD;&#x4E3A;<code>NULL</code></li>
+<li>nStackSize:&#x6808;&#x5927;&#x5C0F;</li>
+<li>nPriority:&#x4EFB;&#x52A1;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&gt;=0&#xFF0C;&#x6BCF;&#x4E2A;&#x4EFB;&#x52A1;&#x4F18;&#x5148;&#x7EA7;&#x4E0D;&#x540C;&#xFF0C;&#x503C;&#x8D8A;&#x5C0F;&#x4EFB;&#x52A1;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x5927;</li>
+<li>nCreationFlags: <code>OS_CREATE_DEFAULT</code>/<code>0</code>&#xFF1A;&#x9ED8;&#x8BA4;&#xFF0C;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x540E;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF1B;<code>OS_CREATE_SUSPENDED</code>&#xFF1A;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x540E;&#x4E0D;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x8C03;&#x7528;start&#x51FD;&#x6570;&#x5F00;&#x542F;&#x4EFB;&#x52A1;&#x8FD0;&#x884C;</li>
+<li>nTimeSlice:&#x4FDD;&#x7559;&#xFF0C;&#x503C;&#x4E3A;0</li>
+<li>pTaskName:&#x4EFB;&#x52A1;&#x540D;&#x79F0;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_2"><a name="&#x8FD4;&#x56DE;&#x503C;_2" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x521B;&#x5EFA;&#x7684;&#x4EFB;&#x52A1;&#x7684;&#x6307;&#x9488;&#xFF08;&#x53E5;&#x67C4;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;<code>NULL</code></li>
+</ul>
+<hr>
+<h3 id="osstarttask"><a name="osstarttask" class="anchor-navigation-ex-anchor" href="#osstarttask"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. OS_StartTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_StartTask</span><span class="hljs-params">(
+    HANDLE pHTask,
+    PVOID pParameter)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_3"><a name="&#x529F;&#x80FD;_3" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5F00;&#x59CB;&#x6267;&#x884C;&#x4EFB;&#x52A1;</p>
+<h5 id="&#x53C2;&#x6570;_3"><a name="&#x53C2;&#x6570;_3" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pHTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>pParameter:&#x9700;&#x8981;&#x4F20;&#x7ED9;&#x4EFB;&#x52A1;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_3"><a name="&#x8FD4;&#x56DE;&#x503C;_3" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="osstoptask"><a name="osstoptask" class="anchor-navigation-ex-anchor" href="#osstoptask"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. OS_StopTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_StopTask</span><span class="hljs-params">(
+    HANDLE pHTask)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_4"><a name="&#x529F;&#x80FD;_4" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x505C;&#x6B62;&#x4EFB;&#x52A1;&#x6267;&#x884C;</p>
+<h5 id="&#x53C2;&#x6570;_4"><a name="&#x53C2;&#x6570;_4" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pHTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_4"><a name="&#x8FD4;&#x56DE;&#x503C;_4" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="osdeletetask"><a name="osdeletetask" class="anchor-navigation-ex-anchor" href="#osdeletetask"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. OS_DeleteTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_DeleteTask</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_5"><a name="&#x529F;&#x80FD;_5" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5220;&#x9664;&#x4EFB;&#x52A1;</p>
+<h5 id="&#x53C2;&#x6570;_5"><a name="&#x53C2;&#x6570;_5" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_5"><a name="&#x8FD4;&#x56DE;&#x503C;_5" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x5220;&#x9664;&#x4EFB;&#x52A1;&#x662F;&#x5426;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="ossuspendtask"><a name="ossuspendtask" class="anchor-navigation-ex-anchor" href="#ossuspendtask"><i class="fa fa-link" aria-hidden="true"></i></a>3.7. OS_SuspendTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_SuspendTask</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_6"><a name="&#x529F;&#x80FD;_6" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x6302;&#x8D77;&#x7EBF;&#x7A0B;</p>
+<h5 id="&#x53C2;&#x6570;_6"><a name="&#x53C2;&#x6570;_6" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_6"><a name="&#x8FD4;&#x56DE;&#x503C;_6" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6302;&#x8D77;&#x662F;&#x5426;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="osresumetask"><a name="osresumetask" class="anchor-navigation-ex-anchor" href="#osresumetask"><i class="fa fa-link" aria-hidden="true"></i></a>3.8. OS_ResumeTask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_ResumeTask</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_7"><a name="&#x529F;&#x80FD;_7" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x7EE7;&#x7EED;&#x4EFB;&#x52A1;</p>
+<h5 id="&#x53C2;&#x6570;_7"><a name="&#x53C2;&#x6570;_7" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_7"><a name="&#x8FD4;&#x56DE;&#x503C;_7" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="ossleep"><a name="ossleep" class="anchor-navigation-ex-anchor" href="#ossleep"><i class="fa fa-link" aria-hidden="true"></i></a>3.9. OS_Sleep</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_Sleep</span><span class="hljs-params">(UINT32 nMillisecondes)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_8"><a name="&#x529F;&#x80FD;_8" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x963B;&#x585E;&#x6BEB;&#x79D2;&#x7EA7;&#x5EF6;&#x65F6;</p>
+<h5 id="&#x53C2;&#x6570;_8"><a name="&#x53C2;&#x6570;_8" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>nMillisecondes:&#x963B;&#x585E;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_8"><a name="&#x8FD4;&#x56DE;&#x503C;_8" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x6210;&#x529F;&#xFF08;&#x59CB;&#x7EC8;&#x4E3A;true&#xFF09;</li>
+</ul>
+<hr>
+<h3 id="ossleepus"><a name="ossleepus" class="anchor-navigation-ex-anchor" href="#ossleepus"><i class="fa fa-link" aria-hidden="true"></i></a>3.10. OS_SleepUs</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_SleepUs</span><span class="hljs-params">(UINT32 us)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_9"><a name="&#x529F;&#x80FD;_9" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x963B;&#x585E;&#x5FAE;&#x5999;&#x7EA7;&#x5EF6;&#x65F6;</p>
+<h5 id="&#x53C2;&#x6570;_9"><a name="&#x53C2;&#x6570;_9" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>us: &#x5EF6;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x5FAE;&#x5999;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_9"><a name="&#x8FD4;&#x56DE;&#x503C;_9" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="oswaitevent"><a name="oswaitevent" class="anchor-navigation-ex-anchor" href="#oswaitevent"><i class="fa fa-link" aria-hidden="true"></i></a>3.11. OS_WaitEvent</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_WaitEvent</span><span class="hljs-params">(
+    HANDLE   hTask,
+    PVOID*   pEvent,
+    UINT32   nTimeOut)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_10"><a name="&#x529F;&#x80FD;_10" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x963B;&#x585E;&#x7B49;&#x5F85;&#x4E8B;&#x4EF6;</p>
+<h5 id="&#x53C2;&#x6570;_10"><a name="&#x53C2;&#x6570;_10" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>pEvent:&#x4E8B;&#x4EF6;&#x503C;&#xFF0C;&#x6765;&#x81EA;<code>OS_SendEvent</code>&#x7684;&#x53C2;&#x6570;</li>
+<li>nTimeOut:&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x963B;&#x585E;&#x7B49;&#x5F85;&#xFF0C;&#x5373;&#x503C;&#x5FC5;&#x987B;&#x4E3A;<code>OS_WAIT_FOREVER</code></li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_10"><a name="&#x8FD4;&#x56DE;&#x503C;_10" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x7B49;&#x5F85;&#x5230;&#x4E8B;&#x4EF6;</li>
+</ul>
+<hr>
+<h3 id="ossendevent"><a name="ossendevent" class="anchor-navigation-ex-anchor" href="#ossendevent"><i class="fa fa-link" aria-hidden="true"></i></a>3.12. OS_SendEvent</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_SendEvent</span><span class="hljs-params">(
+    HANDLE hTask,
+    PVOID  pEvent,
+    UINT32 nTimeOut,
+    UINT16 nOption)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_11"><a name="&#x529F;&#x80FD;_11" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5411;&#x67D0;&#x4E2A;&#x4EFB;&#x52A1;&#x53D1;&#x9001;&#x4E8B;&#x4EF6;</p>
+<h5 id="&#x53C2;&#x6570;_11"><a name="&#x53C2;&#x6570;_11" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>pEvent&#xFF1A;&#x4E8B;&#x4EF6;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#xFF08;&#x6307;&#x9488;&#xFF09;</li>
+<li>nTimeOut:&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;&#x963B;&#x585E;&#x7B49;&#x5F85;&#xFF0C;&#x5373;&#x503C;&#x5FC5;&#x987B;&#x4E3A;<code>OS_WAIT_FOREVER</code></li>
+<li>nOption:&#x4E8B;&#x4EF6;&#x9009;&#x9879;&#xFF0C;<code>OS_EVENT_PRI_NORMAL</code>&#xFF1A;&#x666E;&#x901A;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;<code>OS_EVENT_PRI_URGENT</code>:&#x7D27;&#x6025;&#x4F18;&#x5148;&#x7EA7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_11"><a name="&#x8FD4;&#x56DE;&#x503C;_11" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x53D1;&#x9001;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="osreseteventqueue"><a name="osreseteventqueue" class="anchor-navigation-ex-anchor" href="#osreseteventqueue"><i class="fa fa-link" aria-hidden="true"></i></a>3.13. OS_ResetEventQueue</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_ResetEventQueue</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_12"><a name="&#x529F;&#x80FD;_12" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_12"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x91CD;&#x7F6E;&#x4E8B;&#x4EF6;&#x961F;&#x5217;</p>
+<h5 id="&#x53C2;&#x6570;_12"><a name="&#x53C2;&#x6570;_12" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_12"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_12"><a name="&#x8FD4;&#x56DE;&#x503C;_12" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_12"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x91CD;&#x7F6E;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="osiseventavailable"><a name="osiseventavailable" class="anchor-navigation-ex-anchor" href="#osiseventavailable"><i class="fa fa-link" aria-hidden="true"></i></a>3.14. OS_IsEventAvailable</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_IsEventAvailable</span><span class="hljs-params">(
+    HANDLE hTask)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_13"><a name="&#x529F;&#x80FD;_13" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_13"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5224;&#x65AD;&#x67D0;&#x4E2A;&#x4EFB;&#x52A1;&#x662F;&#x5426;&#x6709;&#x4E8B;&#x4EF6;&#x53EF;&#x4EE5;&#x63A5;&#x6536;</p>
+<h5 id="&#x53C2;&#x6570;_13"><a name="&#x53C2;&#x6570;_13" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_13"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateTask</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_13"><a name="&#x8FD4;&#x56DE;&#x503C;_13" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_13"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x6709;&#x4E8B;&#x4EF6;&#x53EF;&#x4EE5;&#x63A5;&#x6536;</li>
+</ul>
+<hr>
+<h3 id="osmalloc"><a name="osmalloc" class="anchor-navigation-ex-anchor" href="#osmalloc"><i class="fa fa-link" aria-hidden="true"></i></a>3.15. OS_Malloc</h3>
+<pre><code class="lang-c"><span class="hljs-function">PVOID <span class="hljs-title">OS_Malloc</span> <span class="hljs-params">(UINT32 nSize)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_14"><a name="&#x529F;&#x80FD;_14" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_14"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x52A8;&#x6001;&#x5206;&#x914D;&#x5185;&#x5B58;</p>
+<h5 id="&#x53C2;&#x6570;_14"><a name="&#x53C2;&#x6570;_14" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_14"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>nSize:&#x52A8;&#x6001;&#x5206;&#x914D;&#x5185;&#x5B58;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x5B57;&#x8282;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_14"><a name="&#x8FD4;&#x56DE;&#x503C;_14" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_14"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x52A8;&#x6001;&#x5206;&#x914D;&#x5185;&#x5B58;&#x5757;&#x7684;&#x9996;&#x5730;&#x5740;&#xFF0C;&#x82E5;&#x5206;&#x914D;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;<code>NULL</code></li>
+</ul>
+<hr>
+<h3 id="osrealloc"><a name="osrealloc" class="anchor-navigation-ex-anchor" href="#osrealloc"><i class="fa fa-link" aria-hidden="true"></i></a>3.16. OS_Realloc</h3>
+<pre><code class="lang-c"><span class="hljs-function">PVOID <span class="hljs-title">OS_Realloc</span><span class="hljs-params">(VOID *ptr, UINT32 nSize)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_15"><a name="&#x529F;&#x80FD;_15" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_15"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x91CD;&#x65B0;&#x5206;&#x914D;&#x5185;&#x5B58;</p>
+<h5 id="&#x53C2;&#x6570;_15"><a name="&#x53C2;&#x6570;_15" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_15"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>ptr:&#x52A8;&#x6001;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x5757;&#x9996;&#x5730;&#x5740;</li>
+<li>nSize:&#x65B0;&#x52A8;&#x6001;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x5757;&#x957F;&#x5EA6;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_15"><a name="&#x8FD4;&#x56DE;&#x503C;_15" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_15"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x5757;&#x9996;&#x5730;&#x5740;&#xFF0C;&#x82E5;&#x4E3A;<code>NULL</code>&#xFF0C;&#x5219;&#x5206;&#x914D;&#x5931;&#x8D25;</li>
+</ul>
+<hr>
+<h3 id="osfree"><a name="osfree" class="anchor-navigation-ex-anchor" href="#osfree"><i class="fa fa-link" aria-hidden="true"></i></a>3.17. OS_Free</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span>  <span class="hljs-title">OS_Free</span>   <span class="hljs-params">(PVOID pMemBlock)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_16"><a name="&#x529F;&#x80FD;_16" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_16"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x91CA;&#x653E;&#x52A8;&#x6001;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;</p>
+<h5 id="&#x53C2;&#x6570;_16"><a name="&#x53C2;&#x6570;_16" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_16"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pMemBlock:&#x52A8;&#x6001;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x5757;&#x9996;&#x5730;&#x5740;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_16"><a name="&#x8FD4;&#x56DE;&#x503C;_16" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_16"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x91CA;&#x653E;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="osgetheapusagestatus"><a name="osgetheapusagestatus" class="anchor-navigation-ex-anchor" href="#osgetheapusagestatus"><i class="fa fa-link" aria-hidden="true"></i></a>3.18. OS_GetHeapUsageStatus</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_GetHeapUsageStatus</span><span class="hljs-params">(OS_Heap_Status_t* pOsHeapStatus)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_17"><a name="&#x529F;&#x80FD;_17" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_17"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x83B7;&#x53D6;&#x5806;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF0C;
+&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7528;OS_Malloc&#x51FD;&#x6570;&#x5206;&#x914D;&#x5C0F;&#x7684;&#x7A7A;&#x95F4;&#x540E;&#xFF08;&#x6BD4;&#x5982;&#x51E0;&#x4E2A;&#x5B57;&#x8282;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x6B64;&#x51FD;&#x6570;&#x83B7;&#x5F97;&#x8FD4;&#x56DE;&#x7684;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x51CF;&#x5C11;&#xFF0C;&#x800C;&#x662F;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;
+&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5185;&#x90E8;&#x4E3A;&#x51CF;&#x5C11;&#x788E;&#x7247;&#x800C;&#x505A;&#x7684;&#x4F18;&#x5316;&#xFF0C;&#x5373;&#x9884;&#x5148;&#x7533;&#x8BF7;&#x4E00;&#x5757;&#x7A7A;&#x95F4;&#xFF08;331280&#x5B57;&#x8282;&#xFF09;&#xFF0C;&#x8FD9;&#x5757;&#x7A7A;&#x95F4;&#x7528;&#x6765;&#x4E3A;&#x4EE5;&#x540E;&#x7533;&#x8BF7;&#x5C0F;&#x7A7A;&#x95F4;&#xFF08;&lt;1k&#xFF09;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x7533;&#x8BF7;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#x4E8E;1k&#x6216;&#x8005;&#x9884;&#x5148;&#x7533;&#x8BF7;&#x7684;&#x7A7A;&#x95F4;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x5B8C;&#x6BD5;&#xFF0C;&#x5219;&#x624D;&#x4F1A;&#x5728;&#x4E3A;&#x7533;&#x8BF7;&#x7684;&#x7A7A;&#x95F4;&#x4E2D;&#x7533;&#x8BF7;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x7528;&#x6B64;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x5927;&#x5C0F;&#x624D;&#x4F1A;&#x53D8;&#x5316;</p>
+<blockquote>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#x5185;&#x90E8;&#x9884;&#x5148;&#x5206;&#x914D;&#x4E86;<code>331280</code>&#x5B57;&#x8282;&#x6765;&#x7ED9;&#x672A;&#x6765;&#x5206;&#x914D;&#x7ED9;&#x5C0F;&#x7A7A;&#x95F4;&#xFF0C;
+&#x8C03;&#x7528;<code>OS_Malloc(n)</code>&#x65F6;&#x5B9E;&#x9645;&#x5206;&#x914D;&#x5982;&#x4E0B;&#x8868;&#xFF0C;&#x6BD4;&#x5982;<code>OS_Malloc(5)</code>&#xFF0C;&#x56E0;&#x4E3A;5&lt;10&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x4F18;&#x5148;&#x67E5;&#x8BE2;&#x7C07;1&#xFF0C;&#x7C07;1&#x4E2D;&#x6709;250&#x5757;&#x5927;&#x5C0F;&#x4E3A;10&#x5B57;&#x8282;&#x7684;&#x9884;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x8FD9;250&#x5757;&#x8FD8;&#x6709;&#x7A7A;&#x95F4;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x5B8C;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x8FD9;&#x91CC;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x5B8C;&#x4E86;&#xFF0C;&#x5219;&#x7EE7;&#x7EED;&#x67E5;&#x627E;&#x7C07;2&#xFF0C;&#x5982;&#x6B64;&#x3002;&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x5B8C;&#x6BD5;&#x7C07;11&#x4ECD;&#x7136;&#x6CA1;&#x6709;&#x5408;&#x9002;&#x7684;&#x7A7A;&#x95F4;&#x5219;&#x4ECE;&#x65B0;&#x7684;&#x7A7A;&#x95F4;&#x4E2D;&#x65B0;&#x5206;&#x914D;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x9891;&#x7E41;&#x5206;&#x914D;&#x5C0F;&#x7A7A;&#x95F4;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x788E;&#x7247;&#x4ECE;&#x800C;&#x6D6A;&#x8D39;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>&#x7C07;&#x7F16;&#x53F7;</th>
+<th>&#x7528;&#x6237;&#x7533;&#x8BF7;&#x5B57;&#x8282;&#x8303;&#x56F4;0&#xFF5E;m(n&lt;m)</th>
+<th>&#x5757;&#x6570;&#x91CF;</th>
+<th>&#x9884;&#x5206;&#x914D;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x7684;&#x7A7A;&#x95F4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>250</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 36*250  &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>24</td>
+<td>250</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 48*250  &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>28</td>
+<td>250</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 52*250  &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>32</td>
+<td>250</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 56*250  &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>52</td>
+<td>250</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 76*250  &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>6</td>
+<td>100</td>
+<td>200</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 124*200 &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>7</td>
+<td>156</td>
+<td>200</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 180*200 &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>8</td>
+<td>200</td>
+<td>20</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 224*20  &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>9</td>
+<td>528</td>
+<td>200</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 552*200 &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>10</td>
+<td>700</td>
+<td>50</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 724*50  &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1024</td>
+<td>50</td>
+<td>&#xFF08;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4E86; 1048*50 &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="&#x53C2;&#x6570;_17"><a name="&#x53C2;&#x6570;_17" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_17"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pOsHeapStatus:&#x5806;&#x4F7F;&#x7528;&#x60C5;&#x51B5;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_17"><a name="&#x8FD4;&#x56DE;&#x503C;_17" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_17"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x83B7;&#x53D6;&#x5806;&#x72B6;&#x6001;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="oscreatesemaphore"><a name="oscreatesemaphore" class="anchor-navigation-ex-anchor" href="#oscreatesemaphore"><i class="fa fa-link" aria-hidden="true"></i></a>3.19. OS_CreateSemaphore</h3>
+<pre><code class="lang-c"><span class="hljs-function">HANDLE <span class="hljs-title">OS_CreateSemaphore</span><span class="hljs-params">(
+    UINT32 nInitCount <span class="hljs-comment">// Specify the initial count of the semaphore</span>
+    )</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_18"><a name="&#x529F;&#x80FD;_18" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_18"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x91CF;</p>
+<h5 id="&#x53C2;&#x6570;_18"><a name="&#x53C2;&#x6570;_18" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_18"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>nInitCount:&#x4FE1;&#x53F7;&#x91CF;&#x521D;&#x59CB;&#x5316;&#x503C;&#xFF0C;0&#x8868;&#x793A;&#x8D44;&#x6E90;&#x88AB;&#x5360;&#x7528;&#xFF0C;n&#x8868;&#x793A;&#x6709;n&#x4E2A;&#x8D44;&#x6E90;&#x503C;&#xFF0C;&#x6BCF;&#x6B21;wait&#x5C06;&#x4F1A;&#x7B49;&#x5F85;&#x8D44;&#x6E90;&#x503C;&#x5E76;&#x51CF;&#x4E00;&#xFF0C;release&#x64CD;&#x4F5C;&#x5C06;&#x4F1A;&#x5C06;&#x8D44;&#x6E90;&#x503C;&#x52A0;&#x4E00;</li>
+</ul>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;_18"><a name="&#x8FD4;&#x56DE;&#x503C;_18" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_18"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h4>
+<ul>
+<li>&#x4FE1;&#x53F7;&#x91CF;&#x53E5;&#x67C4;&#xFF0C;&#x5982;&#x679C;&#x5931;&#x8D25;&#xFF0C;&#x8FD4;&#x56DE;<code>NULL</code></li>
+</ul>
+<hr>
+<h3 id="osdeletesemaphore"><a name="osdeletesemaphore" class="anchor-navigation-ex-anchor" href="#osdeletesemaphore"><i class="fa fa-link" aria-hidden="true"></i></a>3.20. OS_DeleteSemaphore</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_DeleteSemaphore</span><span class="hljs-params">(
+    HANDLE hSem)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_19"><a name="&#x529F;&#x80FD;_19" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_19"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5220;&#x9664;&#x4FE1;&#x53F7;&#x91CF;</p>
+<h5 id="&#x53C2;&#x6570;_19"><a name="&#x53C2;&#x6570;_19" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_19"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hSem:&#x4FE1;&#x53F7;&#x91CF;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateSemaphore</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_19"><a name="&#x8FD4;&#x56DE;&#x503C;_19" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_19"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x4FE1;&#x53F7;&#x91CF;&#x662F;&#x5426;&#x5220;&#x9664;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="oswaitforsemaphore"><a name="oswaitforsemaphore" class="anchor-navigation-ex-anchor" href="#oswaitforsemaphore"><i class="fa fa-link" aria-hidden="true"></i></a>3.21. OS_WaitForSemaphore</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_WaitForSemaphore</span><span class="hljs-params">(
+    HANDLE hSem,    <span class="hljs-comment">// Specify the handle to a counting semaphore</span>
+    UINT32 nTimeOut <span class="hljs-comment">// the time-out value</span>
+    )</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_20"><a name="&#x529F;&#x80FD;_20" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_20"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x7B49;&#x5F85;&#x4FE1;&#x53F7;&#x91CF;&#x77E5;&#x9053;&#x8D44;&#x6E90;&#x503C;&#x5927;&#x4E8E;0&#xFF0C;&#x5E76;&#x5C06;&#x8D44;&#x6E90;&#x503C;&#x51CF;&#x4E00;</p>
+<h5 id="&#x53C2;&#x6570;_20"><a name="&#x53C2;&#x6570;_20" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_20"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hSem:&#x4FE1;&#x53F7;&#x91CF;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateSemaphore</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>nTimeOut:&#x8D85;&#x65F6;&#x503C;&#xFF0C;&#x6682;&#x65F6;&#x4FDD;&#x7559;&#xFF0C;&#x5373;&#x503C;&#x4E3A;<code>OS_WAIT_FOREVER</code></li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_20"><a name="&#x8FD4;&#x56DE;&#x503C;_20" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_20"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x6210;&#x529F;&#x83B7;&#x53D6;&#x5230;&#x4FE1;&#x53F7;&#x91CF;&#xFF08;&#x8D44;&#x6E90;&#x503C;&#xFF09;</li>
+</ul>
+<hr>
+<h3 id="osreleasesemaphore"><a name="osreleasesemaphore" class="anchor-navigation-ex-anchor" href="#osreleasesemaphore"><i class="fa fa-link" aria-hidden="true"></i></a>3.22. OS_ReleaseSemaphore</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_ReleaseSemaphore</span><span class="hljs-params">(
+    HANDLE hSem <span class="hljs-comment">//Specify the counting semaphore</span>
+    )</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_21"><a name="&#x529F;&#x80FD;_21" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_21"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x91CA;&#x653E;&#x4FE1;&#x53F7;&#x91CF;&#xFF0C;&#x5373;&#x8D44;&#x6E90;&#x503C;&#x52A0;&#x4E00;</p>
+<h5 id="&#x53C2;&#x6570;_21"><a name="&#x53C2;&#x6570;_21" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_21"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hSem:&#x4FE1;&#x53F7;&#x91CF;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateSemaphore</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_21"><a name="&#x8FD4;&#x56DE;&#x503C;_21" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_21"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x91CA;&#x653E;&#x4FE1;&#x53F7;&#x91CF;&#xFF08;&#x8D44;&#x6E90;&#x503C;&#xFF09;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="oscreatemutex"><a name="oscreatemutex" class="anchor-navigation-ex-anchor" href="#oscreatemutex"><i class="fa fa-link" aria-hidden="true"></i></a>3.23. OS_CreateMutex</h3>
+<pre><code class="lang-c"><span class="hljs-function">HANDLE <span class="hljs-title">OS_CreateMutex</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_22"><a name="&#x529F;&#x80FD;_22" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_22"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E92;&#x65A5;&#x91CF;</p>
+<h5 id="&#x53C2;&#x6570;_22"><a name="&#x53C2;&#x6570;_22" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_22"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<p>&#x65E0;</p>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_22"><a name="&#x8FD4;&#x56DE;&#x503C;_22" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_22"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x4E92;&#x65A5;&#x91CF;&#x53E5;&#x67C4;&#xFF0C;&#x5982;&#x679C;&#x5931;&#x8D25;&#xFF0C;&#x8FD4;&#x56DE;<code>NULL</code></li>
+</ul>
+<hr>
+<h3 id="osdeletemutex"><a name="osdeletemutex" class="anchor-navigation-ex-anchor" href="#osdeletemutex"><i class="fa fa-link" aria-hidden="true"></i></a>3.24. OS_DeleteMutex</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_DeleteMutex</span><span class="hljs-params">(HANDLE mutex)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_23"><a name="&#x529F;&#x80FD;_23" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_23"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5220;&#x9664;&#x4E92;&#x65A5;&#x91CF;</p>
+<h5 id="&#x53C2;&#x6570;_23"><a name="&#x53C2;&#x6570;_23" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_23"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>mutex:&#x4E92;&#x65A5;&#x91CF;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateMutex</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_23"><a name="&#x8FD4;&#x56DE;&#x503C;_23" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_23"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="oslockmutex"><a name="oslockmutex" class="anchor-navigation-ex-anchor" href="#oslockmutex"><i class="fa fa-link" aria-hidden="true"></i></a>3.25. OS_LockMutex</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_LockMutex</span><span class="hljs-params">(HANDLE mutex)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_24"><a name="&#x529F;&#x80FD;_24" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_24"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x9501;&#x4E92;&#x65A5;&#x91CF;&#xFF0C;&#x5373;&#x5360;&#x7528;&#x8D44;&#x6E90;</p>
+<h5 id="&#x53C2;&#x6570;_24"><a name="&#x53C2;&#x6570;_24" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_24"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>mutex:&#x4E92;&#x65A5;&#x91CF;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateMutex</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_24"><a name="&#x8FD4;&#x56DE;&#x503C;_24" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_24"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="osunlockmutex"><a name="osunlockmutex" class="anchor-navigation-ex-anchor" href="#osunlockmutex"><i class="fa fa-link" aria-hidden="true"></i></a>3.26. OS_UnlockMutex</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OS_UnlockMutex</span><span class="hljs-params">(HANDLE mutex)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_25"><a name="&#x529F;&#x80FD;_25" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_25"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x91CA;&#x653E;&#x4E92;&#x65A5;&#x91CF;&#xFF0C;&#x5373;&#x91CA;&#x653E;&#x8D44;&#x6E90;</p>
+<h5 id="&#x53C2;&#x6570;_25"><a name="&#x53C2;&#x6570;_25" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_25"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>mutex:&#x4E92;&#x65A5;&#x91CF;&#x53E5;&#x67C4;&#xFF0C;<code>OS_CreateMutex</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_25"><a name="&#x8FD4;&#x56DE;&#x503C;_25" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_25"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="oscallbackfunct"><a name="oscallbackfunct" class="anchor-navigation-ex-anchor" href="#oscallbackfunct"><i class="fa fa-link" aria-hidden="true"></i></a>3.27. OS_CALLBACK_FUNC_T</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*OS_CALLBACK_FUNC_T)</span><span class="hljs-params">(<span class="hljs-keyword">void</span>* param)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_26"><a name="&#x529F;&#x80FD;_26" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_26"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x7531;&#x7528;&#x6237;&#x5B9A;&#x4E49;</p>
+<h5 id="&#x53C2;&#x6570;_26"><a name="&#x53C2;&#x6570;_26" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_26"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>param&#xFF1A;&#x7528;&#x6237;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_26"><a name="&#x8FD4;&#x56DE;&#x503C;_26" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_26"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="osstartcallbacktimer"><a name="osstartcallbacktimer" class="anchor-navigation-ex-anchor" href="#osstartcallbacktimer"><i class="fa fa-link" aria-hidden="true"></i></a>3.28. OS_StartCallbackTimer</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_StartCallbackTimer</span><span class="hljs-params">(HANDLE hTask, UINT32 ms, OS_CALLBACK_FUNC_T callback, <span class="hljs-keyword">void</span>* param)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_27"><a name="&#x529F;&#x80FD;_27" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_27"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5F00;&#x59CB;&#x8F6F;&#x4EF6;&#x8BA1;&#x65F6;&#x5668;&#xFF0C;&#x8BBE;&#x5B9A;&#x65F6;&#x95F4;&#x5230;&#x4E86;&#x540E;&#x4F1A;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h5 id="&#x53C2;&#x6570;_27"><a name="&#x53C2;&#x6570;_27" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_27"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;&#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x4EFB;&#x52A1;&#x91CC;&#x5FC5;&#x987B;&#x5305;&#x542B;<code>OS_WaitEvent</code>&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF08;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x4F20;&#x4E3B;&#x4EFB;&#x52A1;&#xFF09;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x56DE;&#x8C03;</li>
+<li>ms&#xFF1A;&#x5B9A;&#x65F6;&#x65F6;&#x95F4;</li>
+<li>callback&#xFF1A;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>param&#xFF1A;&#x4F20;&#x5165;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_27"><a name="&#x8FD4;&#x56DE;&#x503C;_27" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_27"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x521B;&#x5EFA;&#x5B9A;&#x65F6;&#x5668;&#x662F;&#x5426;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="osstopcallbacktimer"><a name="osstopcallbacktimer" class="anchor-navigation-ex-anchor" href="#osstopcallbacktimer"><i class="fa fa-link" aria-hidden="true"></i></a>3.29. OS_StopCallbackTimer</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">OS_StopCallbackTimer</span><span class="hljs-params">(HANDLE hTask, OS_CALLBACK_FUNC_T callback, <span class="hljs-keyword">void</span> *param)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_28"><a name="&#x529F;&#x80FD;_28" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_28"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x505C;&#x6B62;&#x8F6F;&#x4EF6;&#x8BA1;&#x65F6;&#x5668;</p>
+<h5 id="&#x53C2;&#x6570;_28"><a name="&#x53C2;&#x6570;_28" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_28"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;&#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x4EFB;&#x52A1;&#x91CC;&#x5FC5;&#x987B;&#x5305;&#x542B;<code>OS_WaitEvent</code>&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF08;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x4F20;&#x4E3B;&#x4EFB;&#x52A1;&#xFF09;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x56DE;&#x8C03;</li>
+<li>callback&#xFF1A;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>param&#xFF1A;&#x4F20;&#x5165;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_28"><a name="&#x8FD4;&#x56DE;&#x503C;_28" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_28"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x505C;&#x6B62;&#x5B9A;&#x65F6;&#x5668;&#x662F;&#x5426;&#x6210;&#x529F;</li>
+</ul>
+<hr>
+<h3 id="osquerycallbacktimer"><a name="osquerycallbacktimer" class="anchor-navigation-ex-anchor" href="#osquerycallbacktimer"><i class="fa fa-link" aria-hidden="true"></i></a>3.30. OS_QueryCallbackTimer</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">uint32_t</span> OS_QueryCallbackTimer(HANDLE hTask, OS_CALLBACK_FUNC_T callback, <span class="hljs-keyword">void</span> *param);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_29"><a name="&#x529F;&#x80FD;_29" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_29"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x67E5;&#x8BE2;&#x8F6F;&#x4EF6;&#x8BA1;&#x65F6;&#x5668;&#x8FD8;&#x5269;&#x591A;&#x5C11;&#x65F6;&#x95F4;&#x7ED3;&#x675F;</p>
+<h5 id="&#x53C2;&#x6570;_29"><a name="&#x53C2;&#x6570;_29" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_29"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>hTask:&#x4EFB;&#x52A1;&#x53E5;&#x67C4;&#xFF0C;&#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x4EFB;&#x52A1;&#x91CC;&#x5FC5;&#x987B;&#x5305;&#x542B;<code>OS_WaitEvent</code>&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF08;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x4F20;&#x4E3B;&#x4EFB;&#x52A1;&#xFF09;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x56DE;&#x8C03;</li>
+<li>callback&#xFF1A;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>param&#xFF1A;&#x4F20;&#x5165;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_29"><a name="&#x8FD4;&#x56DE;&#x503C;_29" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_29"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x5B9A;&#x65F6;&#x5668;&#x79BB;&#x7ED3;&#x675F;&#x5269;&#x4F59;&#x7684;&#x65F6;&#x95F4;</li>
+</ul>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="uart.html" class="navigation navigation-prev " aria-label="Previous page: UART">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="imei.html" class="navigation navigation-next " aria-label="Next page: IMEI">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"OS","level":"4.8.4","depth":2,"next":{"title":"IMEI","level":"4.8.5","depth":2,"path":"c-sdk/gong-neng-ji-api/imei.md","ref":"c-sdk/gong-neng-ji-api/imei.md","articles":[]},"previous":{"title":"UART","level":"4.8.3","depth":2,"path":"c-sdk/gong-neng-ji-api/uart.md","ref":"c-sdk/gong-neng-ji-api/uart.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga","toggle-chapters"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"English","text":"English","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["weibo","facebook","twitter","google","instapaper","vk"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"zh-hans","gitbook":"*","description":"GPRS C SDK 文档"},"file":{"path":"c-sdk/gong-neng-ji-api/os.md","mtime":"2018-12-26T09:37:35.981Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T09:38:38.959Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,822 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Code Style · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="function-api.html" />
+    
+    
+    <link rel="prev" href="first-code.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">introduces</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../hardware/a9.html">
+            
+                <a href="../hardware/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../hardware/a9g.html">
+            
+                <a href="../hardware/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../hardware/pudding-dev-board.html">
+            
+                <a href="../hardware/pudding-dev-board.html">
+            
+                    
+                    pudding dev board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../hardware/usb-uart-module.html">
+            
+                <a href="../hardware/usb-uart-module.html">
+            
+                    
+                    USB-UART module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../hardware/sim-card.html">
+            
+                <a href="../hardware/sim-card.html">
+            
+                    
+                    SIM Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Knowledge</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../basic-knowledge/gsmgprs.html">
+            
+                <a href="../basic-knowledge/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../basic-knowledge/gps.html">
+            
+                <a href="../basic-knowledge/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="installation_linux.html">
+            
+                <a href="installation_linux.html">
+            
+                    
+                    Installation Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="installation_docker.html">
+            
+                <a href="installation_docker.html">
+            
+                    
+                    Installation Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="burn-debug.html">
+            
+                <a href="burn-debug.html">
+            
+                    
+                    Burn & Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="first-code.html">
+            
+                <a href="first-code.html">
+            
+                    
+                    First Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.6" data-path="code-style.html">
+            
+                <a href="code-style.html">
+            
+                    
+                    Code Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="function-api.html">
+            
+                <a href="function-api.html">
+            
+                    
+                    Function & API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="function-api/gpio.html">
+            
+                <a href="function-api/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="function-api/adc.html">
+            
+                <a href="function-api/adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="function-api/uart.html">
+            
+                <a href="function-api/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.4" data-path="function-api/os.html">
+            
+                <a href="function-api/os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" data-path="function-api/imei.html">
+            
+                <a href="function-api/imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" data-path="function-api/iccid.html">
+            
+                <a href="function-api/iccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" data-path="function-api/gps.html">
+            
+                <a href="function-api/gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.8" data-path="function-api/iic.html">
+            
+                <a href="function-api/iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.9" data-path="function-api/spi.html">
+            
+                <a href="function-api/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.10" data-path="function-api/timertc.html">
+            
+                <a href="function-api/timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.11" data-path="function-api/file-system.html">
+            
+                <a href="function-api/file-system.html">
+            
+                    
+                    FS(Flash/TF Card)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.12" data-path="function-api/gprs-network.html">
+            
+                <a href="function-api/gprs-network.html">
+            
+                    
+                    GPRS Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.13" data-path="function-api/dns.html">
+            
+                <a href="function-api/dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.14" data-path="function-api/socket.html">
+            
+                <a href="function-api/socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.15" data-path="function-api/ssl-tls.html">
+            
+                <a href="function-api/ssl-tls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.16" data-path="function-api/mqtt.html">
+            
+                <a href="function-api/mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.17" data-path="function-api/power-manager.html">
+            
+                <a href="function-api/power-manager.html">
+            
+                    
+                    Power Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.18" data-path="function-api/call.html">
+            
+                <a href="function-api/call.html">
+            
+                    
+                    Call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.19" data-path="function-api/sms.html">
+            
+                <a href="function-api/sms.html">
+            
+                    
+                    SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.20" data-path="function-api/fota.html">
+            
+                <a href="function-api/fota.html">
+            
+                    
+                    FOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.21" data-path="function-api/lbs.html">
+            
+                <a href="function-api/lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.22" data-path="function-api/gizwits.html">
+            
+                <a href="function-api/gizwits.html">
+            
+                    
+                    Gizwits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Code Style</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#code-style-and-directory-structure"><b> </b>Code Style And Directory Structure</a></li><ul><li><span class="title-icon "></span><a href="#directory-structure"><b>1. </b>Directory Structure</a></li><li><span class="title-icon "></span><a href="#coding-style"><b>2. </b>Coding Style</a></li><ul><li><span class="title-icon "></span><a href="#function-naming"><b>2.1. </b>Function naming</a></li><li><span class="title-icon "></span><a href="#variable-naming"><b>2.2. </b>Variable naming</a></li><li><span class="title-icon "></span><a href="#macro-definition"><b>2.3. </b>Macro definition</a></li><li><span class="title-icon "></span><a href="#file-encoding-format"><b>2.4. </b>File Encoding Format</a></li><li><span class="title-icon "></span><a href="#tab-or-space"><b>2.5. </b>Tab Or Space</a></li><li><span class="title-icon "></span><a href="#word-abbreviation"><b>2.6. </b>Word abbreviation</a></li><li><span class="title-icon "></span><a href="#comment"><b>2.7. </b>Comment</a></li></ul></ul></ul></div><a href="#code-style-and-directory-structure" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="code-style-and-directory-structure"><a name="code-style-and-directory-structure" class="anchor-navigation-ex-anchor" href="#code-style-and-directory-structure"><i class="fa fa-link" aria-hidden="true"></i></a> Code Style And Directory Structure</h1>
+<h2 id="directory-structure"><a name="directory-structure" class="anchor-navigation-ex-anchor" href="#directory-structure"><i class="fa fa-link" aria-hidden="true"></i></a>1. Directory Structure</h2>
+<p>It is composed mainly of the following folders:</p>
+<ul>
+<li>app: user app folder</li>
+<li>demo: examples</li>
+<li>include: header files</li>
+<li>init: initilize code, do not edit</li>
+<li>platform: lib files</li>
+</ul>
+<p>You can find API in <code>include</code> folder, and examples in <code>demo</code> folder.</p>
+<p>All the event and it&apos;s parameters description from lower system can be find in <code>api_event.h</code></p>
+<h2 id="coding-style"><a name="coding-style" class="anchor-navigation-ex-anchor" href="#coding-style"><i class="fa fa-link" aria-hidden="true"></i></a>2. Coding Style</h2>
+<p>A unified code style and convenient reading is very important for any code, each person&apos;s code style is different, but many people must have a unified style when developing the same project, and a simple and clean code will make the code more smooth and easy.</p>
+<p>CSDK uses a unified code style to briefly summarize the following points:</p>
+<h3 id="function-naming"><a name="function-naming" class="anchor-navigation-ex-anchor" href="#function-naming"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. Function naming</h3>
+<p>Module API uses a <code>&quot;upper case function module name&quot;+&quot;_&quot;+&quot;Upper Camel Case&quot;</code>,&quot; such as <code>AUDIO_MicOpen</code>, <code>SSL_Init</code>; the ordinary function is named with <code>Upper-Camel-Case</code>, such as <code>EventDispatch</code>.</p>
+<blockquote>
+<p>entry function is special, use the folder name _Main<code>, for example,</code>imei_Main`.</p>
+</blockquote>
+<h3 id="variable-naming"><a name="variable-naming" class="anchor-navigation-ex-anchor" href="#variable-naming"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. Variable naming</h3>
+<p>Lower camel case, e.g.:<code>int ballNumber;</code></p>
+<h3 id="macro-definition"><a name="macro-definition" class="anchor-navigation-ex-anchor" href="#macro-definition"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. Macro definition</h3>
+<p>Upper case with&quot;<code>_</code>&quot;, e.g.: <code>#define BUFFER_MAX_LENGTH 10</code></p>
+<h3 id="file-encoding-format"><a name="file-encoding-format" class="anchor-navigation-ex-anchor" href="#file-encoding-format"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. File Encoding Format</h3>
+<p>File use <code>UTF-8</code> with no BOM format</p>
+<h3 id="tab-or-space"><a name="tab-or-space" class="anchor-navigation-ex-anchor" href="#tab-or-space"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. Tab Or Space</h3>
+<p>Use 4 space instead of <kbd>tab</kbd></p>
+<h3 id="word-abbreviation"><a name="word-abbreviation" class="anchor-navigation-ex-anchor" href="#word-abbreviation"><i class="fa fa-link" aria-hidden="true"></i></a>2.6. Word abbreviation</h3>
+<ul>
+<li><p>use acronyms for some well-known words in the industry, such as <code>src</code>, <code>tmp</code>,<code>addr</code>, etc.</p>
+</li>
+<li><p>in addition to this, in order to ensure the readability of the code, be sure to use the full name, especially some professional terms, to make the person without contact with the word search the meaning of the word through the search engine.</p>
+</li>
+</ul>
+<p>For example, <code>NetworkLocation</code>, if abbreviated to <code>NL</code>, <code>NetLo</code>, believe that even people who are very familiar with the word have to look at the context of the code to get the meaning of it slowly! If you search these abbreviations on the Internet, you never get <code>NetworkLocation</code>!</p>
+<p><strong>so, in order to make the code more concise and easy to read, it is not necessarily to make the code words abbreviated to a simpler form, but the opposite is that the full-name words are often more readable.</strong></p>
+<p>In addition, some words need to be interpreted and appropriate comments should be made.</p>
+<h3 id="comment"><a name="comment" class="anchor-navigation-ex-anchor" href="#comment"><i class="fa fa-link" aria-hidden="true"></i></a>2.7. Comment</h3>
+<p>annotations can be used with / <em> </em> / \ &quot;or / / \&quot; to annotate, and invalid code should be used as / (<em> </em> / \ &quot;notes) as far as possible.</p>
+<ul>
+<li><p>User <code>/**/</code> or <code>//</code> to comment code, and invalid code should be comment with <code>/**/</code> as far as possible.</p>
+</li>
+<li><p>If we want some comment added to auto generated documentation, use:</p>
+</li>
+</ul>
+<pre><code>//////////////
+///comment here
+//////////////
+</code></pre><p>of</p>
+<pre><code>/**
+  *comment here
+  *
+  */
+</code></pre><ul>
+<li>And add some infomation to file or function, e.g. file:</li>
+</ul>
+<pre><code>/**
+  *@file header.h
+  *@author nick name
+  */
+</code></pre><p>or function</p>
+<pre><code>/**
+  *@brief brief, @brief can be omitted
+  *@param a parameter a
+  *@param b parameter b
+  *@return  return sum
+  */
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="first-code.html" class="navigation navigation-prev " aria-label="Previous page: First Code">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="function-api.html" class="navigation navigation-next " aria-label="Next page: Function & API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Code Style","level":"4.6","depth":1,"next":{"title":"Function & API","level":"4.7","depth":1,"path":"c-sdk/function-api.md","ref":"c-sdk/function-api.md","articles":[{"title":"GPIO","level":"4.7.1","depth":2,"path":"c-sdk/function-api/gpio.md","ref":"c-sdk/function-api/gpio.md","articles":[]},{"title":"ADC","level":"4.7.2","depth":2,"path":"c-sdk/function-api/adc.md","ref":"c-sdk/function-api/adc.md","articles":[]},{"title":"UART","level":"4.7.3","depth":2,"path":"c-sdk/function-api/uart.md","ref":"c-sdk/function-api/uart.md","articles":[]},{"title":"OS","level":"4.7.4","depth":2,"path":"c-sdk/function-api/os.md","ref":"c-sdk/function-api/os.md","articles":[]},{"title":"IMEI","level":"4.7.5","depth":2,"path":"c-sdk/function-api/imei.md","ref":"c-sdk/function-api/imei.md","articles":[]},{"title":"ICCID","level":"4.7.6","depth":2,"path":"c-sdk/function-api/iccid.md","ref":"c-sdk/function-api/iccid.md","articles":[]},{"title":"GPS","level":"4.7.7","depth":2,"path":"c-sdk/function-api/gps.md","ref":"c-sdk/function-api/gps.md","articles":[]},{"title":"I2C","level":"4.7.8","depth":2,"path":"c-sdk/function-api/iic.md","ref":"c-sdk/function-api/iic.md","articles":[]},{"title":"SPI","level":"4.7.9","depth":2,"path":"c-sdk/function-api/spi.md","ref":"c-sdk/function-api/spi.md","articles":[]},{"title":"time(RTC)","level":"4.7.10","depth":2,"path":"c-sdk/function-api/timertc.md","ref":"c-sdk/function-api/timertc.md","articles":[]},{"title":"FS(Flash/TF Card)","level":"4.7.11","depth":2,"path":"c-sdk/function-api/file-system.md","ref":"c-sdk/function-api/file-system.md","articles":[]},{"title":"GPRS Network","level":"4.7.12","depth":2,"path":"c-sdk/function-api/gprs-network.md","ref":"c-sdk/function-api/gprs-network.md","articles":[]},{"title":"DNS","level":"4.7.13","depth":2,"path":"c-sdk/function-api/dns.md","ref":"c-sdk/function-api/dns.md","articles":[]},{"title":"Socket","level":"4.7.14","depth":2,"path":"c-sdk/function-api/socket.md","ref":"c-sdk/function-api/socket.md","articles":[]},{"title":"SSL/TLS","level":"4.7.15","depth":2,"path":"c-sdk/function-api/ssl-tls.md","ref":"c-sdk/function-api/ssl-tls.md","articles":[]},{"title":"MQTT","level":"4.7.16","depth":2,"path":"c-sdk/function-api/mqtt.md","ref":"c-sdk/function-api/mqtt.md","articles":[]},{"title":"Power Manager","level":"4.7.17","depth":2,"path":"c-sdk/function-api/power-manager.md","ref":"c-sdk/function-api/power-manager.md","articles":[]},{"title":"Call","level":"4.7.18","depth":2,"path":"c-sdk/function-api/call.md","ref":"c-sdk/function-api/call.md","articles":[]},{"title":"SMS","level":"4.7.19","depth":2,"path":"c-sdk/function-api/sms.md","ref":"c-sdk/function-api/sms.md","articles":[]},{"title":"FOTA","level":"4.7.20","depth":2,"path":"c-sdk/function-api/fota.md","ref":"c-sdk/function-api/fota.md","articles":[]},{"title":"LBS","level":"4.7.21","depth":2,"path":"c-sdk/function-api/lbs.md","ref":"c-sdk/function-api/lbs.md","articles":[]},{"title":"Gizwits","level":"4.7.22","depth":2,"path":"c-sdk/function-api/gizwits.md","ref":"c-sdk/function-api/gizwits.md","articles":[]}]},"previous":{"title":"First Code","level":"4.5","depth":1,"path":"c-sdk/first-code.md","ref":"c-sdk/first-code.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"中文","text":"中文","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["facebook","twitter","google","instapaper","vk","weibo"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"en","gitbook":"*","description":"GPRS C SDK documention"},"file":{"path":"c-sdk/code-style.md","mtime":"2018-12-11T02:48:24.970Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T02:49:35.562Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

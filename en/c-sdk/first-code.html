@@ -1,0 +1,919 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>First Code · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="code-style.html" />
+    
+    
+    <link rel="prev" href="burn-debug.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">introduces</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../hardware/a9.html">
+            
+                <a href="../hardware/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../hardware/a9g.html">
+            
+                <a href="../hardware/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../hardware/pudding-dev-board.html">
+            
+                <a href="../hardware/pudding-dev-board.html">
+            
+                    
+                    pudding dev board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../hardware/usb-uart-module.html">
+            
+                <a href="../hardware/usb-uart-module.html">
+            
+                    
+                    USB-UART module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../hardware/sim-card.html">
+            
+                <a href="../hardware/sim-card.html">
+            
+                    
+                    SIM Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Knowledge</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../basic-knowledge/gsmgprs.html">
+            
+                <a href="../basic-knowledge/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../basic-knowledge/gps.html">
+            
+                <a href="../basic-knowledge/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="installation_linux.html">
+            
+                <a href="installation_linux.html">
+            
+                    
+                    Installation Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="installation_docker.html">
+            
+                <a href="installation_docker.html">
+            
+                    
+                    Installation Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="burn-debug.html">
+            
+                <a href="burn-debug.html">
+            
+                    
+                    Burn & Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.5" data-path="first-code.html">
+            
+                <a href="first-code.html">
+            
+                    
+                    First Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="code-style.html">
+            
+                <a href="code-style.html">
+            
+                    
+                    Code Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="function-api.html">
+            
+                <a href="function-api.html">
+            
+                    
+                    Function & API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="function-api/gpio.html">
+            
+                <a href="function-api/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="function-api/adc.html">
+            
+                <a href="function-api/adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="function-api/uart.html">
+            
+                <a href="function-api/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.4" data-path="function-api/os.html">
+            
+                <a href="function-api/os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" data-path="function-api/imei.html">
+            
+                <a href="function-api/imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" data-path="function-api/iccid.html">
+            
+                <a href="function-api/iccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" data-path="function-api/gps.html">
+            
+                <a href="function-api/gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.8" data-path="function-api/iic.html">
+            
+                <a href="function-api/iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.9" data-path="function-api/spi.html">
+            
+                <a href="function-api/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.10" data-path="function-api/timertc.html">
+            
+                <a href="function-api/timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.11" data-path="function-api/file-system.html">
+            
+                <a href="function-api/file-system.html">
+            
+                    
+                    FS(Flash/TF Card)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.12" data-path="function-api/gprs-network.html">
+            
+                <a href="function-api/gprs-network.html">
+            
+                    
+                    GPRS Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.13" data-path="function-api/dns.html">
+            
+                <a href="function-api/dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.14" data-path="function-api/socket.html">
+            
+                <a href="function-api/socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.15" data-path="function-api/ssl-tls.html">
+            
+                <a href="function-api/ssl-tls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.16" data-path="function-api/mqtt.html">
+            
+                <a href="function-api/mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.17" data-path="function-api/power-manager.html">
+            
+                <a href="function-api/power-manager.html">
+            
+                    
+                    Power Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.18" data-path="function-api/call.html">
+            
+                <a href="function-api/call.html">
+            
+                    
+                    Call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.19" data-path="function-api/sms.html">
+            
+                <a href="function-api/sms.html">
+            
+                    
+                    SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.20" data-path="function-api/fota.html">
+            
+                <a href="function-api/fota.html">
+            
+                    
+                    FOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.21" data-path="function-api/lbs.html">
+            
+                <a href="function-api/lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.22" data-path="function-api/gizwits.html">
+            
+                <a href="function-api/gizwits.html">
+            
+                    
+                    Gizwits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >First Code</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#start-my-first-code"><b> </b>Start My First Code</a></li><ul><li><span class="title-icon "></span><a href="#contents"><b>1. </b>Contents</a></li><li><span class="title-icon "></span><a href="#setting-up-folders-and-files"><b>2. </b>Setting up folders and files</a></li><li><span class="title-icon "></span><a href="#code"><b>3. </b>Code</a></li><ul><li><span class="title-icon "></span><a href="#entrance-and-main-task"><b>3.1. </b>Entrance and main task</a></li><li><span class="title-icon "></span><a href="#primary-task-processing-and-printing-tasks"><b>3.2. </b>Primary task processing and printing tasks</a></li></ul><li><span class="title-icon "></span><a href="#compiling-and-downloading-firmware-to-verify"><b>4. </b>Compiling and downloading firmware to verify</a></li></ul></ul></div><a href="#start-my-first-code" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="start-my-first-code"><a name="start-my-first-code" class="anchor-navigation-ex-anchor" href="#start-my-first-code"><i class="fa fa-link" aria-hidden="true"></i></a> Start My First Code</h1>
+<p>To ensure that you can compile code, Download firmware to GPRS module / development board, then we can begin our first code ~ ~</p>
+<p>The following code can be found in the <a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/tree/master/demo/first" target="_blank"><code>demo/first</code></a> directory </p>
+<p>Let&apos;s code from <code>Hello word</code></p>
+<p>So our goal: a complete code structure, and can print <code>Hello GPRS</code> continuously.</p>
+<h2 id="contents"><a name="contents" class="anchor-navigation-ex-anchor" href="#contents"><i class="fa fa-link" aria-hidden="true"></i></a>1. Contents</h2>
+<table>
+<thead>
+<tr>
+<th>Contents</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app</td>
+<td>application code here</td>
+</tr>
+<tr>
+<td>build</td>
+<td>build files</td>
+</tr>
+<tr>
+<td>demo</td>
+<td>examples</td>
+</tr>
+<tr>
+<td>doc</td>
+<td>SDK-related documentation</td>
+</tr>
+<tr>
+<td>hex</td>
+<td>last generated burnable file(burn files)</td>
+</tr>
+<tr>
+<td>include</td>
+<td>SDK api include directory</td>
+</tr>
+<tr>
+<td>init</td>
+<td>system initialization directory, you can ignore, do not recommend edit</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>lib files</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setting-up-folders-and-files"><a name="setting-up-folders-and-files" class="anchor-navigation-ex-anchor" href="#setting-up-folders-and-files"><i class="fa fa-link" aria-hidden="true"></i></a>2. Setting up folders and files</h2>
+<ul>
+<li>Create a new <code>demo/fisrt</code> folder and create a new <code>Makefile</code> file</li>
+</ul>
+<p>Fill in the following contents:</p>
+<pre><code class="lang-c"><span class="hljs-meta"># Name of the module</span>
+LOCAL_NAME := demo/first
+
+<span class="hljs-meta"># List of submodules which contain code we need to <span class="hljs-meta-keyword">include</span> in the final lib</span>
+LOCAL_API_DEPENDS := \
+
+LOCAL_ADD_INCLUDE := include\
+                     include/std_inc \
+                     include/api_inc \
+
+
+<span class="hljs-meta"># Set this to any non-null string to signal a module which </span>
+<span class="hljs-meta"># generates a binary </span>
+IS_ENTRY_POINT := no
+
+<span class="hljs-meta">## ------------------------------------ ##</span>
+<span class="hljs-meta">##     Add your custom flags here          ##</span>
+<span class="hljs-meta">## ------------------------------------ ##</span>
+MYCFLAGS += 
+
+<span class="hljs-meta">## ------------------------------------- ##</span>
+<span class="hljs-meta">##    List all your sources here           ##</span>
+<span class="hljs-meta">## ------------------------------------- ##</span>
+C_SRC := ${notdir ${wildcard src<span class="hljs-comment">/*.c}}
+
+## ------------------------------------- ##
+##  Do Not touch below this line         ##
+## ------------------------------------- ##
+include ${SOFT_WORKDIR}/platform/compilation/cust_rules.mk
+</span></code></pre>
+<p><code>LOCAL_NAME := demo/first</code> is folder path,<code>LOCAL_ADD_INCLUDE</code> is header path</p>
+<ul>
+<li>setting up <code>demo/first/src</code> folder and set up <code>demo_first.c</code> file</li>
+</ul>
+<h2 id="code"><a name="code" class="anchor-navigation-ex-anchor" href="#code"><i class="fa fa-link" aria-hidden="true"></i></a>3. Code</h2>
+<p>Code can be find in <code>demo/first/src/demo_first.c</code></p>
+<p>The main thing to do is to write the program entry and create the main task to receive events from the bottom, and to create a task and print information continuously.</p>
+<h3 id="entrance-and-main-task"><a name="entrance-and-main-task" class="anchor-navigation-ex-anchor" href="#entrance-and-main-task"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. Entrance and main task</h3>
+<p>Program entry, create the main task </p>
+<pre><code class="lang-c">
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stdbool.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;stdint.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;api_os.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;api_debug.h&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;api_event.h&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAIN_TASK_STACK_SIZE    (2048 * 2)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAIN_TASK_PRIORITY      0</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAIN_TASK_NAME          <span class="hljs-string">&quot;Main Test Task&quot;</span></span>
+
+<span class="hljs-keyword">static</span> HANDLE mainTaskHandle = <span class="hljs-literal">NULL</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">first_Main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    mainTaskHandle = OS_CreateTask(MainTask,
+        <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>, MAIN_TASK_STACK_SIZE, MAIN_TASK_PRIORITY, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, MAIN_TASK_NAME);
+    OS_SetUserMainHandle(&amp;mainTaskHandle);
+}
+</code></pre>
+<p><code>void first_Main(void)</code> is the main entrance,no parameters and no return value,&#xFF0C;The left side of the underline <strong>must be</strong> the name of the folder, here is &quot;first&quot;, the right of the underline <strong>must be</strong> &quot;Main&quot;.</p>
+<p>Call <code>OS_CreateTask</code> to create a task. The meaning of the specific parameters can be seen in the OS part. Call <code>OS_SetUserMainHandle</code> to pass the newly created task pointer(Handler) to lower system, <strong>this is necessary</strong></p>
+<h3 id="primary-task-processing-and-printing-tasks"><a name="primary-task-processing-and-printing-tasks" class="anchor-navigation-ex-anchor" href="#primary-task-processing-and-printing-tasks"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. Primary task processing and printing tasks</h3>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SECOND_TASK_STACK_SIZE    (2048 * 2)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SECOND_TASK_PRIORITY      1</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SECOND_TASK_NAME          <span class="hljs-string">&quot;Second Test Task&quot;</span></span>
+
+<span class="hljs-keyword">static</span> HANDLE secondTaskHandle = <span class="hljs-literal">NULL</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SecondTask</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *pData)</span>
+</span>{
+    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)
+    {
+        Trace(<span class="hljs-number">1</span>,<span class="hljs-string">&quot;Hello GPRS &quot;</span>);
+        OS_Sleep(<span class="hljs-number">3000</span>);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">EventDispatch</span><span class="hljs-params">(API_Event_t* pEvent)</span>
+</span>{
+    <span class="hljs-keyword">switch</span>(pEvent-&gt;id)
+    {
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">break</span>;
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">MainTask</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *pData)</span>
+</span>{
+    API_Event_t* event=<span class="hljs-literal">NULL</span>;
+
+    secondTaskHandle = OS_CreateTask(SecondTask,
+        <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>, SECOND_TASK_STACK_SIZE, SECOND_TASK_PRIORITY, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, SECOND_TASK_NAME);
+
+    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)
+    {
+        <span class="hljs-keyword">if</span>(OS_WaitEvent(mainTaskHandle, (<span class="hljs-keyword">void</span>**)&amp;event, OS_TIME_OUT_WAIT_FOREVER))
+        {
+            EventDispatch(event);
+            OS_Free(event-&gt;pParam1);
+            OS_Free(event-&gt;pParam2);
+            OS_Free(event);
+        }
+    }
+}
+</code></pre>
+<p>In the main task <code>MainTask</code>, a new task <code>SecondTask</code> is created, and what it does in this task is to print a <code>Hello GPRS</code> every 3 seconds, and the print information can be seen in the tracer tool of coolwatcher.</p>
+<p>Then the main task blocks waiting for events from the lower system, and is handled in the <code>EventDispatch</code> function, where no event is handled for the time being, all events can be found in the <code>api_event.h</code>, and the parameters of each event are also annotated.</p>
+<h2 id="compiling-and-downloading-firmware-to-verify"><a name="compiling-and-downloading-firmware-to-verify" class="anchor-navigation-ex-anchor" href="#compiling-and-downloading-firmware-to-verify"><i class="fa fa-link" aria-hidden="true"></i></a>4. Compiling and downloading firmware to verify</h2>
+<p>Download to the development board according to the previous compile and download documentation </p>
+<p>then we can find <code>Hello GPRS</code> in the tracer tool</p>
+<p><img src="../assets/Hello_GPRS.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="burn-debug.html" class="navigation navigation-prev " aria-label="Previous page: Burn & Debug">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="code-style.html" class="navigation navigation-next " aria-label="Next page: Code Style">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"First Code","level":"4.5","depth":1,"next":{"title":"Code Style","level":"4.6","depth":1,"path":"c-sdk/code-style.md","ref":"c-sdk/code-style.md","articles":[]},"previous":{"title":"Burn & Debug","level":"4.4","depth":1,"path":"c-sdk/burn-debug.md","ref":"c-sdk/burn-debug.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"中文","text":"中文","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["facebook","twitter","google","instapaper","vk","weibo"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"en","gitbook":"*","description":"GPRS C SDK documention"},"file":{"path":"c-sdk/first-code.md","mtime":"2018-12-11T02:48:24.970Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T02:49:35.562Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1186 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MQTT · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pmdian-yuan-guan-740629.html" />
+    
+    
+    <link rel="prev" href="ssltls.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">硬件</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../ying-jian/a9.html">
+            
+                <a href="../../ying-jian/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../ying-jian/a9g.html">
+            
+                <a href="../../ying-jian/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                <a href="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                    
+                    开发板pudding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                <a href="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                    
+                    USB转串口模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../ying-jian/simqia.html">
+            
+                <a href="../../ying-jian/simqia.html">
+            
+                    
+                    SIM卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                <a href="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../ji-chu-zhi-shi/gps.html">
+            
+                <a href="../../ji-chu-zhi-shi/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../kai-fa-huan-jing-an-zhuang.html">
+            
+                <a href="../kai-fa-huan-jing-an-zhuang.html">
+            
+                    
+                    Windows开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Linux开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    使用docker编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                <a href="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                    
+                    下载固件到模组及调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                <a href="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                    
+                    开始第一份代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../more/vscode.html">
+            
+                <a href="../../more/vscode.html">
+            
+                    
+                    如何使用vscode写C代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                <a href="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                    
+                    代码风格及结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../gong-neng-ji-api.html">
+            
+                <a href="../gong-neng-ji-api.html">
+            
+                    
+                    功能及API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.8.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.6" data-path="ccid.html">
+            
+                <a href="ccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.11" data-path="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                <a href="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                    
+                    FS(文件系统)(储存数据到flash或T卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.12" data-path="gprswang-7edc28-ji-7ad929.html">
+            
+                <a href="gprswang-7edc28-ji-7ad929.html">
+            
+                    
+                    GPRS网络(基站信息等)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.14" data-path="socketwang-luo-tong-xin.html">
+            
+                <a href="socketwang-luo-tong-xin.html">
+            
+                    
+                    socket网络通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.15" data-path="ssltls.html">
+            
+                <a href="ssltls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.8.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.17" data-path="pmdian-yuan-guan-740629.html">
+            
+                <a href="pmdian-yuan-guan-740629.html">
+            
+                    
+                    PM(电源管理)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.18" data-path="dian-hua.html">
+            
+                <a href="dian-hua.html">
+            
+                    
+                    电话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.19" data-path="smsduan-4fe129.html">
+            
+                <a href="smsduan-4fe129.html">
+            
+                    
+                    SMS(短信)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA(远程固件升级)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits(机智云)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../../Q_A/q_a.html">
+            
+                <a href="../../Q_A/q_a.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    Flash 分区布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.2" data-path="../../more/gen_lib.html">
+            
+                <a href="../../more/gen_lib.html">
+            
+                    
+                    如果将SDK生成一个lib库文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.3" data-path="../../more/mpy.html">
+            
+                <a href="../../more/mpy.html">
+            
+                    
+                    移植脚本语言MicroPython
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >MQTT</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mqtt"><b> </b>MQTT</a></li><ul><li><span class="title-icon "></span><a href="#&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><b>1. </b>&#x679A;&#x4E3E;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#mqtterrort"><b>1.1. </b>MQTT_Error_t</a></li><li><span class="title-icon "></span><a href="#mqttsslversiont"><b>1.2. </b>MQTT_SSL_Version_t</a></li><li><span class="title-icon "></span><a href="#mqttsslverifymodet"><b>1.3. </b>MQTT_SSL_Verify_Mode_t</a></li><li><span class="title-icon "></span><a href="#mqttconnectionstatust"><b>1.4. </b>MQTT_Connection_Status_t</a></li><li><span class="title-icon "></span><a href="#mqttflagst"><b>1.5. </b>MQTT_Flags_t</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><b>2. </b>&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#mqttclientt"><b>2.1. </b>MQTT_Client_t</a></li><li><span class="title-icon "></span><a href="#mqttconnectinfot"><b>2.2. </b>MQTT_Connect_Info_t</a></li></ul><li><span class="title-icon "></span><a href="#&#x529F;&#x80FD;&#x51FD;&#x6570;"><b>3. </b>&#x529F;&#x80FD;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#mqttconnectioncallbackt"><b>3.1. </b>MQTT_Connection_Callback_t</a></li><li><span class="title-icon "></span><a href="#mqttrequestcallbackt"><b>3.2. </b>MQTT_Request_Callback_t</a></li><li><span class="title-icon "></span><a href="#mqttinpubcallbackt"><b>3.3. </b>MQTT_InPub_Callback_t</a></li><li><span class="title-icon "></span><a href="#mqttinpubdatacallbackt"><b>3.4. </b>MQTT_InPub_Data_Callback_t</a></li><li><span class="title-icon "></span><a href="#mqttclientnew"><b>3.5. </b>MQTT_ClientNew</a></li><li><span class="title-icon "></span><a href="#mqttconnect"><b>3.6. </b>MQTT_Connect</a></li><li><span class="title-icon "></span><a href="#mqttdisconnect"><b>3.7. </b>MQTT_Disconnect</a></li><li><span class="title-icon "></span><a href="#mqttsetinpubcallback"><b>3.8. </b>MQTT_SetInPubCallback</a></li><li><span class="title-icon "></span><a href="#mqttsubscribe"><b>3.9. </b>MQTT_Subscribe</a></li><li><span class="title-icon "></span><a href="#mqttunsubscribe"><b>3.10. </b>MQTT_Unsubscribe</a></li><li><span class="title-icon "></span><a href="#mqttpublish"><b>3.11. </b>MQTT_Publish</a></li><li><span class="title-icon "></span><a href="#mqttisconnected"><b>3.12. </b>MQTT_IsConnected</a></li></ul></ul></ul></div><a href="#mqtt" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mqtt"><a name="mqtt" class="anchor-navigation-ex-anchor" href="#mqtt"><i class="fa fa-link" aria-hidden="true"></i></a> MQTT</h1>
+<p>MQTT&#x662F;&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x6A21;&#x578B;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x5728;&#x5B9E;&#x65F6;&#x804A;&#x5929;&#xFF08;IM&#xFF09;&#x3001;&#x7269;&#x8054;&#x7F51;&#x7B49;&#x9886;&#x57DF;&#x4E2D;&#x6709;&#x5E7F;&#x6CDB;&#x5E94;&#x7528;</p>
+<p>&#x4F8B;&#x7A0B;&#xFF1A;
+<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt/src/demo_mqtt.c" target="_blank">demo/mqtt</a>
+<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/mqtt_ssl/src/demo_mqtt.c" target="_blank">demo/mqtt_ssl</a></p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;
+MQTT&#x76F8;&#x5173;&#x7684;&#x8FDE;&#x63A5;&#x3001;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x3001;&#xFF08;&#x53D6;&#x6D88;&#xFF09;&#x8BA2;&#x9605;&#x53D1;&#x5E03;&#x7B49;&#x51FD;&#x6570;<strong>&#x53EA;&#x80FD;&#x5728;&#x7EBF;&#x7A0B;&#x4E2D;&#x8C03;&#x7528;</strong>&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x4E2D;&#x65AD;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;,&#x53C2;&#x89C1;&#x4F8B;&#x7A0B;&#x7684;&#x7528;&#x6CD5;</p>
+<h2 id="&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><a name="&#x679A;&#x4E3E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x679A;&#x4E3E;&#x7C7B;&#x578B;</h2>
+<h3 id="mqtterrort"><a name="mqtterrort" class="anchor-navigation-ex-anchor" href="#mqtterrort"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. MQTT_Error_t</h3>
+<p>MQTT&#x9519;&#x8BEF;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    MQTT_ERROR_NONE       =  <span class="hljs-number">0</span>,  <span class="hljs-comment">//no error</span>
+    <span class="hljs-comment">/** Out of memory error.     */</span>
+    MQTT_ERROR_MEM        = <span class="hljs-number">-1</span>,
+    <span class="hljs-comment">/** Buffer error.            */</span>
+    MQTT_ERROR_BUF        = <span class="hljs-number">-2</span>,
+    <span class="hljs-comment">/** Timeout.                 */</span>
+    MQTT_ERROR_TIMEOUT    = <span class="hljs-number">-3</span>,
+    <span class="hljs-comment">/** Routing problem.         */</span>
+    MQTT_ERROR_RTE        = <span class="hljs-number">-4</span>,
+    <span class="hljs-comment">/** Operation in progress    */</span>
+    MQTT_ERROR_INPROGRESS = <span class="hljs-number">-5</span>,
+    <span class="hljs-comment">/** Illegal value.           */</span>
+    MQTT_ERROR_VAL        = <span class="hljs-number">-6</span>,
+    <span class="hljs-comment">/** Operation would block.   */</span>
+    MQTT_ERROR_WOULDBLOCK = <span class="hljs-number">-7</span>,
+    <span class="hljs-comment">/** Address in use.          */</span>
+    MQTT_ERROR_USE        = <span class="hljs-number">-8</span>,
+    <span class="hljs-comment">/** Already connecting.      */</span>
+    MQTT_ERROR_ALREADY    = <span class="hljs-number">-9</span>,
+    <span class="hljs-comment">/** Conn already established.*/</span>
+    MQTT_ERROR_ISCONN     = <span class="hljs-number">-10</span>,
+    <span class="hljs-comment">/** Not connected.           */</span>
+    MQTT_ERROR_CONN       = <span class="hljs-number">-11</span>,
+    <span class="hljs-comment">/** Low-level netif error    */</span>
+    MQTT_ERROR_IF         = <span class="hljs-number">-12</span>,
+
+    <span class="hljs-comment">/** Connection aborted.      */</span>
+    MQTT_ERROR_ABRT       = <span class="hljs-number">-13</span>,
+    <span class="hljs-comment">/** Connection reset.        */</span>
+    MQTT_ERROR_RST        = <span class="hljs-number">-14</span>,
+    <span class="hljs-comment">/** Connection closed.       */</span>
+    MQTT_ERROR_CLSD       = <span class="hljs-number">-15</span>,
+    <span class="hljs-comment">/** Illegal argument.        */</span>
+    MQTT_ERROR_ARG        = <span class="hljs-number">-16</span>,
+    MQTT_ERROR_PARAM      = <span class="hljs-number">-17</span>,
+    MQTT_ERROR_DNS        = <span class="hljs-number">-18</span>
+}MQTT_Error_t;
+</code></pre>
+<hr>
+<h3 id="mqttsslversiont"><a name="mqttsslversiont" class="anchor-navigation-ex-anchor" href="#mqttsslversiont"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. MQTT_SSL_Version_t</h3>
+<p>MQTT SSL&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    MQTT_SSL_VERSION_SSLv3 = <span class="hljs-number">0</span>,
+    MQTT_SSL_VERSION_TLSv1    ,
+    MQTT_SSL_VERSION_TLSv1_1  ,
+    MQTT_SSL_VERSION_TLSv1_2  ,
+    MQTT_SSL_VERSION_MAX
+}MQTT_SSL_Version_t;
+</code></pre>
+<hr>
+<h3 id="mqttsslverifymodet"><a name="mqttsslverifymodet" class="anchor-navigation-ex-anchor" href="#mqttsslverifymodet"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. MQTT_SSL_Verify_Mode_t</h3>
+<p>&#x9A8C;&#x8BC1;&#x6A21;&#x5F0F;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    MQTT_SSL_VERIFY_MODE_NONE     = <span class="hljs-number">0</span>,
+    MQTT_SSL_VERIFY_MODE_OPTIONAL = <span class="hljs-number">1</span>,
+    MQTT_SSL_VERIFY_MODE_REQUIRED = <span class="hljs-number">2</span>,
+    MQTT_SSL_VERIFY_MODE_MAX
+}MQTT_SSL_Verify_Mode_t;
+</code></pre>
+<hr>
+<h3 id="mqttconnectionstatust"><a name="mqttconnectionstatust" class="anchor-navigation-ex-anchor" href="#mqttconnectionstatust"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. MQTT_Connection_Status_t</h3>
+<p>MQTT&#x8FDE;&#x63A5;&#x72B6;&#x6001;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>
+{
+    <span class="hljs-comment">/** Accepted */</span>
+    MQTT_CONNECTION_ACCEPTED                 = <span class="hljs-number">0</span>,
+    <span class="hljs-comment">/** Refused protocol version */</span>
+    MQTT_CONNECTION_REFUSED_PROTOCOL_VERSION = <span class="hljs-number">1</span>,
+    <span class="hljs-comment">/** Refused identifier */</span>
+    MQTT_CONNECTION_REFUSED_IDENTIFIER       = <span class="hljs-number">2</span>,
+    <span class="hljs-comment">/** Refused server */</span>
+    MQTT_CONNECTION_REFUSED_SERVER           = <span class="hljs-number">3</span>,
+    <span class="hljs-comment">/** Refused user credentials */</span>
+    MQTT_CONNECTION_REFUSED_USERNAME_PASS    = <span class="hljs-number">4</span>,
+    <span class="hljs-comment">/** Refused not authorized */</span>
+    MQTT_CONNECTION_REFUSED_NOT_AUTHORIZED   = <span class="hljs-number">5</span>,
+    <span class="hljs-comment">/** Disconnected */</span>
+    MQTT_CONNECTION_DISCONNECTED             = <span class="hljs-number">256</span>,
+    <span class="hljs-comment">/** Timeout */</span>
+    MQTT_CONNECTION_TIMEOUT                  = <span class="hljs-number">257</span>,
+    MQTT_CONNECTION_DNS_FAIL                 = <span class="hljs-number">258</span>,
+    MQTT_CONNECTION_STATUS_MAX
+}MQTT_Connection_Status_t;
+</code></pre>
+<hr>
+<h3 id="mqttflagst"><a name="mqttflagst" class="anchor-navigation-ex-anchor" href="#mqttflagst"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. MQTT_Flags_t</h3>
+<p>MQTT&#x6807;&#x5FD7;&#x4F4D;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    MQTT_FLAG_NONE      = <span class="hljs-number">0</span>   ,
+    MQTT_FLAG_DATA_LAST = <span class="hljs-number">1</span> ,
+    MQTT_FLAG_MAX
+}MQTT_Flags_t;
+</code></pre>
+<hr>
+<h2 id="&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><a name="&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;</h2>
+<h3 id="mqttclientt"><a name="mqttclientt" class="anchor-navigation-ex-anchor" href="#mqttclientt"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. MQTT_Client_t</h3>
+<p>MQTT&#x5BF9;&#x8C61;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-keyword">void</span>* mqttClient;
+}MQTT_Client_t;
+</code></pre>
+<hr>
+<h3 id="mqttconnectinfot"><a name="mqttconnectinfot" class="anchor-navigation-ex-anchor" href="#mqttconnectinfot"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. MQTT_Connect_Info_t</h3>
+<p>MQTT&#x8FDE;&#x63A5;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-comment">/** Client identifier, must be set by caller  */</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *client_id;
+    <span class="hljs-comment">/** User name, set to NULL if not used */</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* client_user;
+    <span class="hljs-comment">/** Password, set to NULL if not used */</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* client_pass;
+    <span class="hljs-comment">/** keep alive time in seconds, 0 to disable keep alive functionality*/</span>
+    <span class="hljs-keyword">uint16_t</span>    keep_alive;
+    <span class="hljs-comment">/** will topic, set to NULL if will is not to be used,
+         will_msg, will_qos and will retain are then ignored */</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* will_topic;
+    <span class="hljs-comment">/** will_msg, see will_topic */</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* will_msg;
+    <span class="hljs-comment">/** will_qos, see will_topic */</span>
+    <span class="hljs-keyword">uint8_t</span>     will_qos;
+    <span class="hljs-comment">/** will_retain, see will_topic */</span>
+    <span class="hljs-keyword">uint8_t</span>     will_retain;
+    <span class="hljs-keyword">uint8_t</span>     clean_session;
+    <span class="hljs-comment">/** SSL/TLS configuration for secure connections */</span>
+    <span class="hljs-keyword">bool</span>                   use_ssl;
+    MQTT_SSL_Verify_Mode_t ssl_verify_mode;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*            ca_cert;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*            ca_crl;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*            client_cert;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*            client_key;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*            client_key_passwd;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*            broker_hostname;
+    MQTT_SSL_Version_t     ssl_min_version;
+    MQTT_SSL_Version_t     ssl_max_version;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>*            entropy_custom;    <span class="hljs-comment">//&#x81EA;&#x5B9A;&#x4E49;&#x6DF7;&#x6DC6;&#x5B57;&#x7B26;</span>
+}MQTT_Connect_Info_t;
+</code></pre>
+<hr>
+<h2 id="&#x529F;&#x80FD;&#x51FD;&#x6570;"><a name="&#x529F;&#x80FD;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x529F;&#x80FD;&#x51FD;&#x6570;</h2>
+<h3 id="mqttconnectioncallbackt"><a name="mqttconnectioncallbackt" class="anchor-navigation-ex-anchor" href="#mqttconnectioncallbackt"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. MQTT_Connection_Callback_t</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*MQTT_Connection_Callback_t)</span><span class="hljs-params">(MQTT_Client_t* client, <span class="hljs-keyword">void</span>* arg, MQTT_Connection_Status_t status)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;"><a name="&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8FDE;&#x63A5;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h5 id="&#x53C2;&#x6570;"><a name="&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>client&#xFF1A;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+<li>arg&#xFF1A;connect&#x51FD;&#x6570;&#x4F20;&#x7684;&#x53C2;&#x6570;</li>
+<li>status:MQTT&#x8FDE;&#x63A5;&#x72B6;&#x6001;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;"><a name="&#x8FD4;&#x56DE;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="mqttrequestcallbackt"><a name="mqttrequestcallbackt" class="anchor-navigation-ex-anchor" href="#mqttrequestcallbackt"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. MQTT_Request_Callback_t</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*MQTT_Request_Callback_t)</span><span class="hljs-params">(<span class="hljs-keyword">void</span>* arg, MQTT_Error_t err)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_1"><a name="&#x529F;&#x80FD;_1" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>MQTT&#x8BF7;&#x6C42;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h5 id="&#x53C2;&#x6570;_1"><a name="&#x53C2;&#x6570;_1" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>arg&#xFF1A;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x65F6;&#x4F20;&#x7684;&#x53C2;&#x6570;</li>
+<li>err&#xFF1A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_1"><a name="&#x8FD4;&#x56DE;&#x503C;_1" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="mqttinpubcallbackt"><a name="mqttinpubcallbackt" class="anchor-navigation-ex-anchor" href="#mqttinpubcallbackt"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. MQTT_InPub_Callback_t</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*MQTT_InPub_Callback_t)</span><span class="hljs-params">(<span class="hljs-keyword">void</span>* arg, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* topic, uint32_t payloadLen)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_2"><a name="&#x529F;&#x80FD;_2" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>MQTT&#x6536;&#x5230;&#x6D88;&#x606F;&#x5934;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x6CA1;&#x6709;&#x6D88;&#x606F;&#x4F53;&#xFF0C;&#x6D88;&#x606F;&#x4F53;&#x5728;<code>MQTT_InPub_Data_Callback_t</code>&#x4E2D;&#x4F20;&#x5165;</p>
+<h5 id="&#x53C2;&#x6570;_2"><a name="&#x53C2;&#x6570;_2" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>arg&#xFF1A;&#x8BBE;&#x7F6E;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x65F6;&#x4F20;&#x7684;&#x53C2;&#x6570;</li>
+<li>topic&#xFF1A;&#x6536;&#x5230;&#x6D88;&#x606F;&#x7684;&#x4E3B;&#x9898;</li>
+<li>payloadLen&#xFF1A;&#x6D88;&#x606F;&#x4F53;&#x957F;&#x5EA6;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_2"><a name="&#x8FD4;&#x56DE;&#x503C;_2" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="mqttinpubdatacallbackt"><a name="mqttinpubdatacallbackt" class="anchor-navigation-ex-anchor" href="#mqttinpubdatacallbackt"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. MQTT_InPub_Data_Callback_t</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*MQTT_InPub_Data_Callback_t)</span><span class="hljs-params">(<span class="hljs-keyword">void</span>* arg, <span class="hljs-keyword">const</span> uint8_t* data, uint16_t len, MQTT_Flags_t flags)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_3"><a name="&#x529F;&#x80FD;_3" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>MQTT&#x6536;&#x5230;&#x6D88;&#x606F;&#x7684;&#x6D88;&#x606F;&#x4F53;,<code>MQTT_InPub_Callback_t</code>&#x540E;&#x4EA7;&#x751F;</p>
+<h5 id="&#x53C2;&#x6570;_3"><a name="&#x53C2;&#x6570;_3" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>arg&#xFF1A;&#x8BBE;&#x7F6E;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x65F6;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;</li>
+<li>data&#xFF1A;&#x6D88;&#x606F;&#x4F53;&#x6570;&#x636E;</li>
+<li>len&#xFF1A;&#x6D88;&#x606F;&#x4F53;&#x6570;&#x636E;&#x957F;&#x5EA6;</li>
+<li>flags&#xFF1A;&#x6807;&#x8BB0;&#xFF0C;&#x56E0;&#x4E3A;&#x957F;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x88AB;&#x5206;&#x6BB5;&#x4F20;&#x8F93;&#xFF0C;<code>MQTT_FLAG_DATA_LAST</code>&#x8868;&#x793A;&#x662F;&#x6D88;&#x606F;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6BB5;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_3"><a name="&#x8FD4;&#x56DE;&#x503C;_3" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="mqttclientnew"><a name="mqttclientnew" class="anchor-navigation-ex-anchor" href="#mqttclientnew"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. MQTT_ClientNew</h3>
+<pre><code class="lang-c"><span class="hljs-function">MQTT_Client_t* <span class="hljs-title">MQTT_ClientNew</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_4"><a name="&#x529F;&#x80FD;_4" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521B;&#x5EFA;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</p>
+<h5 id="&#x53C2;&#x6570;_4"><a name="&#x53C2;&#x6570;_4" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<p>&#x65E0;</p>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_4"><a name="&#x8FD4;&#x56DE;&#x503C;_4" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+</ul>
+<hr>
+<h3 id="mqttconnect"><a name="mqttconnect" class="anchor-navigation-ex-anchor" href="#mqttconnect"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. MQTT_Connect</h3>
+<pre><code class="lang-c"><span class="hljs-function">MQTT_Error_t   <span class="hljs-title">MQTT_Connect</span><span class="hljs-params">(MQTT_Client_t* client, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* domainOrIp,uint16_t port, 
+                            MQTT_Connection_Callback_t callback, <span class="hljs-keyword">void</span>* arg, <span class="hljs-keyword">const</span> MQTT_Connect_Info_t* connectInfo)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_5"><a name="&#x529F;&#x80FD;_5" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8FDE;&#x63A5;MQTT&#x670D;&#x52A1;&#x5668;(broker)</p>
+<h5 id="&#x53C2;&#x6570;_5"><a name="&#x53C2;&#x6570;_5" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>client&#xFF1A;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+<li>domainOrIp&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</li>
+<li>port&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;</li>
+<li>callback&#xFF1A;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>arg&#xFF1A;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7ED9;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+<li>connectInfo:&#x8FDE;&#x63A5;&#x914D;&#x7F6E;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_5"><a name="&#x8FD4;&#x56DE;&#x503C;_5" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>MQTT&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</li>
+</ul>
+<hr>
+<h3 id="mqttdisconnect"><a name="mqttdisconnect" class="anchor-navigation-ex-anchor" href="#mqttdisconnect"><i class="fa fa-link" aria-hidden="true"></i></a>3.7. MQTT_Disconnect</h3>
+<pre><code class="lang-c"><span class="hljs-function">MQTT_Error_t   <span class="hljs-title">MQTT_Disconnect</span><span class="hljs-params">(MQTT_Client_t* client)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_6"><a name="&#x529F;&#x80FD;_6" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x65AD;&#x5F00;&#x4E0E;MQTT&#x670D;&#x52A1;&#x5668;(broker)&#x7684;&#x8FDE;&#x63A5;</p>
+<h5 id="&#x53C2;&#x6570;_6"><a name="&#x53C2;&#x6570;_6" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>client&#xFF1A;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_6"><a name="&#x8FD4;&#x56DE;&#x503C;_6" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>MQTT&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</li>
+</ul>
+<hr>
+<h3 id="mqttsetinpubcallback"><a name="mqttsetinpubcallback" class="anchor-navigation-ex-anchor" href="#mqttsetinpubcallback"><i class="fa fa-link" aria-hidden="true"></i></a>3.8. MQTT_SetInPubCallback</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span>           <span class="hljs-title">MQTT_SetInPubCallback</span><span class="hljs-params">(MQTT_Client_t* client, MQTT_InPub_Callback_t inpubCallback, MQTT_InPub_Data_Callback_t dataInpubCallback, <span class="hljs-keyword">void</span>* arg)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_7"><a name="&#x529F;&#x80FD;_7" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8BBE;&#x7F6E;MQTT&#x63A5;&#x6536;&#x5230;&#x8BA2;&#x9605;&#x7684;&#x6D88;&#x606F;&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h5 id="&#x53C2;&#x6570;_7"><a name="&#x53C2;&#x6570;_7" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>client&#xFF1A;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+<li>inpubCallback&#xFF1A;&#x63A5;&#x6536;&#x5230;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>dataInpubCallback&#xFF1A;&#x63A5;&#x6536;&#x5230;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#x65F6;&#x7684;&#x6D88;&#x606F;&#x4F53;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>arg&#xFF1A;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7ED9;&#x6210;&#x529F;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_7"><a name="&#x8FD4;&#x56DE;&#x503C;_7" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="mqttsubscribe"><a name="mqttsubscribe" class="anchor-navigation-ex-anchor" href="#mqttsubscribe"><i class="fa fa-link" aria-hidden="true"></i></a>3.9. MQTT_Subscribe</h3>
+<pre><code class="lang-c"><span class="hljs-function">MQTT_Error_t   <span class="hljs-title">MQTT_Subscribe</span><span class="hljs-params">(MQTT_Client_t* client, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* topic, uint8_t qos, MQTT_Request_Callback_t callback, <span class="hljs-keyword">void</span>* arg)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_8"><a name="&#x529F;&#x80FD;_8" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5411;MQTT&#x670D;&#x52A1;&#x5668;(broker)&#x53D1;&#x8D77;&#x8BA2;&#x9605;&#x4E3B;&#x9898;&#x8BF7;&#x6C42;</p>
+<h5 id="&#x53C2;&#x6570;_8"><a name="&#x53C2;&#x6570;_8" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>client&#xFF1A;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+<li>topic&#xFF1A;&#x4E3B;&#x9898;</li>
+<li>qos&#xFF1A;&#x670D;&#x52A1;&#x8D28;&#x91CF;</li>
+<li>callback&#xFF1A;&#x8BA2;&#x9605;&#x4E3B;&#x9898;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>arg&#xFF1A;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7ED9;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_8"><a name="&#x8FD4;&#x56DE;&#x503C;_8" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>MQTT&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</li>
+</ul>
+<hr>
+<h3 id="mqttunsubscribe"><a name="mqttunsubscribe" class="anchor-navigation-ex-anchor" href="#mqttunsubscribe"><i class="fa fa-link" aria-hidden="true"></i></a>3.10. MQTT_Unsubscribe</h3>
+<pre><code class="lang-c"><span class="hljs-function">MQTT_Error_t   <span class="hljs-title">MQTT_Unsubscribe</span><span class="hljs-params">(MQTT_Client_t* client, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* topic, MQTT_Request_Callback_t callback, <span class="hljs-keyword">void</span>* arg)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_9"><a name="&#x529F;&#x80FD;_9" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x4ECE;MQTT&#x670D;&#x52A1;&#x5668;(broker)&#x53D6;&#x6D88;&#x8BA2;&#x9605;&#x4E3B;&#x9898;</p>
+<h5 id="&#x53C2;&#x6570;_9"><a name="&#x53C2;&#x6570;_9" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>client&#xFF1A;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+<li>topic&#xFF1A;&#x4E3B;&#x9898;</li>
+<li>callback&#xFF1A;&#x8BA2;&#x9605;&#x4E3B;&#x9898;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>arg&#xFF1A;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7ED9;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_9"><a name="&#x8FD4;&#x56DE;&#x503C;_9" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>MQTT&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</li>
+</ul>
+<hr>
+<h3 id="mqttpublish"><a name="mqttpublish" class="anchor-navigation-ex-anchor" href="#mqttpublish"><i class="fa fa-link" aria-hidden="true"></i></a>3.11. MQTT_Publish</h3>
+<pre><code class="lang-c"><span class="hljs-function">MQTT_Error_t   <span class="hljs-title">MQTT_Publish</span><span class="hljs-params">(MQTT_Client_t* client, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* topic, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span>* payload, uint16_t payloadLen, uint8_t dup, uint8_t qos, uint8_t retain,
+                                  MQTT_Request_Callback_t callback, <span class="hljs-keyword">void</span>* arg)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_10"><a name="&#x529F;&#x80FD;_10" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5411;MQTT&#x670D;&#x52A1;&#x5668;(broker)&#x53D1;&#x5E03;&#x6D88;&#x606F;</p>
+<h5 id="&#x53C2;&#x6570;_10"><a name="&#x53C2;&#x6570;_10" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>client&#xFF1A;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+<li>topic&#xFF1A;&#x4E3B;&#x9898;</li>
+<li>port&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;</li>
+<li>payload&#xFF1A;&#x6D88;&#x606F;&#x4F53;</li>
+<li>payloadLen&#xFF1A;&#x6D88;&#x606F;&#x4F53;&#x957F;&#x5EA6;</li>
+<li>dup&#xFF1A;&#x6807;&#x793A;&#x53D1;&#x9001;&#x91CD;&#x590D;&#x6570;</li>
+<li>qos&#xFF1A;&#x670D;&#x52A1;&#x8D28;&#x91CF;</li>
+<li>retain:&#x9700;&#x8981;&#x670D;&#x52A1;&#x5668;&#x6301;&#x4E45;&#x4FDD;&#x5B58;&#x6D88;&#x606F;</li>
+<li>callback&#xFF1A;&#x53D1;&#x5E03;&#x8BF7;&#x6C42;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>arg&#xFF1A;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7ED9;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_10"><a name="&#x8FD4;&#x56DE;&#x503C;_10" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>MQTT&#x8FDE;&#x63A5;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</li>
+</ul>
+<hr>
+<h3 id="mqttisconnected"><a name="mqttisconnected" class="anchor-navigation-ex-anchor" href="#mqttisconnected"><i class="fa fa-link" aria-hidden="true"></i></a>3.12. MQTT_IsConnected</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">uint8_t</span> MQTT_IsConnected(MQTT_Client_t* client);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_11"><a name="&#x529F;&#x80FD;_11" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;MQTT&#x670D;&#x52A1;&#x5668;(broker)</p>
+<h5 id="&#x53C2;&#x6570;_11"><a name="&#x53C2;&#x6570;_11" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>client&#xFF1A;MQTT&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;&#x8C61;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_11"><a name="&#x8FD4;&#x56DE;&#x503C;_11" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;&#xFF0C;&#x8FD4;&#x56DE;&#x975E;0&#x503C;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;0</li>
+</ul>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ssltls.html" class="navigation navigation-prev " aria-label="Previous page: SSL/TLS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pmdian-yuan-guan-740629.html" class="navigation navigation-next " aria-label="Next page: PM(电源管理)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MQTT","level":"4.8.16","depth":2,"next":{"title":"PM(电源管理)","level":"4.8.17","depth":2,"path":"c-sdk/gong-neng-ji-api/pmdian-yuan-guan-740629.md","ref":"c-sdk/gong-neng-ji-api/pmdian-yuan-guan-740629.md","articles":[]},"previous":{"title":"SSL/TLS","level":"4.8.15","depth":2,"path":"c-sdk/gong-neng-ji-api/ssltls.md","ref":"c-sdk/gong-neng-ji-api/ssltls.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga","toggle-chapters"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"English","text":"English","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["weibo","facebook","twitter","google","instapaper","vk"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"zh-hans","gitbook":"*","description":"GPRS C SDK 文档"},"file":{"path":"c-sdk/gong-neng-ji-api/mqtt.md","mtime":"2018-12-26T09:37:35.981Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T09:38:38.959Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,824 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Installation Windows · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="installation_linux.html" />
+    
+    
+    <link rel="prev" href="../basic-knowledge/gps.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">introduces</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../hardware/a9.html">
+            
+                <a href="../hardware/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../hardware/a9g.html">
+            
+                <a href="../hardware/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../hardware/pudding-dev-board.html">
+            
+                <a href="../hardware/pudding-dev-board.html">
+            
+                    
+                    pudding dev board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../hardware/usb-uart-module.html">
+            
+                <a href="../hardware/usb-uart-module.html">
+            
+                    
+                    USB-UART module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../hardware/sim-card.html">
+            
+                <a href="../hardware/sim-card.html">
+            
+                    
+                    SIM Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Knowledge</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../basic-knowledge/gsmgprs.html">
+            
+                <a href="../basic-knowledge/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../basic-knowledge/gps.html">
+            
+                <a href="../basic-knowledge/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="installation_linux.html">
+            
+                <a href="installation_linux.html">
+            
+                    
+                    Installation Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="installation_docker.html">
+            
+                <a href="installation_docker.html">
+            
+                    
+                    Installation Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="burn-debug.html">
+            
+                <a href="burn-debug.html">
+            
+                    
+                    Burn & Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="first-code.html">
+            
+                <a href="first-code.html">
+            
+                    
+                    First Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="code-style.html">
+            
+                <a href="code-style.html">
+            
+                    
+                    Code Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="function-api.html">
+            
+                <a href="function-api.html">
+            
+                    
+                    Function & API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="function-api/gpio.html">
+            
+                <a href="function-api/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="function-api/adc.html">
+            
+                <a href="function-api/adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="function-api/uart.html">
+            
+                <a href="function-api/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.4" data-path="function-api/os.html">
+            
+                <a href="function-api/os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" data-path="function-api/imei.html">
+            
+                <a href="function-api/imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" data-path="function-api/iccid.html">
+            
+                <a href="function-api/iccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" data-path="function-api/gps.html">
+            
+                <a href="function-api/gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.8" data-path="function-api/iic.html">
+            
+                <a href="function-api/iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.9" data-path="function-api/spi.html">
+            
+                <a href="function-api/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.10" data-path="function-api/timertc.html">
+            
+                <a href="function-api/timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.11" data-path="function-api/file-system.html">
+            
+                <a href="function-api/file-system.html">
+            
+                    
+                    FS(Flash/TF Card)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.12" data-path="function-api/gprs-network.html">
+            
+                <a href="function-api/gprs-network.html">
+            
+                    
+                    GPRS Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.13" data-path="function-api/dns.html">
+            
+                <a href="function-api/dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.14" data-path="function-api/socket.html">
+            
+                <a href="function-api/socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.15" data-path="function-api/ssl-tls.html">
+            
+                <a href="function-api/ssl-tls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.16" data-path="function-api/mqtt.html">
+            
+                <a href="function-api/mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.17" data-path="function-api/power-manager.html">
+            
+                <a href="function-api/power-manager.html">
+            
+                    
+                    Power Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.18" data-path="function-api/call.html">
+            
+                <a href="function-api/call.html">
+            
+                    
+                    Call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.19" data-path="function-api/sms.html">
+            
+                <a href="function-api/sms.html">
+            
+                    
+                    SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.20" data-path="function-api/fota.html">
+            
+                <a href="function-api/fota.html">
+            
+                    
+                    FOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.21" data-path="function-api/lbs.html">
+            
+                <a href="function-api/lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.22" data-path="function-api/gizwits.html">
+            
+                <a href="function-api/gizwits.html">
+            
+                    
+                    Gizwits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Installation Windows</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#gprs-c-sdk-build-environment-installation"><b> </b>GPRS C SDK Build environment installation</a></li><ul><li><span class="title-icon "></span><a href="#pay-attention"><b>1. </b>Pay Attention</a></li><li><span class="title-icon "></span><a href="#download-tool-chain-debug-tool-and-sdk"><b>2. </b>Download tool chain, debug tool and SDK</a></li><li><span class="title-icon "></span><a href="#installation"><b>3. </b>installation</a></li><li><span class="title-icon "></span><a href="#compile"><b>4. </b>Compile</a></li><li><span class="title-icon "></span><a href="#other-problems"><b>5. </b>Other Problems</a></li></ul></ul></div><a href="#gprs-c-sdk-build-environment-installation" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="gprs-c-sdk-build-environment-installation"><a name="gprs-c-sdk-build-environment-installation" class="anchor-navigation-ex-anchor" href="#gprs-c-sdk-build-environment-installation"><i class="fa fa-link" aria-hidden="true"></i></a> GPRS C SDK Build environment installation</h1>
+<h2 id="pay-attention"><a name="pay-attention" class="anchor-navigation-ex-anchor" href="#pay-attention"><i class="fa fa-link" aria-hidden="true"></i></a>1. Pay Attention</h2>
+<p><strong>important, please read first</strong></p>
+<ul>
+<li><p>SDK does not have a specific IDE, and the user chooses the code editor to edit the code.</p>
+</li>
+<li><p>When modifying the code, you <strong>must not</strong> use the notepad and writing board that windows brings. Please use a more professional editor (recommended as <a href="https://code.visualstudio.com/" target="_blank">vscode</a>, <a href="https://www.sublimetext.com/" target="_blank">sublime</a>, <a href="https://atom.io/" target="_blank">atom</a>, <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/oxygen2" target="_blank">eclipse</a>, source insight, or other editors you are familiar with. )</p>
+</li>
+<li><p>Please modify the editor settings. The end of the file symbol is set to UNIX style (<code>&lt;LF&gt;</code> (<code>\n</code>) end), and file encoding is <code>UTF-8</code></p>
+</li>
+<li><p>if you are cloned using git, set the git at pull not to convert <code>&lt;LF&gt;</code> to <code>&lt;CR&gt;&lt;LF&gt;</code>, set the method reference <a href="https://www.jianshu.com/p/305a138883d4" target="_blank">here</a></p>
+</li>
+</ul>
+<h2 id="download-tool-chain-debug-tool-and-sdk"><a name="download-tool-chain-debug-tool-and-sdk" class="anchor-navigation-ex-anchor" href="#download-tool-chain-debug-tool-and-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>2. Download tool chain, debug tool and SDK</h2>
+<ul>
+<li><p>Download CSDTK4.2: <a href="https://pan.baidu.com/s/16ZIQ9YbZdcVz-zvpzEFXbA" target="_blank">baidu cloud</a>,<a href="https://mega.nz/#!uKAlRA7Z!UPHn3ZoLY8X33iMIKcBcUYFwrhmNYe-x_dyOdrm_d6I" target="_blank">MEGA cloud</a>&#xFF0C;<a href="http://test.ai-thinker.com/csdk/CSDTK42.7z" target="_blank">direct link</a></p>
+</li>
+<li><p>Get SDK</p>
+<ul>
+<li><a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/releases" target="_blank">download SDK</a></li>
+<li>or clone by git:<code>git clone https://github.com/Ai-Thinker-Open/GPRS_C_SDK.git --recursive</code> (pay attention <code>--recursive</code> is needed, or compile will fail for lake of files)</li>
+<li>Check C_SDK <code>platform/csdk</code> folder, there should be some folders and file, if not, you may get source code with wrong way, check and download again
+<img src="../assets/sdk_download_en.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="installation"><a name="installation" class="anchor-navigation-ex-anchor" href="#installation"><i class="fa fa-link" aria-hidden="true"></i></a>3. installation</h2>
+<ul>
+<li>Decompression to a folder, such as <code>C:\CSDTK</code>, <strong>path please DO NOT bring Chinese!</strong></li>
+<li>Run <code>config_env_admin.bat</code> file in CSDTK to set environment value<blockquote>
+<p>What the script does is to create an environment variable named <code>GPRS_CSDTK42_PATH</code>, which has a variable directory value of CSDTK. If the script fails, you can build it by yourself
+<img src="../assets/env.png" alt=""></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="compile"><a name="compile" class="anchor-navigation-ex-anchor" href="#compile"><i class="fa fa-link" aria-hidden="true"></i></a>4. Compile</h2>
+<ul>
+<li><p>Decompress the CSDK downloaded to <code>GPRS_C_SDK</code> folder into a directory, such as <code>C:\GPRS_C_SDK</code>, use the underscore(_) instead of minus(-).</p>
+</li>
+<li><p>Step into CSDK folder(<code>C:\GPRS_C_SDK</code>&#xFF09;&#xFF0C;right click mouse in th blank space in the folder with <kbd>shift</kbd> key pressed, then open with powersheel of cmd.</p>
+</li>
+</ul>
+<p><img src="../assets/open_with_cmd.png" alt=""></p>
+<p>Type <code>./build.bat app</code> or <code>build.bat app</code> to build app project, ensure our environment is ok.</p>
+<p><img src="../assets/compile.png" alt=""></p>
+<p><strong>If comes with <code>NO CSDTK</code> error</strong>, you may need to restart you system(mostly appears on Win7).</p>
+<p>Then you can use <code>./build.bat</code> script to build project:</p>
+<ul>
+<li><code>./build.bat $PROJ</code>:compile app module&#xFF0C;e.g.:<code>./build.batsh app</code> to compile the source code of app folder</li>
+<li><code>./build.bat demo $PROJ</code>:compile demo project, e.g.:<code>./build.bat demo gpio</code> to compile gpio demo</li>
+<li><code>./build.bat clean $PROJ</code>:clear the build files of <code>$PROJ</code></li>
+<li><code>./build.bat clean all</code>:clear all the build files</li>
+<li><code>./build.bat demo $PROJ release</code>:build a release version, e.g.:<code>./build.bat demo gpio release</code>&#xFF0C;if the last parameter is not <code>release</code>, it will be default to <code>debug</code> version. <strong>The GDB can be used to debug errors after system crashed in <code>debug</code> version, but <code>release</code> version can not, watch dog activate in release version,it will auto restart system when system crashed!</strong></li>
+</ul>
+<p><strong>e.g.: </strong></p>
+<pre><code>./build.sh demo gpio
+</code></pre><p>A <code>build</code> folder will be generated after compile, there&apos;s two <code>*.lod</code> files in th <code>hex</code> folder, it&apos;s the target file that burn(download) to dev board</p>
+<ul>
+<li><strong>about target hex file(*.lod)</strong> </li>
+</ul>
+<p>There&apos;s two hex file,(<code>*_B*.lod</code> and <code>*_flash.lod</code>), you must burn the bigger one to dev board at the first time, then you can just burn the little one to reduce the doanload time. And you must download the bigger if you update the SDK version</p>
+<h2 id="other-problems"><a name="other-problems" class="anchor-navigation-ex-anchor" href="#other-problems"><i class="fa fa-link" aria-hidden="true"></i></a>5. Other Problems</h2>
+<ul>
+<li><p>If error occured, please compare the documents carefully to see if the operation is wrong&#xFF0C;and find in <a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/issues?utf8=%E2%9C%93&amp;q=" target="_blank">issue</a></p>
+</li>
+<li><p>Way A: github <a href="https://github.com/Ai-Thinker-Open/GPRS-C-SDK/issues/new" target="_blank">add issue</a></p>
+</li>
+<li><p>Way B: <a href="http://bbs.ai-thinker.com/forum.php?mod=forumdisplay&amp;fid=37" target="_blank">Ai-Thinker forum</a></p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../basic-knowledge/gps.html" class="navigation navigation-prev " aria-label="Previous page: GNSS(GPS)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="installation_linux.html" class="navigation navigation-next " aria-label="Next page: Installation Linux">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Installation Windows","level":"4.1","depth":1,"next":{"title":"Installation Linux","level":"4.2","depth":1,"path":"c-sdk/installation_linux.md","ref":"c-sdk/installation_linux.md","articles":[]},"previous":{"title":"GNSS(GPS)","level":"3.2","depth":1,"path":"basic-knowledge/gps.md","ref":"basic-knowledge/gps.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"中文","text":"中文","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["facebook","twitter","google","instapaper","vk","weibo"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"en","gitbook":"*","description":"GPRS C SDK documention"},"file":{"path":"c-sdk/installation.md","mtime":"2018-12-11T02:48:24.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T02:49:35.562Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

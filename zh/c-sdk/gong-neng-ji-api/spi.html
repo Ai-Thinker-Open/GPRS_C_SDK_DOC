@@ -1,0 +1,1166 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SPI · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="timertc.html" />
+    
+    
+    <link rel="prev" href="iic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">硬件</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../ying-jian/a9.html">
+            
+                <a href="../../ying-jian/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../ying-jian/a9g.html">
+            
+                <a href="../../ying-jian/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                <a href="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                    
+                    开发板pudding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                <a href="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                    
+                    USB转串口模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../ying-jian/simqia.html">
+            
+                <a href="../../ying-jian/simqia.html">
+            
+                    
+                    SIM卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                <a href="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../ji-chu-zhi-shi/gps.html">
+            
+                <a href="../../ji-chu-zhi-shi/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../kai-fa-huan-jing-an-zhuang.html">
+            
+                <a href="../kai-fa-huan-jing-an-zhuang.html">
+            
+                    
+                    Windows开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Linux开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    使用docker编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                <a href="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                    
+                    下载固件到模组及调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                <a href="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                    
+                    开始第一份代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../more/vscode.html">
+            
+                <a href="../../more/vscode.html">
+            
+                    
+                    如何使用vscode写C代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                <a href="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                    
+                    代码风格及结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../gong-neng-ji-api.html">
+            
+                <a href="../gong-neng-ji-api.html">
+            
+                    
+                    功能及API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.8.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.6" data-path="ccid.html">
+            
+                <a href="ccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.8.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.11" data-path="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                <a href="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                    
+                    FS(文件系统)(储存数据到flash或T卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.12" data-path="gprswang-7edc28-ji-7ad929.html">
+            
+                <a href="gprswang-7edc28-ji-7ad929.html">
+            
+                    
+                    GPRS网络(基站信息等)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.14" data-path="socketwang-luo-tong-xin.html">
+            
+                <a href="socketwang-luo-tong-xin.html">
+            
+                    
+                    socket网络通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.15" data-path="ssltls.html">
+            
+                <a href="ssltls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.17" data-path="pmdian-yuan-guan-740629.html">
+            
+                <a href="pmdian-yuan-guan-740629.html">
+            
+                    
+                    PM(电源管理)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.18" data-path="dian-hua.html">
+            
+                <a href="dian-hua.html">
+            
+                    
+                    电话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.19" data-path="smsduan-4fe129.html">
+            
+                <a href="smsduan-4fe129.html">
+            
+                    
+                    SMS(短信)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA(远程固件升级)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits(机智云)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../../Q_A/q_a.html">
+            
+                <a href="../../Q_A/q_a.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    Flash 分区布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.2" data-path="../../more/gen_lib.html">
+            
+                <a href="../../more/gen_lib.html">
+            
+                    
+                    如果将SDK生成一个lib库文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.3" data-path="../../more/mpy.html">
+            
+                <a href="../../more/mpy.html">
+            
+                    
+                    移植脚本语言MicroPython
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >SPI</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#spi"><b> </b>SPI</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B8F;&#x5B9A;&#x4E49;"><b>1. </b>&#x5B8F;&#x5B9A;&#x4E49;</a></li><ul><li><span class="title-icon "></span><a href="#spifreqmax"><b>1.1. </b>SPI_FREQ_MAX</a></li></ul><li><span class="title-icon "></span><a href="#&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><b>2. </b>&#x679A;&#x4E3E;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#spicst"><b>2.1. </b>SPI_CS_t</a></li><li><span class="title-icon "></span><a href="#spimodet"><b>2.2. </b>SPI_Mode_t</a></li><li><span class="title-icon "></span><a href="#spilinet"><b>2.3. </b>SPI_Line_t</a></li><li><span class="title-icon "></span><a href="#spidatabitst"><b>2.4. </b>SPI_Data_Bits_t</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><b>3. </b>&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#spiirqflagst"><b>3.1. </b>SPI_Irq_Flags_t</a></li><li><span class="title-icon "></span><a href="#spiconfigt"><b>3.2. </b>SPI_Config_t</a></li></ul><li><span class="title-icon "></span><a href="#&#x529F;&#x80FD;&#x51FD;&#x6570;"><b>4. </b>&#x529F;&#x80FD;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#spiirqhandlert"><b>4.1. </b>SPI_Irq_Handler_t</a></li><li><span class="title-icon "></span><a href="#spiinit"><b>4.2. </b>SPI_Init</a></li><li><span class="title-icon "></span><a href="#spiclose"><b>4.3. </b>SPI_Close</a></li><li><span class="title-icon "></span><a href="#spiwrite"><b>4.4. </b>SPI_Write</a></li><li><span class="title-icon "></span><a href="#spiread"><b>4.5. </b>SPI_Read</a></li><li><span class="title-icon "></span><a href="#spiistxdone"><b>4.6. </b>SPI_IsTxDone</a></li><li><span class="title-icon "></span><a href="#spiistxdmadone"><b>4.7. </b>SPI_IsTxDmaDone</a></li><li><span class="title-icon "></span><a href="#spiisrxdmadone"><b>4.8. </b>SPI_IsRxDmaDone</a></li><li><span class="title-icon "></span><a href="#spicleartxdmadone"><b>4.9. </b>SPI_ClearTxDmaDone</a></li><li><span class="title-icon "></span><a href="#spiflushfifos"><b>4.10. </b>SPI_FlushFIFOs</a></li><li><span class="title-icon "></span><a href="#spisetirqhandler"><b>4.11. </b>SPI_SetIrqHandler</a></li><li><span class="title-icon "></span><a href="#spisetirqmask"><b>4.12. </b>SPI_SetIrqMask</a></li></ul></ul></ul></div><a href="#spi" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="spi"><a name="spi" class="anchor-navigation-ex-anchor" href="#spi"><i class="fa fa-link" aria-hidden="true"></i></a> SPI</h1>
+<p>A9/A9G&#x6709;&#x4E24;&#x4E2A;SPI&#x63A5;&#x53E3;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x6CE8;&#x610F;&#x4E0E;&#x54EA;&#x4E9B;&#x5F15;&#x811A;&#x590D;&#x7528;&#x4E86;&#x7684;&#xFF0C;&#x5F15;&#x811A;&#x60C5;&#x51B5;&#x67E5;&#x770B;pudding&#x5F00;&#x53D1;&#x677F;&#x5F15;&#x811A;&#x56FE;</p>
+<p>&#x4F8B;&#x7A0B;&#xFF1A;<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/spi/src/demo_spi.c" target="_blank">demo/spi</a></p>
+<h2 id="&#x5B8F;&#x5B9A;&#x4E49;"><a name="&#x5B8F;&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x5B8F;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5B8F;&#x5B9A;&#x4E49;</h2>
+<h3 id="spifreqmax"><a name="spifreqmax" class="anchor-navigation-ex-anchor" href="#spifreqmax"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. SPI_FREQ_MAX</h3>
+<p>SPI&#x6700;&#x5927;&#x652F;&#x6301;&#x9891;&#x7387;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SPI_FREQ_MAX 13000000</span>
+</code></pre>
+<hr>
+<h2 id="&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><a name="&#x679A;&#x4E3E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x679A;&#x4E3E;&#x7C7B;&#x578B;</h2>
+<h4 id="spiidt"><a name="spiidt" class="anchor-navigation-ex-anchor" href="#spiidt"><i class="fa fa-link" aria-hidden="true"></i></a>SPI_ID_t</h4>
+<p>SPI&#x7F16;&#x53F7;&#xFF0C;&#x5171;&#x4E24;&#x4E2A;SPI</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>
+{
+    SPI1      = <span class="hljs-number">1</span> ,
+    SPI2      = <span class="hljs-number">2</span> ,
+} SPI_ID_t;
+</code></pre>
+<hr>
+<h3 id="spicst"><a name="spicst" class="anchor-navigation-ex-anchor" href="#spicst"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. SPI_CS_t</h3>
+<p>SPI CS&#x5F15;&#x811A;&#xFF0C;&#x6BCF;&#x4E2A;SPI&#x90FD;&#x6709;&#x4E24;&#x4E2A;CS&#x5F15;&#x811A;&#x53EF;&#x4F9B;&#x9009;&#x62E9;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>
+{
+    SPI_CS_0  = <span class="hljs-number">0</span> ,
+    SPI_CS_1      ,
+    SPI_CS_MAX
+} SPI_CS_t;
+</code></pre>
+<hr>
+<h3 id="spimodet"><a name="spimodet" class="anchor-navigation-ex-anchor" href="#spimodet"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. SPI_Mode_t</h3>
+<p>SPI&#x6A21;&#x5F0F;&#xFF0C;&#x5206;&#x4E3A;&#x8F6E;&#x8BE2;&#x3001;&#x4E2D;&#x65AD;&#x3001;DMA&#x8F6E;&#x8BE2;&#x3001;DMA&#x4E2D;&#x65AD;&#x56DB;&#x79CD;&#x6A21;&#x5F0F;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>
+{
+    <span class="hljs-comment">/// Direct polling: The application sends/receives the data directly to/from</span>
+    <span class="hljs-comment">/// the hardware module. The number of bytes actually sent/received is</span>
+    <span class="hljs-comment">/// returned.</span>
+    SPI_MODE_DIRECT_POLLING                   ,
+
+    <span class="hljs-comment">/// Direct IRQ: The application sends/receives the data directly to/from</span>
+    <span class="hljs-comment">/// the hardware module. The number of bytes actually sent/received is</span>
+    <span class="hljs-comment">/// returned. An Irq can be generated when the Tx/Rx FIFO reaches the</span>
+    <span class="hljs-comment">/// pre-programmed level.</span>
+    SPI_MODE_DIRECT_IRQ                       ,
+
+    <span class="hljs-comment">/// DMA polling: The application sends/receives the data through a DMA to</span>
+    <span class="hljs-comment">/// the hardware module. The function returns 0 when no DMA channel is</span>
+    <span class="hljs-comment">/// available. No bytes are sent. The function returns the number of bytes</span>
+    <span class="hljs-comment">/// to send when a DMA resource is available. They will all be sent. A</span>
+    <span class="hljs-comment">/// function allows to check if the previous DMA transfer is finished. No</span>
+    <span class="hljs-comment">/// new DMA transfer in the same direction will be allowed before the end</span>
+    <span class="hljs-comment">/// of the previous transfer.</span>
+    SPI_MODE_DMA_POLLING                      ,
+
+    <span class="hljs-comment">/// DMA IRQ: The application sends/receives the data through a DMA to the</span>
+    <span class="hljs-comment">/// hardware module. The function returns 0 when no DMA channel is</span>
+    <span class="hljs-comment">/// available. No bytes are sent. The function returns the number of bytes</span>
+    <span class="hljs-comment">/// to send when a DMA resource is available. They will all be sent. An</span>
+    <span class="hljs-comment">/// IRQ is generated when the current transfer is finished. No new DMA</span>
+    <span class="hljs-comment">/// transfer in the same direction will be allowed before the end of the</span>
+    <span class="hljs-comment">/// previous transfer.</span>
+    SPI_MODE_DMA_IRQ                          ,
+
+    SPI_MODE_MAX
+} SPI_Mode_t;
+</code></pre>
+<hr>
+<h3 id="spilinet"><a name="spilinet" class="anchor-navigation-ex-anchor" href="#spilinet"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. SPI_Line_t</h3>
+<p>SPI &#x652F;&#x6301;3&#x7EBF;&#x548C;4&#x7EBF;&#x6A21;&#x5F0F;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+
+    SPI_LINE_3  = <span class="hljs-number">3</span>    ,   <span class="hljs-comment">///  Half-Duplex Mode</span>
+    SPI_LINE_4  = <span class="hljs-number">4</span>    ,    <span class="hljs-comment">///  Full-Duplex Mode</span>
+} SPI_Line_t;
+</code></pre>
+<hr>
+<h3 id="spidatabitst"><a name="spidatabitst" class="anchor-navigation-ex-anchor" href="#spidatabitst"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. SPI_Data_Bits_t</h3>
+<p>SPI &#x6570;&#x636E;&#x4F4D;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    SPI_DATA_BITS_8 = <span class="hljs-number">8</span> ,
+    SPI_DATA_BITS_16 = <span class="hljs-number">16</span>,
+} SPI_Data_Bits_t;
+</code></pre>
+<hr>
+<h2 id="&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><a name="&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;</h2>
+<h3 id="spiirqflagst"><a name="spiirqflagst" class="anchor-navigation-ex-anchor" href="#spiirqflagst"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. SPI_Irq_Flags_t</h3>
+<p>SPI&#x4E2D;&#x65AD;&#x6807;&#x5FD7;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>
+{
+    <span class="hljs-comment">/// Rx FIFO overflow</span>
+    <span class="hljs-keyword">bool</span> rxOverflow;
+    <span class="hljs-comment">/// Tx send finish</span>
+    <span class="hljs-keyword">bool</span> txFinish;
+    <span class="hljs-comment">/// Tx DMA send finish</span>
+    <span class="hljs-keyword">bool</span> txDmaDone;
+    <span class="hljs-comment">/// Rx send finish</span>
+    <span class="hljs-keyword">bool</span> rxFinish;
+    <span class="hljs-comment">/// Rx DMA send finish</span>
+    <span class="hljs-keyword">bool</span> rxDmaDone;
+} SPI_Irq_Flags_t;
+</code></pre>
+<hr>
+<h3 id="spiconfigt"><a name="spiconfigt" class="anchor-navigation-ex-anchor" href="#spiconfigt"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. SPI_Config_t</h3>
+<p>SPI&#x914D;&#x7F6E;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>
+{
+    <span class="hljs-comment">/// Select the Chip Select</span>
+    SPI_CS_t cs;
+
+    <span class="hljs-comment">/// Emission transfer mode</span>
+    SPI_Mode_t txMode;
+
+    <span class="hljs-comment">/// Reception transfer mode</span>
+    SPI_Mode_t rxMode;
+
+    <span class="hljs-comment">/// SPI clock frequency</span>
+    <span class="hljs-comment">/// up to 13Mbits/s (SPI_FREQ_MAX)</span>
+    <span class="hljs-keyword">uint32_t</span>   freq;
+
+    <span class="hljs-comment">/// SPI transfer line mode</span>
+    SPI_Line_t line;
+
+    <span class="hljs-comment">/// SPI tx only</span>
+    <span class="hljs-comment">/// false: tx only disable</span>
+    <span class="hljs-comment">/// true:  tx only enable</span>
+    <span class="hljs-keyword">bool</span> txOnly;
+
+    <span class="hljs-comment">/// SPI Clk Polarity</span>
+    <span class="hljs-comment">/// 0 when SPI is free,clk line is in low level</span>
+    <span class="hljs-comment">/// 1 when SPI is free,clk line is in high level</span>
+    <span class="hljs-keyword">uint8_t</span> cpol;
+
+    <span class="hljs-comment">/// SPI Clk Phase</span>
+    <span class="hljs-comment">/// 0 SPI sampling data at the first edge</span>
+    <span class="hljs-comment">/// 1 SPI sampling data at the second edge</span>
+    <span class="hljs-keyword">uint8_t</span> cpha;
+
+    <span class="hljs-comment">/// SPI Cs Active Polarity</span>
+    <span class="hljs-comment">/// true: Cs Active Low</span>
+    <span class="hljs-comment">/// false:  Cs Active High</span>
+    <span class="hljs-keyword">bool</span> csActiveLow;
+
+    <span class="hljs-comment">/// SPI framesize</span>
+    SPI_Data_Bits_t dataBits;
+
+
+    SPI_Irq_Handler_t irqHandler;
+
+    SPI_Irq_Flags_t   irqMask;
+
+} SPI_Config_t;
+</code></pre>
+<hr>
+<h2 id="&#x529F;&#x80FD;&#x51FD;&#x6570;"><a name="&#x529F;&#x80FD;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x529F;&#x80FD;&#x51FD;&#x6570;</h2>
+<h3 id="spiirqhandlert"><a name="spiirqhandlert" class="anchor-navigation-ex-anchor" href="#spiirqhandlert"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. SPI_Irq_Handler_t</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*SPI_Irq_Handler_t)</span><span class="hljs-params">(SPI_Irq_Flags_t flags)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;"><a name="&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>SPI &#x4E2D;&#x65AD;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h5 id="&#x53C2;&#x6570;"><a name="&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>flags:&#x4E2D;&#x65AD;&#x72B6;&#x6001;&#x6807;&#x5FD7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;"><a name="&#x8FD4;&#x56DE;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="spiinit"><a name="spiinit" class="anchor-navigation-ex-anchor" href="#spiinit"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. SPI_Init</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_Init</span><span class="hljs-params">(SPI_ID_t spiN, SPI_Config_t spiConfig)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_1"><a name="&#x529F;&#x80FD;_1" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521D;&#x59CB;&#x5316;SPI</p>
+<h5 id="&#x53C2;&#x6570;_1"><a name="&#x53C2;&#x6570;_1" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+<li>spiConfig&#xFF1A;SPI&#x914D;&#x7F6E;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_1"><a name="&#x8FD4;&#x56DE;&#x503C;_1" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x6210;&#x529F;&#x521D;&#x59CB;&#x5316;</li>
+</ul>
+<hr>
+<h3 id="spiclose"><a name="spiclose" class="anchor-navigation-ex-anchor" href="#spiclose"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. SPI_Close</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_Close</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_2"><a name="&#x529F;&#x80FD;_2" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5173;&#x95ED;SPI</p>
+<h5 id="&#x53C2;&#x6570;_2"><a name="&#x53C2;&#x6570;_2" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_2"><a name="&#x8FD4;&#x56DE;&#x503C;_2" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x6210;&#x529F;&#x5173;&#x95ED;SPI</li>
+</ul>
+<hr>
+<h3 id="spiwrite"><a name="spiwrite" class="anchor-navigation-ex-anchor" href="#spiwrite"><i class="fa fa-link" aria-hidden="true"></i></a>4.4. SPI_Write</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">uint32_t</span> SPI_Write(SPI_ID_t spiN, <span class="hljs-keyword">const</span> <span class="hljs-keyword">uint8_t</span> *data, <span class="hljs-keyword">uint32_t</span> length);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_3"><a name="&#x529F;&#x80FD;_3" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5411;SPI&#x5199;&#x6570;&#x636E;</p>
+<h5 id="&#x53C2;&#x6570;_3"><a name="&#x53C2;&#x6570;_3" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+<li>data&#xFF1A;&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;</li>
+<li>length&#xFF1A;&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_3"><a name="&#x8FD4;&#x56DE;&#x503C;_3" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&#xFF0C;&#x5982;&#x679C;&#x5728;DMA&#x6A21;&#x5F0F;&#x4E0B;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;0&#xFF0C;&#x5219;&#x8868;&#x793A;DMA&#x901A;&#x9053;&#x4E0D;&#x53EF;&#x7528;</li>
+</ul>
+<hr>
+<h3 id="spiread"><a name="spiread" class="anchor-navigation-ex-anchor" href="#spiread"><i class="fa fa-link" aria-hidden="true"></i></a>4.5. SPI_Read</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">uint32_t</span> SPI_Read(SPI_ID_t spiN, <span class="hljs-keyword">uint8_t</span> *data, <span class="hljs-keyword">uint32_t</span> length);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_4"><a name="&#x529F;&#x80FD;_4" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x4ECE;SPI&#x8BFB;&#x53D6;&#x6570;&#x636E;</p>
+<h5 id="&#x53C2;&#x6570;_4"><a name="&#x53C2;&#x6570;_4" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+<li>data&#xFF1A;&#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E;&#x5B58;&#x653E;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>length&#xFF1A;&#x9700;&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_4"><a name="&#x8FD4;&#x56DE;&#x503C;_4" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x6570;&#x636E;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x5B57;&#x8282;</li>
+</ul>
+<hr>
+<h3 id="spiistxdone"><a name="spiistxdone" class="anchor-navigation-ex-anchor" href="#spiistxdone"><i class="fa fa-link" aria-hidden="true"></i></a>4.6. SPI_IsTxDone</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_IsTxDone</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_5"><a name="&#x529F;&#x80FD;_5" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x68C0;&#x67E5;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x4F20;&#x8F93;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x5728;&#x5173;&#x95ED;SPI&#x524D;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6700;&#x597D;&#x88AB;&#x8C03;&#x7528;&#x3002;
+&#x5728;&#x76F4;&#x63A5;&#x4F20;&#x8F93;&#x548C;DMA&#x4F20;&#x8F93;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x5E94;&#x8BE5;&#x88AB;&#x8C03;&#x7528;</p>
+<h5 id="&#x53C2;&#x6570;_5"><a name="&#x53C2;&#x6570;_5" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_5"><a name="&#x8FD4;&#x56DE;&#x503C;_5" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x5982;&#x679C;&#x53D1;&#x9001;FIFO&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;true&#xFF1B;&#x5426;&#x5219;&#x8FD4;&#x56DE;false</li>
+</ul>
+<hr>
+<h3 id="spiistxdmadone"><a name="spiistxdmadone" class="anchor-navigation-ex-anchor" href="#spiistxdmadone"><i class="fa fa-link" aria-hidden="true"></i></a>4.7. SPI_IsTxDmaDone</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_IsTxDmaDone</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_6"><a name="&#x529F;&#x80FD;_6" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x67E5;&#x8BE2;SPI DMA&#x53D1;&#x9001;&#x662F;&#x5426;&#x5B8C;&#x6210;&#xFF0C;&#x5728;DMA&#x6A21;&#x5F0F;&#x53D1;&#x9001;&#x65B0;&#x7684;&#x6570;&#x636E;&#x65F6;&#x8981;&#x4FDD;&#x8BC1;&#x4E4B;&#x524D;&#x7684;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x53D1;&#x9001;&#x5B8C;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x8F6E;&#x8BE2;&#x3002;
+&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;DMA&#x53D1;&#x9001;&#x5B8C;&#x6210;&#x4E86;&#x4F46;&#x662F;&#x53D1;&#x9001;FIFO&#x53EF;&#x80FD;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x53CA;&#x65F6;&#x8FD9;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B21;DMA&#x65B0;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#xFF0C;&#x5173;&#x95ED;SPI&#x4E4B;&#x524D;&#x5FC5;&#x987B;&#x8981;&#x7528;<code>SPI_IsTxDone</code>&#x68C0;&#x67E5;SPI FIFO&#x662F;&#x5426;&#x4E3A;&#x7A7A;</p>
+<h5 id="&#x53C2;&#x6570;_6"><a name="&#x53C2;&#x6570;_6" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_6"><a name="&#x8FD4;&#x56DE;&#x503C;_6" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>DMA&#x4F20;&#x8F93;&#x662F;&#x5426;&#x5B8C;&#x6210;</li>
+</ul>
+<hr>
+<h3 id="spiisrxdmadone"><a name="spiisrxdmadone" class="anchor-navigation-ex-anchor" href="#spiisrxdmadone"><i class="fa fa-link" aria-hidden="true"></i></a>4.8. SPI_IsRxDmaDone</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_IsRxDmaDone</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_7"><a name="&#x529F;&#x80FD;_7" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x68C0;&#x67E5;DMA&#x63A5;&#x6536;&#x6570;&#x636E;&#x662F;&#x5426;&#x5B8C;&#x6210;</p>
+<h5 id="&#x53C2;&#x6570;_7"><a name="&#x53C2;&#x6570;_7" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_7"><a name="&#x8FD4;&#x56DE;&#x503C;_7" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5426;&#x6210;&#x529F;&#x63A5;&#x6536;&#x6570;&#x636E;&#x5B8C;&#x6BD5;</li>
+</ul>
+<hr>
+<h3 id="spicleartxdmadone"><a name="spicleartxdmadone" class="anchor-navigation-ex-anchor" href="#spicleartxdmadone"><i class="fa fa-link" aria-hidden="true"></i></a>4.9. SPI_ClearTxDmaDone</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SPI_ClearTxDmaDone</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_8"><a name="&#x529F;&#x80FD;_8" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x6E05;&#x9664;SPI DMA&#x53D1;&#x9001;&#x5B8C;&#x6210;&#x6807;&#x5FD7;</p>
+<h5 id="&#x53C2;&#x6570;_8"><a name="&#x53C2;&#x6570;_8" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_8"><a name="&#x8FD4;&#x56DE;&#x503C;_8" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="spiflushfifos"><a name="spiflushfifos" class="anchor-navigation-ex-anchor" href="#spiflushfifos"><i class="fa fa-link" aria-hidden="true"></i></a>4.10. SPI_FlushFIFOs</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SPI_FlushFIFOs</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_9"><a name="&#x529F;&#x80FD;_9" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5237;&#x65B0;&#x4E24;&#x4E2A;SPI&#x7684;&#x7F13;&#x51B2;&#x533A;&#xFF08;FIFO&#xFF09;</p>
+<h5 id="&#x53C2;&#x6570;_9"><a name="&#x53C2;&#x6570;_9" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_9"><a name="&#x8FD4;&#x56DE;&#x503C;_9" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="spisetirqhandler"><a name="spisetirqhandler" class="anchor-navigation-ex-anchor" href="#spisetirqhandler"><i class="fa fa-link" aria-hidden="true"></i></a>4.11. SPI_SetIrqHandler</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SPI_SetIrqHandler</span><span class="hljs-params">(SPI_ID_t spiN, SPI_Irq_Handler_t handler)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_10"><a name="&#x529F;&#x80FD;_10" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8BBE;&#x7F6E;&#x4E2D;&#x65AD;&#x56DE;&#x8C03;&#x51FD;&#x6570;</p>
+<h5 id="&#x53C2;&#x6570;_10"><a name="&#x53C2;&#x6570;_10" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+<li>handler&#xFF1A;&#x4E2D;&#x65AD;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_10"><a name="&#x8FD4;&#x56DE;&#x503C;_10" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+<h3 id="spisetirqmask"><a name="spisetirqmask" class="anchor-navigation-ex-anchor" href="#spisetirqmask"><i class="fa fa-link" aria-hidden="true"></i></a>4.12. SPI_SetIrqMask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SPI_SetIrqMask</span><span class="hljs-params">(SPI_ID_t spiN, SPI_Irq_Flags_t irqMask)</span></span>;
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_11"><a name="&#x529F;&#x80FD;_11" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8BBE;&#x7F6E;&#x4E2D;&#x65AD;&#x6807;&#x5FD7;&#x4F4D;&#xFF0C;&#x5373;&#x4F7F;&#x80FD;&#x54EA;&#x4E9B;&#x4E2D;&#x65AD;&#x6807;&#x5FD7;&#x4F4D;</p>
+<h5 id="&#x53C2;&#x6570;_11"><a name="&#x53C2;&#x6570;_11" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>spiN:SPI&#x7F16;&#x53F7;</li>
+<li>irqMask&#xFF1A;&#x4E2D;&#x65AD;&#x6807;&#x5FD7;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_11"><a name="&#x8FD4;&#x56DE;&#x503C;_11" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<p>&#x65E0;</p>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="iic.html" class="navigation navigation-prev " aria-label="Previous page: I2C">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="timertc.html" class="navigation navigation-next " aria-label="Next page: time(RTC)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SPI","level":"4.8.9","depth":2,"next":{"title":"time(RTC)","level":"4.8.10","depth":2,"path":"c-sdk/gong-neng-ji-api/timertc.md","ref":"c-sdk/gong-neng-ji-api/timertc.md","articles":[]},"previous":{"title":"I2C","level":"4.8.8","depth":2,"path":"c-sdk/gong-neng-ji-api/iic.md","ref":"c-sdk/gong-neng-ji-api/iic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga","toggle-chapters"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"English","text":"English","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["weibo","facebook","twitter","google","instapaper","vk"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"zh-hans","gitbook":"*","description":"GPRS C SDK 文档"},"file":{"path":"c-sdk/gong-neng-ji-api/spi.md","mtime":"2018-12-26T09:37:35.981Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T09:38:38.959Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

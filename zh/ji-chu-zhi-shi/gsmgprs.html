@@ -1,0 +1,892 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>GSM/GPRS · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gps.html" />
+    
+    
+    <link rel="prev" href="../ying-jian/simqia.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">硬件</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../ying-jian/a9.html">
+            
+                <a href="../ying-jian/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../ying-jian/a9g.html">
+            
+                <a href="../ying-jian/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../ying-jian/kai-fa-ban-pudding.html">
+            
+                <a href="../ying-jian/kai-fa-ban-pudding.html">
+            
+                    
+                    开发板pudding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                <a href="../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                    
+                    USB转串口模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../ying-jian/simqia.html">
+            
+                <a href="../ying-jian/simqia.html">
+            
+                    
+                    SIM卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础知识</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="gsmgprs.html">
+            
+                <a href="gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../c-sdk/kai-fa-huan-jing-an-zhuang.html">
+            
+                <a href="../c-sdk/kai-fa-huan-jing-an-zhuang.html">
+            
+                    
+                    Windows开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../c-sdk/installation_linux.html">
+            
+                <a href="../c-sdk/installation_linux.html">
+            
+                    
+                    Linux开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../c-sdk/installation_docker.html">
+            
+                <a href="../c-sdk/installation_docker.html">
+            
+                    
+                    使用docker编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../c-sdk/xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                <a href="../c-sdk/xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                    
+                    下载固件到模组及调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../c-sdk/kai-shi-di-yi-fen-dai-ma.html">
+            
+                <a href="../c-sdk/kai-shi-di-yi-fen-dai-ma.html">
+            
+                    
+                    开始第一份代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../more/vscode.html">
+            
+                <a href="../more/vscode.html">
+            
+                    
+                    如何使用vscode写C代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../c-sdk/dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                <a href="../c-sdk/dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                    
+                    代码风格及结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../c-sdk/gong-neng-ji-api.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api.html">
+            
+                    
+                    功能及API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.8.1" data-path="../c-sdk/gong-neng-ji-api/gpio.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.2" data-path="../c-sdk/gong-neng-ji-api/adc.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.3" data-path="../c-sdk/gong-neng-ji-api/uart.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.4" data-path="../c-sdk/gong-neng-ji-api/os.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.5" data-path="../c-sdk/gong-neng-ji-api/imei.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.6" data-path="../c-sdk/gong-neng-ji-api/ccid.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/ccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7" data-path="../c-sdk/gong-neng-ji-api/gps.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.8" data-path="../c-sdk/gong-neng-ji-api/iic.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.9" data-path="../c-sdk/gong-neng-ji-api/spi.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.10" data-path="../c-sdk/gong-neng-ji-api/timertc.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.11" data-path="../c-sdk/gong-neng-ji-api/fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                    
+                    FS(文件系统)(储存数据到flash或T卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.12" data-path="../c-sdk/gong-neng-ji-api/gprswang-7edc28-ji-7ad929.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/gprswang-7edc28-ji-7ad929.html">
+            
+                    
+                    GPRS网络(基站信息等)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.13" data-path="../c-sdk/gong-neng-ji-api/dns.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.14" data-path="../c-sdk/gong-neng-ji-api/socketwang-luo-tong-xin.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/socketwang-luo-tong-xin.html">
+            
+                    
+                    socket网络通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.15" data-path="../c-sdk/gong-neng-ji-api/ssltls.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/ssltls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.16" data-path="../c-sdk/gong-neng-ji-api/mqtt.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.17" data-path="../c-sdk/gong-neng-ji-api/pmdian-yuan-guan-740629.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/pmdian-yuan-guan-740629.html">
+            
+                    
+                    PM(电源管理)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.18" data-path="../c-sdk/gong-neng-ji-api/dian-hua.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/dian-hua.html">
+            
+                    
+                    电话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.19" data-path="../c-sdk/gong-neng-ji-api/smsduan-4fe129.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/smsduan-4fe129.html">
+            
+                    
+                    SMS(短信)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.20" data-path="../c-sdk/gong-neng-ji-api/fota.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/fota.html">
+            
+                    
+                    FOTA(远程固件升级)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.21" data-path="../c-sdk/gong-neng-ji-api/lbs.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.22" data-path="../c-sdk/gong-neng-ji-api/gizwits.html">
+            
+                <a href="../c-sdk/gong-neng-ji-api/gizwits.html">
+            
+                    
+                    Gizwits(机智云)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../Q_A/q_a.html">
+            
+                <a href="../Q_A/q_a.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../more/flash_map.html">
+            
+                <a href="../more/flash_map.html">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="../more/flash_map.html">
+            
+                <a href="../more/flash_map.html">
+            
+                    
+                    Flash 分区布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.2" data-path="../more/gen_lib.html">
+            
+                <a href="../more/gen_lib.html">
+            
+                    
+                    如果将SDK生成一个lib库文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.3" data-path="../more/mpy.html">
+            
+                <a href="../more/mpy.html">
+            
+                    
+                    移植脚本语言MicroPython
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >GSM/GPRS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF1A;gsmgprs"><b> </b>&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF1A;GSM/GPRS</a></li><ul><li><span class="title-icon "></span><a href="#gsm"><b>1. </b>GSM</a></li><li><span class="title-icon "></span><a href="#gprs"><b>2. </b>GPRS</a></li></ul></ul></div><a href="#&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF1A;gsmgprs" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF1A;gsmgprs"><a name="&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF1A;gsmgprs" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF1A;gsmgprs"><i class="fa fa-link" aria-hidden="true"></i></a> &#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF1A;GSM/GPRS</h1>
+<h2 id="gsm"><a name="gsm" class="anchor-navigation-ex-anchor" href="#gsm"><i class="fa fa-link" aria-hidden="true"></i></a>1. GSM</h2>
+<p>&#x5168;&#x7403;&#x79FB;&#x52A8;&#x901A;&#x8BAF;&#x7CFB;&#x7EDF;&#xFF08;Global System for Mobile Communications)</p>
+<h2 id="gprs"><a name="gprs" class="anchor-navigation-ex-anchor" href="#gprs"><i class="fa fa-link" aria-hidden="true"></i></a>2. GPRS</h2>
+<p>&#x901A;&#x7528;&#x5206;&#x7EC4;&#x65E0;&#x7EBF;&#x4E1A;&#x52A1;(General Packet Radio Service)
+GPRS&#x662F;&#x5728;GSM&#x7CFB;&#x7EDF;&#x57FA;&#x7840;&#x4E0A;&#x53D1;&#x5C55;&#x8D77;&#x6765;&#x7684;&#x5206;&#x7EC4;&#x6570;&#x636E;&#x627F;&#x8F7D;&#x548C;&#x4F20;&#x8F93;&#x4E1A;&#x52A1;,GSM&#x662F;&#x4E00;&#x79CD;&#x7535;&#x8DEF;&#x4EA4;&#x6362;&#x7CFB;&#x7EDF;&#xFF0C;&#x800C;GPRS&#x662F;&#x4E00;&#x79CD;&#x5206;&#x7EC4;&#x4EA4;&#x6362;&#xFF08;&#x5305;&#x4EA4;&#x6362;&#xFF09;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x5173;&#x4E8E;GPRS&#x8FD9;&#x91CC;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x5B83;&#x7684;&#x51E0;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x91CD;&#x8981;&#x77E5;&#x8BC6;&#xFF0C;&#x66F4;&#x591A;&#x8BE6;&#x7EC6;&#x8BF7;&#x81EA;&#x884C;&#x627E;&#x8D44;&#x6599;&#x5B66;&#x4E60;</p>
+<h4 id="&#xFF08;1&#xFF09;gprs&#x670D;&#x52A1;&#x79CD;&#x7C7B;"><a name="&#xFF08;1&#xFF09;gprs&#x670D;&#x52A1;&#x79CD;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#xFF08;1&#xFF09;gprs&#x670D;&#x52A1;&#x79CD;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#xFF08;1&#xFF09;GPRS&#x670D;&#x52A1;&#x79CD;&#x7C7B;</h4>
+<p>GPRS&#x670D;&#x52A1;&#x79CD;&#x7C7B;&#x5206;&#x4E3A;Class A/B/C&#xFF0C;</p>
+<ul>
+<li>Class A&#xFF1A;&#x662F;&#x80FD;&#x540C;&#x65F6;&#x652F;&#x6301;&#x7535;&#x8DEF;&#x4EA4;&#x6362;&#x548C;&#x5206;&#x7EC4;&#x4EA4;&#x6362;&#xFF08;&#x5373;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x6253;&#x7535;&#x8BDD;&#x548C;&#x4E0A;&#x7F51;&#xFF09;</li>
+<li>Class B&#xFF1A;&#x652F;&#x6301;&#x7535;&#x8DEF;&#x4EA4;&#x6362;&#x548C;&#x5206;&#x7EC4;&#x4EA4;&#x6362;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x80FD;&#x540C;&#x65F6;&#x8FDB;&#x884C;&#x4E00;&#x79CD;</li>
+<li>Class C&#xFF1A;&#x53EA;&#x652F;&#x6301;&#x5206;&#x7EC4;&#x4EA4;&#x6362;</li>
+</ul>
+<h4 id="&#xFF08;2&#xFF09;gprs&#x7684;&#x4F20;&#x8F93;&#x7C7B;&#x578B;"><a name="&#xFF08;2&#xFF09;gprs&#x7684;&#x4F20;&#x8F93;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#xFF08;2&#xFF09;gprs&#x7684;&#x4F20;&#x8F93;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#xFF08;2&#xFF09;GPRS&#x7684;&#x4F20;&#x8F93;&#x7C7B;&#x578B;</h4>
+<p>GPRS&#x7F51;&#x7EDC;&#x4E3A;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x5206;&#x914D;<strong>&#x6700;&#x591A;</strong>8&#x4E2A;&#x65F6;&#x9699;&#x6765;&#x4F20;&#x8F93;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x6700;&#x591A;8&#x4E2A;&#x65F6;&#x9699;&#x53C8;&#x7531;&#x4E0A;&#x884C;&#x548C;&#x4E0B;&#x884C;&#x7EC4;&#x6210;&#xFF0C;&#x5177;&#x4F53;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>Class 2&#xFF1A;&#x4E0B;&#x884C;2&#xFF0C;&#x4E0A;&#x884C;1 &#xFF08;&#x7B80;&#x79F0;2+1&#xFF09;</li>
+<li>Class 4&#xFF1A;&#x4E0B;&#x884C;3&#xFF0C;&#x4E0A;&#x884C;1 &#xFF08;&#x7B80;&#x79F0;3+1&#xFF09;</li>
+<li>Class 8&#xFF1A;&#x4E0B;4&#xFF0C;&#x4E0A;&#x884C;1 &#xFF08;&#x7B80;&#x79F0;4+1&#xFF09;</li>
+<li>Class 10&#xFF1A;&#x4E0B;&#x884C;4&#xFF0C;&#x4E0A;&#x884C;2 &#xFF08;&#x7B80;&#x79F0;4+2&#xFF09;</li>
+<li>Class 12&#xFF1A;&#x4E0B;&#x884C;4&#xFF0C;&#x4E0A;&#x884C;4 &#xFF08;&#x7B80;&#x79F0;4+4&#xFF09;</li>
+</ul>
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;Class 8/10/12&#x5E76;&#x4E0D;&#x662F;&#x6307;&#x6709;8/10/12&#x4E2A;&#x4FE1;&#x9053;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x603B;&#x4FE1;&#x9053;&#x90FD;&#x53EA;&#x6709;5&#x4E2A;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x5206;&#x7C7B;&#x8BF4;&#x660E;&#x4E86;&#x6700;&#x5927;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x4E0A;&#x884C;&#x4FE1;&#x9053;&#x548C;&#x4E0B;&#x884C;&#x4FE1;&#x9053;&#x6570;&#x3002;</p>
+<p><strong>GPRS&#x4F20;&#x8F93;&#x901F;&#x5EA6;</strong>&#xFF1A;&#x7406;&#x8BBA;&#x4E0A;class&#x503C;&#x8D8A;&#x5927;&#x901F;&#x5EA6;&#x8D8A;&#x5FEB;&#xFF0C;&#x4F46;&#x662F;&#x901F;&#x5EA6;&#x53D7;&#x57FA;&#x7AD9;&#x548C;GPRS&#x8BBE;&#x5907;&#xFF08;GPRS&#x6A21;&#x7EC4;&#x3001;&#x624B;&#x673A;&#xFF09;&#x53CC;&#x65B9;&#x7684;&#x6700;&#x4F4E;&#x901F;&#x5EA6;&#x9650;&#x5236;&#xFF0C;&#x6BD4;&#x5982;GPRS&#x8BBE;&#x5907;&#x652F;&#x6301;Class 12&#xFF0C;&#x4F46;&#x662F;&#x57FA;&#x7AD9;&#x53EA;&#x652F;&#x6301;Class 10&#xFF0C;&#x90A3;&#x5C31;&#x4F1A;&#x6536;&#x5230;Class 10&#x9650;&#x5236;&#xFF0C;&#x800C;&#x4E14;&#x548C;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3001;&#x4FE1;&#x53F7;&#x3001;&#x5E72;&#x6270;&#x7B49;&#x56E0;&#x7D20;&#x4E5F;&#x6709;&#x5173;&#x7CFB;&#x3002;</p>
+<h4 id="&#xFF08;3&#xFF09;gprs&#x7F16;&#x7801;&#x65B9;&#x5F0F;"><a name="&#xFF08;3&#xFF09;gprs&#x7F16;&#x7801;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#xFF08;3&#xFF09;gprs&#x7F16;&#x7801;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#xFF08;3&#xFF09;GPRS&#x7F16;&#x7801;&#x65B9;&#x5F0F;</h4>
+<p>GPRS&#x5B9A;&#x4E49;&#x4E86;CS-1&#x5230;CS-4&#x56DB;&#x79CD;&#x4FE1;&#x9053;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0D;&#x540C;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x901F;&#x7387;&#x4E0D;&#x540C;&#xFF0C;&#x7EA0;&#x9519;&#x80FD;&#x529B;&#x4E5F;&#x4E0D;&#x540C;&#x3002;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x8D8A;&#x4F4E;&#xFF0C;&#x7EA0;&#x9519;&#x80FD;&#x529B;&#x8D8A;&#x5F3A;&#xFF0C;&#x4F46;&#x662F;&#x901F;&#x7387;&#x8D8A;&#x4F4E;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4FE1;&#x53F7;&#x8D8A;&#x597D;&#x7684;&#x5730;&#x65B9;&#x4F7F;&#x7528;&#x66F4;&#x9AD8;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;</p>
+<h4 id="&#xFF08;4&#xFF09;gprs&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x901A;&#x4FE1;&#x6D41;&#x7A0B;"><a name="&#xFF08;4&#xFF09;gprs&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x901A;&#x4FE1;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#xFF08;4&#xFF09;gprs&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x901A;&#x4FE1;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#xFF08;4&#xFF09;GPRS&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x901A;&#x4FE1;&#x6D41;&#x7A0B;</h4>
+<p><img src="../assets/0_1290061989D7Fl.gif" alt="">
+<img src="../assets/20130725100058828.jpg" alt=""></p>
+<ol>
+<li><p>GPRS&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x57FA;&#x7AD9;&#x5E76;&#x6CE8;&#x518C;(register)&#x5230;&#x7F51;&#x7EDC;&#xFF0C;&#x4FDD;&#x8BC1;&#x6709;&#x8DB3;&#x591F;&#x5F3A;&#x7684;&#x4FE1;&#x53F7;,&#x6B64;&#x65F6;&#x4FBF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;GSM&#x670D;&#x52A1;&#xFF0C;&#x5373;&#x53EF;&#x4EE5;&#x901A;&#x8BDD;&#x3001;&#x77ED;&#x4FE1;&#x3002;</p>
+</li>
+<li><p><strong>GPRS&#x9644;&#x7740;&#xFF08;Attach&#xFF09;</strong>&#xFF1A;&#x5EFA;&#x7ACB;GPRS&#x8BBE;&#x5907;&#x5230;GPRS&#x7F51;&#x7EDC;&#x7684;&#x901A;&#x4FE1;&#x4FE1;&#x9053;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x9644;&#x7740;&#x5230;SGSN(serving GPRS support node)&#x4E0A;&#x3002;</p>
+</li>
+<li><p><strong>GPRS PDP Context(&#x5206;&#x7EC4;&#x62A5;&#x6587;&#x534F;&#x8BAE;&#x4E0A;&#x4E0B;&#x6587;)&#x6FC0;&#x6D3B;</strong>&#xFF1A;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E00;&#x6B65;&#x770B;&#x4F5C;&#x662F;GPRS&#x8BBE;&#x5907;&#x4ECE;&#x7F51;&#x5173;&#x62FF;&#x5230;IP&#x5730;&#x5740;&#xFF0C;&#x7ECF;&#x8FC7;&#x8FD9;&#x4E00;&#x6B65;&#x8BBE;&#x5907;&#x4FBF;&#x5177;&#x6709;&#x6570;&#x636E;&#x901A;&#x4FE1;&#x529F;&#x80FD;,&#x80FD;&#x591F;&#x4E0E;&#x516C;&#x7F51;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x901A;&#x4FE1;&#x3002;
+GGSN(gateway GPRS Support Node)&#x662F;GPRS&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x5173;&#x952E;&#x90E8;&#x5206;&#xFF0C;&#x662F;GPRS&#x7F51;&#x7EDC;&#x548C;&#x5916;&#x90E8;&#x5206;&#x7EC4;&#x4EA4;&#x6362;&#x7F51;&#x7EDC;&#x4E4B;&#x95F4;&#x7684;&#x4EA4;&#x4E92;&#xFF0C;&#x4ECE;&#x5916;&#x90E8;&#x7F51;&#x7EDC;&#x6765;&#x770B;&#xFF0C;GGSN&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5B50;&#x7F51;&#x8DEF;&#x7531;&#x5668;&#xFF0C;&#x8D1F;&#x8D23;&#x4EA4;&#x6362;SGSN&#x4E0E;&#x5916;&#x90E8;&#x7F51;&#x7EDC;&#x4E4B;&#x95F4;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8FD8;&#x8D1F;&#x8D23;&#x8BA4;&#x8BC1;&#x3001;&#x6D41;&#x91CF;&#x8BA1;&#x8D39;&#x7B49;&#x529F;&#x80FD;&#x3002;</p>
+</li>
+<li><p>&#x4E0E;&#x516C;&#x7F51;&#x8BBE;&#x5907;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF1A;&#x56E0;&#x4E3A;&#x8BBE;&#x5907;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x597D;&#x4E8E;&#x516C;&#x7F51;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x67D0;&#x79CD;&#x534F;&#x8BAE;&#x8FDE;&#x63A5;&#x5373;&#x53EF;&#xFF0C;&#x6BD4;&#x5982;&#x5EFA;&#x7ACB;TCP&#x8FDE;&#x63A5;&#x3001;UDP&#x8FDE;&#x63A5;&#x7B49;</p>
+</li>
+</ol>
+<h4 id="imei-sn-imsi-ccid&#x533A;&#x522B;"><a name="imei-sn-imsi-ccid&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#imei-sn-imsi-ccid&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>IMEI SN IMSI CCID&#x533A;&#x522B;</h4>
+<p>SN&#x662F;&#x6A21;&#x5757;&#x5E8F;&#x5217;&#x53F7;,&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x7406;&#x4F1A;</p>
+<p>IMEI&#x662F;&#x8BBE;&#x5907;&#x53F7;&#x7801;,&#x5168;&#x7403;&#x552F;&#x4E00;,&#x4F1A;&#x53D1;&#x9001;&#x5230;&#x57FA;&#x7AD9;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x6821;&#x9A8C;,&#x5728;&#x4E00;&#x4E9B;&#x5730;&#x533A;&#x5982;&#x679C;IMEI&#x53F7;&#x7801;&#x9519;&#x8BEF;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x8054;&#x7F51;</p>
+<p>IMSI&#xFF1A; International Mobile SubscriberIdentification Number &#x56FD;&#x9645;&#x79FB;&#x52A8;&#x7528;&#x6237;&#x8BC6;&#x522B;&#x7801;&#xFF0C;&#x662F;&#x533A;&#x522B;&#x79FB;&#x52A8;&#x7528;&#x6237;&#x7684;&#x6807;&#x5FD7;&#xFF0C;&#x50A8;&#x5B58;&#x5728;SIM&#x5361;&#x4E2D;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x533A;&#x522B;&#x79FB;&#x52A8;&#x7528;&#x6237;&#x7684;&#x6709;&#x6548;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x603B;&#x957F;&#x5EA6;&#x4E0D;&#x8D85;&#x8FC7;15&#x4F4D;&#xFF0C;&#x540C;&#x6837;&#x4F7F;&#x7528;0&#xFF5E;9&#x7684;&#x6570;&#x5B57;&#x3002;&#x5176;&#x4E2D;MCC&#x662F;&#x79FB;&#x52A8;&#x7528;&#x6237;&#x6240;&#x5C5E;&#x56FD;&#x5BB6;&#x4EE3;&#x53F7;&#xFF0C;&#x5360;3&#x4F4D;&#x6570;&#x5B57;&#xFF0C;&#x4E2D;&#x56FD;&#x7684;MCC&#x89C4;&#x5B9A;&#x4E3A;460&#xFF1B;MNC&#x662F;&#x79FB;&#x52A8;&#x7F51;&#x53F7;&#x7801;&#xFF0C;&#x6700;&#x591A;&#x7531;&#x4E24;&#x4F4D;&#x6570;&#x5B57;&#x7EC4;&#x6210;&#xFF0C;&#x7528;&#x4E8E;&#x8BC6;&#x522B;&#x79FB;&#x52A8;&#x7528;&#x6237;&#x6240;&#x5F52;&#x5C5E;&#x7684;&#x79FB;&#x52A8;&#x901A;&#x4FE1;&#x7F51;&#xFF1B;MSIN&#x662F;&#x79FB;&#x52A8;&#x7528;&#x6237;&#x8BC6;&#x522B;&#x7801;&#xFF0C;&#x7528;&#x4EE5;&#x8BC6;&#x522B;&#x67D0;&#x4E00;&#x79FB;&#x52A8;&#x901A;&#x4FE1;&#x7F51;&#x4E2D;&#x7684;&#x79FB;&#x52A8;&#x7528;&#x6237;&#x3002;&#x4F8B;&#x5982;&#x5F00;&#x5934;&#x662F;46000&#x662F;&#x4E2D;&#x56FD;&#x79FB;&#x52A8;&#x7528;&#x6237;&#xFF0C;46001&#x662F;&#x8054;&#x901A;&#x7528;&#x6237;&#xFF0C;46003&#x662F;&#x7535;&#x4FE1;&#x7528;&#x6237;</p>
+<p>ICCID&#xFF1A;Integrate circuit card identity &#x96C6;&#x6210;&#x7535;&#x8DEF;&#x5361;&#x8BC6;&#x522B;&#x7801;&#xFF08;&#x56FA;&#x5316;&#x5728;&#x624B;&#x673A;SIM&#x5361;&#x4E2D;),ICCID&#x4E3A;IC&#x5361;&#x7684;&#x552F;&#x4E00;&#x8BC6;&#x522B;&#x53F7;&#x7801;&#xFF0C;&#x5171;&#x6709;20&#x4F4D;&#x6570;&#x5B57;&#x7EC4;&#x6210;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ying-jian/simqia.html" class="navigation navigation-prev " aria-label="Previous page: SIM卡">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gps.html" class="navigation navigation-next " aria-label="Next page: GNSS(GPS)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"GSM/GPRS","level":"3.1","depth":1,"next":{"title":"GNSS(GPS)","level":"3.2","depth":1,"path":"ji-chu-zhi-shi/gps.md","ref":"ji-chu-zhi-shi/gps.md","articles":[]},"previous":{"title":"SIM卡","level":"2.5","depth":1,"path":"ying-jian/simqia.md","ref":"ying-jian/simqia.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga","toggle-chapters"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"English","text":"English","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["weibo","facebook","twitter","google","instapaper","vk"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"zh-hans","gitbook":"*","description":"GPRS C SDK 文档"},"file":{"path":"ji-chu-zhi-shi/gsmgprs.md","mtime":"2018-12-26T09:37:35.981Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T09:38:38.959Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

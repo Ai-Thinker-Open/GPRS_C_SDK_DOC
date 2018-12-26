@@ -1,0 +1,1346 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>FS(文件系统)(储存数据到flash或T卡) · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gprswang-7edc28-ji-7ad929.html" />
+    
+    
+    <link rel="prev" href="timertc.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">介绍</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">硬件</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../ying-jian/a9.html">
+            
+                <a href="../../ying-jian/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../ying-jian/a9g.html">
+            
+                <a href="../../ying-jian/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                <a href="../../ying-jian/kai-fa-ban-pudding.html">
+            
+                    
+                    开发板pudding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                <a href="../../ying-jian/usbzhuan-chuan-kou-mo-kuai.html">
+            
+                    
+                    USB转串口模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../ying-jian/simqia.html">
+            
+                <a href="../../ying-jian/simqia.html">
+            
+                    
+                    SIM卡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                <a href="../../ji-chu-zhi-shi/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../ji-chu-zhi-shi/gps.html">
+            
+                <a href="../../ji-chu-zhi-shi/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../kai-fa-huan-jing-an-zhuang.html">
+            
+                <a href="../kai-fa-huan-jing-an-zhuang.html">
+            
+                    
+                    Windows开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Linux开发环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    使用docker编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                <a href="../xia-zai-bian-yi-hao-de-gu-jian-dao-mo-zu.html">
+            
+                    
+                    下载固件到模组及调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                <a href="../kai-shi-di-yi-fen-dai-ma.html">
+            
+                    
+                    开始第一份代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../../more/vscode.html">
+            
+                <a href="../../more/vscode.html">
+            
+                    
+                    如何使用vscode写C代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                <a href="../dai-ma-feng-ge-ji-ming-ming-gui-ze.html">
+            
+                    
+                    代码风格及结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../gong-neng-ji-api.html">
+            
+                <a href="../gong-neng-ji-api.html">
+            
+                    
+                    功能及API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.8.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.6" data-path="ccid.html">
+            
+                <a href="ccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.8.11" data-path="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                <a href="fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.html">
+            
+                    
+                    FS(文件系统)(储存数据到flash或T卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.12" data-path="gprswang-7edc28-ji-7ad929.html">
+            
+                <a href="gprswang-7edc28-ji-7ad929.html">
+            
+                    
+                    GPRS网络(基站信息等)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.14" data-path="socketwang-luo-tong-xin.html">
+            
+                <a href="socketwang-luo-tong-xin.html">
+            
+                    
+                    socket网络通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.15" data-path="ssltls.html">
+            
+                <a href="ssltls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.17" data-path="pmdian-yuan-guan-740629.html">
+            
+                <a href="pmdian-yuan-guan-740629.html">
+            
+                    
+                    PM(电源管理)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.18" data-path="dian-hua.html">
+            
+                <a href="dian-hua.html">
+            
+                    
+                    电话
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.19" data-path="smsduan-4fe129.html">
+            
+                <a href="smsduan-4fe129.html">
+            
+                    
+                    SMS(短信)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA(远程固件升级)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits(机智云)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../../Q_A/q_a.html">
+            
+                <a href="../../Q_A/q_a.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="../../more/flash_map.html">
+            
+                <a href="../../more/flash_map.html">
+            
+                    
+                    Flash 分区布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.2" data-path="../../more/gen_lib.html">
+            
+                <a href="../../more/gen_lib.html">
+            
+                    
+                    如果将SDK生成一个lib库文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.3" data-path="../../more/mpy.html">
+            
+                <a href="../../more/mpy.html">
+            
+                    
+                    移植脚本语言MicroPython
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >FS(文件系统)(储存数据到flash或T卡)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#file-system"><b> </b>File System</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B8F;&#x5B9A;&#x4E49;"><b>1. </b>&#x5B8F;&#x5B9A;&#x4E49;</a></li><ul><li><span class="title-icon "></span><a href="#fstflashroot"><b>1.1. </b>FS_TFLASH_ROOT</a></li><li><span class="title-icon "></span><a href="#fsordonly"><b>1.2. </b>FS_O_RDONLY</a></li><li><span class="title-icon "></span><a href="#fsordwr"><b>1.3. </b>FS_O_RDWR</a></li><li><span class="title-icon "></span><a href="#fsoaccmode"><b>1.4. </b>FS_O_ACCMODE</a></li><li><span class="title-icon "></span><a href="#fsocreat"><b>1.5. </b>FS_O_CREAT</a></li><li><span class="title-icon "></span><a href="#fsoexcl"><b>1.6. </b>FS_O_EXCL</a></li><li><span class="title-icon "></span><a href="#fsotrunc"><b>1.7. </b>FS_O_TRUNC</a></li><li><span class="title-icon "></span><a href="#fsoappend"><b>1.8. </b>FS_O_APPEND</a></li><li><span class="title-icon "></span><a href="#fsattrmark"><b>1.9. </b>FS_ATTR_MARK</a></li><li><span class="title-icon "></span><a href="#fsattrro"><b>1.10. </b>FS_ATTR_RO</a></li><li><span class="title-icon "></span><a href="#fsattrhidden"><b>1.11. </b>FS_ATTR_HIDDEN</a></li><li><span class="title-icon "></span><a href="#fsattrsystem"><b>1.12. </b>FS_ATTR_SYSTEM</a></li><li><span class="title-icon "></span><a href="#fsattrvolume"><b>1.13. </b>FS_ATTR_VOLUME</a></li><li><span class="title-icon "></span><a href="#fsattrdir"><b>1.14. </b>FS_ATTR_DIR</a></li><li><span class="title-icon "></span><a href="#fsattrarchive"><b>1.15. </b>FS_ATTR_ARCHIVE</a></li><li><span class="title-icon "></span><a href="#fsseekset"><b>1.16. </b>FS_SEEK_SET</a></li><li><span class="title-icon "></span><a href="#fsseekcur"><b>1.17. </b>FS_SEEK_CUR</a></li><li><span class="title-icon "></span><a href="#fsseekend"><b>1.18. </b>FS_SEEK_END</a></li><li><span class="title-icon "></span><a href="#fsdevicenametflash"><b>1.19. </b>FS_DEVICE_NAME_T_FLASH</a></li><li><span class="title-icon "></span><a href="#fsdevicenameflash"><b>1.20. </b>FS_DEVICE_NAME_FLASH</a></li><li><span class="title-icon "></span><a href="#errfs"><b>1.21. </b>ERR_FS</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><b>2. </b>&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#apifsinfo"><b>2.1. </b>API_FS_INFO</a></li></ul><li><span class="title-icon "></span><a href="#&#x529F;&#x80FD;&#x51FD;&#x6570;"><b>3. </b>&#x529F;&#x80FD;&#x51FD;&#x6570;</a></li><ul><li><span class="title-icon "></span><a href="#apifsopen"><b>3.1. </b>API_FS_Open</a></li><li><span class="title-icon "></span><a href="#apifsclose"><b>3.2. </b>API_FS_Close</a></li><li><span class="title-icon "></span><a href="#apifsread"><b>3.3. </b>API_FS_Read</a></li><li><span class="title-icon "></span><a href="#apifswrite"><b>3.4. </b>API_FS_Write</a></li><li><span class="title-icon "></span><a href="#apifsflush"><b>3.5. </b>API_FS_Flush</a></li><li><span class="title-icon "></span><a href="#apifscreate"><b>3.6. </b>API_FS_Create</a></li><li><span class="title-icon "></span><a href="#apifsdelete"><b>3.7. </b>API_FS_Delete</a></li><li><span class="title-icon "></span><a href="#apifsseek"><b>3.8. </b>API_FS_Seek</a></li><li><span class="title-icon "></span><a href="#apifsisendoffile"><b>3.9. </b>API_FS_IsEndOfFile</a></li><li><span class="title-icon "></span><a href="#apifsrename"><b>3.10. </b>API_FS_Rename</a></li><li><span class="title-icon "></span><a href="#apifsgetfilename"><b>3.11. </b>API_FS_GetFileName</a></li><li><span class="title-icon "></span><a href="#apifsgetfilesize"><b>3.12. </b>API_FS_GetFileSize</a></li><li><span class="title-icon "></span><a href="#apifsgetdirsize"><b>3.13. </b>API_FS_GetDirSize</a></li><li><span class="title-icon "></span><a href="#apifsgetcurdir"><b>3.14. </b>API_FS_GetCurDir</a></li><li><span class="title-icon "></span><a href="#apifschangedir"><b>3.15. </b>API_FS_ChangeDir</a></li><li><span class="title-icon "></span><a href="#apifsmkdir"><b>3.16. </b>API_FS_Mkdir</a></li><li><span class="title-icon "></span><a href="#apifsrmdir"><b>3.17. </b>API_FS_Rmdir</a></li><li><span class="title-icon "></span><a href="#apifsgetfsinfo"><b>3.18. </b>API_FS_GetFSInfo</a></li></ul></ul></ul></div><a href="#file-system" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="file-system"><a name="file-system" class="anchor-navigation-ex-anchor" href="#file-system"><i class="fa fa-link" aria-hidden="true"></i></a> File System</h1>
+<p>&#x4E3A;&#x4E86;&#x64CD;&#x4F5C;Flash&#x66F4;&#x52A0;&#x7B80;&#x5355;&#xFF0C;&#x5185;&#x7F6E;&#x4E86;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x548C;&#x5E38;&#x7528;&#x7684;API&#xFF0C;
+&#x9700;&#x8981;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x6216;&#x8005;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x5176;&#x4FDD;&#x5B58;&#x4E3A;&#x6587;&#x4EF6;&#x5373;&#x53EF;&#xFF0C;
+&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63A5;&#x89E6;&#x8FC7;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C; &#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x7406;&#x89E3;&#x4E3A;&#xFF0C;
+&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x6570;&#x636E;&#x50A8;&#x5B58;&#x5230;flash&#xFF0C;&#x6BCF;&#x6B21;&#x50A8;&#x5B58;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x64E6;&#x9664;flash&#x7136;&#x540E;&#x518D;&#x5199;&#x5165;&#xFF0C;&#x5199;&#x5230;&#x54EA;&#x91CC;&#x600E;&#x4E48;&#x5199;&#x8FD9;&#x4E9B;&#x7B56;&#x7565;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x5B89;&#x6392;&#xFF0C;
+&#x800C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5C31;&#x662F;&#x5E2E;&#x6211;&#x4EEC;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x7B56;&#x7565;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528;api&#x628A;&#x6570;&#x636E;&#x53D1;&#x9001;&#x7ED9;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x81EA;&#x5DF1;&#x4F1A;&#x51B3;&#x5B9A;&#x64E6;&#x9664;&#x54EA;&#x4E2A;&#x5206;&#x533A;&#x4EE5;&#x53CA;&#x50A8;&#x5B58;&#x5230;&#x54EA;&#x4E2A;&#x5206;&#x533A;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x662F;&#x5728;Flash&#x4E0A;&#x7684;&#xFF0C;&#x4E0D;&#x9700;&#x8981;TF&#x5361;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF0C;&#x603B;&#x5927;&#x5C0F;&#x6709;408k&#xFF0C;&#x5F53;&#x7136;&#x53EF;&#x4F7F;&#x7528;&#x7684;&#x7A7A;&#x95F4;&#x5C0F;&#x4E8E;408k&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;OTA&#x8FD8;&#x8981;&#x7ED9;&#x56FA;&#x4EF6;&#x5B58;&#x653E;&#x9884;&#x7559;&#x6700;&#x5927;64k&#x7684;&#x7A7A;&#x95F4;&#x3002;
+&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x5230;&#x5916;&#x90E8;TF&#x5361;&#xFF0C;&#x5F00;&#x673A;&#x9ED8;&#x8BA4;&#x6302;&#x5728;TF&#x5361;&#x5230;<code>/t</code>&#x4F4D;&#x7F6E;&#x4E86;&#xFF0C;&#x6700;&#x5927;&#x652F;&#x6301;16G&#x50A8;&#x5B58;&#x7A7A;&#x95F4;&#x7684;TF&#x5361;</p>
+<p>&#x4F8B;&#x7A0B;&#xFF1A;<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/fs/src/demo_fs.c" target="_blank">demo/fs</a></p>
+<h2 id="&#x5B8F;&#x5B9A;&#x4E49;"><a name="&#x5B8F;&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x5B8F;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5B8F;&#x5B9A;&#x4E49;</h2>
+<h3 id="fstflashroot"><a name="fstflashroot" class="anchor-navigation-ex-anchor" href="#fstflashroot"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. FS_TFLASH_ROOT</h3>
+<p>TF&#x5361;&#x5F00;&#x673A;&#x81EA;&#x52A8;&#x6302;&#x8F7D;&#x7684;&#x4F4D;&#x7F6E;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_TFLASH_ROOT <span class="hljs-string">&quot;/t&quot;</span></span>
+</code></pre>
+<hr>
+<h3 id="fsordonly"><a name="fsordonly" class="anchor-navigation-ex-anchor" href="#fsordonly"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. FS_O_RDONLY</h3>
+<p>&#x53EA;&#x8BFB;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_O_RDONLY                0</span>
+</code></pre>
+<hr>
+<h4 id="fsowronly"><a name="fsowronly" class="anchor-navigation-ex-anchor" href="#fsowronly"><i class="fa fa-link" aria-hidden="true"></i></a>FS_O_WRONLY</h4>
+<p>&#x53EA;&#x5199;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_O_WRONLY                1</span>
+</code></pre>
+<hr>
+<h3 id="fsordwr"><a name="fsordwr" class="anchor-navigation-ex-anchor" href="#fsordwr"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. FS_O_RDWR</h3>
+<p>&#x8BFB;&#x5199;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_O_RDWR                  2</span>
+</code></pre>
+<hr>
+<h3 id="fsoaccmode"><a name="fsoaccmode" class="anchor-navigation-ex-anchor" href="#fsoaccmode"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. FS_O_ACCMODE</h3>
+<p>&#x8BFB;&#x5199;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x7528;&#x4E8E;&#x53D6;&#x51FA;flag&#x7684;&#x4F4E;2&#x4F4D;&#xFF08;&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x6743;&#x9650;&#xFF09;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_O_ACCMODE               3</span>
+</code></pre>
+<hr>
+<h3 id="fsocreat"><a name="fsocreat" class="anchor-navigation-ex-anchor" href="#fsocreat"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. FS_O_CREAT</h3>
+<p>&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#xFF0C;&#x4E0D;&#x4EA7;&#x751F;&#x5F71;&#x54CD;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x5EFA;&#x7ACB;&#xFF0C;&#x8FD4;&#x56DE;&#x6210;&#x529F;
+&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#x4E14;&#x6709;<code>FS_O_EXCL</code>&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5931;&#x8D25;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_O_CREAT                 00100</span>
+</code></pre>
+<hr>
+<h3 id="fsoexcl"><a name="fsoexcl" class="anchor-navigation-ex-anchor" href="#fsoexcl"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. FS_O_EXCL</h3>
+<p>&#x5982;&#x679C;&#x5B83;&#x548C;<code>FS_O_CREAT</code>&#x540C;&#x65F6;&#x8BBE;&#x5B9A;&#xFF0C;&#x4E14;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x4F1A;&#x5931;&#x8D25;&#xFF0C;&#x8FD4;&#x56DE;-1</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_O_EXCL                  00200</span>
+</code></pre>
+<hr>
+<h3 id="fsotrunc"><a name="fsotrunc" class="anchor-navigation-ex-anchor" href="#fsotrunc"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. FS_O_TRUNC</h3>
+<p>&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4EE5;&#x53EA;&#x5199;&#x6216;&#x53EA;&#x8BFB;&#x6253;&#x5F00;&#xFF0C;&#x5E76;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x4E4B;&#x524D;&#x7684;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_O_TRUNC                 01000</span>
+</code></pre>
+<hr>
+<h3 id="fsoappend"><a name="fsoappend" class="anchor-navigation-ex-anchor" href="#fsoappend"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. FS_O_APPEND</h3>
+<p>&#x8FFD;&#x52A0;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_O_APPEND                02000</span>
+</code></pre>
+<hr>
+<h3 id="fsattrmark"><a name="fsattrmark" class="anchor-navigation-ex-anchor" href="#fsattrmark"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. FS_ATTR_MARK</h3>
+<p>&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x6807;&#x8BB0;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_ATTR_MARK       0x0</span>
+</code></pre>
+<hr>
+<h3 id="fsattrro"><a name="fsattrro" class="anchor-navigation-ex-anchor" href="#fsattrro"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. FS_ATTR_RO</h3>
+<p>&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x53EA;&#x8BFB;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_ATTR_RO            0x00000001</span>
+</code></pre>
+<hr>
+<h3 id="fsattrhidden"><a name="fsattrhidden" class="anchor-navigation-ex-anchor" href="#fsattrhidden"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. FS_ATTR_HIDDEN</h3>
+<p>&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x9690;&#x85CF;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_ATTR_HIDDEN    0x00000002</span>
+</code></pre>
+<hr>
+<h3 id="fsattrsystem"><a name="fsattrsystem" class="anchor-navigation-ex-anchor" href="#fsattrsystem"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. FS_ATTR_SYSTEM</h3>
+<p>&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x7CFB;&#x7EDF;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_ATTR_SYSTEM    0x00000004</span>
+</code></pre>
+<hr>
+<h3 id="fsattrvolume"><a name="fsattrvolume" class="anchor-navigation-ex-anchor" href="#fsattrvolume"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. FS_ATTR_VOLUME</h3>
+<p>&#x5377;&#x6807;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_ATTR_VOLUME    0x00000008</span>
+</code></pre>
+<hr>
+<h3 id="fsattrdir"><a name="fsattrdir" class="anchor-navigation-ex-anchor" href="#fsattrdir"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. FS_ATTR_DIR</h3>
+<p>&#x6587;&#x4EF6;&#x5939;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_ATTR_DIR           0x00000010</span>
+</code></pre>
+<hr>
+<h3 id="fsattrarchive"><a name="fsattrarchive" class="anchor-navigation-ex-anchor" href="#fsattrarchive"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. FS_ATTR_ARCHIVE</h3>
+<p>&#x538B;&#x7F29;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_ATTR_ARCHIVE   0x00000020</span>
+</code></pre>
+<hr>
+<h3 id="fsseekset"><a name="fsseekset" class="anchor-navigation-ex-anchor" href="#fsseekset"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. FS_SEEK_SET</h3>
+<p>&#x6587;&#x4EF6;&#x5F00;&#x5934;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_SEEK_SET                 0</span>
+</code></pre>
+<hr>
+<h3 id="fsseekcur"><a name="fsseekcur" class="anchor-navigation-ex-anchor" href="#fsseekcur"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. FS_SEEK_CUR</h3>
+<p>&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_SEEK_CUR                 1</span>
+</code></pre>
+<hr>
+<h3 id="fsseekend"><a name="fsseekend" class="anchor-navigation-ex-anchor" href="#fsseekend"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. FS_SEEK_END</h3>
+<p>&#x672B;&#x5C3E;&#x4F4D;&#x7F6E;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_SEEK_END                 2</span>
+</code></pre>
+<hr>
+<h3 id="fsdevicenametflash"><a name="fsdevicenametflash" class="anchor-navigation-ex-anchor" href="#fsdevicenametflash"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. FS_DEVICE_NAME_T_FLASH</h3>
+<p>TF&#x5361;&#x540D;&#x79F0;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_DEVICE_NAME_T_FLASH  <span class="hljs-string">&quot;TF&quot;</span></span>
+</code></pre>
+<hr>
+<h3 id="fsdevicenameflash"><a name="fsdevicenameflash" class="anchor-navigation-ex-anchor" href="#fsdevicenameflash"><i class="fa fa-link" aria-hidden="true"></i></a>1.20. FS_DEVICE_NAME_FLASH</h3>
+<p>Flash&#x540D;&#x79F0;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FS_DEVICE_NAME_FLASH    <span class="hljs-string">&quot;FLASH&quot;</span></span>
+</code></pre>
+<hr>
+<h3 id="errfs"><a name="errfs" class="anchor-navigation-ex-anchor" href="#errfs"><i class="fa fa-link" aria-hidden="true"></i></a>1.21. ERR_FS</h3>
+<p>&#x9519;&#x8BEF;&#x4FE1;&#x606F;,&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x8BF7;&#x770B;<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/include/api_inc/api_inc_fs.h" target="_blank">api_inc_fs.h</a></p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_IS_DIRECTORY                                -4200001</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NOT_DIRECTORY                               -4200002</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NO_DIR_ENTRY                                -4200003</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_OPERATION_NOT_GRANTED                       -4200005</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_DIR_NOT_EMPTY                               -4200006</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_FDS_MAX                                     -4200007</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_PROCESS_FILE_MAX                            -4200008</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_FILE_EXIST                                  -4200009</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NO_BASENAME                                 -4200011</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_BAD_FD                                      -4200012</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NO_MORE_FILES                               -4200013</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_HAS_MOUNTED                                 -4200014</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_MOUNTED_FS_MAX                              -4200015</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_UNKNOWN_FILESYSTEM                          -4200016</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_INVALID_DIR_ENTRY                           -4200018</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_INVALID_PARAMETER                           -4200019</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NOT_SUPPORT                                 -4200020</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_UNMOUNT_FAILED                              -4200021</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NO_MORE_MEMORY                              -4200025</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_DEVICE_NOT_REGISTER                         -4200027</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_DISK_FULL                                   -4200030</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NOT_FORMAT                                  -4200032</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_HAS_FORMATED                                -4200033</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NOT_FIND_SB                                 -4200035</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_DEVICE_BUSY                                 -4200037</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_OPEN_DEV_FAILED                             -4200038</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_ROOT_FULL                                   -4200039</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_ACCESS_REG_FAILED                           -4200040</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_PATHNAME_PARSE_FAILED                       -4200041</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_READ_DIR_FAILED                             -4200048</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_MOUNT_READ_ROOT_INODE_FAILED                -4200050</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_INVALID_DEV_NUMBER                          -4200051</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_RENAME_DIFF_PATH                            -4200052</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_FORMAT_MOUNTING_DEVICE                      -4200053</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_DATA_DESTROY                                -4200056</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_READ_SECTOR_FAILED                          -4200057</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_WRITE_SECTOR_FAILED                         -4200058</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_READ_FILE_EXCEED                            -4200059</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_WRITE_FILE_EXCEED                           -4200060</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_FILE_TOO_MORE                               -4200061</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_FILE_NOT_EXIST                              -4200062</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_DEVICE_DIFF                                 -4200063</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_GET_DEV_INFO_FAILED                         -4200064</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NO_MORE_SB_ITEM                             -4200065</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NOT_MOUNT                                   -4200066</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NAME_BUFFER_TOO_SHORT                       -4200068</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_NOT_REGULAR                                 -42000100</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ERR_FS_VOLLAB_IS_NULL                              -42000101</span>
+</code></pre>
+<hr>
+<h2 id="&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><a name="&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;</h2>
+<h3 id="apifsinfo"><a name="apifsinfo" class="anchor-navigation-ex-anchor" href="#apifsinfo"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. API_FS_INFO</h3>
+<p>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7A7A;&#x95F4;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x603B;&#x7A7A;&#x95F4;&#x548C;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x7684;&#x7A7A;&#x95F4;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>
+{
+    UINT64 totalSize;    <span class="hljs-comment">// Total size</span>
+    UINT64 usedSize;     <span class="hljs-comment">// Has used  size</span>
+} API_FS_INFO;
+</code></pre>
+<hr>
+<h2 id="&#x529F;&#x80FD;&#x51FD;&#x6570;"><a name="&#x529F;&#x80FD;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x529F;&#x80FD;&#x51FD;&#x6570;</h2>
+<h3 id="apifsopen"><a name="apifsopen" class="anchor-navigation-ex-anchor" href="#apifsopen"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. API_FS_Open</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span>  API_FS_Open(
+    PCSTR    fileName,
+    <span class="hljs-keyword">uint32_t</span> operationFlag,
+    <span class="hljs-keyword">uint32_t</span> mode
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;"><a name="&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x6253;&#x5F00;&#x6587;&#x4EF6;</p>
+<h5 id="&#x53C2;&#x6570;"><a name="&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fileName&#xFF1A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x6CE8;&#x610F;&#x6587;&#x4EF6;&#x540D;&#x53EA;&#x63A5;&#x53D7;unicode&#x7F16;&#x7801;,
+&#x5148;&#x8C03;&#x7528;<code>LocalLanguage2UnicodeBigEndian</code>&#x5C06;&#x5B57;&#x7B26;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A;unicode&#x7F16;&#x7801;</li>
+<li>operationFlag&#xFF1A;&#x64CD;&#x4F5C;&#x6807;&#x8BB0;&#xFF0C;&#x6BD4;&#x5982;&#x53EA;&#x8BFB;&#x3001;&#x53EA;&#x5199;&#x7B49;(<code>FS_O_...</code>)&#xFF0C;&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x6216;&#x8FD0;&#x7B97;&#x4F20;&#x5165;</li>
+<li>mode&#xFF1A;&#x6A21;&#x5F0F;,&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;&#x5C5E;&#x6027;&#xFF0C;<code>FS_ATTR_...</code>&#xFF0C;&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x6216;&#x8FD0;&#x7B97;&#x4F20;&#x5165;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;"><a name="&#x8FD4;&#x56DE;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x5982;&#x679C;&#x6210;&#x529F;&#x8FD4;&#x56DE;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x96F6;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;&#x8D1F;&#x8D23;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsclose"><a name="apifsclose" class="anchor-navigation-ex-anchor" href="#apifsclose"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. API_FS_Close</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span>  API_FS_Close(
+    <span class="hljs-keyword">int32_t</span> fd
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_1"><a name="&#x529F;&#x80FD;_1" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5173;&#x95ED;&#x6587;&#x4EF6;</p>
+<h5 id="&#x53C2;&#x6570;_1"><a name="&#x53C2;&#x6570;_1" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fd&#xFF1A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;<code>API_FS_Open</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_1"><a name="&#x8FD4;&#x56DE;&#x503C;_1" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsread"><a name="apifsread" class="anchor-navigation-ex-anchor" href="#apifsread"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. API_FS_Read</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span>  API_FS_Read(
+    <span class="hljs-keyword">int32_t</span>  fd,
+    <span class="hljs-keyword">uint8_t</span>* pBuffer,
+    <span class="hljs-keyword">uint32_t</span> length
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_2"><a name="&#x529F;&#x80FD;_2" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8BFB;&#x53D6;&#x6570;&#x636E;</p>
+<h5 id="&#x53C2;&#x6570;_2"><a name="&#x53C2;&#x6570;_2" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fd&#xFF1A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;<code>API_FS_Open</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>pBuffer:&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x6570;&#x636E;&#x5B58;&#x653E;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>length:&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_2"><a name="&#x8FD4;&#x56DE;&#x503C;_2" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x6570;&#x636E;&#x5B57;&#x8282;&#xFF0C;&#x9519;&#x8BEF;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#xFF08;&#x8D1F;&#x6570;&#xFF09;</li>
+</ul>
+<hr>
+<h3 id="apifswrite"><a name="apifswrite" class="anchor-navigation-ex-anchor" href="#apifswrite"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. API_FS_Write</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span>  API_FS_Write(
+    <span class="hljs-keyword">int32_t</span>  fd,
+    <span class="hljs-keyword">uint8_t</span>* pBuffer,
+    <span class="hljs-keyword">uint32_t</span> length
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_3"><a name="&#x529F;&#x80FD;_3" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5199;&#x5165;&#x6587;&#x4EF6;</p>
+<h5 id="&#x53C2;&#x6570;_3"><a name="&#x53C2;&#x6570;_3" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fd&#xFF1A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;<code>API_FS_Open</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>pBuffer:&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x6570;&#x636E;&#x5B58;&#x653E;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>length:&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_3"><a name="&#x8FD4;&#x56DE;&#x503C;_3" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#x5B57;&#x8282;&#xFF0C;&#x9519;&#x8BEF;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#xFF08;&#x8D1F;&#x6570;&#xFF09;</li>
+</ul>
+<hr>
+<h3 id="apifsflush"><a name="apifsflush" class="anchor-navigation-ex-anchor" href="#apifsflush"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. API_FS_Flush</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">uint32_t</span> API_FS_Flush(
+    <span class="hljs-keyword">int32_t</span> fd
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_4"><a name="&#x529F;&#x80FD;_4" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5237;&#x65B0;&#x7F13;&#x51B2;&#x533A;</p>
+<h5 id="&#x53C2;&#x6570;_4"><a name="&#x53C2;&#x6570;_4" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fd&#xFF1A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;<code>API_FS_Open</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_4"><a name="&#x8FD4;&#x56DE;&#x503C;_4" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x8FD4;&#x56DE;0&#x6216;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifscreate"><a name="apifscreate" class="anchor-navigation-ex-anchor" href="#apifscreate"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. API_FS_Create</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span> API_FS_Create(
+    PCSTR fileName,
+    <span class="hljs-keyword">uint32_t</span> mode
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_5"><a name="&#x529F;&#x80FD;_5" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521B;&#x5EFA;&#x6587;&#x4EF6;</p>
+<h5 id="&#x53C2;&#x6570;_5"><a name="&#x53C2;&#x6570;_5" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fileName:&#x6587;&#x4EF6;&#x540D;&#xFF0C;unicode&#x7F16;&#x7801;</li>
+<li>mode&#xFF1A;&#x6587;&#x4EF6;&#x5C5E;&#x6027;<code>FS_ATTR_...</code>&#xFF0C;&#x53EF;&#x4EE5;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x6216;&#x8FD0;&#x7B97;&#x4F20;&#x5165;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_5"><a name="&#x8FD4;&#x56DE;&#x503C;_5" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsdelete"><a name="apifsdelete" class="anchor-navigation-ex-anchor" href="#apifsdelete"><i class="fa fa-link" aria-hidden="true"></i></a>3.7. API_FS_Delete</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span>  API_FS_Delete(
+    PCSTR fileName
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_6"><a name="&#x529F;&#x80FD;_6" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5220;&#x9664;&#x6587;&#x4EF6;</p>
+<h5 id="&#x53C2;&#x6570;_6"><a name="&#x53C2;&#x6570;_6" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fileName:&#x6587;&#x4EF6;&#x540D;&#xFF0C;unicode&#x7F16;&#x7801;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_6"><a name="&#x8FD4;&#x56DE;&#x503C;_6" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_6"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsseek"><a name="apifsseek" class="anchor-navigation-ex-anchor" href="#apifsseek"><i class="fa fa-link" aria-hidden="true"></i></a>3.8. API_FS_Seek</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int64_t</span> API_FS_Seek(
+    <span class="hljs-keyword">int32_t</span>  fd,
+    <span class="hljs-keyword">int64_t</span>  offset,
+    <span class="hljs-keyword">uint8_t</span>  origin
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_7"><a name="&#x529F;&#x80FD;_7" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x4F4D;&#x7F6E;</p>
+<h5 id="&#x53C2;&#x6570;_7"><a name="&#x53C2;&#x6570;_7" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fd&#xFF1A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;<code>API_FS_Open</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>offset&#xFF1A;&#x504F;&#x79FB;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;origin&#x7684;&#x504F;&#x79FB;&#x5B57;&#x8282;&#x6570;</li>
+<li>origin&#xFF1A;&#x504F;&#x79FB;&#x7684;&#x8D77;&#x59CB;&#x5730;&#x5740;,&#x5177;&#x4F53;&#x4F4D;&#x7F6E;&#x6216;&#x8005;&#x7279;&#x6B8A;&#x503C;&#xFF1A;<code>FS_SEEK_...</code></li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_7"><a name="&#x8FD4;&#x56DE;&#x503C;_7" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_7"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsisendoffile"><a name="apifsisendoffile" class="anchor-navigation-ex-anchor" href="#apifsisendoffile"><i class="fa fa-link" aria-hidden="true"></i></a>3.9. API_FS_IsEndOfFile</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span> API_FS_IsEndOfFile(
+    <span class="hljs-keyword">int32_t</span> fd
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_8"><a name="&#x529F;&#x80FD;_8" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x662F;&#x5426;&#x5728;&#x6587;&#x4EF6;&#x672B;&#x5C3E;</p>
+<h5 id="&#x53C2;&#x6570;_8"><a name="&#x53C2;&#x6570;_8" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fd&#xFF1A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;<code>API_FS_Open</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_8"><a name="&#x8FD4;&#x56DE;&#x503C;_8" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_8"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x662F;&#x5728;&#x672B;&#x5C3E;&#x5219;&#x8FD4;&#x56DE;1&#xFF0C;&#x6CA1;&#x5728;&#x672B;&#x5C3E;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsrename"><a name="apifsrename" class="anchor-navigation-ex-anchor" href="#apifsrename"><i class="fa fa-link" aria-hidden="true"></i></a>3.10. API_FS_Rename</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span> API_FS_Rename(
+    PCSTR oldName,
+    PCSTR newName
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_9"><a name="&#x529F;&#x80FD;_9" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;</p>
+<h5 id="&#x53C2;&#x6570;_9"><a name="&#x53C2;&#x6570;_9" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>oldName:&#x65E7;&#x6587;&#x4EF6;&#x540D;&#xFF0C;unicode&#x7F16;&#x7801;</li>
+<li>newName:&#x65B0;&#x6587;&#x4EF6;&#x540D;&#xFF0C;unicode&#x7F16;&#x7801;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_9"><a name="&#x8FD4;&#x56DE;&#x503C;_9" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_9"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsgetfilename"><a name="apifsgetfilename" class="anchor-navigation-ex-anchor" href="#apifsgetfilename"><i class="fa fa-link" aria-hidden="true"></i></a>3.11. API_FS_GetFileName</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span>  API_FS_GetFileName(
+    <span class="hljs-keyword">int32_t</span>  fd,
+    <span class="hljs-keyword">int32_t</span>  nameBufferLen,
+    <span class="hljs-keyword">uint8_t</span>* fileName
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_10"><a name="&#x529F;&#x80FD;_10" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x6839;&#x636E;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x540D;</p>
+<h5 id="&#x53C2;&#x6570;_10"><a name="&#x53C2;&#x6570;_10" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fd&#xFF1A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;<code>API_FS_Open</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>nameBufferLen&#xFF1A;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x540D;&#x5B57;&#x5B58;&#x653E;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</li>
+<li>fileName&#xFF1A;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x6587;&#x4EF6;&#x540D;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_10"><a name="&#x8FD4;&#x56DE;&#x503C;_10" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_10"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsgetfilesize"><a name="apifsgetfilesize" class="anchor-navigation-ex-anchor" href="#apifsgetfilesize"><i class="fa fa-link" aria-hidden="true"></i></a>3.12. API_FS_GetFileSize</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int64_t</span>  API_FS_GetFileSize(
+    <span class="hljs-keyword">int32_t</span> fd
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_11"><a name="&#x529F;&#x80FD;_11" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5927;&#x5C0F;</p>
+<h5 id="&#x53C2;&#x6570;_11"><a name="&#x53C2;&#x6570;_11" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fd&#xFF1A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C;<code>API_FS_Open</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_11"><a name="&#x8FD4;&#x56DE;&#x503C;_11" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_11"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x6216;&#x8005;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsgetdirsize"><a name="apifsgetdirsize" class="anchor-navigation-ex-anchor" href="#apifsgetdirsize"><i class="fa fa-link" aria-hidden="true"></i></a>3.13. API_FS_GetDirSize</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int64_t</span>  API_FS_GetDirSize(
+    PCSTR     fileName,
+    <span class="hljs-keyword">uint64_t</span>* size
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_12"><a name="&#x529F;&#x80FD;_12" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_12"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x5939;&#x5927;&#x5C0F;</p>
+<h5 id="&#x53C2;&#x6570;_12"><a name="&#x53C2;&#x6570;_12" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_12"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fileName&#xFF1A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;unicode&#x7F16;&#x7801;</li>
+<li>size&#xFF1A;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x5927;&#x5C0F;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_12"><a name="&#x8FD4;&#x56DE;&#x503C;_12" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_12"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsgetcurdir"><a name="apifsgetcurdir" class="anchor-navigation-ex-anchor" href="#apifsgetcurdir"><i class="fa fa-link" aria-hidden="true"></i></a>3.14. API_FS_GetCurDir</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span>  API_FS_GetCurDir(
+    <span class="hljs-keyword">uint32_t</span> size,
+    PSTR     pCurDir
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_13"><a name="&#x529F;&#x80FD;_13" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_13"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x540D;&#x79F0;</p>
+<h5 id="&#x53C2;&#x6570;_13"><a name="&#x53C2;&#x6570;_13" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_13"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>size&#xFF1A;&#x5F97;&#x5230;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x540D;&#x79F0;&#x5B58;&#x653E;&#x6570;&#x7EC4;&#x957F;&#x5EA6;</li>
+<li>pCurDir&#xFF1A;&#x5F97;&#x5230;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x540D;&#x79F0;&#x5B58;&#x653E;&#x6570;&#x7EC4;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_13"><a name="&#x8FD4;&#x56DE;&#x503C;_13" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_13"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifschangedir"><a name="apifschangedir" class="anchor-navigation-ex-anchor" href="#apifschangedir"><i class="fa fa-link" aria-hidden="true"></i></a>3.15. API_FS_ChangeDir</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span>  API_FS_ChangeDir(
+    PCSTR pDirName
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_14"><a name="&#x529F;&#x80FD;_14" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_14"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5207;&#x6362;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;</p>
+<h5 id="&#x53C2;&#x6570;_14"><a name="&#x53C2;&#x6570;_14" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_14"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pDirName&#xFF1A;&#x6587;&#x4EF6;&#x5939;&#x540D;&#xFF0C;unicode&#x7F16;&#x7801;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_14"><a name="&#x8FD4;&#x56DE;&#x503C;_14" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_14"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsmkdir"><a name="apifsmkdir" class="anchor-navigation-ex-anchor" href="#apifsmkdir"><i class="fa fa-link" aria-hidden="true"></i></a>3.16. API_FS_Mkdir</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span> API_FS_Mkdir(
+    PCSTR fileName,
+    <span class="hljs-keyword">uint32_t</span> mode
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_15"><a name="&#x529F;&#x80FD;_15" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_15"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;</p>
+<h5 id="&#x53C2;&#x6570;_15"><a name="&#x53C2;&#x6570;_15" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_15"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>fileName&#xFF1A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;unicode&#x7F16;&#x7801;</li>
+<li>mode&#xFF1A;&#x6587;&#x4EF6;&#x5939;&#x5C5E;&#x6027;&#xFF0C;<code>FS_ATTR_...</code></li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_15"><a name="&#x8FD4;&#x56DE;&#x503C;_15" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_15"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsrmdir"><a name="apifsrmdir" class="anchor-navigation-ex-anchor" href="#apifsrmdir"><i class="fa fa-link" aria-hidden="true"></i></a>3.17. API_FS_Rmdir</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span> API_FS_Rmdir(
+    PCSTR dirName
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_16"><a name="&#x529F;&#x80FD;_16" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_16"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5939;</p>
+<h5 id="&#x53C2;&#x6570;_16"><a name="&#x53C2;&#x6570;_16" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_16"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>dirName&#xFF1A;&#x6587;&#x4EF6;&#x5939;&#x540D;&#xFF0C;unicode&#x7F16;&#x7801;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_16"><a name="&#x8FD4;&#x56DE;&#x503C;_16" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_16"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+<h3 id="apifsgetfsinfo"><a name="apifsgetfsinfo" class="anchor-navigation-ex-anchor" href="#apifsgetfsinfo"><i class="fa fa-link" aria-hidden="true"></i></a>3.18. API_FS_GetFSInfo</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">int32_t</span> API_FS_GetFSInfo(
+    PCSTR         pDevName,
+    API_FS_INFO* pFsInfo
+);
+</code></pre>
+<h5 id="&#x529F;&#x80FD;_17"><a name="&#x529F;&#x80FD;_17" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;_17"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h5>
+<p>&#x83B7;&#x53D6;&#x50A8;&#x5B58;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x4FE1;&#x606F;</p>
+<h5 id="&#x53C2;&#x6570;_17"><a name="&#x53C2;&#x6570;_17" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;_17"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;</h5>
+<ul>
+<li>pDevName:&#x8BBE;&#x5907;&#x540D;&#xFF1A;<code>FS_DEVICE_NAME_...</code></li>
+<li>pFsInfo:&#x8FD4;&#x56DE;&#x7684;&#x50A8;&#x5B58;&#x7A7A;&#x95F4;&#x4FE1;&#x606F;</li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x503C;_17"><a name="&#x8FD4;&#x56DE;&#x503C;_17" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_17"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h5>
+<ul>
+<li>&#x6210;&#x529F;&#x8FD4;&#x56DE;0&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</li>
+</ul>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="timertc.html" class="navigation navigation-prev " aria-label="Previous page: time(RTC)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gprswang-7edc28-ji-7ad929.html" class="navigation navigation-next " aria-label="Next page: GPRS网络(基站信息等)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"FS(文件系统)(储存数据到flash或T卡)","level":"4.8.11","depth":2,"next":{"title":"GPRS网络(基站信息等)","level":"4.8.12","depth":2,"path":"c-sdk/gong-neng-ji-api/gprswang-7edc28-ji-7ad929.md","ref":"c-sdk/gong-neng-ji-api/gprswang-7edc28-ji-7ad929.md","articles":[]},"previous":{"title":"time(RTC)","level":"4.8.10","depth":2,"path":"c-sdk/gong-neng-ji-api/timertc.md","ref":"c-sdk/gong-neng-ji-api/timertc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga","toggle-chapters"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"English","text":"English","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/en"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["weibo","facebook","twitter","google","instapaper","vk"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"zh-hans","gitbook":"*","description":"GPRS C SDK 文档"},"file":{"path":"c-sdk/gong-neng-ji-api/fswen-jian-xi-7edf2928-chu-cun-shu-ju-dao-flash-huo-t-536129.md","mtime":"2018-12-26T09:37:35.977Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T09:38:38.959Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

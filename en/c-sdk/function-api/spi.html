@@ -1,0 +1,1075 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SPI · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="timertc.html" />
+    
+    
+    <link rel="prev" href="iic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">introduces</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../hardware/a9.html">
+            
+                <a href="../../hardware/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../hardware/a9g.html">
+            
+                <a href="../../hardware/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../hardware/pudding-dev-board.html">
+            
+                <a href="../../hardware/pudding-dev-board.html">
+            
+                    
+                    pudding dev board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../hardware/usb-uart-module.html">
+            
+                <a href="../../hardware/usb-uart-module.html">
+            
+                    
+                    USB-UART module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../hardware/sim-card.html">
+            
+                <a href="../../hardware/sim-card.html">
+            
+                    
+                    SIM Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Knowledge</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../basic-knowledge/gsmgprs.html">
+            
+                <a href="../../basic-knowledge/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../basic-knowledge/gps.html">
+            
+                <a href="../../basic-knowledge/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Installation Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    Installation Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../burn-debug.html">
+            
+                <a href="../burn-debug.html">
+            
+                    
+                    Burn & Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../first-code.html">
+            
+                <a href="../first-code.html">
+            
+                    
+                    First Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../code-style.html">
+            
+                <a href="../code-style.html">
+            
+                    
+                    Code Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../function-api.html">
+            
+                <a href="../function-api.html">
+            
+                    
+                    Function & API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" data-path="iccid.html">
+            
+                <a href="iccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.7.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.11" data-path="file-system.html">
+            
+                <a href="file-system.html">
+            
+                    
+                    FS(Flash/TF Card)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.12" data-path="gprs-network.html">
+            
+                <a href="gprs-network.html">
+            
+                    
+                    GPRS Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.14" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.15" data-path="ssl-tls.html">
+            
+                <a href="ssl-tls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.17" data-path="power-manager.html">
+            
+                <a href="power-manager.html">
+            
+                    
+                    Power Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.18" data-path="call.html">
+            
+                <a href="call.html">
+            
+                    
+                    Call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.19" data-path="sms.html">
+            
+                <a href="sms.html">
+            
+                    
+                    SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >SPI</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#spi"><b> </b>SPI</a></li><ul><li><span class="title-icon "></span><a href="#macro-definition"><b>1. </b>Macro definition</a></li><ul><li><span class="title-icon "></span><a href="#spifreqmax"><b>1.1. </b>SPI_FREQ_MAX</a></li></ul><li><span class="title-icon "></span><a href="#enumerated-type"><b>2. </b>Enumerated type</a></li><ul><li><span class="title-icon "></span><a href="#spicst"><b>2.1. </b>SPI_CS_t</a></li><li><span class="title-icon "></span><a href="#spimodet"><b>2.2. </b>SPI_Mode_t</a></li><li><span class="title-icon "></span><a href="#spilinet"><b>2.3. </b>SPI_Line_t</a></li><li><span class="title-icon "></span><a href="#spidatabitst"><b>2.4. </b>SPI_Data_Bits_t</a></li></ul><li><span class="title-icon "></span><a href="#struct"><b>3. </b>Struct</a></li><ul><li><span class="title-icon "></span><a href="#spiirqflagst"><b>3.1. </b>SPI_Irq_Flags_t</a></li><li><span class="title-icon "></span><a href="#spiconfigt"><b>3.2. </b>SPI_Config_t</a></li></ul><li><span class="title-icon "></span><a href="#function"><b>4. </b>Function</a></li><ul><li><span class="title-icon "></span><a href="#spiirqhandlert"><b>4.1. </b>SPI_Irq_Handler_t</a></li><li><span class="title-icon "></span><a href="#spiinit"><b>4.2. </b>SPI_Init</a></li><li><span class="title-icon "></span><a href="#spiclose"><b>4.3. </b>SPI_Close</a></li><li><span class="title-icon "></span><a href="#spiwrite"><b>4.4. </b>SPI_Write</a></li><li><span class="title-icon "></span><a href="#spiread"><b>4.5. </b>SPI_Read</a></li><li><span class="title-icon "></span><a href="#spiistxdone"><b>4.6. </b>SPI_IsTxDone</a></li><li><span class="title-icon "></span><a href="#spiistxdmadone"><b>4.7. </b>SPI_IsTxDmaDone</a></li><li><span class="title-icon "></span><a href="#spiisrxdmadone"><b>4.8. </b>SPI_IsRxDmaDone</a></li><li><span class="title-icon "></span><a href="#spicleartxdmadone"><b>4.9. </b>SPI_ClearTxDmaDone</a></li><li><span class="title-icon "></span><a href="#spiflushfifos"><b>4.10. </b>SPI_FlushFIFOs</a></li><li><span class="title-icon "></span><a href="#spisetirqhandler"><b>4.11. </b>SPI_SetIrqHandler</a></li><li><span class="title-icon "></span><a href="#spisetirqmask"><b>4.12. </b>SPI_SetIrqMask</a></li></ul></ul></ul></div><a href="#spi" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="spi"><a name="spi" class="anchor-navigation-ex-anchor" href="#spi"><i class="fa fa-link" aria-hidden="true"></i></a> SPI</h1>
+<p>A9/A9G has two SPI interfaces. When using it, pay attention to which pins are multiplexed and pin view the pin diagram of pudding development board.</p>
+<p>Open power first</p>
+<p>example:<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/spi/src/demo_spi.c" target="_blank">demo/spi</a></p>
+<h2 id="macro-definition"><a name="macro-definition" class="anchor-navigation-ex-anchor" href="#macro-definition"><i class="fa fa-link" aria-hidden="true"></i></a>1. Macro definition</h2>
+<h3 id="spifreqmax"><a name="spifreqmax" class="anchor-navigation-ex-anchor" href="#spifreqmax"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. SPI_FREQ_MAX</h3>
+<p>SPI maximum support frequency</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SPI_FREQ_MAX 13000000</span>
+</code></pre>
+<hr>
+<h2 id="enumerated-type"><a name="enumerated-type" class="anchor-navigation-ex-anchor" href="#enumerated-type"><i class="fa fa-link" aria-hidden="true"></i></a>2. Enumerated type</h2>
+<h4 id="spiidt"><a name="spiidt" class="anchor-navigation-ex-anchor" href="#spiidt"><i class="fa fa-link" aria-hidden="true"></i></a>SPI_ID_t</h4>
+<p>SPI number, two SPI</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>
+{
+    SPI1      = <span class="hljs-number">1</span> ,
+    SPI2      = <span class="hljs-number">2</span> ,
+} SPI_ID_t;
+</code></pre>
+<hr>
+<h3 id="spicst"><a name="spicst" class="anchor-navigation-ex-anchor" href="#spicst"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. SPI_CS_t</h3>
+<p>SPI CS pin, each SPI has two CS pins to choose from.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>
+{
+    SPI_CS_0  = <span class="hljs-number">0</span> ,
+    SPI_CS_1      ,
+    SPI_CS_MAX
+} SPI_CS_t;
+</code></pre>
+<hr>
+<h3 id="spimodet"><a name="spimodet" class="anchor-navigation-ex-anchor" href="#spimodet"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. SPI_Mode_t</h3>
+<p>SPI mode is divided into four modes: polling, interruption, DMA polling and DMA interruption.</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>
+{
+    <span class="hljs-comment">/// Direct polling: The application sends/receives the data directly to/from</span>
+    <span class="hljs-comment">/// the hardware module. The number of bytes actually sent/received is</span>
+    <span class="hljs-comment">/// returned.</span>
+    SPI_MODE_DIRECT_POLLING                   ,
+
+    <span class="hljs-comment">/// Direct IRQ: The application sends/receives the data directly to/from</span>
+    <span class="hljs-comment">/// the hardware module. The number of bytes actually sent/received is</span>
+    <span class="hljs-comment">/// returned. An Irq can be generated when the Tx/Rx FIFO reaches the</span>
+    <span class="hljs-comment">/// pre-programmed level.</span>
+    SPI_MODE_DIRECT_IRQ                       ,
+
+    <span class="hljs-comment">/// DMA polling: The application sends/receives the data through a DMA to</span>
+    <span class="hljs-comment">/// the hardware module. The function returns 0 when no DMA channel is</span>
+    <span class="hljs-comment">/// available. No bytes are sent. The function returns the number of bytes</span>
+    <span class="hljs-comment">/// to send when a DMA resource is available. They will all be sent. A</span>
+    <span class="hljs-comment">/// function allows to check if the previous DMA transfer is finished. No</span>
+    <span class="hljs-comment">/// new DMA transfer in the same direction will be allowed before the end</span>
+    <span class="hljs-comment">/// of the previous transfer.</span>
+    SPI_MODE_DMA_POLLING                      ,
+
+    <span class="hljs-comment">/// DMA IRQ: The application sends/receives the data through a DMA to the</span>
+    <span class="hljs-comment">/// hardware module. The function returns 0 when no DMA channel is</span>
+    <span class="hljs-comment">/// available. No bytes are sent. The function returns the number of bytes</span>
+    <span class="hljs-comment">/// to send when a DMA resource is available. They will all be sent. An</span>
+    <span class="hljs-comment">/// IRQ is generated when the current transfer is finished. No new DMA</span>
+    <span class="hljs-comment">/// transfer in the same direction will be allowed before the end of the</span>
+    <span class="hljs-comment">/// previous transfer.</span>
+    SPI_MODE_DMA_IRQ                          ,
+
+    SPI_MODE_MAX
+} SPI_Mode_t;
+</code></pre>
+<hr>
+<h3 id="spilinet"><a name="spilinet" class="anchor-navigation-ex-anchor" href="#spilinet"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. SPI_Line_t</h3>
+<p>SPI supports 3 line and 4 line mode</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+
+    SPI_LINE_3  = <span class="hljs-number">3</span>    ,   <span class="hljs-comment">///  Half-Duplex Mode</span>
+    SPI_LINE_4  = <span class="hljs-number">4</span>    ,    <span class="hljs-comment">///  Full-Duplex Mode</span>
+} SPI_Line_t;
+</code></pre>
+<hr>
+<h3 id="spidatabitst"><a name="spidatabitst" class="anchor-navigation-ex-anchor" href="#spidatabitst"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. SPI_Data_Bits_t</h3>
+<p>SPI data bits</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span>{
+    SPI_DATA_BITS_8 = <span class="hljs-number">8</span> ,
+    SPI_DATA_BITS_16 = <span class="hljs-number">16</span>,
+} SPI_Data_Bits_t;
+</code></pre>
+<hr>
+<h2 id="struct"><a name="struct" class="anchor-navigation-ex-anchor" href="#struct"><i class="fa fa-link" aria-hidden="true"></i></a>3. Struct</h2>
+<h3 id="spiirqflagst"><a name="spiirqflagst" class="anchor-navigation-ex-anchor" href="#spiirqflagst"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. SPI_Irq_Flags_t</h3>
+<p>SPI interrupt flag</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>
+{
+    <span class="hljs-comment">/// Rx FIFO overflow</span>
+    <span class="hljs-keyword">bool</span> rxOverflow;
+    <span class="hljs-comment">/// Tx send finish</span>
+    <span class="hljs-keyword">bool</span> txFinish;
+    <span class="hljs-comment">/// Tx DMA send finish</span>
+    <span class="hljs-keyword">bool</span> txDmaDone;
+    <span class="hljs-comment">/// Rx send finish</span>
+    <span class="hljs-keyword">bool</span> rxFinish;
+    <span class="hljs-comment">/// Rx DMA send finish</span>
+    <span class="hljs-keyword">bool</span> rxDmaDone;
+} SPI_Irq_Flags_t;
+</code></pre>
+<hr>
+<h3 id="spiconfigt"><a name="spiconfigt" class="anchor-navigation-ex-anchor" href="#spiconfigt"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. SPI_Config_t</h3>
+<p>SPI configuration</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>
+{
+    <span class="hljs-comment">/// Select the Chip Select</span>
+    SPI_CS_t cs;
+
+    <span class="hljs-comment">/// Emission transfer mode</span>
+    SPI_Mode_t txMode;
+
+    <span class="hljs-comment">/// Reception transfer mode</span>
+    SPI_Mode_t rxMode;
+
+    <span class="hljs-comment">/// SPI clock frequency</span>
+    <span class="hljs-comment">/// up to 13Mbits/s (SPI_FREQ_MAX)</span>
+    <span class="hljs-keyword">uint32_t</span>   freq;
+
+    <span class="hljs-comment">/// SPI transfer line mode</span>
+    SPI_Line_t line;
+
+    <span class="hljs-comment">/// SPI tx only</span>
+    <span class="hljs-comment">/// false: tx only disable</span>
+    <span class="hljs-comment">/// true:  tx only enable</span>
+    <span class="hljs-keyword">bool</span> txOnly;
+
+    <span class="hljs-comment">/// SPI Clk Polarity</span>
+    <span class="hljs-comment">/// 0 when SPI is free,clk line is in low level</span>
+    <span class="hljs-comment">/// 1 when SPI is free,clk line is in high level</span>
+    <span class="hljs-keyword">uint8_t</span> cpol;
+
+    <span class="hljs-comment">/// SPI Clk Phase</span>
+    <span class="hljs-comment">/// 0 SPI sampling data at the first edge</span>
+    <span class="hljs-comment">/// 1 SPI sampling data at the second edge</span>
+    <span class="hljs-keyword">uint8_t</span> cpha;
+
+    <span class="hljs-comment">/// SPI Cs Active Polarity</span>
+    <span class="hljs-comment">/// true: Cs Active Low</span>
+    <span class="hljs-comment">/// false:  Cs Active High</span>
+    <span class="hljs-keyword">bool</span> csActiveLow;
+
+    <span class="hljs-comment">/// SPI framesize</span>
+    SPI_Data_Bits_t dataBits;
+
+
+    SPI_Irq_Handler_t irqHandler;
+
+    SPI_Irq_Flags_t   irqMask;
+
+} SPI_Config_t;
+</code></pre>
+<hr>
+<h2 id="function"><a name="function" class="anchor-navigation-ex-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>4. Function</h2>
+<h3 id="spiirqhandlert"><a name="spiirqhandlert" class="anchor-navigation-ex-anchor" href="#spiirqhandlert"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. SPI_Irq_Handler_t</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*SPI_Irq_Handler_t)</span><span class="hljs-params">(SPI_Irq_Flags_t flags)</span></span>;
+</code></pre>
+<h4 id="function_1"><a name="function_1" class="anchor-navigation-ex-anchor" href="#function_1"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>SPI interrupt callback function</p>
+<h4 id="parameters"><a name="parameters" class="anchor-navigation-ex-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>flags: interrupt status flag</li>
+</ul>
+<h4 id="return"><a name="return" class="anchor-navigation-ex-anchor" href="#return"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="spiinit"><a name="spiinit" class="anchor-navigation-ex-anchor" href="#spiinit"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. SPI_Init</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_Init</span><span class="hljs-params">(SPI_ID_t spiN, SPI_Config_t spiConfig)</span></span>;
+</code></pre>
+<h4 id="function_2"><a name="function_2" class="anchor-navigation-ex-anchor" href="#function_2"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Initialization of SPI</p>
+<h4 id="parameters_1"><a name="parameters_1" class="anchor-navigation-ex-anchor" href="#parameters_1"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+<li>spiConfig:SPI configuration</li>
+</ul>
+<h4 id="return_1"><a name="return_1" class="anchor-navigation-ex-anchor" href="#return_1"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether or not it is successfully initialized</li>
+</ul>
+<hr>
+<h3 id="spiclose"><a name="spiclose" class="anchor-navigation-ex-anchor" href="#spiclose"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. SPI_Close</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_Close</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h4 id="function_3"><a name="function_3" class="anchor-navigation-ex-anchor" href="#function_3"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Shut down SPI</p>
+<h4 id="parameters_2"><a name="parameters_2" class="anchor-navigation-ex-anchor" href="#parameters_2"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+</ul>
+<h4 id="return_2"><a name="return_2" class="anchor-navigation-ex-anchor" href="#return_2"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether SPI has been successfully closed</li>
+</ul>
+<hr>
+<h3 id="spiwrite"><a name="spiwrite" class="anchor-navigation-ex-anchor" href="#spiwrite"><i class="fa fa-link" aria-hidden="true"></i></a>4.4. SPI_Write</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">uint32_t</span> SPI_Write(SPI_ID_t spiN, <span class="hljs-keyword">const</span> <span class="hljs-keyword">uint8_t</span> *data, <span class="hljs-keyword">uint32_t</span> length);
+</code></pre>
+<h4 id="function_4"><a name="function_4" class="anchor-navigation-ex-anchor" href="#function_4"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Write data to SPI</p>
+<h4 id="parameters_3"><a name="parameters_3" class="anchor-navigation-ex-anchor" href="#parameters_3"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+<li>data: data to be sent</li>
+<li>length: the length of the data to be sent</li>
+</ul>
+<h4 id="return_3"><a name="return_3" class="anchor-navigation-ex-anchor" href="#return_3"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>the length of the data sent successfully, if the return value in DMA mode is 0, it means that the DMA channel is not available.</li>
+</ul>
+<hr>
+<h3 id="spiread"><a name="spiread" class="anchor-navigation-ex-anchor" href="#spiread"><i class="fa fa-link" aria-hidden="true"></i></a>4.5. SPI_Read</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">uint32_t</span> SPI_Read(SPI_ID_t spiN, <span class="hljs-keyword">uint8_t</span> *data, <span class="hljs-keyword">uint32_t</span> length);
+</code></pre>
+<h4 id="function_5"><a name="function_5" class="anchor-navigation-ex-anchor" href="#function_5"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Reading data from SPI</p>
+<h4 id="parameters_4"><a name="parameters_4" class="anchor-navigation-ex-anchor" href="#parameters_4"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+<li>data: the location of the stored data read</li>
+<li>length: the length of the data to be read</li>
+</ul>
+<h4 id="return_4"><a name="return_4" class="anchor-navigation-ex-anchor" href="#return_4"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>read the length of the data, unit bytes</li>
+</ul>
+<hr>
+<h3 id="spiistxdone"><a name="spiistxdone" class="anchor-navigation-ex-anchor" href="#spiistxdone"><i class="fa fa-link" aria-hidden="true"></i></a>4.6. SPI_IsTxDone</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_IsTxDone</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h4 id="function_6"><a name="function_6" class="anchor-navigation-ex-anchor" href="#function_6"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Check whether the last transmission has been completed. If the transmitted data is very important, this function is best invoked before closing the SPI.</p>
+<p>It should not be invoked in direct transmission and DMA transmission.</p>
+<h4 id="parameters_5"><a name="parameters_5" class="anchor-navigation-ex-anchor" href="#parameters_5"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+</ul>
+<h4 id="return_5"><a name="return_5" class="anchor-navigation-ex-anchor" href="#return_5"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>If FIFO is sent empty, return to true; otherwise, return false.</li>
+</ul>
+<hr>
+<h3 id="spiistxdmadone"><a name="spiistxdmadone" class="anchor-navigation-ex-anchor" href="#spiistxdmadone"><i class="fa fa-link" aria-hidden="true"></i></a>4.7. SPI_IsTxDmaDone</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_IsTxDmaDone</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h4 id="function_7"><a name="function_7" class="anchor-navigation-ex-anchor" href="#function_7"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>If you want to know whether the SPI DMA is complete or not, when you send new data in DMA mode, you need to ensure that the previous data has been sent to completion. You can use this function to poll.</p>
+<p>It is important to note that the DMA transmission is completed but the sending FIFO may not be empty, so that the next DMA new data can be sent in time, and before the SPI is closed, it is necessary to check whether the SPI FIFO is empty with <code>SPI_IsTxDone</code>.</p>
+<h4 id="parameters_6"><a name="parameters_6" class="anchor-navigation-ex-anchor" href="#parameters_6"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+</ul>
+<h4 id="return_6"><a name="return_6" class="anchor-navigation-ex-anchor" href="#return_6"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>DMA transmission is completed</li>
+</ul>
+<hr>
+<h3 id="spiisrxdmadone"><a name="spiisrxdmadone" class="anchor-navigation-ex-anchor" href="#spiisrxdmadone"><i class="fa fa-link" aria-hidden="true"></i></a>4.8. SPI_IsRxDmaDone</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">SPI_IsRxDmaDone</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h4 id="function_8"><a name="function_8" class="anchor-navigation-ex-anchor" href="#function_8"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Check whether the DMA received data is completed</p>
+<h4 id="parameters_7"><a name="parameters_7" class="anchor-navigation-ex-anchor" href="#parameters_7"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+</ul>
+<h4 id="return_7"><a name="return_7" class="anchor-navigation-ex-anchor" href="#return_7"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>whether the data has been successfully received</li>
+</ul>
+<hr>
+<h3 id="spicleartxdmadone"><a name="spicleartxdmadone" class="anchor-navigation-ex-anchor" href="#spicleartxdmadone"><i class="fa fa-link" aria-hidden="true"></i></a>4.9. SPI_ClearTxDmaDone</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SPI_ClearTxDmaDone</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h4 id="function_9"><a name="function_9" class="anchor-navigation-ex-anchor" href="#function_9"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Clear the SPI DMA to send the completion flag</p>
+<h4 id="parameters_8"><a name="parameters_8" class="anchor-navigation-ex-anchor" href="#parameters_8"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+</ul>
+<h4 id="return_8"><a name="return_8" class="anchor-navigation-ex-anchor" href="#return_8"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="spiflushfifos"><a name="spiflushfifos" class="anchor-navigation-ex-anchor" href="#spiflushfifos"><i class="fa fa-link" aria-hidden="true"></i></a>4.10. SPI_FlushFIFOs</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SPI_FlushFIFOs</span><span class="hljs-params">(SPI_ID_t spiN)</span></span>;
+</code></pre>
+<h4 id="function_10"><a name="function_10" class="anchor-navigation-ex-anchor" href="#function_10"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Refresh the buffer of two SPI (FIFO)</p>
+<h4 id="parameters_9"><a name="parameters_9" class="anchor-navigation-ex-anchor" href="#parameters_9"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+</ul>
+<h4 id="return_9"><a name="return_9" class="anchor-navigation-ex-anchor" href="#return_9"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="spisetirqhandler"><a name="spisetirqhandler" class="anchor-navigation-ex-anchor" href="#spisetirqhandler"><i class="fa fa-link" aria-hidden="true"></i></a>4.11. SPI_SetIrqHandler</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SPI_SetIrqHandler</span><span class="hljs-params">(SPI_ID_t spiN, SPI_Irq_Handler_t handler)</span></span>;
+</code></pre>
+<h4 id="function_11"><a name="function_11" class="anchor-navigation-ex-anchor" href="#function_11"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Setting the interrupt callback function</p>
+<h4 id="parameters_10"><a name="parameters_10" class="anchor-navigation-ex-anchor" href="#parameters_10"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+<li>handler: interrupt callback function</li>
+</ul>
+<h4 id="return_10"><a name="return_10" class="anchor-navigation-ex-anchor" href="#return_10"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="spisetirqmask"><a name="spisetirqmask" class="anchor-navigation-ex-anchor" href="#spisetirqmask"><i class="fa fa-link" aria-hidden="true"></i></a>4.12. SPI_SetIrqMask</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SPI_SetIrqMask</span><span class="hljs-params">(SPI_ID_t spiN, SPI_Irq_Flags_t irqMask)</span></span>;
+</code></pre>
+<h4 id="function_12"><a name="function_12" class="anchor-navigation-ex-anchor" href="#function_12"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Set interrupt flag bits, even which interrupt flag bits can be.</p>
+<h4 id="parameters_11"><a name="parameters_11" class="anchor-navigation-ex-anchor" href="#parameters_11"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>spiN:SPI number</li>
+<li>irqMask: interrupt sign</li>
+</ul>
+<h4 id="return_11"><a name="return_11" class="anchor-navigation-ex-anchor" href="#return_11"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="iic.html" class="navigation navigation-prev " aria-label="Previous page: I2C">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="timertc.html" class="navigation navigation-next " aria-label="Next page: time(RTC)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SPI","level":"4.7.9","depth":2,"next":{"title":"time(RTC)","level":"4.7.10","depth":2,"path":"c-sdk/function-api/timertc.md","ref":"c-sdk/function-api/timertc.md","articles":[]},"previous":{"title":"I2C","level":"4.7.8","depth":2,"path":"c-sdk/function-api/iic.md","ref":"c-sdk/function-api/iic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"中文","text":"中文","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["facebook","twitter","google","instapaper","vk","weibo"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"en","gitbook":"*","description":"GPRS C SDK documention"},"file":{"path":"c-sdk/function-api/spi.md","mtime":"2018-12-11T02:48:24.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T02:49:35.562Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

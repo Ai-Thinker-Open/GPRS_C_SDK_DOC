@@ -1,0 +1,907 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>time(RTC) · GPRS C SDK DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ai-Thinker">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="file-system.html" />
+    
+    
+    <link rel="prev" href="spi.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">introduces</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Hardware</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../hardware/a9.html">
+            
+                <a href="../../hardware/a9.html">
+            
+                    
+                    A9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../hardware/a9g.html">
+            
+                <a href="../../hardware/a9g.html">
+            
+                    
+                    A9G
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../hardware/pudding-dev-board.html">
+            
+                <a href="../../hardware/pudding-dev-board.html">
+            
+                    
+                    pudding dev board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../hardware/usb-uart-module.html">
+            
+                <a href="../../hardware/usb-uart-module.html">
+            
+                    
+                    USB-UART module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../hardware/sim-card.html">
+            
+                <a href="../../hardware/sim-card.html">
+            
+                    
+                    SIM Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basic Knowledge</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../basic-knowledge/gsmgprs.html">
+            
+                <a href="../../basic-knowledge/gsmgprs.html">
+            
+                    
+                    GSM/GPRS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../basic-knowledge/gps.html">
+            
+                <a href="../../basic-knowledge/gps.html">
+            
+                    
+                    GNSS(GPS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C SDK</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../installation_linux.html">
+            
+                <a href="../installation_linux.html">
+            
+                    
+                    Installation Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../installation_docker.html">
+            
+                <a href="../installation_docker.html">
+            
+                    
+                    Installation Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../burn-debug.html">
+            
+                <a href="../burn-debug.html">
+            
+                    
+                    Burn & Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../first-code.html">
+            
+                <a href="../first-code.html">
+            
+                    
+                    First Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../code-style.html">
+            
+                <a href="../code-style.html">
+            
+                    
+                    Code Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../function-api.html">
+            
+                <a href="../function-api.html">
+            
+                    
+                    Function & API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="gpio.html">
+            
+                <a href="gpio.html">
+            
+                    
+                    GPIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="adc.html">
+            
+                <a href="adc.html">
+            
+                    
+                    ADC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.3" data-path="uart.html">
+            
+                <a href="uart.html">
+            
+                    
+                    UART
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.4" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.5" data-path="imei.html">
+            
+                <a href="imei.html">
+            
+                    
+                    IMEI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.6" data-path="iccid.html">
+            
+                <a href="iccid.html">
+            
+                    
+                    ICCID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.7" data-path="gps.html">
+            
+                <a href="gps.html">
+            
+                    
+                    GPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.8" data-path="iic.html">
+            
+                <a href="iic.html">
+            
+                    
+                    I2C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.9" data-path="spi.html">
+            
+                <a href="spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.7.10" data-path="timertc.html">
+            
+                <a href="timertc.html">
+            
+                    
+                    time(RTC)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.11" data-path="file-system.html">
+            
+                <a href="file-system.html">
+            
+                    
+                    FS(Flash/TF Card)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.12" data-path="gprs-network.html">
+            
+                <a href="gprs-network.html">
+            
+                    
+                    GPRS Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.13" data-path="dns.html">
+            
+                <a href="dns.html">
+            
+                    
+                    DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.14" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.15" data-path="ssl-tls.html">
+            
+                <a href="ssl-tls.html">
+            
+                    
+                    SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.16" data-path="mqtt.html">
+            
+                <a href="mqtt.html">
+            
+                    
+                    MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.17" data-path="power-manager.html">
+            
+                <a href="power-manager.html">
+            
+                    
+                    Power Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.18" data-path="call.html">
+            
+                <a href="call.html">
+            
+                    
+                    Call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.19" data-path="sms.html">
+            
+                <a href="sms.html">
+            
+                    
+                    SMS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.20" data-path="fota.html">
+            
+                <a href="fota.html">
+            
+                    
+                    FOTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.21" data-path="lbs.html">
+            
+                <a href="lbs.html">
+            
+                    
+                    LBS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.22" data-path="gizwits.html">
+            
+                <a href="gizwits.html">
+            
+                    
+                    Gizwits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >time(RTC)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#time&#xFF08;rtc&#xFF09;"><b> </b>time&#xFF08;RTC&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#&#x65F6;&#x95F4;&#x76F8;&#x5173;&#x7C7B;&#x578B;"><b>1. </b>&#x65F6;&#x95F4;&#x76F8;&#x5173;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#timet"><b>1.1. </b>time_t</a></li><li><span class="title-icon "></span><a href="#clockt"><b>1.2. </b>clock_t</a></li></ul><li><span class="title-icon "></span><a href="#macro-definition"><b>2. </b>Macro definition</a></li><ul><li><span class="title-icon "></span><a href="#clockspersec"><b>2.1. </b>CLOCKS_PER_SEC</a></li><li><span class="title-icon "></span><a href="#clockspermsec"><b>2.2. </b>CLOCKS_PER_MSEC</a></li></ul><li><span class="title-icon "></span><a href="#struct"><b>3. </b>Struct</a></li><ul><li><span class="title-icon "></span><a href="#tm"><b>3.1. </b>tm</a></li><li><span class="title-icon "></span><a href="#timevalt"><b>3.2. </b>timeval_t</a></li><li><span class="title-icon "></span><a href="#timezonet"><b>3.3. </b>timezone_t</a></li><li><span class="title-icon "></span><a href="#rtctimet"><b>3.4. </b>RTC_Time_t</a></li></ul><li><span class="title-icon "></span><a href="#function"><b>4. </b>Function</a></li><ul><li><span class="title-icon "></span><a href="#gettimeofday"><b>4.1. </b>gettimeofday</a></li><li><span class="title-icon "></span><a href="#timesetisautoupdatertctime"><b>4.2. </b>TIME_SetIsAutoUpdateRtcTime</a></li><li><span class="title-icon "></span><a href="#timeisautoupdatertctime"><b>4.3. </b>TIME_IsAutoUpdateRtcTime</a></li><li><span class="title-icon "></span><a href="#timesetrtctime"><b>4.4. </b>TIME_SetRtcTime</a></li><li><span class="title-icon "></span><a href="#timegetrtctime"><b>4.5. </b>TIME_GetRtcTIme</a></li><li><span class="title-icon "></span><a href="#clock"><b>4.6. </b>clock</a></li></ul></ul></ul></div><a href="#time&#xFF08;rtc&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="time&#xFF08;rtc&#xFF09;"><a name="time&#xFF08;rtc&#xFF09;" class="anchor-navigation-ex-anchor" href="#time&#xFF08;rtc&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a> time&#xFF08;RTC&#xFF09;</h1>
+<p>Basic RTC time and system timestamp, as well as network practice synchronization.</p>
+<p>example:<a href="https://github.com/Ai-Thinker-Open/GPRS_C_SDK/blob/master/demo/time/src/demo_time.c" target="_blank">demo/time</a></p>
+<h2 id="&#x65F6;&#x95F4;&#x76F8;&#x5173;&#x7C7B;&#x578B;"><a name="&#x65F6;&#x95F4;&#x76F8;&#x5173;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x65F6;&#x95F4;&#x76F8;&#x5173;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x65F6;&#x95F4;&#x76F8;&#x5173;&#x7C7B;&#x578B;</h2>
+<h3 id="timet"><a name="timet" class="anchor-navigation-ex-anchor" href="#timet"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. time_t</h3>
+<p>Use integers to represent time</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int32_t</span>         <span class="hljs-keyword">time_t</span>;
+</code></pre>
+<hr>
+<h3 id="clockt"><a name="clockt" class="anchor-navigation-ex-anchor" href="#clockt"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. clock_t</h3>
+<p>Use integers to represent time</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">long</span>         <span class="hljs-keyword">clock_t</span>;
+</code></pre>
+<hr>
+<h2 id="macro-definition"><a name="macro-definition" class="anchor-navigation-ex-anchor" href="#macro-definition"><i class="fa fa-link" aria-hidden="true"></i></a>2. Macro definition</h2>
+<h3 id="clockspersec"><a name="clockspersec" class="anchor-navigation-ex-anchor" href="#clockspersec"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. CLOCKS_PER_SEC</h3>
+<p>System clock convert to second</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CLOCKS_PER_SEC   (16384.0)</span>
+</code></pre>
+<hr>
+<h3 id="clockspermsec"><a name="clockspermsec" class="anchor-navigation-ex-anchor" href="#clockspermsec"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. CLOCKS_PER_MSEC</h3>
+<p>System clock convert to microsecond</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> CLOCKS_PER_MSEC  (16.384)</span>
+</code></pre>
+<hr>
+<h2 id="struct"><a name="struct" class="anchor-navigation-ex-anchor" href="#struct"><i class="fa fa-link" aria-hidden="true"></i></a>3. Struct</h2>
+<h3 id="tm"><a name="tm" class="anchor-navigation-ex-anchor" href="#tm"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. tm</h3>
+<p>Time representation, including days and days</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> tm{
+    <span class="hljs-keyword">int</span> tm_sec;         <span class="hljs-comment">/* &#x79D2;&#xFF0C;&#x8303;&#x56F4;&#x4ECE; 0 &#x5230; 59        */</span>
+    <span class="hljs-keyword">int</span> tm_min;         <span class="hljs-comment">/* &#x5206;&#xFF0C;&#x8303;&#x56F4;&#x4ECE; 0 &#x5230; 59        */</span>
+    <span class="hljs-keyword">int</span> tm_hour;        <span class="hljs-comment">/* &#x5C0F;&#x65F6;&#xFF0C;&#x8303;&#x56F4;&#x4ECE; 0 &#x5230; 23        */</span>
+    <span class="hljs-keyword">int</span> tm_mday;        <span class="hljs-comment">/* &#x4E00;&#x6708;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929;&#xFF0C;&#x8303;&#x56F4;&#x4ECE; 1 &#x5230; 31    */</span>
+    <span class="hljs-keyword">int</span> tm_mon;         <span class="hljs-comment">/* &#x6708;&#xFF0C;&#x8303;&#x56F4;&#x4ECE; 0 &#x5230; 11        */</span>
+    <span class="hljs-keyword">int</span> tm_year;        <span class="hljs-comment">/* &#x81EA; 1900 &#x5E74;&#x8D77;&#x7684;&#x5E74;&#x6570;        */</span>
+    <span class="hljs-keyword">int</span> tm_wday;        <span class="hljs-comment">/* &#x4E00;&#x5468;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929;&#xFF0C;&#x8303;&#x56F4;&#x4ECE; 0 &#x5230; 6    */</span>
+    <span class="hljs-keyword">int</span> tm_yday;        <span class="hljs-comment">/* &#x4E00;&#x5E74;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929;&#xFF0C;&#x8303;&#x56F4;&#x4ECE; 0 &#x5230; 365    */</span>
+    <span class="hljs-keyword">int</span> tm_isdst;       <span class="hljs-comment">/* &#x590F;&#x4EE4;&#x65F6;                */</span>
+ }tm;
+</code></pre>
+<hr>
+<h3 id="timevalt"><a name="timevalt" class="anchor-navigation-ex-anchor" href="#timevalt"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. timeval_t</h3>
+<p>Time, seconds, and subtleties</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> timeval {
+    <span class="hljs-keyword">time_t</span>       tv_sec;        <span class="hljs-comment">// seconds</span>
+    <span class="hljs-keyword">long</span>         tv_usec;       <span class="hljs-comment">//microsecond</span>
+}<span class="hljs-keyword">timeval_t</span>;
+</code></pre>
+<hr>
+<h3 id="timezonet"><a name="timezonet" class="anchor-navigation-ex-anchor" href="#timezonet"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. timezone_t</h3>
+<p>Time zone type</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> timezone {
+    <span class="hljs-keyword">int</span> tz_minuteswest;
+    <span class="hljs-keyword">int</span> tz_dsttime;
+}<span class="hljs-keyword">timezone_t</span>;
+</code></pre>
+<hr>
+<h3 id="rtctimet"><a name="rtctimet" class="anchor-navigation-ex-anchor" href="#rtctimet"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. RTC_Time_t</h3>
+<p>RTC time</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span>{
+    <span class="hljs-keyword">uint16_t</span> year;
+    <span class="hljs-keyword">uint8_t</span>  month;
+    <span class="hljs-keyword">uint8_t</span>  day;
+    <span class="hljs-keyword">uint8_t</span>  hour;
+    <span class="hljs-keyword">uint8_t</span>  minute;
+    <span class="hljs-keyword">uint8_t</span>  second;
+    <span class="hljs-keyword">int8_t</span>   timeZone;        <span class="hljs-comment">// timezone hour</span>
+    <span class="hljs-keyword">int8_t</span>   timeZoneMinutes; <span class="hljs-comment">// timezone minutes that less than 1 hours</span>
+                              <span class="hljs-comment">// so `timezone = timeZone+timeZoneMinutes/60`</span>
+}RTC_Time_t;
+</code></pre>
+<hr>
+<h2 id="function"><a name="function" class="anchor-navigation-ex-anchor" href="#function"><i class="fa fa-link" aria-hidden="true"></i></a>4. Function</h2>
+<h3 id="gettimeofday"><a name="gettimeofday" class="anchor-navigation-ex-anchor" href="#gettimeofday"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. gettimeofday</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">gettimeofday</span><span class="hljs-params">(timeval_t *tv, timezone_t *tz)</span></span>;
+</code></pre>
+<h4 id="function_1"><a name="function_1" class="anchor-navigation-ex-anchor" href="#function_1"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Get system time, seconds, and microseconds</p>
+<h4 id="parameters"><a name="parameters" class="anchor-navigation-ex-anchor" href="#parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>TV: time information, seconds and microseconds</li>
+<li>TZ: unrealized, always NULL</li>
+</ul>
+<h4 id="return"><a name="return" class="anchor-navigation-ex-anchor" href="#return"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>The success returns 0, otherwise not 0</li>
+</ul>
+<hr>
+<h3 id="timesetisautoupdatertctime"><a name="timesetisautoupdatertctime" class="anchor-navigation-ex-anchor" href="#timesetisautoupdatertctime"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. TIME_SetIsAutoUpdateRtcTime</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">TIME_SetIsAutoUpdateRtcTime</span><span class="hljs-params">(<span class="hljs-keyword">bool</span> isAutoUpdate)</span></span>;
+</code></pre>
+<h4 id="function_2"><a name="function_2" class="anchor-navigation-ex-anchor" href="#function_2"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>When you attach to the GPRS network, you will get the network time. If set to true, you will synchronize the network time to RTC local time.</p>
+<p>Set to false does not synchronize</p>
+<h4 id="parameters_1"><a name="parameters_1" class="anchor-navigation-ex-anchor" href="#parameters_1"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>isAutoUpdate&#xFF1A;Whether or not the network time is synchronized</li>
+</ul>
+<h4 id="return_1"><a name="return_1" class="anchor-navigation-ex-anchor" href="#return_1"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<p>None</p>
+<hr>
+<h3 id="timeisautoupdatertctime"><a name="timeisautoupdatertctime" class="anchor-navigation-ex-anchor" href="#timeisautoupdatertctime"><i class="fa fa-link" aria-hidden="true"></i></a>4.3. TIME_IsAutoUpdateRtcTime</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">TIME_IsAutoUpdateRtcTime</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<h4 id="function_3"><a name="function_3" class="anchor-navigation-ex-anchor" href="#function_3"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Query whether the current configuration will automatically synchronize from the network to the local time.</p>
+<h4 id="parameters_2"><a name="parameters_2" class="anchor-navigation-ex-anchor" href="#parameters_2"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>None</p>
+<h4 id="return_2"><a name="return_2" class="anchor-navigation-ex-anchor" href="#return_2"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>Automatically synchronize network time to local, true: synchronization; false: asynchrony.</li>
+</ul>
+<hr>
+<h3 id="timesetrtctime"><a name="timesetrtctime" class="anchor-navigation-ex-anchor" href="#timesetrtctime"><i class="fa fa-link" aria-hidden="true"></i></a>4.4. TIME_SetRtcTime</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">TIME_SetRtcTime</span><span class="hljs-params">(RTC_Time_t* time)</span></span>;
+</code></pre>
+<h4 id="function_4"><a name="function_4" class="anchor-navigation-ex-anchor" href="#function_4"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Set local RTC time</p>
+<h4 id="parameters_3"><a name="parameters_3" class="anchor-navigation-ex-anchor" href="#parameters_3"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>time: time</li>
+</ul>
+<h4 id="return_3"><a name="return_3" class="anchor-navigation-ex-anchor" href="#return_3"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>Success or not</li>
+</ul>
+<hr>
+<h3 id="timegetrtctime"><a name="timegetrtctime" class="anchor-navigation-ex-anchor" href="#timegetrtctime"><i class="fa fa-link" aria-hidden="true"></i></a>4.5. TIME_GetRtcTIme</h3>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">TIME_GetRtcTIme</span><span class="hljs-params">(RTC_Time_t* time)</span></span>;
+</code></pre>
+<h4 id="function_5"><a name="function_5" class="anchor-navigation-ex-anchor" href="#function_5"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Get local RTC time</p>
+<h4 id="parameters_4"><a name="parameters_4" class="anchor-navigation-ex-anchor" href="#parameters_4"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<ul>
+<li>time:time </li>
+</ul>
+<h4 id="return_4"><a name="return_4" class="anchor-navigation-ex-anchor" href="#return_4"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>Get time success or not</li>
+</ul>
+<hr>
+<h3 id="clock"><a name="clock" class="anchor-navigation-ex-anchor" href="#clock"><i class="fa fa-link" aria-hidden="true"></i></a>4.6. clock</h3>
+<pre><code class="lang-c"><span class="hljs-keyword">clock_t</span> clock(<span class="hljs-keyword">void</span>);
+</code></pre>
+<h4 id="function_6"><a name="function_6" class="anchor-navigation-ex-anchor" href="#function_6"><i class="fa fa-link" aria-hidden="true"></i></a>Function</h4>
+<p>Get the system clock, note that not time, need to change, for example, converted to seconds need to be divided by 16384.</p>
+<h4 id="parameters_5"><a name="parameters_5" class="anchor-navigation-ex-anchor" href="#parameters_5"><i class="fa fa-link" aria-hidden="true"></i></a>Parameters</h4>
+<p>None</p>
+<h4 id="return_5"><a name="return_5" class="anchor-navigation-ex-anchor" href="#return_5"><i class="fa fa-link" aria-hidden="true"></i></a>Return</h4>
+<ul>
+<li>System clock</li>
+</ul>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="spi.html" class="navigation navigation-prev " aria-label="Previous page: SPI">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="file-system.html" class="navigation navigation-next " aria-label="Next page: FS(Flash/TF Card)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"time(RTC)","level":"4.7.10","depth":2,"next":{"title":"FS(Flash/TF Card)","level":"4.7.11","depth":2,"path":"c-sdk/function-api/file-system.md","ref":"c-sdk/function-api/file-system.md","articles":[]},"previous":{"title":"SPI","level":"4.7.9","depth":2,"path":"c-sdk/function-api/spi.md","ref":"c-sdk/function-api/spi.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","splitter","fontsettings","-search","search-pro","edit-link","anchor-navigation-ex","sharing","my-toolbar","ga"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"my-toolbar":{"buttons":[{"label":"中文","text":"中文","icon":"fa fa-language","position":"left","target":"_self","url":"https://ai-thinker-open.github.io/GPRS_C_SDK_DOC/zh/"}]},"ga":{"configuration":"auto","token":"UA-119047820-1"},"sharing":{"all":["facebook","twitter","google","instapaper","vk","weibo"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"edit-link":{"label":"","base":"https://github.com/Ai-Thinker-Open/GPRS_C_SDK_DOC/blob/en"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Ai-Thinker","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GPRS C SDK DOC","language":"en","gitbook":"*","description":"GPRS C SDK documention"},"file":{"path":"c-sdk/function-api/timertc.md","mtime":"2018-12-11T02:48:24.974Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-11T02:49:35.562Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+
