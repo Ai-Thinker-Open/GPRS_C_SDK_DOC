@@ -54,7 +54,7 @@ Then you can use `./build.bat` script to build project:
 
 **e.g.: **
 ```
-./build.sh demo gpio
+./build.bat demo gpio
 ```
 A `build` folder will be generated after compile, there's two `*.lod` files in th `hex` folder, it's the target file that burn(download) to dev board
 
