@@ -33,7 +33,7 @@ The development of modules mainly provides two kinds of interfaces:
 
 （B）**SDK On Chip Development**，No external MCU is needed, burn the firmware directly to GPRS module
 
-* The advantage of this method is that it doesn't need extra MCU, programming directly on modules, saving hardware resources, and save mony for projects
+* The advantage of this method is that it doesn't need extra MCU, programming directly on modules, saving hardware resources, and save money for projects
 
 * This documentation introduces in detail how to use SDK to develop and provide related API docs.
 
